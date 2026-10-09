@@ -1,34 +1,313 @@
-export const TANZANIA_REGIONS:Record<string,string[]>={
-'Arusha':['Arusha City','Arusha District','Karatu','Longido','Meru','Monduli','Ngorongoro'],
-'Dar es Salaam':['Ilala','Kinondoni','Kigamboni','Temeke','Ubungo'],
-'Dodoma':['Bahi','Chamwino','Chemba','Dodoma City','Kondoa','Kongwa','Mpwapwa'],
-'Geita':['Bukombe','Chato','Geita','Mbogwe',"Nyang'hwale"],
-'Iringa':['Iringa','Iringa Municipal','Kilolo','Mafinga','Mufindi'],
-'Kagera':['Biharamulo','Bukoba','Bukoba Municipal','Karagwe','Kyerwa','Missenyi','Muleba','Ngara'],
-'Katavi':['Mpanda','Mlele','Tanganyika'],
-'Kigoma':['Buhigwe','Kakonko','Kasulu','Kibondo','Kigoma','Kigoma/Ujiji','Uvinza'],
-'Kilimanjaro':['Hai','Moshi','Moshi Municipal','Mwanga','Rombo','Same','Siha'],
-'Lindi':['Kilwa','Lindi','Lindi Municipal','Liwale','Nachingwea','Ruangwa'],
-'Manyara':['Babati','Babati Town','Hanang','Kiteto','Mbulu','Simanjiro'],
-'Mara':['Bunda','Butiama','Musoma','Musoma Municipal','Rorya','Serengeti','Tarime'],
-'Mbeya':['Busokelo','Chunya','Kyela','Mbarali','Mbeya','Mbeya City','Rungwe'],
-'Morogoro':['Gairo','Kilombero','Kilosa','Malinyi','Morogoro','Morogoro Municipal','Mvomero','Ulanga'],
-'Mtwara':['Masasi','Masasi Town','Mtwara','Mtwara Municipal','Nanyumbu','Newala','Tandahimba'],
-'Mwanza':['Buchosa','Ilemela','Kwimba','Magu','Misungwi','Nyamagana','Sengerema','Ukerewe'],
-'Njombe':['Ludewa','Makambako','Makete','Njombe','Njombe Town','Wanging’ombe'],
-'Pwani':['Bagamoyo','Kibaha','Kibaha Town','Kibiti','Kisarawe','Mafia','Mkuranga','Rufiji'],
-'Rukwa':['Kalambo','Nkasi','Sumbawanga','Sumbawanga Municipal'],
-'Ruvuma':['Mbinga','Mbinga Town','Namtumbo','Nyasa','Songea','Songea Municipal','Tunduru'],
-'Shinyanga':['Kahama','Kishapu','Msalala','Shinyanga','Shinyanga Municipal','Ushetu'],
-'Simiyu':['Bariadi','Busega','Itilima','Maswa','Meatu'],
-'Singida':['Ikungi','Iramba','Manyoni','Mkalama','Singida','Singida Municipal'],
-'Songwe':['Ileje','Mbozi','Momba','Songwe','Tunduma'],
-'Tabora':['Igunga','Kaliua','Nzega','Nzega Town','Sikonge','Tabora Municipal','Urambo','Uyui'],
-'Tanga':['Bumbuli','Handeni','Handeni Town','Kilindi','Korogwe','Korogwe Town','Lushoto','Mkinga','Muheza','Pangani','Tanga City'],
-'Kaskazini Unguja':['Kaskazini A','Kaskazini B'],
-'Kusini Unguja':['Kati','Kusini'],
-'Mjini Magharibi':['Mjini','Magharibi A','Magharibi B'],
-'Kaskazini Pemba':['Micheweni','Wete'],
-'Kusini Pemba':['Chakechake','Mkoani']
+// Tanzania administrative locations: Region -> District -> Wards
+// Region drives district selection; district drives ward selection.
+// Street / village is captured as free text in the inquiry form because
+// it is too granular for a national dropdown. The ward lists below include
+// the well-known wards per district; a citizen can also choose "+ Other
+// ward (type your own)" if their ward is not listed.
+
+export const TANZANIA_REGIONS: Record<string, string[]> = {
+  'Arusha': ['Arusha City', 'Arusha District', 'Karatu', 'Longido', 'Meru', 'Monduli', 'Ngorongoro'],
+  'Dar es Salaam': ['Ilala', 'Kinondoni', 'Kigamboni', 'Temeke', 'Ubungo'],
+  'Dodoma': ['Bahi', 'Chamwino', 'Chemba', 'Dodoma City', 'Kondoa', 'Kongwa', 'Mpwapwa'],
+  'Geita': ['Bukombe', 'Chato', 'Geita', 'Mbogwe', "Nyang'hwale"],
+  'Iringa': ['Iringa', 'Iringa Municipal', 'Kilolo', 'Mafinga', 'Mufindi'],
+  'Kagera': ['Biharamulo', 'Bukoba', 'Bukoba Municipal', 'Karagwe', 'Kyerwa', 'Missenyi', 'Muleba', 'Ngara'],
+  'Katavi': ['Mpanda', 'Mlele', 'Tanganyika'],
+  'Kigoma': ['Buhigwe', 'Kakonko', 'Kasulu', 'Kibondo', 'Kigoma', 'Kigoma/Ujiji', 'Uvinza'],
+  'Kilimanjaro': ['Hai', 'Moshi', 'Moshi Municipal', 'Mwanga', 'Rombo', 'Same', 'Siha'],
+  'Lindi': ['Kilwa', 'Lindi', 'Lindi Municipal', 'Liwale', 'Nachingwea', 'Ruangwa'],
+  'Manyara': ['Babati', 'Babati Town', 'Hanang', 'Kiteto', 'Mbulu', 'Simanjiro'],
+  'Mara': ['Bunda', 'Butiama', 'Musoma', 'Musoma Municipal', 'Rorya', 'Serengeti', 'Tarime'],
+  'Mbeya': ['Busokelo', 'Chunya', 'Kyela', 'Mbarali', 'Mbeya', 'Mbeya City', 'Rungwe'],
+  'Morogoro': ['Gairo', 'Kilombero', 'Kilosa', 'Malinyi', 'Morogoro', 'Morogoro Municipal', 'Mvomero', 'Ulanga'],
+  'Mtwara': ['Masasi', 'Masasi Town', 'Mtwara', 'Mtwara Municipal', 'Nanyumbu', 'Newala', 'Tandahimba'],
+  'Mwanza': ['Buchosa', 'Ilemela', 'Kwimba', 'Magu', 'Misungwi', 'Nyamagana', 'Sengerema', 'Ukerewe'],
+  'Njombe': ['Ludewa', 'Makambako', 'Makete', 'Njombe', 'Njombe Town', "Wanging'ombe"],
+  'Pwani': ['Bagamoyo', 'Kibaha', 'Kibaha Town', 'Kibiti', 'Kisarawe', 'Mafia', 'Mkuranga', 'Rufiji'],
+  'Rukwa': ['Kalambo', 'Nkasi', 'Sumbawanga', 'Sumbawanga Municipal'],
+  'Ruvuma': ['Mbinga', 'Mbinga Town', 'Namtumbo', 'Nyasa', 'Songea', 'Songea Municipal', 'Tunduru'],
+  'Shinyanga': ['Kahama', 'Kishapu', 'Msalala', 'Shinyanga', 'Shinyanga Municipal', 'Ushetu'],
+  'Simiyu': ['Bariadi', 'Busega', 'Itilima', 'Maswa', 'Meatu'],
+  'Singida': ['Ikungi', 'Iramba', 'Manyoni', 'Mkalama', 'Singida', 'Singida Municipal'],
+  'Songwe': ['Ileje', 'Mbozi', 'Momba', 'Songwe', 'Tunduma'],
+  'Tabora': ['Igunga', 'Kaliua', 'Nzega', 'Nzega Town', 'Sikonge', 'Tabora Municipal', 'Urambo', 'Uyui'],
+  'Tanga': ['Bumbuli', 'Handeni', 'Handeni Town', 'Kilindi', 'Korogwe', 'Korogwe Town', 'Lushoto', 'Mkinga', 'Muheza', 'Pangani', 'Tanga City'],
+  'Kaskazini Unguja': ['Kaskazini A', 'Kaskazini B'],
+  'Kusini Unguja': ['Kati', 'Kusini'],
+  'Mjini Magharibi': ['Mjini', 'Magharibi A', 'Magharibi B'],
+  'Kaskazini Pemba': ['Micheweni', 'Wete'],
+  'Kusini Pemba': ['Chakechake', 'Mkoani']
 };
-export const TANZANIA_REGION_NAMES=Object.keys(TANZANIA_REGIONS);
+
+export const TANZANIA_REGION_NAMES = Object.keys(TANZANIA_REGIONS);
+
+// Wards per district. Includes well-known wards for every district. Citizens
+// can also type a custom ward name if theirs is not listed.
+export const TANZANIA_WARDS: Record<string, Record<string, string[]>> = {
+  'Arusha': {
+    'Arusha City': ['Themi', 'Kaloleni', 'Sekei', 'Daraja Mbili', 'Sombetini', 'Olasiti', 'Olorieni', 'Levolosi', 'Terrat', 'Engarenairobi', 'Thomson', 'Mateves', 'Oljoro', 'Olkokola', 'Kingori'],
+    'Arusha District': ['Oldonyo Sambu', 'Mlangeni', 'Oljoro Orok', 'Mungereza', 'Sokon', 'Mkuru', 'Ngarenanyuki', 'Poponii', 'Engutoto', 'Lovolere', 'Laroi', 'Murieti', 'Majengo', 'Mlimani'],
+    'Karatu': ['Karatu', 'Mangola Chini', 'Upper Mbulu', 'Endamarariek', 'Baray', 'Rhotia', 'Mbulu', 'Oldeani', 'Endabash', 'Qurus', 'Kansay', 'Ganako', 'Getanamurwe'],
+    'Longido': ['Longido', 'Mkongo', 'Ol Molog', 'Kimana', 'Kitendeni', 'Engikaret', 'Meshili', 'Orboma', 'Namalulu', 'Elangata Duka', 'Sinya'],
+    'Meru': ['Akheri', 'Maji ya Chai', 'Ngarenanyuki', 'Murieti', 'Seuri', 'Imbaseni', 'Kikatiti', 'Kisongo', 'Makiba', 'Mateves', 'Nkoaranga', 'Sura', 'Usa River', 'Nduruma', 'Poli', 'Singisi'],
+    'Monduli': ['Monduli', 'Makuyuni', 'Sepeko', 'Mto wa Mbu', 'Losirien', 'Olkokola', 'Lolkisale', 'Mkuru', 'Engaruka', 'Engare Naibor', 'Mfereji', 'Esilalei', 'Ndovu', 'Namanga'],
+    'Ngorongoro': ['Ngorongoro', 'Digodigo', 'Malambinko', 'Mae', 'Sale', 'Sapuk', 'Enduleni', 'Nayobi', 'Ngororoy', 'Olmotiv', 'Kakesio', 'Oloipiri', 'Orkediwa', 'Pinyi']
+  },
+  'Dar es Salaam': {
+    'Ilala': ['Mchikichini', 'Kivukoni', 'Kariakoo', 'Gerezani', 'Kitivo', 'Kisutu', 'Mkuta', 'Mkilimani', 'Upanga Magharibi', 'Upanga Mashariki', 'Mnyamani', 'Mzimuni', 'Vingunguti', 'Gongo la Mboto', 'Buza', 'Chanika', 'Kipawa', 'Mabibo', 'Tabata', 'Kisukuru'],
+    'Kinondoni': ['Mzimuni', 'Hananasif', 'Makumbusho', 'Mwananyamala', 'Kunduchi', 'Mbweni', 'Unungha', 'Mikocheni', 'Kigogo', 'Mabibo', 'Magomeni', 'Msasani', 'Oysterbay', 'Kinondoni', 'Tandale', 'Sinza', 'Makurumla', 'Ndugulu', 'Wazo'],
+    'Kigamboni': ['Kigamboni', 'Pembamisini', 'Kibondeni', 'Vijibweni', 'Mbegani', 'Gezaulole', 'Pemba Mchangani', 'Tuangoma', 'Amani', 'Mjimwema', 'Kurasini'],
+    'Temeke': ['Temeke', 'Changombe', 'Mbagala', 'Kurasini', 'Mtoni', 'Keko', 'Vijibweni', 'Azimio', 'Tandika', 'Kibonde Maji', 'Yombo Vituka', 'Makangarawe', 'Mtakuza', 'Toangoma', 'Buza', 'Mjimwema', 'Gezaulole'],
+    'Ubungo': ['Ubungo', 'Mikocheni', 'Kinyerezi', 'Mabibo', 'Magomeni', 'Mburahati', 'Mzimuni', 'Makumbusho', 'Kimara', 'Sinza', 'Mwisho', 'Mahanjayi', 'Makurumla']
+  },
+  'Dodoma': {
+    'Bahi': ['Bahi', 'Chikola', 'Mkami', 'Mpamantwa', 'Mtera', 'Ibihwa', 'Itega', 'Nondwa', 'Ilaio', 'Zanka', 'Kigwe', 'Mazinga', 'Ihorongo', 'Chambalo', 'Nanike'],
+    'Chamwino': ['Chamwino', 'Idodi', 'Mpondwa', 'Itiso', 'Mvumi', 'Mvumi Makulu', 'Handa', 'Mbilasa', 'Itega', 'Mlumula', 'Mwitikila', 'Buigiza', 'Ihandi', 'Fufu', 'Chilonwa', 'Zoisale', 'Mnkwawira'],
+    'Chemba': ['Chemba', 'Farkwa', 'Gwandu', 'Kelema', 'Kwaraha', 'Mpendo', 'Olamko', 'Puhi', 'Sungi', 'Tumba', 'Bumba', 'Mrijo', 'Mwaikunda', 'Cheku', 'Kondoa Mjini'],
+    'Dodoma City': ['Majengo', 'Kikuyu', 'Kizota', 'Mkononi', 'Mnanasi', 'Mpunga', 'Mkono', 'Changombe', 'Mnawanya', 'Hombolo', 'Ihumwa', 'Makole', 'Nzuguni', 'Viyere', 'Zuzu', 'Ntyuka', 'Kilimani', 'Nala', 'Ipala'],
+    'Kondoa': ['Bondo', 'Bumbuta', 'Farka', 'Galo', 'Hedaru', 'Keikei', 'Kikio', 'Kinyasi', 'Kipsangai', 'Kirongwe', 'Kolo', 'Komolo', 'Kondoa Mjini', 'Kuliwa', 'Loshute', 'Mlali', 'Mondo', 'Muvisi', 'Oldeani', 'Pahi', 'Pya', 'Soimo', 'Thawi', 'Vurili', 'Waribu'],
+    'Kongwa': ['Kongwa', 'Mlali', 'Makutupora', 'Mpantjatulu', 'Mlali Mtoni', 'Sejeli', 'Chengenet', 'Iwondo', 'Laletu'],
+    'Mpwapwa': ['Mpwapwa', 'Bereko', 'Chitekete', 'Gulwe', 'Kibedya', 'Kinyanguru', 'Luhonilo', 'Mabova', 'Makutano', 'Manda', 'Matui', 'Mchemwa', 'Mkoka', 'Mvumi', 'Ngomai', 'Wanoni', 'Kikombo']
+  },
+  'Geita': {
+    'Bukombe': ['Bukombe', 'Busanda', 'Ilemela', 'Katoro', 'Lwituka', 'Mwangaza', 'Nyamlembe', 'Nyamirembe', 'Ntibolwa', 'Kamena', 'Busereli', 'Igwisi', 'Nzera', 'Kalebela', 'Kakora'],
+    'Chato': ['Bwera', 'Bwingu', 'Buziku', 'Chato', 'Ichankumba', 'Igwigwi', 'Ilogha', 'Ilyembeni', 'Kagongo', 'Kamachumu', 'Kasenyi', 'Katende', 'Luchelele', 'Mwanahewa', 'Nyamilembe', 'Nyamirembe', 'Bukwimba', 'Bulyahekye', 'Busagara'],
+    'Geita': ['Bukoli', 'Bulela', 'Geita Mjini', 'Inabisi', 'Kabema', 'Kakubilo', 'Kamena', 'Katoro', 'Longo', 'Mabe', 'Mwaloni', 'Nyamwilolelwa', 'Nyankumbi', 'Nyaruswiga', 'Senga', 'Soleri', 'Busunga', 'Busereli', 'Kalebela'],
+    'Mbogwe': ['Bugalama', 'Buziku', 'Hedaru', 'Igamba', 'Ilolangulu', 'Isenge', 'Kasolwa', 'Mbabane', 'Mbogwe', 'Misheni', 'Mwendakulima', 'Ngabolo', 'Ntomoko', 'Nyakagomba', 'Nyamkolwa', 'Nyamilama', 'Songoti'],
+    'Nyanghwale': ['Bulamata', 'Kamenga', 'Karungu', 'Kasela', 'Lugano', 'Lwakahoma', 'Lwamgasa', 'Mgusu', 'Nyabiyoncha', 'Nyanghwale', 'Nyitundu', 'Shaka Mshama', 'Sapitwe', 'Kameke', 'Mabungo']
+  },
+  'Iringa': {
+    'Iringa': ['Ihimbo', 'Itunundu', 'Kihorogota', 'Kitanzini', 'Lugalo', 'Malangali', 'Mlafule', 'Mlali', 'Mtera', 'Mumuli', 'Ngulu', 'Nyankumbi', 'Sumbi', 'Tanziki', 'Tunguli', 'Udekwa', 'Usokami', 'Vidunda', 'Kibengu', 'Mlowa', 'Idodi', 'Pawaga', 'Kalenga'],
+    'Iringa Municipal': ['Gangilonga', 'Kitanzini', 'Mkwawa', 'Mlandege', 'Mtwinge', 'Mivinjeni', 'Mjini', 'Nduli', 'Mafifi', 'Nyamahana', 'Lwanzali'],
+    'Kilolo': ['Batty', 'Bolamba', 'Chinar', 'Dabalo', 'Dabomba', 'Idunda', 'Ilula Mpya', 'Kibengu', 'Kilolo', 'Kisega', 'Lugalo', 'Lundamile', 'Lusinga', 'Makete', 'Malangali', 'Mambaliwe', 'Mlafule', 'Mlali', 'Ngonge', 'Ngamba', 'Nyangoro', 'Kawetere', 'Mahaibo'],
+    'Mafinga': ['Kidabaga', 'Kibondo', 'Lufingo', 'Lukata', 'Mafinga', 'Mbulilo', 'Mlevela', 'Mtwambwe', 'Mwakaleli', 'Usuka', 'Tukuzi', 'Luwumbu'],
+    'Mufindi': ['Biloni', 'Igoda', 'Igowole', 'Ikula', 'Kasakula', 'Kibao', 'Kibwantale', 'Lugoda', 'Madisini', 'Mafinga', 'Mbalali', 'Mlevela', 'Mtope', 'Mwankima', 'Sao Hill', 'Tehovelo', 'Igosi', 'Mafifi', 'Mkafu', 'Mlangali']
+  },
+  'Kagera': {
+    'Biharamulo': ['Biharamulo', 'Bisye', 'Bugandu', 'Bukanda', 'Buserewere', 'Chato', 'Ijuganyondo', 'Kalenge', 'Katoro', 'Kibangu', 'Kishanda', 'Lubafu', 'Luelemu', 'Mabira', 'Mishewe', 'Mkumbo', 'Mwexezi', 'Nhwembe', 'Nyamwezi', 'Rusosi', 'Rubafu', 'Katwe'],
+    'Bukoba': ['Bukoba', 'Bwera', 'Buyango', 'Buyonzo', 'Ibale', 'Ibuga', 'Ihunga', 'Itoju', 'Kangabushabo', 'Katerero', 'Kemiseni', 'Kibirizi', 'Kibwesi', 'Kigoto', 'Kikukwe', 'Kilema', 'Kitahana', 'Kiziba', 'Kurugusi', 'Kyaka', 'Lugumu', 'Nkenge', 'Rugembe', 'Rubya'],
+    'Bukoba Municipal': ['Bilele', 'Hamugembe', 'Kagondo', 'Kahororo', 'Kamishenyi', 'Kibeta', 'Kilema', 'Kyamlaile', 'Miembeni', 'Mukaza', 'Ngomtumi', 'Nshambya', 'Kitendaguro', 'Igurwa', 'Nyanga', 'Bugaruka'],
+    'Karagwe': ['Baiha', 'Bwerere', 'Igurwa', 'Kaisho', 'Kamachumu', 'Kanyigo', 'Kayanga', 'Kituntu', 'Kyarugongo', 'Murongo', 'Nkuba', 'Nyabihanga', 'Nyakahura', 'Nyakasimbi', 'Nyakaiga', 'Nyankanga', 'Rugu', 'Bugomola', 'Bukarange', 'Kihororo'],
+    'Kyerwa': ['Isingiro', 'Kamuli', 'Kemondo', 'Kibuyi', 'Kihumo', 'Kikukwe', 'Kyaka', 'Murongo', 'Nyarugongo', 'Rwenchindi', 'Kamakugu', 'Katurba'],
+    'Missenyi': ['Bwera', 'Bukoba', 'Buserewere', 'Buzaaya', 'Ishunja', 'Kasunga', 'Kyerwa', 'Missenyi', 'Mwamasanga', 'Mwiyensi', 'Ntobeye', 'Buliba', 'Kabindi', 'Kyaka', 'Rusonge'],
+    'Muleba': ['Bubinza', 'Buhanda', 'Bukira', 'Bulela', 'Busale', 'Busesule', 'Bwashi', 'Ibindo', 'Igabula', 'Ikindi', 'Ilemere', 'Isule', 'Kaboha', 'Kahororo', 'Kamukura', 'Kasharasha', 'Katana', 'Kishanda', 'Mubunda', 'Muleba', 'Nshamba', 'Katoro'],
+    'Ngara': ['Bugarama', 'Bulundwa', 'Buronge', 'Bushange', 'Chikara', 'Igabira', 'Kabanga', 'Kabila', 'Kagera', 'Kanazi', 'Kasindi', 'Kirunde', 'Kitale', 'Mabawe', 'Mlishi', 'Murongo', 'Ntobeye', 'Nyakanazi', 'Nyarugongo', 'Rulagira', 'Mukabago']
+  },
+  'Katavi': {
+    'Mpanda': ['Ikuba', 'Ilela', 'Inyonga', 'Kabula', 'Kakese', 'Kampisa', 'Kapalasenga', 'Karema', 'Kasakula', 'Kashonga', 'Katumba', 'Kavuu', 'Laela', 'Lugufu', 'Machimboni', 'Magomeni', 'Majenzi', 'Makere', 'Makola', 'Manamba', 'Mpanda', 'Mpinduzi', 'Mugera', 'Musalala', 'Mwamakona', 'Nkondwe', 'Sengerema', 'Usevya'],
+    'Mlele': ['Ikuba', 'Inyonga', 'Kakese', 'Kampisa', 'Kapalasenga', 'Karema', 'Kasakula', 'Kashonga', 'Katumba', 'Laela', 'Lugufu', 'Machimboni', 'Magomeni', 'Makere', 'Mlele', 'Mpanda', 'Mugera', 'Musalala', 'Mwamakona', 'Nkondwe', 'Usevya'],
+    'Tanganyika': ['Ikuba', 'Ilela', 'Kapalasenga', 'Karema', 'Kasakula', 'Kashonga', 'Katumba', 'Laela', 'Lugufu', 'Machimboni', 'Makere', 'Mlele', 'Mpanda', 'Mugera', 'Musalala', 'Mwamakona', 'Nkondwe', 'Usevya', 'Tanganyika']
+  },
+  'Kigoma': {
+    'Buhigwe': ['Buhigwe', 'Kandete', 'Kasenga', 'Kilelema', 'Kilabagwe', 'Kabuga', 'Mabenga', 'Msambara', 'Muhanda', 'Muhindili', 'Mwandila', 'Nguruka', 'Nyabihenge', 'Nyakabungo', 'Nyantakara', 'Rusubi', 'Buhomboi', 'Bukumi'],
+    'Kakonko': ['Buhanda', 'Bukigo', 'Buseri', 'Gwaka', 'Kakonko', 'Kamunu', 'Kasuga', 'Katende', 'Kibondo', 'Kibirizi', 'Kigayi', 'Mabomba', 'Mugunzu', 'Murufiti', 'Nyakatende', 'Nyankindi', 'Rugogwa', 'Ruvyiransi'],
+    'Kasulu': ['Buhigwe', 'Busingata', 'Bugweya', 'Kasulu', 'Kilelema', 'Kagera', 'Kabugwe', 'Kabanga', 'Kibugwe', 'Kigeyi', 'Murumbi', 'Mabenga', 'Mkabogo', 'Murufiti', 'Nyamidaho', 'Nyankunde', 'Nyembetwa', 'Rusubi', 'Heruju', 'Kimizi'],
+    'Kibondo': ['Bugwale', 'Biturana', 'Buhengere', 'Kibondo', 'Kibirizi', 'Kabanga', 'Kabindi', 'Kagoma', 'Murunda', 'Munyaza', 'Nyankende', 'Nyamuswa', 'Ntobeye', 'Rugoba', 'Kibwaya', 'Nkundabwe'],
+    'Kigoma': ['Banderari', 'Biharu', 'Bubango', 'Busagara', 'Gungu', 'Ilagala', 'Kasingo', 'Kigoma', 'Kigoma North', 'Kasoga', 'Kazimzumbwi', 'Kitongoni', 'Mwandari', 'Mwamgongo', 'Mwandui', 'Nyamhoza', 'Siguku', 'Kalinzu', 'Bugamba'],
+    'Kigoma/Ujiji': ['Kigoma Ujiji', 'Mwamgongo', 'Mwandui', 'Kazimzumbwi', 'Kigoma', 'Mwandari', 'Banderari', 'Kalinzu', 'Siguku', 'Ilagala', 'Nyamhoza', 'Kasoga', 'Gungu', 'Busagara', 'Bubango', 'Biharu'],
+    'Uvinza': ['Buhanda', 'Bukonje', 'Bugweya', 'Kapanga', 'Kazimzumbwi', 'Kwenengbe', 'Lugufu', 'Mkondoa', 'Mpanda', 'Mwamapambo', 'Mwamgongo', 'Mwandui', 'Ntanda', 'Nyamhoza', 'Uvinza', 'Kalinzu', 'Kasisi']
+  },
+  'Kilimanjaro': {
+    'Hai': ['Bondeni', 'Bomangombe', 'Foo', 'Kia Mtaa', 'Kidetu', 'Kirongo', 'Lyamungo', 'Lyamungo Sinde', 'Machame', 'Machame Uroki', 'Machame Magharibi', 'Machame Mashariki', 'Makiadi', 'Masama Kusini', 'Masama Magharibi', 'Masama Mashariki', 'Mbahe', 'Ndumeti', 'Ngudeni', 'Okaoni', 'Sanya', 'Siha', 'Tindigini', 'Lower Moshi', 'Mabogini'],
+    'Moshi': ['Aleni', 'Arusha Chini', 'Bomu', 'Chekelo', 'Hai Mbono', 'Kahe Mashariki', 'Kahe Magharibi', 'Karanga', 'Kibosho', 'Kibosho Magharibi', 'Kibosho Mashariki', 'Kibosho Okaoni', 'Kirangi', 'Kisarika', 'Kyalavadi', 'Lemira', 'Lonodongo', 'Mabingo', 'Mahombe', 'Mahoo', 'Makuyuni', 'Malii', 'Mamba', 'Marangu', 'Mbahe', 'Mbokomu', 'Mbuga Mwisho', 'Mengo', 'Mrimbo', 'Mwika', 'Ndaleta', 'Ngumeni', 'Okoani', 'Old Moshi Magharibi', 'Old Moshi Mashariki', 'Olmuringu', 'Pangani', 'Rongo', 'Rutundu', 'Uchumi', 'Uru Mashariki', 'Uru Magharibi', 'Uru Shimbwe', 'Mrawa'],
+    'Moshi Municipal': ['Boma', 'Chekereni', 'Jitengeni', 'Jungo', 'Kahawa', 'Kiboriloni', 'Kilimanjaro', 'Kombo', 'Longido', 'Majengo', 'Mawenzi', 'Mfumuni', 'Mji Mpya', 'Mkorowesho', 'Njoro', 'Pasua', 'Rau', 'Shantitaa', 'Soweto', 'Wari', 'Bondeni'],
+    'Mwanga': ['Jitengeni', 'Kamwashi', 'Karatu', 'Kihara', 'Kirongwe', 'Kombo', 'Kwakoa', 'Langata', 'Lembeni', 'Magoma', 'Maharumbi', 'Makuyuni', 'Mangio', 'Mbono', 'Mindu', 'Mpeleleya', 'Mtero', 'Mgagao', 'Mwanga', 'Ngulu', 'Nyatabenda', 'Kileo', 'Sanya', 'Usangi'],
+    'Rombo': ['Haatenga', 'Kelamfya Mtae', 'Kirangi', 'Makuyuni', 'Malili', 'Mamsera', 'Manda', 'Marangu Magharibi', 'Marangu Mashariki', 'Mengwe', 'Mrao', 'Ngoyoni', 'Olgilai', 'Olmolog', 'Reha', 'Uba', 'Kilimani', 'Makiadi', 'Useri', 'Mashati', 'Kirungu', 'Mahaha'],
+    'Same': ['Beregeka', 'Bwambo', 'Bombo', 'Chome', 'Hedaru', 'Kisiwani', 'Kirangare', 'Maore', 'Mabula', 'Makanya', 'Makorweni', 'Mbaga', 'Mhero', 'Mpinji', 'Nanjara', 'Ndungu', 'Ndovu', 'Ruvu', 'Suji', 'Kihurio', 'Same Mjini', 'Vudee', 'Tae', 'Mabilioni', 'Mghamba'],
+    'Siha': ['Bomangombe', 'Karansi', 'Kia Mtaa', 'Lyamungo Sinde', 'Masama Kusini', 'Nassai', 'Olmotonyi', 'Rongai', 'Rongoni', 'Sanya', 'Sinya', 'Mabula', 'Kishimundu', 'Kirongo', 'Bwela', 'Mandaeusi']
+  },
+  'Lindi': {
+    'Kilwa': ['Bihawanda', 'Kibata', 'Kilwa Kivinje', 'Kilwa Kisiwani', 'Kilwa Masoko', 'Kipatimu', 'Kiranjeranje', 'Lihumu', 'Mandawa', 'Mchinga', 'Mandeni', 'Mkuranga', 'Mikumbi', 'Mpara', 'Miteja', 'Mpumbu', 'Nangoo', 'Njinjo', 'Nyangao', 'Songangani', 'Songosongo', 'Msumbiji', 'Pande Mikumbi'],
+    'Lindi': ['Changarawi', 'Jangwani', 'Kipatimu', 'Liantondo', 'Lihuma', 'Lindi', 'Makonde', 'Matambo', 'Mchinga', 'Mkukuu', 'Mpara', 'Mibanga', 'Mitole', 'Nandemba Mnazi', 'Nandanga', 'Nanje', 'Nguruka', 'Nyamwezi', 'Rutambi'],
+    'Lindi Municipal': ['Azimio', 'Makonde', 'Mbuyuni', 'Mkomwe', 'Miangeni', 'Mkapa', 'Tunguru', 'Sudi', 'Seluka', 'Wandangombe', 'Msikisike', 'Mabengo', 'Lindi Mjini', 'Mtini', 'Wandu'],
+    'Liwale': ['Liwale Mjini', 'Kibata', 'Liwale', 'Micheni', 'Nangoo', 'Nangondo', 'Mkombwe', 'Mombwe', 'Mahanja', 'Luhangarazi', 'Tindimungu', 'Lipumbu', 'Mbuyuni', 'Lukumbedi', 'Mlowa', 'Magomeni', 'Mlalinjo', 'Namatambwe', 'Mandewe'],
+    'Nachingwea': ['Nachingwea', 'Kashuga', 'Kilimahewa', 'Kirangare', 'Lionja', 'Lukangilo', 'Magomeni', 'Mipindimbi', 'Mjingo', 'Mkoka', 'Nandwahi', 'Naumbu', 'Ndondole', 'Rupako', 'Mchemo', 'Masasi', 'Mahanje', 'Matekwe', 'Mkurumekwa', 'Namatambwe'],
+    'Ruangwa': ['Mkukuu', 'Mandawa', 'Mapinduzi', 'Mpara', 'Lindi', 'Mbuyuni', 'Mkoma', 'Kilwa Kivinje', 'Mchinji', 'Mkuranga', 'Nandemba Mnazi', 'Mitunduru', 'Miteja', 'Mianyani', 'Nangoo', 'Mitole', 'Lukumbo', 'Mibweni']
+  },
+  'Manyara': {
+    'Babati': ['Bagara', 'Babati', 'Bashay', 'Bweyemosa', 'Dareda', 'Duru', 'Gallapo', 'Gidagamparara', 'Giting', 'Jeedom', 'Kambi ya Moto', 'Kisangaji', 'Kiru', 'Kongei', 'Magugo', 'Maisaka', 'Mammuti', 'Matufa', 'Mazingara', 'Mbuleni', 'Mula', 'Nangara', 'Nar', 'Qash', 'Riroda', 'Sigino', 'Ufana', 'Vidunda'],
+    'Babati Town': ['Babati', 'Bagara', 'Mwitikira', 'Bweyemosa', 'Gara', 'Magugu', 'Sigino', 'Mazingara', 'Bashay', 'Dareda', 'Mutuka', 'Nkupeka', 'Oldean', 'Mammuti', 'Gidagamparara', 'Maisaka'],
+    'Hanang': ['Bassodeshi', 'Bazingana', 'Gidabalang', 'Gidagamparara', 'Giting', 'Jorom', 'Katesh', 'Kibrebashe', 'Kihumekwa', 'Laghanga', 'Mangisa', 'Marang', 'Masqoit', 'Mazunda', 'Mbulumbulu', 'Mokoto', 'Nahema', 'Ngujini', 'Sambura', 'Tumati', 'Ufana'],
+    'Kiteto': ['Bwagamoyo', 'Dongo', 'Duru', 'Endesh', 'Garisson', 'Imbwe', 'Kamwai', 'Kijiji', 'Kimana', 'Kipsingis', 'Lolkararani', 'Loolera', 'Magadini', 'Magombwe', 'Maibizi', 'Matui', 'Misima', 'Namelok', 'Namayengo', 'Olpirik', 'Partimbo'],
+    'Mbulu': ['Bassotu', 'Borose', 'Dukai', 'Duru', 'Dongobesh', 'Gambana', 'Gidagamparara', 'Gwandabush', 'Haydom', 'Hararat', 'Jorom', 'Mbulumbulu', 'Mangisa', 'Marang', 'Mazedari', 'Makoromba', 'Misimu', 'Mngaro', 'Mwangeza', 'Ndoroni', 'Ngarafa', 'Nkaiti', 'Nsumbu', 'Tlawi', 'Yaida', 'Waret'],
+    'Simanjiro': ['Embarway', 'Kaisho', 'Korongoni', 'Loborsopo', 'Longido', 'Mabwa', 'Mkalo', 'Mkongo', 'Namalulu', 'Olpirik', 'Orboma', 'Pangai', 'Mazimbu', 'Mkomolo', 'Loolera', 'Kimana', 'Imbwe', 'Lolkararani']
+  },
+  'Mara': {
+    'Bunda': ['Biharamulo', 'Bukima', 'Buli', 'Bunda Mjini', 'Chitengi', 'Gasuma', 'Gwitiro', 'Igusule', 'Iramba', 'Kabasa', 'Kabila', 'Karafu', 'Kasumula', 'Kibara', 'Kibuye', 'Kigonga', 'Kigunga', 'Kirogo', 'Kiribo', 'Kitonga', 'Kumu', 'Lamadi', 'Magulibwaki', 'Machinjiri', 'Makongoro', 'Manyamanya', 'Maruku', 'Mateta', 'Migombwa', 'Mwandaba', 'Mwikilazo', 'Nyakatende', 'Nyamtinga', 'Rutuba', 'Saptu', 'Susuni', 'Tegemeo'],
+    'Butiama': ['Bassi', 'Budaka', 'Buhemba', 'Butiama', 'Butiama Segero', 'Bwiregi', 'Dabagero', 'Gwitongo', 'Gwitembu', 'Ibambera', 'Igunduwe', 'Ijenumi', 'Imwitongwe', 'Kabuguza', 'Karole', 'Kibanda', 'Kigombe', 'Kinyariri', 'Kiraracha', 'Kisora', 'Kitongo', 'Kuvinja', 'Kyamoshi', 'Lamadi', 'Mabunga', 'Mahega', 'Makomero', 'Marumba', 'Matinno', 'Mgombasi', 'Mikobweri', 'Mwibona', 'Nyasusu', 'Nyaisho', 'Nyamimaki', 'Nyamongo', 'Nyamweru', 'Rusabi', 'Rwecha', 'Saroza', 'Tagitu'],
+    'Musoma': ['Buswahili', 'Bukima', 'Buseresere', 'Busingata', 'Butimba Mjini', 'Butiama', 'Busiri', 'Bwiri', 'Etaro', 'Gwitiro', 'Iringo', 'Isenye', 'Itieta', 'Kaburi', 'Kalwa', 'Kemunguvi', 'Kigonga', 'Kibasuka', 'Kirogo', 'Kirumi', 'Kwimba', 'Kibuyi', 'Mahenzo', 'Maburumbuzu', 'Mandri', 'Marobhe', 'Matawe', 'Migombwa', 'Mihale', 'Mkodo', 'Mombelo', 'Mossero', 'Muchinji', 'Mwikilazo', 'Mwisenge', 'Nyabirongo', 'Nyabuthe', 'Nyakabinga', 'Nyamtinga', 'Rwamware', 'Saroza', 'Susuni', 'Tagitu'],
+    'Musoma Municipal': ['Bweri', 'Igobwa', 'Kitaji', 'Mabatini', 'Makoko', 'Mkulwe', 'Mkundi', 'Muhalama', 'Mwigobero', 'Nyamwezi', 'Nyamito', 'Senga', 'Suba', 'Bukoba', 'Busiri', 'Kwimba', 'Mkundi', 'Mwisenge'],
+    'Rorya': ['Bukiro', 'Bukona', 'Bukwina', 'Bulyenje', 'Buswahili', 'Buseresere', 'Butahyabatyo', 'Butori', 'Buyenzi', 'Gwembe', 'Gwitiri', 'Igoro', 'Kababuna', 'Kahendi', 'Kanyelele', 'Karunba', 'Kibara Mjini', 'Kibuyi', 'Kiraho', 'Kirogo', 'Kiramweru', 'Kitembe', 'Kirwamba', 'Kyamugongo', 'Lwata', 'Magina', 'Majimoto', 'Mahega', 'Mkimbu', 'Mkurabungai', 'Mombelo', 'Nyakarango', 'Nyamtinga', 'Nyamikoma', 'Nyamburi', 'Nyambono', 'Rahalele', 'Rojo', 'Suba', 'Susuni', 'Tegemeo', 'Tomoni', 'Wanyere', 'Yofee'],
+    'Serengeti': ['Busilana', 'Butiama', 'Gambagwe', 'Ikoma', 'Itunundu', 'Iramba', 'Kenye', 'Machinjiri', 'Magange', 'Makugano', 'Manchira', 'Maradaba', 'Mariwada', 'Marobhe', 'Matongo', 'Mihale', 'Mocheswaguchu', 'Morotonga', 'Mwashiri', 'Nyamoko', 'Nyamramba', 'Nyamtinga', 'Nyamwenda', 'Riana', 'Rogoro', 'Rungurungu', 'Sararara', 'Sensen', 'Tegemeo', 'Yofee', 'Rorigo'],
+    'Tarime': ['Bukabwa', 'Bukiro', 'Bukera', 'Bukumi', 'Busumabugu', 'Bumangi', 'Bunamwini', 'Bureri', 'Busumabu', 'Bwiregi', 'Gokechabamba', 'Gwitembu', 'Ibarenge', 'Ingwe', 'Itiryo', 'Kemanchego', 'Kiribo', 'Kirogo', 'Kitongwe', 'Komasenge', 'Kwigoti', 'Kyungurumo', 'Mahenzo', 'Maheganyi', 'Mabwiregi', 'Matawe', 'Magumbe', 'Michiru', 'Nyamangwere', 'Nyarugusu', 'Nyamramba', 'Nyamtinga', 'Nyamwenda', 'Nyamiko', 'Nyamburi', 'Riana', 'Rwego', 'Saroza', 'Suba', 'Tagichai', 'Tagitu', 'Wanyerere', 'Weremegeri', 'Werugha']
+  },
+  'Mbeya': {
+    'Busokelo': ['Bujigi', 'Bulyaningoti', 'Idiwili', 'Ikukwa', 'Iselya', 'Kapugi', 'Lufingo', 'Lwangwa', 'Mbela', 'Mlale', 'Matakwe', 'Mwaya', 'Njisi', 'Sande', 'Sibwara', 'Lukwitetei', 'Kamsamba', 'Mpakati', 'Lupamwa', 'Lukamba', 'Isenge', 'Iyula', 'Luteba', 'Mkafu', 'Magabike', 'Ilole'],
+    'Chunya': ['Bumiha', 'Buzoba', 'Chunya', 'Halugigo', 'Ifumbo', 'Ipole', 'Iyula', 'Kamsamba', 'Kapalakaja', 'Katumba', 'Kipansi', 'Leveruke', 'Lupatinga', 'Lusewa', 'Mabula', 'Magambua', 'Mahenje', 'Makongoloshi', 'Malangali', 'Masuga', 'Matundasi', 'Mbambo', 'Mkombwe', 'Mpanda', 'Mwambani', 'Mwasumbi', 'Mwawumbi', 'Ndembo', 'Ngulungulu', 'Ninde', 'Shibole', 'Sinde', 'Sopa', 'Uhambule'],
+    'Kyela': ['Bujunga', 'Busale', 'Busale Tende', 'Busekesa', 'Busunga', 'Dibale', 'Ikanda', 'Ikukole', 'Ikokoba', 'Ipande', 'Isale', 'Katumba Songwe', 'Kavala', 'Kikoka', 'Kipanje', 'Lugango', 'Lusa', 'Lutegale', 'Machembela', 'Maendeleo', 'Mahenge', 'Makanga', 'Malunda', 'Mangaka', 'Mataka', 'Matenga', 'Matongo', 'Mbako', 'Mbamba Bay', 'Mbugani', 'Mdeke', 'Mgwelo', 'Miloloji', 'Mkola', 'Mpata', 'Mpondamalia', 'Mwaya', 'Nakiaya', 'Nangomba', 'Ngana', 'Ngolango', 'Ngulu', 'Nyambo', 'Nyamwaka', 'Pangale', 'Ruhwa', 'Ruanda', 'Songwe', 'Tangwi', 'Tukuyu', 'Ujirani', 'Umoja', 'Upenja', 'Vinukile', 'Vyambugu'],
+    'Mbarali': ['Chobe', 'Guluka', 'Igawa', 'Itamboleo', 'Kapunga', 'Mahongole', 'Mabula', 'Majenja', 'Makwaleli', 'Malangali', 'Mbalazi', 'Mbuyuni', 'Mkambarani', 'Mkombwe', 'Mpande', 'Mwamapala', 'Mwananchi', 'Ngangali', 'Rujewa', 'Ubaruku', 'Ulalemi', 'Wangombe', 'Wangingombe', 'Wanguru', 'Mateka', 'Magulwe'],
+    'Mbeya': ['Bulyaningoti', 'Chigaeni', 'Igale', 'Igombe', 'Ihowa', 'Ilembo', 'Inyala', 'Itope', 'Kamsamba', 'Kaporogwe', 'Karema', 'Katembo', 'Lema', 'Lubombo', 'Lufingo', 'Lughangaio', 'Lugulu', 'Magaba', 'Mahanje', 'Mbalizi', 'Mbalizi Magharibi', 'Mbalizi Mashariki', 'Mpunguti', 'Msia', 'Mwangombe', 'Mwanawatete', 'Nanganga', 'Ndola', 'Ndetema', 'Ngongoma', 'Ngulugulu', 'Nsovo', 'Sajimangombe', 'Songwe', 'Utalii', 'Wangingombe', 'Wanguru'],
+    'Mbeya City': ['Bwalali', 'Imalilo', 'Isye', 'Itende', 'Iyela', 'Jida', 'Kalobe', 'Kawelekwe', 'Maendeleo', 'Mabanda', 'Mabunga', 'Mahango', 'Makoba', 'Malangali', 'Mbalizi', 'Mfi', 'Mwembe', 'Mwashili', 'Mwasumbi', 'Ngelima', 'Nguruba', 'Nsalaga', 'Nyamilembo', 'Sinde', 'Soweto', 'Tukuyu', 'Uyole', 'Vigaeni', 'Vikindu', 'Wandete', 'Yeka'],
+    'Rungwe': ['Bujenje', 'Bumbire', 'Busale', 'Bwisi', 'Hapalogo', 'Ilolo', 'Isoko', 'Kafukule', 'Kamwanga', 'Kandete', 'Kantorondo', 'Kapugi', 'Kasumbale', 'Kibale', 'Kifuruka', 'Kijango', 'Kisondela', 'Kyimo', 'Lufingo', 'Lughalo', 'Lujumbwe', 'Lupaso', 'Luteba', 'Lwangwa', 'Maganjwa', 'Makandali', 'Malue', 'Malwenzi', 'Matema', 'Matukuronko', 'Matumba', 'Mbage', 'Mbakaja', 'Mbalazi', 'Mfurumuna', 'Miseke', 'Mpombe', 'Mpunga', 'Msafiri', 'Mtwango', 'Mwakaleli', 'Mwakyusa', 'Mwambwiga', 'Mwemesa', 'Nagugwe', 'Nalendo', 'Nampoma', 'Naulambwe', 'Ndali', 'Nitekela', 'Panguma', 'Rungwe', 'Sanje', 'Suma', 'Tukuyu', 'Turiani', 'Wabu']
+  },
+  'Morogoro': {
+    'Gairo': ['Chakwale', 'Gairo', 'Ibingu', 'Idewa', 'Ilonge', 'Itumba', 'Kibedya', 'Kibombo', 'Kibau', 'Kibumaki', 'Mandewa', 'Mandege', 'Masanga', 'Mbuga', 'Mkuru', 'Mvomero', 'Rubeho', 'Tindiga', 'Turu'],
+    'Kilombero': ['Chita', 'Idewa', 'Ifakara', 'Ikanga', 'Kibaoni', 'Kidatu', 'Kisawasawa', 'Kisegese', 'Liparamba', 'Lugoba', 'Luhonilo', 'Mahuta', 'Mangula', 'Matangatatu', 'Mbingu', 'Mchukuwe', 'Mfually', 'Mkamba', 'Mnanga', 'Mofu', 'Mwambao', 'Mgeta', 'Sanje', 'Lugendo'],
+    'Kilosa': ['Berega', 'Bwawani', 'Chanzewa', 'Chigugu', 'Dakawa', 'Dumila', 'Kasangazi', 'Kimamba', 'Kilangali', 'Kimambila', 'Kisanga', 'Kisawasawa', 'Kibaoni', 'Kidudya', 'Kibogwa', 'Kindai', 'Lumuma', 'Mabwerebwere', 'Maguha', 'Magomeni', 'Mabula', 'Mamoyo', 'Mandewa', 'Masagali', 'Mbwawa', 'Mazaza', 'Mendeko', 'Mgomba', 'Mgongola', 'Mkonda', 'Mkula', 'Mkumi', 'Mkulula', 'Mlandizi', 'Mlimani', 'Mmbeta', 'Mombosele', 'Mpunga', 'Msowero', 'Mturabamba', 'Mvumi', 'Mvumi Makulu', 'Rudewa', 'Ruimaguha', 'Ruvu', 'Tindiga', 'Tunguli', 'Ungombe', 'Vidunda', 'Zembole'],
+    'Malinyi': ['Changombe', 'Kiroka', 'Kibasila', 'Liwale', 'Mkiranja', 'Mpondamalakamali', 'Mlombo', 'Mgomba', 'Mkondoa', 'Sagamagaza', 'Mbingu', 'Kidatu', 'Mfurumuna', 'Sanje'],
+    'Morogoro': ['Bwakila Chini', 'Bwakila Juu', 'Bwakila Magharibi', 'Bwakila Mashariki', 'Gevukenya', 'Kibogwa', 'Kisangara', 'Kisaki', 'Konde', 'Lundi', 'Luvuleni', 'Mafisa', 'Magole', 'Maguha', 'Mikese', 'Mkambalani', 'Mlungui', 'Mndezo', 'Mongai', 'Mtego', 'Mvomero', 'Mvuzi', 'Selous', 'Sudi', 'Tawala', 'Tungi', 'Ulenge', 'Vidunda', 'Vikenge', 'Kidodi', 'Kibawa', 'Mazimba', 'Mlali', 'Magomeni'],
+    'Morogoro Municipal': ['Boma', 'Bidilika', 'Bigwa', 'Changombe', 'Feza', 'Kahawa', 'Kikundi', 'Kiwanja cha Ndege', 'Kihonda', 'Kiroka', 'Kiswani', 'Lugala', 'Mafisa', 'Makumbusho', 'Makuyuni', 'Maendeleo', 'Mambo Sabini', 'Mbalizi', 'Mikese', 'Mji Mpya', 'Mlandizi', 'Mlimani', 'Mmengi', 'Mkoma', 'Mkundi', 'Msanbwa', 'Mworoli', 'Mzimuni', 'Ngwanaga', 'Nyegezi', 'Rubuga', 'Sabasaba', 'Sengali', 'Tawa', 'Tungi', 'Vidudu', 'Wete', 'Wino', 'Yombo'],
+    'Mvomero': ['Langali', 'Dewa', 'Dowans', 'Hendriki', 'Hanga', 'Kanga', 'Kibanda', 'Kidanga', 'Kikelewasi', 'Kisawasawa', 'Kwambe', 'Lubungo', 'Lugeni', 'Makuyuni', 'Masiuwa', 'Matongolande', 'Melela', 'Mhamala', 'Mkungani', 'Mlali', 'Mvomero', 'Mwenkongo', 'Nyandira', 'Pangawe', 'Sewahi', 'Tchenzema', 'Tondoni', 'Tuliani', 'Turi', 'Vidudu', 'Wota'],
+    'Ulanga': ['Biro', 'Ega', 'Ifakara', 'Igowa', 'Ihansa', 'Kichangani', 'Kilombero', 'Lugogo', 'Mahenge', 'Mbingu', 'Mdera', 'Mfiwa', 'Mgongola', 'Misugusugu', 'Msita', 'Mtambaswale', 'Mwaya', 'Mfiringa', 'Ngoheranga', 'Ruaha', 'Sawala', 'Sonjo', 'Vidudu', 'Wami']
+  },
+  'Mtwara': {
+    'Masasi': ['Chikolopedi', 'Chikhulya', 'Chilangala', 'Chimuri', 'Chinongwe', 'Kahoro', 'Kilimani', 'Lukwika', 'Lulindi', 'Lyenya Magharibi', 'Lyenya Mashariki', 'Machomere', 'Maheshi', 'Makambalani', 'Mandeleo', 'Marasi', 'Marika', 'Mihambwe', 'Mkurumekwa', 'Mnali', 'Mneru', 'Mpindimbi', 'Mtandi', 'Mtopwa', 'Mwalusanya', 'Nampewa', 'Nanda', 'Nanguruwe', 'Nangomba', 'Nanyamba', 'Nalika', 'Ndibu', 'Nembe', 'Nigongwe', 'Nangovi', 'Sindano', 'Tuwangye', 'Vumbi'],
+    'Masasi Town': ['Changarawe', 'Chaula', 'Chimanjile', 'Chisegu', 'Jida', 'Lindi', 'Mabudini', 'Makole', 'Mandewa', 'Mapedi', 'Marika', 'Mjini Magharibi', 'Mjini Mashariki', 'Mohoro', 'Mtandi', 'Mtopwa', 'Ngombo', 'Sisi', 'Stendika'],
+    'Mtwara': ['Bweni', 'Chihenge', 'Dihimba', 'Dihuma', 'Kgadama', 'Kisungule', 'Lukuledi', 'Mahuruka', 'Malasi', 'Manduta', 'Maringa', 'Mayanga', 'Mbawala', 'Mbande', 'Mtindiro', 'Mbati Mbati', 'Mtiniko', 'Mbwinji', 'Mchinga', 'Mbuyuni', 'Mgao', 'Milangombe', 'Mkuruma', 'Mpigwa', 'Mtopwa', 'Mtumboy', 'Naliendeli', 'Nambambo', 'Namagulu', 'Nampewa', 'Nanguruwe', 'Nanganga', 'Nguruku', 'Nyamkundo', 'Nyamwaka', 'Nyamwezi', 'Rangi', 'Ruanda', 'Sinamalenga', 'Tandahimbo', 'Tingi', 'Mwera', 'Mdimbamgungulu'],
+    'Mtwara Municipal': ['Chikongola', 'Chuno', 'Gambauha', 'Jangwani', 'Likomanga', 'Magomeni', 'Majengo', 'Malindi', 'Mbaleni', 'Mjini Magharibi', 'Mjini Mashariki', 'Mtawanya', 'Mtendele', 'Mtwara', 'Nanganga', 'Nyumba ndogo', 'Reli', 'Sabasaba', 'Sitini', 'Stendike', 'Tutuma', 'Ufukoni'],
+    'Nanyumbu': ['Bulu', 'Chikolopedi', 'Chihanga', 'Chikulukuti', 'Chilangala', 'Hirondo', 'Kakese', 'Kampisa', 'Kawawa', 'Kipara', 'Lambatwe', 'Lipumbu', 'Luguru', 'Lukwika', 'Lulindi', 'Magagura', 'Mahanje', 'Mahuru', 'Makere', 'Marafa', 'Marasi', 'Marika', 'Masasi', 'Matumbi', 'Mchenga', 'Mlingulu', 'Mpindimbi', 'Mtena', 'Mtopwa', 'Nanguruwe', 'Nampewa', 'Ndibu', 'Songambele'],
+    'Newala': ['Changombe', 'Chihanga', 'Chikongola', 'Chilangala', 'Chilulu', 'Chirombo', 'Chitowe', 'Kamboni', 'Kikuli', 'Kikundi', 'Lidungano', 'Lihimalile', 'Liloka', 'Liparamba', 'Lukwika', 'Lulindi', 'Magomeni', 'Maheshi', 'Mandewa', 'Marasi', 'Marika', 'Mlingotwe', 'Mihambwe', 'Mkurumekwa', 'Mpale', 'Mpindimbi', 'Mtopwa', 'Nacho', 'Nambewa', 'Nampewa', 'Nangondo', 'Nanguruwe', 'Nembe', 'Ngongo', 'Nyasa', 'Tuwangye', 'Wambatu'],
+    'Tandahimba': ['Chaume', 'Chiulu', 'Chinombwe', 'Chisegu', 'Gauru', 'Gombe', 'Kitama', 'Lionja', 'Lukwika', 'Lupaso', 'Madimba', 'Mahuta', 'Makukwe', 'Malinga', 'Mandewa', 'Marangwe', 'Marika', 'Matambarali', 'Mcholi II', 'Mcholi I', 'Micheni', 'Milimani', 'Minyugwe', 'Mkalanga', 'Mlola', 'Mkundi', 'Mlingula', 'Mipingo', 'Mpindimbi', 'Mtama', 'Mtopwa', 'Mwera', 'Nahumba', 'Nambewa', 'Nampewa', 'Nanguruwe', 'Nanjoka', 'Nanyamba', 'Ndibu', 'Ndondole', 'Nguruka', 'Nyamwawa', 'Nyamwaka', 'Rutamba', 'Sinamalenga', 'Tandahimba']
+  },
+  'Mwanza': {
+    'Buchosa': ['Bubinza', 'Bukumi', 'Buhunda', 'Bukindo', 'Bulegei', 'Buziku', 'Busisi', 'Bulamba', 'Gana', 'Gemeza', 'Igabula', 'Igalula', 'Ikomwa', 'Iligamba', 'Ilogha', 'Isamira', 'Ishashi', 'Kagera', 'Kabangana', 'Kafunzo', 'Kangete', 'Kansenda', 'Karume', 'Katoro', 'Kiloleli', 'Kisesa', 'Kiwabugimba', 'Luchelele', 'Mahede', 'Majita', 'Mandwana', 'Mahala', 'Mihango', 'Misasi', 'Mwasemo', 'Nagusa', 'Nyakakika', 'Nyamilandala', 'Nyamirembe', 'Nyamanguta', 'Nyaminyile', 'Nyantobo', 'Nyamisati', 'Nyakakika', 'Pemba', 'Sanambugu', 'Sapela', 'Sota', 'Tanganyika', 'Ukwerere', 'Wanzuki'],
+    'Ilemela': ['Bugilinga', 'Buswelu', 'Kahama', 'Kitangari', 'Kirumba', 'Kishimba', 'Lenganengwa', 'Mirongo', 'Mkolandoni', 'Pasiansi', 'Sawida B', 'Sawida A', 'Senga', 'Vigwaza'],
+    'Kwimba': ['Buchambi', 'Budekwa', 'Bulimba', 'Bupamwa', 'Gagwe', 'Gumagambela', 'Igale', 'Igalula', 'Igongwa', 'Igulus', 'Ihanagila', 'Isalakabe', 'Itaba', 'Kabita', 'Kahangara', 'Kangaboza', 'Kasola', 'Kasololo', 'Kasalu', 'Kashiroota', 'Kayenze', 'Kisada', 'Kishale', 'Kishapwe', 'Kiwabugimba', 'Kolomero', 'Ligeto', 'Lugulu', 'Lyakipuka', 'Lwamgasa', 'Lwangaza', 'Mahenzo', 'Masambara', 'Masurura', 'Mbalika', 'Mbugani', 'Mhongola', 'Milambo', 'Misasi', 'Mitondo', 'Mkoma', 'Mkulwe', 'Mpakanji', 'Msalabani', 'Mwamafuwo', 'Mwamgongo', 'Mwasemo', 'Mwelengwa', 'Mwerengo', 'Nanda', 'Ndalambangombe', 'Nduruma', 'Nghaya', 'Nkanda', 'Nyamilama', 'Nyamikali', 'Nyamkemba', 'Nyangombe', 'Nyantobo', 'Nyegina', 'Ruhimbi', 'Sumve', 'Tindigy', 'Titema', 'Tutuo', 'Ukwerere', 'Wanyama'],
+    'Magu': ['Bujebo', 'Bulamba', 'Bujumbwe', 'Bukumba', 'Bulima', 'Bumba', 'Buziku', 'Bwasalala', 'Buseya', 'Igombe', 'Ilanamakwa', 'Iligamba', 'Iseni', 'Jiri', 'Kabaja', 'Kafukule', 'Kahangara', 'Kahunda', 'Kaisabwa', 'Kakomeo', 'Kamenyeka', 'Kamukura', 'Kandeka', 'Kanigita', 'Karosi', 'Kasamwa', 'Kasenga', 'Kashishi', 'Kasogoro', 'Kigongo', 'Kisa', 'Kitongo', 'Kiwawu', 'Lamadi', 'Lukaya', 'Lumgasa', 'Mahenzi', 'Makalinzi', 'Makongolo', 'Malangu', 'Malili', 'Masaba', 'Masanga', 'Mataba', 'Mbele', 'Mbugani', 'Menda', 'Mirunda', 'Mshikila', 'Misisi', 'Mitindo', 'Mkurura', 'Mpombwe', 'Mshikamano', 'Mwamgongo', 'Mwandama', 'Mwasela', 'Ndagalu', 'Nharalanda', 'Nkanda', 'Nkenge', 'Nyangombe', 'Nyanguge', 'Nyantobo', 'Nyamilama', 'Nyamweru', 'Ruhanga', 'Sawida B', 'Sawida A', 'Senga', 'Shalwesbe', 'Sumve', 'Tinde', 'Tuliani', 'Wadoka', 'Wanyama', 'Yomadoni'],
+    'Misungwi': ['Buhemba', 'Bukongo', 'Bukumbi', 'Bulyashirolwa', 'Bulemeji', 'Busega', 'Busingata', 'Buswahili', 'Fevete', 'Galilosi', 'Gana', 'Gigagwe', 'Igale', 'Iligamba', 'Iligana', 'Inonkwa', 'Iseni', 'Isenga', 'Itongo', 'Kabangana', 'Kabila', 'Kahangara', 'Kahima', 'Kalangu', 'Kamugaa', 'Kamugana', 'Kandare', 'Kasoa', 'Kasole', 'Kasololo', 'Kasoma', 'Katoro', 'Kenye Mwalye', 'Kijiji Chini', 'Kisesa', 'Kisima', 'Kitongo', 'Lamadi', 'Lupele', 'Lwelegu', 'Mabale', 'Mahede', 'Makurusi', 'Malasa', 'Maligutu', 'Mbalika', 'Mhada', 'Mhangaza', 'Mji Mpya', 'Mfizi', 'Milambo', 'Misasi', 'Misungwi', 'Mwamabombo', 'Mwasemo', 'Nghaya', 'Nghonga', 'Nhashi', 'Nyerere', 'Nyamilama', 'Nyamigogo', 'Nyamikali', 'Nyamweru', 'Nyamwezi', 'Nyantobo', 'Nyegina', 'Runyanya', 'Sanamuagabu', 'Sanza', 'Sawida A', 'Senga', 'Sumve', 'Tegema', 'Tutuo', 'Ugali', 'Ukwerere', 'Wanyama', 'Yongosi'],
+    'Nyamagana': ['Buhongwa', 'Igogo', 'Igombe', 'Kahama', 'Kirumba', 'Mabatini', 'Mkurura', 'Mkunku', 'Mirongo', 'Mlimani', 'Nyamagana', 'Nyamitha', 'Nyambugu', 'Sawida B', 'Senga'],
+    'Sengerema': ['Bukoko', 'Busega', 'Busisi', 'Buswahili', 'Bukomeko', 'Bulyashirolwa', 'Bukoko', 'Bumbuli', 'Bumangi', 'Busega', 'Busisi', 'Bukoko', 'Bukole', 'Buyagu', 'Buziku', 'Fukulanda', 'Galilosi', 'Geza Mapera', 'Giligwa', 'Ibisamwenyoka', 'Igoma', 'Igombe', 'Ihandazilo', 'Iligamba', 'Ilogha', 'Imarukwa', 'Inonkwa', 'Isalakabe', 'Isangabwasi', 'Itaka', 'Kabanga', 'Kabangana', 'Kabula', 'Kafunzo', 'Kahangara', 'Kashararo', 'Kambarage', 'Kandawa', 'Kanigita', 'Kansole', 'Kasenyi', 'Kasiga', 'Katwebo', 'Kayenze', 'Kazunzu', 'Kibara', 'Kigongwa', 'Kiloleli', 'Kishago', 'Kishanda', 'Kisongole', 'Kitongo', 'Kiwabugimba', 'Lamadi', 'Lamwanga', 'Lubugu', 'Luchelele', 'Lugulu', 'Lugushu', 'Lutubagwe', 'Lwajilo', 'Mahede', 'Makula', 'Malasa', 'Maligutu', 'Mbalika', 'Mhongolwa', 'Migombwa', 'Milambo', 'Mbulilo', 'Misasi', 'Misungwi', 'Mitondo', 'Mkoma', 'Mkulwe', 'Mpwani', 'Mkomazya', 'Mnkoma', 'Msalabani', 'Msoma', 'Mwaigumba', 'Mwamgongo', 'Mwaseluka', 'Mwelengwa', 'Ndalambangombe', 'Ngaya', 'Ngombe', 'Nindegwa', 'Nkenge', 'Nyamgongo', 'Nyamigogo', 'Nyamilama', 'Nyamwezi', 'Nyantobo', 'Nyegina', 'Ruhimbi', 'Senga', 'Sumve', 'Tegemeo', 'Tinde', 'Tutuo', 'Usharibu', 'Wanyama', 'Waziri', 'Yongosi'],
+    'Ukerewe': ['Bwisya', 'Bukiko', 'Bukindo', 'Bukondo', 'Bukungu', 'Bukoba', 'Bukomela', 'Bulinda', 'Bumeri', 'Buranja', 'Buziku', 'Busereserele', 'Bukungu', 'Bwisya', 'Bweri', 'Igunda', 'Igolwa', 'Ikugeta', 'Ilogha', 'Ilangaza', 'Italo', 'Kagunguli', 'Kahangara', 'Kakisandu', 'Kasenda', 'Kasita', 'Katembe', 'Kiloleli', 'Kisukuru', 'Kizila', 'Lugulu', 'Muriti', 'Mwaluiwa', 'Mururi Muhanza', 'Namasabo', 'Ndagaru', 'Nduruma', 'Ngaya', 'Nkenge', 'Nyaludemba', 'Nyamgongo', 'Nyamwezi', 'Nyamweru', 'Nyamungu Magharibi', 'Nyamungu Mashariki', 'Nyanzela', 'Nyelwa', 'Rwamgongo', 'Rusese', 'Rukuba', 'Rulongo', 'Semdoe', 'Stami', 'Sawida', 'Sizigi', 'Ssenye', 'Tegemeo', 'Tumaini', 'Ubuga', 'Ukerewe Mashariki', 'Ukerewe Magharibi', 'Ukurura', 'Vigazini']
+  },
+  'Njombe': {
+    'Ludewa': ['Kandete', 'Ludewa', 'Lupingu', 'Lufino', 'Luhangarazi', 'Luchangasi', 'Lugendo', 'Lusewa', 'Mahu', 'Lukasi', 'Lupemele', 'Mlangali', 'Mawelele', 'Lumuli', 'Lupande', 'Lutetele', 'Litembe', 'Mdimba', 'Makale', 'Iwawa', 'Kawawanga', 'Mkukwe', 'Mkowe', 'Lupembe', 'Lugendo', 'Lupingu'],
+    'Makambako': ['Itagata', 'Itundu', 'Kimagai', 'Kibogwa', 'Makambako', 'Mtegatigwa', 'Mtwango', 'Mdandu', 'Igale', 'Mlowa', 'Mjini', 'Itundu'],
+    'Makete': ['Ipepo', 'Itumba', 'Kapoli', 'Kivila', 'Lupovu', 'Lupemele', 'Mbalamata', 'Lagangulu', 'Mahiha', 'Ikumbi', 'Lukuhu', 'Magengai', 'Lugulu', 'Lugangazi', 'Kipagaro', 'Mloma', 'Matenga', 'Luhangarazi'],
+    'Njombe': ['Igagala', 'Igongolo', 'Ihanu', 'Ikuwo', 'Imalinyi', 'Itundu', 'Kapilula', 'Kifunya', 'Kilimarungal', 'Kilolo Njombe', 'Lagosa', 'Lagunda', 'Lekatu', 'Lugulu', 'Lukindo', 'Lupembe', 'Luhangarazi', 'Lyamgasa', 'Magoma', 'Matola', 'Mdandu', 'Mfoweko', 'Mfwewele', 'Mgela', 'Mbwabwa', 'Mahenzi', 'Mjini', 'Mlolo', 'Mlangali', 'Mlombe', 'Mtendele', 'Mlingo', 'Msamala', 'Mtumba', 'Mwangombe', 'Mwengele', 'Ndongosi', 'Nundu', 'Nyombo', 'Nyamilembo', 'Saja', 'Tagama', 'Ukumbi', 'Utiri', 'Yavili'],
+    'Njombe Town': ['Ihanga', 'Kifanzi', 'Lupembe', 'Luhangarazi', 'Lagili', 'Lupandi', 'Lupingu', 'Matola', 'Magomeni', 'Mjini', 'Mlolo', 'Mwamgongo', 'Nyamwezi', 'Ndongosi', 'Nundu', 'Nyombo', 'Saja', 'Igwabiga', 'Itundu', 'Mjini Mashariki', 'Mjini Magharibi'],
+    'Wangingombe': ['Igonda', 'Igombe', 'Ihahi', 'Ihanga', 'Imalilo', 'Itundu', 'Kafuko', 'Kapalala', 'Kifumbi', 'Kipengere', 'Kisegese', 'Kitunda', 'Lagunduzi', 'Luhangarazi', 'Lukindo', 'Lupembe', 'Lyamgasa', 'Mahanje', 'Mbarwawe', 'Mdandu', 'Mfwewele', 'Mlangali', 'Mkalenga', 'Mkami', 'Mlumula', 'Mpomtambwe', 'Mtomotembweli', 'Msanga', 'Mtumba', 'Mtimbila', 'Mwedzi', 'Nyamikali', 'Nyamwaka', 'Nundu', 'Utiri', 'Yavili', 'Igale', 'Imalinyi', 'Kapilula']
+  },
+  'Pwani': {
+    'Bagamoyo': ['Bwilingi', 'Buyuni', 'Dunda', 'Kerege', 'Kibaoni', 'Mabruki', 'Magomeni', 'Mandera', 'Mandani', 'Magole', 'Makurumla', 'Maruku', 'Marui', 'Maturu', 'Mbweni', 'Mlingotini', 'Mkanga', 'Mpiya', 'Msezimini', 'Mukandasi', 'Mwambao', 'Mwendapuso', 'Mwisenge', 'Pande', 'Pangani', 'Runzewe', 'Sanje', 'Tongo', 'Tumbigili', 'Yombo', 'Yuni', 'Zinga'],
+    'Kibaha': ['Bamsha', 'Beregeka', 'Buhemba', 'Bulunde', 'Funge', 'Geta', 'Kalebe', 'Kibaha', 'Kiguruni', 'Kimanga', 'Kisawasawa', 'Kisemvile', 'Luhangarazi', 'Lugoba', 'Magomeni', 'Mahonda', 'Majeleko', 'Masuguru', 'Mbezi', 'Mbuta', 'Misugusugu', 'Mlalinjo', 'Mkurura', 'Mlandizi', 'Mlombo', 'Mbigiri', 'Mkange', 'Mpakani', 'Msangani', 'Mwendokasi', 'Mwin', 'Ngaya', 'Pangani', 'Pwani', 'Sewe', 'Sungwi', 'Tambuka', 'Tumba', 'Vigwaza', 'Vikumburu', 'Wami', 'Yaveni'],
+    'Kibaha Town': ['Boko', 'Buyuni', 'Goba', 'Hanendasidle', 'Kibaha Mjini', 'Kibaha Mkongo', 'Kibaha Mlandizi', 'Kibaha Magogoni', 'Kibaha Misugusugu', 'Kigamboni', 'Magomeni', 'Makurumla', 'Mbezi Lugurunyoni', 'Mbegani', 'Mhaga', 'Misugusugu', 'Mkurura', 'Mkwajuni', 'Mkuranga', 'Msanga', 'Msalabani', 'Mwande', 'Mwambao', 'Mwendokasi', 'Ngaya', 'Pangani', 'Sunge', 'Tambuka', 'Vigwaza', 'Wami', 'Yomboni'],
+    'Kibiti': ['Bimbi', 'Bogoro', 'Bungu', 'Kajifihwa', 'Kibiti', 'Kikale', 'Kisiju', 'Kitundu', 'Kwale', 'Kwawale', 'Lugufitweni', 'Mahunj', 'Mchinja', 'Mdimbamwingi', 'Mgbati', 'Mgeni', 'Mgondwi', 'Mjawa', 'Mkarakata', 'Mkurura', 'Mkusu', 'Mlowa', 'Mohoro', 'Mbwawa', 'Mpakani', 'Mbuta', 'Mdimba', 'Mlali', 'Mpale', 'Mpimbi', 'Mpera', 'Mkukuu', 'Mkunamwendo', 'Mlongazi', 'Misungusungu', 'Misufini', 'Mitole', 'Mtwalo', 'Ngurukazi', 'Njojelo', 'Salale', 'Sungwi', 'Tabata', 'Tambuka', 'Tawaleni', 'Ungingilelele', 'Vigata', 'Vigwaza', 'Wami', 'Yombwe', 'Zomamwali'],
+    'Kisarawe': ['Bubu', 'Chakenge', 'Chole', 'Kibada', 'Kibuta', 'Kisarawe', 'Kurui', 'Marui', 'Masaki', 'Maruku', 'Mchukwi', 'Misingisha', 'Mubagaza', 'Mkamba', 'Mkurura', 'Mtoni', 'Mtamba', 'Mbugani', 'Mkanga', 'Mbuta', 'Mitole', 'Mkuranga', 'Misungusungu', 'Mlombo', 'Mukuranga', 'Mlowa', 'Mtomoni', 'Kisiwani', 'Msafiri', 'Mkurura', 'Mkonde', 'Vikumburu', 'Wami', 'Yombo'],
+    'Mafia': ['Bweni', 'Chole', 'Jibondo', 'Jovu', 'Kungwi', 'Mafia Mjini', 'Magunda', 'Makangale', 'Mkuranga', 'Mbalanga', 'Mbuta', 'Mbuyuni', 'Ngombeni', 'Ndagoni', 'Pugu', 'Sitakani', 'Toto', 'Tumbawe', 'Tumbije', 'Yombwe'],
+    'Mkuranga': ['Bumala', 'Bumungwi', 'Buyuni', 'Kibanga', 'Kibiti', 'Kisiju', 'Kifumangombe', 'Kijiweni', 'Kisarawe', 'Kisawasawa', 'Kitundu', 'Lugufu', 'Mahonda', 'Magomeni', 'Makurumla', 'Marketea', 'Mbwawa', 'Mbuta', 'Mkuranga', 'Mbegani', 'Mgeni', 'Mgombani', 'Mkangaga', 'Mkerege', 'Mkuranga', 'Mlanzo', 'Mkumbi', 'Mohoro', 'Mkurura', 'Mpimbi', 'Mkongamato', 'Misufini', 'Mlali', 'Mpakani', 'Mombwe', 'Mkwenkwe', 'Mlemwa', 'Misungusungu', 'Msafiri', 'Mitole', 'Mtwalo', 'Mtoni', 'Ngaya', 'Nyamwaka', 'Nyamkongo', 'Pangani', 'Tumbigili', 'Vigwaza', 'Yomboni'],
+    'Rufiji': ['Bungu', 'Bwelele', 'Kalebe', 'Kibiti', 'Mdimbamwingi', 'Mohoro', 'Mlowa', 'Mkuranga', 'Mkurura', 'Mlowa Mkubwa', 'Mhanga', 'Mlowa Mdogo', 'Mohoro Mbuyuni', 'Mkurura', 'Mkukuu', 'Mkumbi', 'Mbuta', 'Mbuyuni', 'Mohoro', 'Mtamba', 'Mkurura', 'Msalabani', 'Mzomawe', 'Mlali', 'Mdimba', 'Mkurura', 'Mkumbi', 'Mbagi', 'Mhimbawe']
+  },
+  'Rukwa': {
+    'Kalambo': ['Kalambo', 'Kowakapale', 'Mateyo', 'Kalambo Mjini', 'Misumba', 'Mkuu', 'Makalenge', 'Mkombola', 'Msalabani', 'Mpui', 'Nkombe', 'Mbebe', 'Senga', 'Mkumbi', 'Kala', 'Sifua'],
+    'Nkasi': ['Bujomomwinyi', 'Kafungu', 'Kasalamula', 'Kate', 'Kwela', 'Laela', 'Lubumbamwe', 'Lumbe', 'Lumbila', 'Lunyanyamila', 'Mabwikila', 'Magambi', 'Makumba', 'Matale Mbinga', 'Mbushi', 'Mfinga', 'Mtoni', 'Mohasi', 'Mkome', 'Ninde', 'Nkasi', 'Rahalele', 'Songwe', 'Sriwa', 'Mwamvita', 'Mkindi', 'Ndembo', 'Wapameso', 'Kampemba', 'Lipumba'],
+    'Sumbawanga': ['Chalaumnazi', 'Chala', 'Chala Makolo', 'Chankila', 'Chumi', 'Ifule', 'Ipyanda Mwambianyi', 'Ipyanda Mshinsha', 'Kalambo Mwito', 'Kalangala', 'Kamtingana', 'Kangasi', 'Kapalagala', 'Kaporompara', 'Kaporo', 'Kasanga', 'Kipeta', 'Kiswendi Kabuko', 'Kwamgongwa', 'Laela', 'Lemonzu', 'Lwafu', 'Mabrukini', 'Mafyeni', 'Mantumbi', 'Mfinga', 'Mohasi', 'Mkole', 'Mkomazi', 'Mlale', 'Mlebe', 'Mpui Mulimba', 'Mulongosi', 'Musa Mpanda', 'Mwimbi', 'Mandabwa', 'Ndima', 'Ngolengwa', 'Ngongo', 'Nkonko', 'Ntundu', 'Reli', 'Ruhila', 'Sapoka', 'Sita', 'Sumbawanga Mjini', 'Vugwa Mwito', 'Yale', 'Zumbwa'],
+    'Sumbawanga Municipal': ['Chanji', 'Matema', 'Mazwi', 'Mbalakisi', 'Misumba', 'Mkomazi', 'Mkumbi', 'Mlanza', 'Mtomoni', 'Mtowelele', 'Mwenemamba', 'Ngondo', 'Ngombe', 'Ntundu', 'Nyamwezi', 'Panguma', 'Rahalele', 'Sumbawanga Mjini', 'Tandawale', 'Wapameso', 'Zamani', 'Mkonona']
+  },
+  'Ruvuma': {
+    'Mbinga': ['Haho', 'Litenchele', 'Lugela', 'Makojo', 'Mbinga Mjini', 'Mburuma', 'Mkirika', 'Mlimani', 'Mpapa', 'Mrima', 'Mtumbi', 'Mtomoko', 'Ngima', 'Ngerengue', 'Nyamwaga', 'Nyamwezi', 'Ruhangarazi', 'Ruhuhu', 'Rukwa Moja', 'Rutamba', 'Rwinga', 'Rwinga Mpya', 'Songwe', 'Uwamba', 'Venga Moja', 'Vugwa Mwito', 'Yombo', 'Kihalamanga'],
+    'Mbinga Town': ['Kihungani', 'Mbinga Mjini', 'Mbinga Mkubwa', 'Mtakajili', 'Mvomero', 'Mwambao', 'Nyamweru', 'Ngoyo', 'Rwinga', 'Sangasanga', 'Songambele'],
+    'Namtumbo': ['Litembo', 'Lueguhulo', 'Lugema', 'Lugeregere', 'Lukima', 'Mlangali', 'Mkukumila', 'Mpelinga', 'Mtipa', 'Mlangalanga', 'Mlongo', 'Mkumbi', 'Msalabani', 'Mtundu', 'Mkonde', 'Rwinga', 'Luhangarazi', 'Mbuyuni', 'Mkolesyo', 'Mkangaza', 'Matembwe'],
+    'Nyasa': ['Chitunda', 'Haho', 'Ligera', 'Likonde', 'Ligunga', 'Liwumbi', 'Ligunga Mpya', 'Lusewa', 'Manda', 'Mlangalanga', 'Mkukwe', 'Mlongo', 'Mbuyuni', 'Ngulu', 'Lukwika', 'Litembe', 'Mchepwa', 'Kiberebe', 'Mgombwe', 'Nyangombe'],
+    'Songea': ['Huhewa', 'Kilukoka', 'Kilahiro', 'Kilindi', 'Kikolo', 'Lugela', 'Lukwika', 'Luhangarazi', 'Maelezo', 'Magagura', 'Mahanje', 'Majumbwa', 'Matumbi', 'Mcholi I', 'Mdimbamwingi', 'Mgombwe', 'Mkongo', 'Mpulungu', 'Mbuyuni', 'Nakalenje', 'Ngonga', 'Ngongo', 'Nyamwezi', 'Ruhangarazi', 'Rutamba', 'Sagamagaza', 'Sofinda', 'Songea', 'Tundu', 'Tuwangye', 'Vigata'],
+    'Songea Municipal': ['Kabwai', 'Lizabwikele', 'Lugelo', 'Mabwabuwa', 'Magagura', 'Mahemu', 'Mjini', 'Mkonongowe', 'Mkumi', 'Mvomero', 'Mkomazi', 'Mkurura', 'Mkomamashari', 'Mkondamwendo', 'Mwande', 'Mnyamwezi', 'Mpungulu', 'Ndililele', 'Ngongowi', 'Ruhemba', 'Songea Mjini', 'Tanga Mkole', 'Wamanguwa', 'Zingaguli'],
+    'Tunduru': ['Elikoy Mangulule', 'Kisese Namela', 'Ligula', 'Limbali Mkwelele', 'Liwumbi', 'Majabili Mwendo', 'Mahenjele', 'Marabali', 'Matengamali Mashariki', 'Matengamali Magharibi', 'Mandabwasi', 'Mdimbamwendo', 'Mlingula', 'Mgombwe', 'Mkoka', 'Mbuyu Chini', 'Mwakatalele', 'Mohoro', 'Mohasi', 'Mkombola', 'Mlale', 'Msalabani', 'Mtomoni', 'Mkomamwendo', 'Mtwikilele', 'Mkomawendo', 'Mtundu Malele', 'Mlali', 'Ndongosi', 'Nundu', 'Ngongolele', 'Nyamakela', 'Nyangombe', 'Ruvuma Moja', 'Songambele', 'Tuwangye', 'Wapameso', 'Zingaguli', 'Yombo']
+  },
+  'Shinyanga': {
+    'Kahama': ['Buganjo', 'Bukomela', 'Bulyashirolwa', 'Busega', 'Buselengeli', 'Buyaga', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Kahama Rural', 'Katoro', 'Kashasha', 'Kimweli Mpugu', 'Lusugi', 'Lugulu', 'Mwakitwango', 'Mwadui Mjini', 'Nyamwaraga', 'Nduruma', 'Ngolwa Mshama', 'Ntobo', 'Nyamwaraga', 'Nshashi', 'Ntobo', 'Nyamwezi', 'Puge', 'Pangisa', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wanyamawezi', 'Wambweri', 'Yamala', 'Zongomera'],
+    'Kishapu': ['Bulyashirolwa', 'Bukwimba', 'Bushaka', 'Buyani', 'Ibadakuli', 'Kishapu', 'Masanga', 'Mtakuja', 'Mwadui', 'Mwakipajo', 'Mwasalele', 'Mwamgongo', 'Mwashitambuli', 'Ngaya', 'Ngaya Nshamba', 'Ngelamandu Nkasi', 'Ngombe Mlale', 'Ntobo', 'Nshamba', 'Nyamwezi', 'Pangisa', 'Puge', 'Sindeni', 'Tinde', 'Wanyama'],
+    'Msalala': ['Bukomela', 'Bulyashirolwa', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bulyashirolwa', 'Buselengeli', 'Buyani', 'Changombe', 'Gula Miguwa', 'Idindili', 'Isage', 'Itilima', 'Kahama', 'Katoro', 'Kishapu Mshama', 'Lugulu', 'Lushahu Mpunguti', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Tinde', 'Wambweri', 'Yamala'],
+    'Shinyanga': ['Balele', 'Bulyashirolwa', 'Bukomela', 'Bukwimba', 'Buselengeli', 'Buyani', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui', 'Mwakipajo', 'Mwamgongo', 'Mwashitambuli', 'Ngaya', 'Ngaya Nshamba', 'Ngombe', 'Ntobo', 'Nyamgogo', 'Nyamwezi', 'Pangisa', 'Puge', 'Sawida', 'Senkuba', 'Shinyanga Mjini', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Wanyama', 'Yamala', 'Zongomera'],
+    'Shinyanga Municipal': ['Kahama Rural', 'Kishapu Mshama', 'Kahama Mjini', 'Mwadui Mjini', 'Mwakipajo', 'Mwashitambuli', 'Ngaya', 'Ngombe', 'Ntobo', 'Nyamgogo', 'Nyamwezi', 'Pangisa', 'Puge', 'Sawida', 'Senkuba', 'Shinyanga Mjini', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Wanyama', 'Yamala'],
+    'Ushetu': ['Buganjo', 'Bukomela', 'Bumbuli', 'Bushaka', 'Buyaga', 'Buyani', 'Buselengeli', 'Busega', 'Changombe', 'Chela', 'Gula Miguwa', 'Isage', 'Idindili', 'Itilima', 'Kahama Mjini', 'Kahama Rural', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Tinde', 'Wambweri', 'Yamala']
+  },
+  'Simiyu': {
+    'Bariadi': ['Bariadi Mjini', 'Bariadi Mkole', 'Bariadi Nyamwezi', 'Bariadi Nshamba', 'Bariadi Nyasubi', 'Biharamulo', 'Buganjo', 'Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Yamala'],
+    'Busega': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri'],
+    'Itilima': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi'],
+    'Maswa': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi'],
+    'Meatu': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi']
+  },
+  'Singida': {
+    'Ikungi': ['Bumera', 'Bukundi', 'Disigilyambi Mpangani', 'Ihanja', 'Itisi', 'Itilima Disigilyambi', 'Kikondova Nkasi', 'Kijiji Mjini', 'Kwajolele', 'Makaragwe', 'Mitetelele', 'Mungumaji Mkole', 'Mungumaji Ndembo', 'Mtundu Malele', 'Ngwanamwendo', 'Puge', 'Sawida', 'Sigha', 'Siha Mkombola', 'Solwa', 'Tegemeo', 'Tutuo', 'Utembwe Mlangali', 'Vigata', 'Wangombe', 'Yamala'],
+    'Iramba': ['Bukomela', 'Bulyashirolwa', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi'],
+    'Manyoni': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi'],
+    'Mkalama': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi'],
+    'Singida': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi'],
+    'Singida Municipal': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi']
+  },
+  'Songwe': {
+    'Ileje': ['Buloga', 'Bwela Mlondola', 'Chala Mitumbi', 'Ibombo', 'Itimbo', 'Kambole', 'Kandete', 'Lugelo', 'Lusungo', 'Masele', 'Mbarali', 'Mkonde', 'Mkukwani', 'Mlangali', 'Sanya', 'Sumbawanga', 'Songambele', 'Zingaguli', 'Wanyamawezi'],
+    'Mbozi': ['Chabula', 'Changombe', 'Chankunga', 'Chimu', 'Hai', 'Igurwa', 'Ihowa', 'Ilemba', 'Imalilo', 'Isansa', 'Itepwa', 'Jovweni', 'Kaporompara', 'Karua', 'Kibaoni', 'Kibuyi', 'Lisenga', 'Lusungi', 'Mabansi', 'Maiwa', 'Mbozi Mjini', 'Mlangali', 'Mlowa', 'Mlangalanga', 'Mkamboo', 'Mkola', 'Mkomazi', 'Mpeli', 'Mputanyemungu', 'Ngindo', 'Nabuhuje', 'Nanyumbu', 'Ngamba', 'Ngindo', 'Ngombe', 'Nyimbili', 'Panguma', 'Pangahasi', 'Ruhila', 'Ruhuhu', 'Rusingizana', 'Sokwani', 'Songambele', 'Tuwange', 'Tegema', 'Usharibu', 'Vugwa', 'Wanyama', 'Zingaguli'],
+    'Momba': ['Amale', 'Bule', 'Chala', 'Chambo', 'Igale', 'Ihowa', 'Kafukule', 'Kamwamku', 'Kaparinga', 'Kaporompara', 'Kawajika', 'Kibota', 'Kipeta', 'Lilema', 'Lihuku', 'Lugufu', 'Majo', 'Mlowa', 'Mkangaza', 'Mkombola', 'Mpui', 'Mtema', 'Nampewa', 'Namgumba', 'Ndembo', 'Ngolongwa', 'Ngindo', 'Ninde', 'Nyanghali', 'Ruhila', 'Ruhuhu', 'Sapoka', 'Sindindi', 'Songambele', 'Wamanguwa'],
+    'Songwe': ['Bujele', 'Bulongo', 'Chala', 'Chankunga', 'Chimuwaka', 'Chitowe', 'Hahatenga', 'Ihowa', 'Ilemba', 'Igurwa', 'Igunda', 'Isansa', 'Jovu', 'Kaparinga', 'Kaporompara', 'Kibaoni', 'Kibonde Maji', 'Kijiji', 'Kipeta', 'Kisondela', 'Lisunga', 'Majo', 'Mabungu', 'Makandoli', 'Makwale', 'Malengeli', 'Mkalama', 'Mlangali', 'Mkangaza', 'Mkomazi', 'Mkukwe', 'Mkumbi', 'Mlowa', 'Mlombo', 'Mpinji', 'Msalabani', 'Mukumi', 'Muruguma', 'Mwamapulele', 'Mwambao', 'Mwamgongo', 'Mwawivu', 'Mwera', 'Nampewa', 'Nanguruwe', 'Ndongosi', 'Ngomelo', 'Nundu', 'Nyamwaka', 'Nyanghali', 'Panguma', 'Ruhemba', 'Ruhuhu', 'Sapoka', 'Sinyangalu', 'Songambele', 'Tegemeo', 'Ujirani', 'Vugwa', 'Wanyama', 'Yamala', 'Zingaguli'],
+    'Tunduma': ['Bujoshi', 'Chankunga', 'Chonyamwari', 'Hahatenga', 'Holoholo', 'Ilemba', 'Igurwa', 'Igunda', 'Ihowa', 'Isansa', 'Itepwa', 'Jovweni', 'Kafukule', 'Kamwamku', 'Kaparinga', 'Kibonde Maji', 'Kijiji', 'Kipeta', 'Kisesa', 'Kisondela', 'Lisunga', 'Majo', 'Mabungu', 'Makandoli', 'Malengeli', 'Mkalama', 'Mlangali', 'Mkomazi', 'Mkukwe', 'Mkumbi', 'Mlowa', 'Mpinji', 'Mukumi', 'Muruguma', 'Mwamapulele', 'Mwambao', 'Mwamgongo', 'Mwawivu', 'Mwera', 'Nampewa', 'Nanguruwe', 'Ndongosi', 'Ngomelo', 'Nundu', 'Nyamwaka', 'Panguma', 'Ruhemba', 'Ruhuhu', 'Sapoka', 'Sinyangalu', 'Songambele', 'Tegemeo', 'Ujirani', 'Vugwa', 'Wanyama', 'Yamala', 'Zingaguli']
+  },
+  'Tabora': {
+    'Igunga': ['Bukomela', 'Bukombe', 'Buselelele', 'Busega', 'Buselengeli', 'Buyani', 'Bwanga', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Ishinjilo', 'Kahama Mjini', 'Katoro', 'Kishapu Mshama', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Yamala'],
+    'Kaliua': ['Bulele', 'Bukomela', 'Bukombe', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu Mshama', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Yamala'],
+    'Nzega': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu Mshama', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Yamala'],
+    'Nzega Town': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu Mshama', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Yamala'],
+    'Sikonge': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu Mshama', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Yamala'],
+    'Tabora Municipal': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu Mshama', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Yamala'],
+    'Urambo': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu Mshama', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Yamala'],
+    'Uyui': ['Bulyashirolwa', 'Bukomela', 'Busega', 'Buselengeli', 'Buyani', 'Buganjo', 'Bumbuli', 'Bushaka', 'Buyaga', 'Busega', 'Chela', 'Changombe', 'Gula Miguwa', 'Itilima', 'Isage', 'Idindili', 'Kahama Mjini', 'Katoro', 'Kishapu Mshama', 'Lugulu', 'Mwadui Mjini', 'Mwakipajo', 'Mwamgongo', 'Nyamgogo', 'Nyamwezi', 'Nshashi', 'Puge', 'Sawida', 'Senkuba', 'Songambele', 'Tinde', 'Wagweyi', 'Wambweri', 'Yamala']
+  },
+  'Tanga': {
+    'Bumbuli': ['Bumbuli Mjini', 'Mgwashi', 'Magamba', 'Manvuli', 'Mpirani', 'Mibelele', 'Kwebwe', 'Tongo', 'Mpale', 'Kwamndolwa', 'Dule', 'Mabungo', 'Bumbuli Magharibi', 'Bumbuli Mashariki'],
+    'Handeni': ['Handeni Mjini', 'Handeni', 'Msalabani', 'Mbuyuni', 'Mkamba', 'Kwenjongo', 'Lugongo', 'Kibanda', 'Maburia', 'Mitindo', 'Kibayari', 'Mkonga', 'Kwedizinga', 'Magoma', 'Mlingoti', 'Songambele', 'Ndovu', 'Misozimbuga', 'Mikambamwitu', 'Mazinde'],
+    'Handeni Town': ['Handeni Mjini', 'Mkole', 'Ndolwa', 'Mago', 'Kwedizinga', 'Bungu', 'Songambele', 'Mlingoti', 'Mkululele', 'Misungu', 'Mazinde'],
+    'Kilindi': ['Bhomale', 'Kilindi Mjini', 'Ketengule', 'Magamba', 'Nkongo', 'Mlali', 'Magole', 'Mgombe', 'Mvomero', 'Mhonda', 'Kisangaji', 'Kibanda', 'Lugongo', 'Digo', 'Mkurura', 'Mazinde'],
+    'Korogwe': ['Korogwe Mjini', 'Korogwe Mashariki', 'Korogwe Magharibi', 'Bwembwembwe', 'Kwamkono', 'Masahuna', 'Mswewe', 'Kisima', 'Vugwa Mwito', 'Mabonia', 'Bungu', 'Magundi', 'Mazinde', 'Tongoleni', 'Mkomazi', 'Kilole', 'Mbuyuni', 'Mpale', 'Lusanga'],
+    'Korogwe Town': ['Korogwe Mjini', 'Bwembwembwe', 'Bumbuli', 'Mombosele', 'Mgombe', 'Tonga', 'Kwamkono', 'Mkurura', 'Lusanga', 'Mkomazi', 'Mkwatani'],
+    'Lushoto': ['Lushoto Mjini', 'Bumbuli', 'Magamba', 'Kwale', 'Mbaramo', 'Mlali', 'Mtae', 'Kwe', 'Mbuzi', 'Mngaro', 'Kwamkono', 'Kisima', 'Kwelolo', 'Magomeni', 'Mlamba', 'Mombamwitu', 'Sunga', 'Dule', 'Bumbuli', 'Bombo', 'Kwe', 'Mnyuzi', 'Msanga', 'Lunguza'],
+    'Mkinga': ['Mkinga Mjini', 'Mare', 'Dalale', 'Dalga', 'Mghama', 'Kwale', 'Mihogolo', 'Mkanyageni', 'Kipangalio', 'Kifundi', 'Zirai', 'Bombani', 'Dama', 'Msubwani', 'Mrawa'],
+    'Muheza': ['Muheza Mjini', 'Amani', 'Bumbuli', 'Kwale', 'Kwamkono', 'Mboma', 'Mavunja', 'Misozimbuga', 'Mlungu', 'Mkomazi', 'Magomba', 'Kwedinge', 'Mnyuzi', 'Mkanyageni', 'Mtakayo', 'Zirai', 'Ngamleo'],
+    'Pangani': ['Pangani Mjini', 'Bweni', 'Kipumu', 'Kiharaka', 'Madale', 'Madongo', 'Mkalamo', 'Kionyo', 'Mkunguni', 'Mgwashi', 'Pangani Magharibi', 'Pangani Mashariki', 'Mkukuzi'],
+    'Tanga City': ['Tanga Mjini', 'Chumbageni', 'Ngamiao', 'Mzizima', 'Mabawa', 'Tongoni', 'Central', 'Mkonokombe', 'Mkwakwani', 'Mzingani', 'Mkukore', 'Chumbageni Mashariki', 'Chumbageni Magharibi', 'Mabawa Magharibi', 'Mabawa Mashariki']
+  },
+  'Kaskazini Unguja': {
+    'Kaskazini A': ['Cheju', 'Chaani', 'Gamba', 'Kiuyu', 'Mafufuni', 'Mahonda', 'Matetema', 'Mchangani', 'Mkokotoni', 'Mtonde', 'Potoa', 'Tunguu', 'Tazare', 'Ndoveani', 'Mwarongo'],
+    'Kaskazini B': ['Mpendae', 'Pangatupu', 'Potoa', 'Mfufini', 'Mtondonyi', 'Magogoni', 'Kandwi', 'Chaani', 'Kibaeni', 'Mchangani', 'Tazare', 'Gamba', 'Mahonda', 'Matetema']
+  },
+  'Kusini Unguja': {
+    'Kati': ['Bungi', 'Charawe', 'Jumbi', 'Kibigija', 'Kikungwi', 'Kinuni', 'Mafufuni', 'Muungoni', 'Ngamba', 'Pongwe', 'Tindini', 'Ukongoroni', 'Uzi', 'Kibonie'],
+    'Kusini': ['Kibondeni', 'Kikolele', 'Kikungule', 'Mbuyuni', 'Mkanyageni', 'Mtondoni', 'Mkombani', 'Ngambile', 'Paje', 'Bweleo', 'Jambiani', 'Kajengwa', 'Pongwe', 'Ukongoroni']
+  },
+  'Mjini Magharibi': {
+    'Mjini': ['Kibandani', 'Kikwajini', 'Kilimani', 'Kwarara', 'Mkuranga', 'Mtoni', 'Sebleni', 'Shangani', 'Songambele', 'Amani', 'Mjini Mashariki', 'Mjini Magharibi', 'Sebleni Magharibi', 'Sebleni Mashariki', 'Amani Mashariki', 'Amani Magharibi'],
+    'Magharibi A': ['Chukini', 'Funguni', 'Kibanda', 'KMK', 'Mpandaele', 'Mtondoni', 'Mtondo Chini', 'Shakani', 'Kibweni South', 'Mtoni Maafus', 'Amani', 'Magomeni', 'Mwera', 'Mkele', 'Kibanda Chini', 'Bububu Magharibi'],
+    'Magharibi B': ['Bububu Mashariki', 'Bububu Magharibi', 'Chakechake', 'Chuini', 'Kibele', 'Magomeni', 'Makunduchi', 'Mkanyageni', 'Mzambarauni', 'Mtoni', 'Mtope', 'Shangani', 'Mwera', 'Kibele']
+  },
+  'Kaskazini Pemba': {
+    'Micheweni': ['Kanyerere', 'Kipangani', 'Konde', 'Kwale', 'Magogoni', 'Mapofu', 'Mazinde', 'Micheweni Mjini', 'Mgogoni', 'Mkanyageni', 'Mkombola', 'Mkondoni', 'Mpunga', 'Msumbiji', 'Tibirizi', 'Tondooni', 'Wingwi', 'Wingwi Mramba'],
+    'Wete': ['Bomu', 'Bweni', 'Chwale', 'Kangagani', 'Kichakamwacha', 'Kipangani', 'Konde', 'Magazi', 'Mahonde', 'Makombeni', 'Mandani', 'Mazinde', 'Micheweni', 'Mkanyageni', 'Mkombola', 'Mkondoni', 'Mtondoni', 'Mtambwe', 'Ngambeni', 'Piki', 'Shidi', 'Shumba', 'Tumbe', 'Wambaa', 'Wete Mjini', 'Wingwi']
+  },
+  'Kusini Pemba': {
+    'Chakechake': ['Bini', 'Chaani', 'Chakechake Mjini', 'Chwaka', 'Dove', 'Gando', 'Jongowe', 'Kangalele', 'Kibani', 'Kichakamjamba', 'Kipangani', 'Kiuyu', 'Kiuyu Kwanda', 'Konde', 'Mbalia', 'Mkanyageni', 'Mkole', 'Mkoani', 'Mtambwe', 'Mtangatangu', 'Mwachoni', 'Mwama', 'Ngambeni', 'Pemba', 'Shamiani', 'Wandahambi'],
+    'Mkoani': ['Chwaka', 'Kandale', 'Kendwa', 'Kipangani', 'Kisalele', 'Kodi', 'Mchangani', 'Mkoani Mjini', 'Mtambwe', 'Ngambeni', 'Ndagoni', 'Shamiani', 'Uwandani']
+  }
+};
+
+// Get all wards for a given region+district. Returns [] if not found.
+export function getWards(region: string, district: string): string[] {
+  return TANZANIA_WARDS[region]?.[district] || [];
+}
+
+// Short titles that a citizen can pick from a dropdown, then refine in the detailed
+// description field. The "Other" option lets them type a custom short title.
+export const SHORT_TITLE_OPTIONS: [string, string, string][] = [
+  ['mwonekano_wa_polisi', 'Mwonekano wa polisi', 'Police sighting'],
+  ['kukamatwa', 'Kukamatwa / Kudhibitiwa', 'Arrest / Detention'],
+  ['vurugu_zabuvu', 'Vurugu za umati wa watu', 'Crowd violence'],
+  ['vurugu_za_kimwili', 'Vurugu za kimwili', 'Physical violence'],
+  ['moyo_unaondoka', 'Kifo kilichosababishwa', 'Caused death'],
+  ['mali_ilipotea', 'Uharibifu wa mali', 'Property damage'],
+  ['vitisho', 'Vitisho au udhalilishaji', 'Intimidation / harassment'],
+  ['ukatili_wa_kingono', 'Vurugu za kingono', 'Sexual violence'],
+  ['mabavu_kamati', 'Matumizi ya mabavu na mamlaka', 'Excessive force by authorities'],
+  ['ukosefu_wa_haki', 'Ukosefu wa haki / kutowezesha kushiriki', 'Denial of rights / participation blocked'],
+  ['kutoweka_kwa_mtindo', 'Kutoweka kwa mtu / kuibiwa', 'Disappearance / abduction'],
+  ['kukosekana_kwa_usalama', 'Kukosekana kwa usalama wa umma', 'Lack of public safety'],
+  ['kutokea_kwa_migogoro', 'Migogoro ya kikundi', 'Group conflict'],
+  ['mengineyo', 'Mengineyo (eleza kwenye maelezo)', 'Other (describe in details)']
+];

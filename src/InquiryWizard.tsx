@@ -1,145 +1,461 @@
-import {FormEvent,useEffect,useRef,useState} from 'react';
+import {FormEvent, useEffect, useRef, useState} from 'react';
 import {Link} from 'react-router';
-import {ArrowLeft,ArrowRight,Check,CheckCircle2,FileText,LockKeyhole,Save,Upload} from 'lucide-react';
+import {ArrowLeft, ArrowRight, Check, CheckCircle2, FileText, LockKeyhole, Plus, Save, Trash2, Upload, X} from 'lucide-react';
 import {Upload as TusUpload} from 'tus-js-client';
-import {TANZANIA_REGIONS,TANZANIA_REGION_NAMES} from './data/tanzaniaLocations';
-import {supabase,supabasePublishableKey,supabaseUrl} from './lib/supabase';
+import {TANZANIA_REGIONS, TANZANIA_REGION_NAMES, TANZANIA_WARDS, SHORT_TITLE_OPTIONS, getWards} from './data/tanzaniaLocations';
+import {supabase, supabasePublishableKey, supabaseUrl} from './lib/supabase';
 import {useLanguage} from './lib/language';
 import './inquiryWizard.css';
-import './inquiryWizard.css';
 
-const maxFileBytes=50*1024*1024;
-const allowedTypes=['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document','image/jpeg','image/png','image/webp','video/mp4','video/webm','video/quicktime','audio/mpeg','audio/wav','audio/mp4','audio/ogg'];
-const violationOptions=[['physical_violence','Vurugu za kimwili','Physical violence'],['arrest','Kukamatwa','Arrest'],['intimidation','Vitisho au udhalilishaji','Intimidation'],['property_damage','Uharibifu wa mali','Property damage'],['death','Kifo','Death'],['sexual_violence','Vurugu za kingono','Sexual violence'],['other','Nyingine','Other']];
-const stepNames=[['Aina','Type'],['Tukio','Incident'],['Simulizi','Account'],['Ushahidi','Evidence'],['Mwasilishaji','Your details'],['Kagua','Review']];
-const initialForm={submissionType:'',reporterRole:'',incidentDate:'',incidentTime:'unknown',region:'',district:'',ward:'',location:'',violationTypes:[] as string[],title:'',description:'',peopleInvolved:'',authoritiesPresent:'unsure',reportedElsewhere:false,reportingPlace:'',evidenceCategory:'none',submissionMode:'identified',fullName:'',phone:'',email:'',residenceRegion:'',contactMethod:'none',contactConsent:false,truthDeclared:false};
-type WizardForm=typeof initialForm;
-type EvidenceItem={file:File;description:string;capturedAt:string;originalUnmodified:boolean;evidenceType:string;previewUrl?:string};
+const maxFileBytes = 50 * 1024 * 1024;
+const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg', 'image/png', 'image/webp', 'video/mp4', 'video/webm', 'video/quicktime', 'audio/mpeg', 'audio/wav', 'audio/mp4', 'audio/ogg'];
+const violationOptions = [['physical_violence', 'Vurugu za kimwili', 'Physical violence'], ['arrest', 'Kukamatwa', 'Arrest'], ['intimidation', 'Vitisho au udhalilishaji', 'Intimidation'], ['property_damage', 'Uharibifu wa mali', 'Property damage'], ['death', 'Kifo', 'Death'], ['sexual_violence', 'Vurugu za kingono', 'Sexual violence'], ['other', 'Nyingine', 'Other']];
+const stepNames = [['Aina', 'Type'], ['Tukio', 'Incident'], ['Simulizi', 'Account'], ['Ushahidi', 'Evidence'], ['Mwasilishaji', 'Your details'], ['Kagua', 'Review']];
 
-function evidenceKind(type:string){if(type.startsWith('image/'))return 'image';if(type.startsWith('video/'))return 'video';if(type.startsWith('audio/'))return 'audio';if(type==='application/pdf'||type.includes('word'))return 'document';return 'other'}
+// Roles a citizen can tag a person with in the "People involved" list.
+const peopleRoles: [string, string, string][] = [
+  ['civilian', 'Mwananchi', 'Civilian'],
+  ['police', 'Polisi', 'Police officer'],
+  ['military', 'Jeshi', 'Military personnel'],
+  ['government_official', 'Afisa Serikali', 'Government official'],
+  ['politician', 'Mwanasiasa', 'Politician'],
+  ['journalist', 'Mwandishi wa habari', 'Journalist'],
+  ['lawyer', 'Wakili', 'Lawyer'],
+  ['doctor', 'Daktari/Muuguzi', 'Doctor/Nurse'],
+  ['witness', 'Shahidi', 'Witness'],
+  ['victim', 'Mhasiriwa', 'Victim'],
+  ['perpetrator', 'Mfanyahalifu', 'Perpetrator'],
+  ['unknown', 'Haijulikani', 'Unknown']
+];
 
-export function InquiryWizard(){
-  const {language,t}=useLanguage();
-  const siteKey=import.meta.env.VITE_TURNSTILE_SITE_KEY||'';
-  const widgetHost=useRef<HTMLDivElement>(null);
-  const widgetId=useRef('');
-  const [user,setUser]=useState<any>(undefined);
-  const [form,setForm]=useState<WizardForm>(initialForm);
-  const [step,setStep]=useState(1);
-  const [files,setFiles]=useState<EvidenceItem[]>([]);
-  const [captchaToken,setCaptchaToken]=useState('');
-  const [busy,setBusy]=useState(false);
-  const [saving,setSaving]=useState(false);
-  const [draftLoaded,setDraftLoaded]=useState(false);
-  const [message,setMessage]=useState('');
-  const [draftMessage,setDraftMessage]=useState('');
-  const [uploadProgress,setUploadProgress]=useState('');
-  const [reference,setReference]=useState('');
+type PersonEntry = { name: string; role: string };
 
-  useEffect(()=>{supabase.auth.getUser().then(({data})=>setUser(data.user||null));const {data:{subscription}}=supabase.auth.onAuthStateChange((_event,session)=>setUser(session?.user||null));return()=>subscription.unsubscribe()},[]);
+const initialForm = {
+  submissionType: '', reporterRole: '', incidentDate: '', incidentTime: 'unknown',
+  region: '', district: '', ward: '', wardCustom: false, streetVillage: '',
+  location: '', violationTypes: [] as string[], shortTitleCategory: '', title: '',
+  description: '', peopleInvolved: [] as PersonEntry[], authoritiesPresent: 'unsure',
+  reportedElsewhere: false, reportingPlace: '', evidenceCategory: 'none',
+  submissionMode: 'identified', fullName: '', phone: '', email: '',
+  residenceRegion: '', contactMethod: 'none', contactConsent: false, truthDeclared: false
+};
+type WizardForm = typeof initialForm;
+type EvidenceItem = { file: File; description: string; capturedAt: string; originalUnmodified: boolean; evidenceType: string; previewUrl?: string };
 
-  useEffect(()=>{
-    if(!user)return;
-    let live=true;
-    supabase.from('inquiry_drafts').select('form_data,current_step').eq('user_id',user.id).maybeSingle().then(({data,error})=>{
-      if(!live)return;
-      if(data&&!error){setForm({...initialForm,...data.form_data});setStep(Math.min(6,Math.max(1,Number(data.current_step)||1)));setDraftLoaded(true);setDraftMessage(t('Rasimu yako imefunguliwa. Faili utazichagua tena kabla ya kutuma.','Your draft is restored. Re-select files before submitting.'))}
+function evidenceKind(type: string) {
+  if (type.startsWith('image/')) return 'image';
+  if (type.startsWith('video/')) return 'video';
+  if (type.startsWith('audio/')) return 'audio';
+  if (type === 'application/pdf' || type.includes('word')) return 'document';
+  return 'other';
+}
+
+export function InquiryWizard() {
+  const { language, t } = useLanguage();
+  const siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY || '';
+  const widgetHost = useRef<HTMLDivElement>(null);
+  const widgetId = useRef('');
+  const [user, setUser] = useState<any>(undefined);
+  const [anonymousMode, setAnonymousMode] = useState<boolean>(false);
+  const [preScreen, setPreScreen] = useState<'choose' | 'anonymous_intro' | 'anonymous_questions' | 'wizard'>('choose');
+  // Quick logical questions for the anonymous flow.
+  const [anonAnswers, setAnonAnswers] = useState<{ witnessed: string; happenedRecently: string; location: string }>({ witnessed: '', happenedRecently: '', location: '' });
+  const [form, setForm] = useState<WizardForm>(initialForm);
+  const [step, setStep] = useState(1);
+  const [files, setFiles] = useState<EvidenceItem[]>([]);
+  const [captchaToken, setCaptchaToken] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [draftLoaded, setDraftLoaded] = useState(false);
+  const [message, setMessage] = useState('');
+  const [draftMessage, setDraftMessage] = useState('');
+  const [uploadProgress, setUploadProgress] = useState('');
+  const [reference, setReference] = useState('');
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => setUser(data.user || null));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => setUser(session?.user || null));
+    return () => subscription.unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    if (!user || anonymousMode) return;
+    let live = true;
+    supabase.from('inquiry_drafts').select('form_data,current_step').eq('user_id', user.id).maybeSingle().then(({ data, error }) => {
+      if (!live) return;
+      if (data && !error) { setForm({ ...initialForm, ...data.form_data }); setStep(Math.min(6, Math.max(1, Number(data.current_step) || 1))); setDraftLoaded(true); setDraftMessage(t('Rasimu yako imefunguliwa. Faili utazichagua tena kabla ya kutuma.', 'Your draft is restored. Re-select files before submitting.')); }
     });
-    return()=>{live=false};
-  },[user?.id]);
+    return () => { live = false; };
+  }, [user?.id, anonymousMode]);
 
-  useEffect(()=>{
-    if(!siteKey||!widgetHost.current)return;
-    const existing=document.querySelector<HTMLScriptElement>('script[data-inquiry-turnstile]');
-    const script=existing||document.createElement('script');
-    const render=()=>{if(!widgetHost.current||!window.turnstile||widgetId.current)return;widgetId.current=window.turnstile.render(widgetHost.current,{sitekey:siteKey,callback:(token:string)=>setCaptchaToken(token),'expired-callback':()=>setCaptchaToken(''),'error-callback':()=>setCaptchaToken('')})};
-    if(!existing){script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';script.async=true;script.defer=true;script.dataset.inquiryTurnstile='true';script.addEventListener('load',render);document.head.appendChild(script)}else if(window.turnstile)render();else script.addEventListener('load',render);
-    return()=>{script.removeEventListener('load',render);if(widgetId.current&&window.turnstile){window.turnstile.remove(widgetId.current);widgetId.current=''}};
-  },[siteKey]);
+  useEffect(() => {
+    if (!siteKey || !widgetHost.current) return;
+    const existing = document.querySelector<HTMLScriptElement>('script[data-inquiry-turnstile]');
+    const script = existing || document.createElement('script');
+    const render = () => { if (!widgetHost.current || !window.turnstile || widgetId.current) return; widgetId.current = window.turnstile.render(widgetHost.current, { sitekey: siteKey, callback: (token: string) => setCaptchaToken(token), 'expired-callback': () => setCaptchaToken(''), 'error-callback': () => setCaptchaToken('') }); };
+    if (!existing) { script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'; script.async = true; script.defer = true; script.dataset.inquiryTurnstile = 'true'; script.addEventListener('load', render); document.head.appendChild(script); } else if (window.turnstile) render(); else script.addEventListener('load', render);
+    return () => { script.removeEventListener('load', render); if (widgetId.current && window.turnstile) { window.turnstile.remove(widgetId.current); widgetId.current = ''; } };
+  }, [siteKey]);
 
-  async function submit(e:FormEvent<HTMLFormElement>){
+  async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const error=validateStep(6);if(error){setMessage(error);return}
-    if(!user){setMessage(t('Ingia kwenye akaunti yako ili kuwasilisha taarifa.','Sign in to submit this report.'));return}
-    if(!form.truthDeclared){setMessage(t('Thibitisha tamko kabla ya kutuma.','Confirm the declaration before submitting.'));return}
-    if(files.length&&!captchaToken){setMessage(t('Thibitisha kuwa wewe si roboti kabla ya kupakia ushahidi.','Complete the security check before uploading evidence.'));return}
-    setBusy(true);setMessage('');
-    const report={...form,fullName:form.submissionMode==='anonymous'?'':form.fullName.trim(),phone:form.submissionMode==='anonymous'?'':form.phone.trim(),email:form.submissionMode==='anonymous'?'':form.email.trim(),description:form.description.trim(),title:form.title.trim()};
-    const {data:created,error:createError}=await supabase.functions.invoke('inquiry-intake',{body:{action:'create',turnstileToken:captchaToken,website:'',report,attachments:files.map(item=>({name:item.file.name,size:item.file.size,type:item.file.type,description:item.description,capturedAt:item.capturedAt,originalUnmodified:item.originalUnmodified,evidenceType:item.evidenceType}))}});
-    if(createError||!created?.id||!Array.isArray(created.uploads)){setMessage(t('Imeshindikana kuanza uwasilishaji. Jaribu tena.','Could not start your submission. Try again.'));setBusy(false);return}
-    const storageBase=new URL(supabaseUrl);storageBase.hostname=storageBase.hostname.replace('.supabase.co','.storage.supabase.co');
-    for(let index=0;index<files.length;index++){
-      const item=files[index],upload=created.uploads[index];setUploadProgress(t(`Inapakia faili ${index+1} kati ya ${files.length}...`,`Uploading file ${index+1} of ${files.length}...`));
-      try{await new Promise<void>((resolve,reject)=>{const tusUpload=new TusUpload(item.file,{endpoint:new URL('/storage/v1/upload/resumable',storageBase).toString(),headers:{apikey:supabasePublishableKey,'x-signature':upload.token},metadata:{bucketName:'inquiry-evidence',objectName:upload.path,contentType:item.file.type,cacheControl:'3600'},chunkSize:6*1024*1024,retryDelays:[0,3000,5000,10000,20000],uploadDataDuringCreation:true,removeFingerprintOnSuccess:true,onError:reject,onSuccess:()=>resolve()});tusUpload.start()})}
-      catch{setUploadProgress('');setMessage(t('Faili halikupakiwa. Jaribu tena.','A file could not be uploaded. Try again.'));setBusy(false);return}
+    const error = validateStep(6);
+    if (error) { setMessage(error); return; }
+    if (!anonymousMode && !user) { setMessage(t('Ingia kwenye akaunti yako ili kuwasilisha taarifa.', 'Sign in to submit this report.')); return; }
+    if (!form.truthDeclared) { setMessage(t('Thibitisha tamko kabla ya kutuma.', 'Confirm the declaration before submitting.')); return; }
+    if (files.length && !captchaToken) { setMessage(t('Thibitisha kuwa wewe si roboti kabla ya kupakia ushahidi.', 'Complete the security check before uploading evidence.')); return; }
+    setBusy(true); setMessage('');
+    const peopleJoined = form.peopleInvolved.filter(p => p.name.trim()).map(p => `${p.name.trim()} (${selectionLabel('peopleRole', p.role)})`).join('; ');
+    const report = {
+      ...form,
+      fullName: form.submissionMode === 'anonymous' || anonymousMode ? '' : form.fullName.trim(),
+      phone: form.submissionMode === 'anonymous' || anonymousMode ? '' : form.phone.trim(),
+      email: form.submissionMode === 'anonymous' || anonymousMode ? '' : form.email.trim(),
+      description: form.description.trim(),
+      title: form.title.trim() || selectionLabel('shortTitle', form.shortTitleCategory),
+      peopleInvolved: peopleJoined,
+      ward: form.ward,
+      streetVillage: form.streetVillage.trim(),
+      anonymous: anonymousMode
+    };
+    const { data: created, error: createError } = await supabase.functions.invoke('inquiry-intake', { body: { action: 'create', turnstileToken: captchaToken, website: '', report, attachments: files.map(item => ({ name: item.file.name, size: item.file.size, type: item.file.type, description: item.description, capturedAt: item.capturedAt, originalUnmodified: item.originalUnmodified, evidenceType: item.evidenceType })) } });
+    if (createError || !created?.id || !Array.isArray(created.uploads)) { setMessage(t('Imeshindikana kuanza uwasilishaji. Jaribu tena.', 'Could not start your submission. Try again.')); setBusy(false); return; }
+    const storageBase = new URL(supabaseUrl); storageBase.hostname = storageBase.hostname.replace('.supabase.co', '.storage.supabase.co');
+    for (let index = 0; index < files.length; index++) {
+      const item = files[index], upload = created.uploads[index];
+      setUploadProgress(t(`Inapakia faili ${index + 1} kati ya ${files.length}...`, `Uploading file ${index + 1} of ${files.length}...`));
+      try { await new Promise<void>((resolve, reject) => { const tusUpload = new TusUpload(item.file, { endpoint: new URL('/storage/v1/upload/resumable', storageBase).toString(), headers: { apikey: supabasePublishableKey, 'x-signature': upload.token }, metadata: { bucketName: 'inquiry-evidence', objectName: upload.path, contentType: item.file.type, cacheControl: '3600' }, chunkSize: 6 * 1024 * 1024, retryDelays: [0, 3000, 5000, 10000, 20000], uploadDataDuringCreation: true, removeFingerprintOnSuccess: true, onError: reject, onSuccess: () => resolve() }); tusUpload.start(); }); }
+      catch { setUploadProgress(''); setMessage(t('Faili halikupakiwa. Jaribu tena.', 'A file could not be uploaded. Try again.')); setBusy(false); return; }
     }
     setUploadProgress('');
-    const {data:finalized,error:finalizeError}=await supabase.functions.invoke('inquiry-intake',{body:{action:'finalize',id:created.id}});
-    if(finalizeError||!finalized?.referenceCode){setMessage(t('Taarifa hazijathibitishwa. Tumia namba hii kuwasiliana na Tume: ','Submission could not be confirmed. Contact the Commission with this reference: ')+created.referenceCode);setBusy(false);return}
-    await supabase.from('inquiry_drafts').delete().eq('user_id',user.id);
-    setReference(finalized.referenceCode);setFiles([]);setCaptchaToken('');setBusy(false);
+    const { data: finalized, error: finalizeError } = await supabase.functions.invoke('inquiry-intake', { body: { action: 'finalize', id: created.id, anonymous: anonymousMode } });
+    if (finalizeError || !finalized?.referenceCode) { setMessage(t('Taarifa hazijathibitishwa. Tumia namba hii kuwasiliana na Tume: ', 'Submission could not be confirmed. Contact the Commission with this reference: ') + created.referenceCode); setBusy(false); return; }
+    if (!anonymousMode && user) await supabase.from('inquiry_drafts').delete().eq('user_id', user.id);
+    setReference(finalized.referenceCode); setFiles([]); setCaptchaToken(''); setBusy(false);
   }
 
-  if(user===undefined)return <section className="section page inquiryPage"><h1 className="pageTitle">{t('Inathibitisha akaunti...','Checking your account...')}</h1></section>;
-  if(!user)return <section className="section page inquiryPage"><span className="kicker">{t('AKAUNTI INAHITAJIKA','ACCOUNT REQUIRED')}</span><h1 className="pageTitle">{t('Ingia ili kuwasilisha taarifa','Sign in to submit information')}</h1><p className="lead">{t('Taarifa zako zitaunganishwa na akaunti yako ili uweze kufuatilia hatua zake.','Your report will be linked to your account so you can track its progress.')}</p><div className="commissionActions"><Link className="primary linkBtn" to="/account?mode=login">{t('Ingia','Sign in')} <ArrowRight size={17}/></Link><Link className="secondary linkBtn" to="/account?mode=signup">{t('Jisajili','Sign up')} <ArrowRight size={17}/></Link></div></section>;
-  if(reference)return <section className="section page inquiryPage"><div className="inquirySuccess"><CheckCircle2/><div><span>{t('TAARIFA IMEWASILISHWA','SUBMISSION RECEIVED')}</span><h2>{reference}</h2><p>{t('Hifadhi namba hii kwa marejeo. Unaweza kufuatilia hali kwenye ukurasa wa Taarifa Zangu.','Save this reference. You can track its status on My Submissions.')}</p><Link to="/taarifa-zangu">{t('Nenda Taarifa Zangu','Go to My Submissions')}</Link></div></div></section>;
+  if (!anonymousMode && user === undefined) return <section className="section page inquiryPage"><h1 className="pageTitle">{t('Inathibitisha akaunti...', 'Checking your account...')}</h1></section>;
 
-  const update=(key:keyof WizardForm,value:any)=>setForm(current=>({...current,[key]:value}));
-  const updateEvidence=(index:number,key:'description'|'capturedAt'|'originalUnmodified',value:string|boolean)=>setFiles(current=>current.map((item,itemIndex)=>itemIndex===index?{...item,[key]:value}:item));
-  const dateToday=new Date().toISOString().slice(0,10);
-  const visibleOptions=(options:string[])=>options.map(value=><option key={value} value={value}>{value}</option>);
-  const selectionLabel=(group:string,value:string)=>{
-    const options:Record<string,Record<string,[string,string]>>={
-      submissionType:{eyewitness:['Simulizi la shahidi','Eyewitness account'],photo:['Picha','Photo evidence'],video:['Video','Video evidence'],document:['Nyaraka','Document'],audio:['Sauti','Audio recording'],other:['Nyingine','Other']},
-      reporterRole:{victim:['Mhanga','Victim'],witness:['Shahidi','Witness'],third_party:['Mtu wa tatu','Third party'],anonymous:['Bila kutaja jina','Anonymous']},
-      time:{morning:['Asubuhi','Morning'],afternoon:['Mchana','Afternoon'],evening:['Jioni','Evening'],night:['Usiku','Night'],unknown:['Sijui','Unknown']},
-      authorities:{police:['Polisi','Police'],military:['Jeshi','Military'],unknown:['Mamlaka, sijui ni ipi','Authorities, unknown'],no:['Hapana','No'],unsure:['Sina uhakika','Unsure']},
-      mode:{identified:['Ninajitambulisha','Identified'],confidential:['Siri kwa umma','Confidential'],anonymous:['Bila kutaja jina','Anonymous']},
-      contact:{phone:['Simu','Phone'],sms:['SMS','SMS'],email:['Barua pepe','Email'],none:['Usiwasiliane nami','None']},
-      evidence:{none:['Hakuna faili','No files'],image:['Picha','Image'],video:['Video','Video'],audio:['Sauti','Audio'],document:['PDF au Word','PDF or Word'],other:['Nyingine','Other'],mixed:['Mchanganyiko','Mixed']}
+  if (preScreen === 'choose' && !reference) {
+    return <section className="section page inquiryWizardPage">
+      <span className="kicker">{t('USHIRIKI WA WANANCHI', 'CITIZEN SUBMISSION')}</span>
+      <h1 className="pageTitle">{t('Wasilisha taarifa kwa Tume', 'Submit information to the Commission')}</h1>
+      <p className="lead">{t('Chagua jinsi unavyotaka kuwasilisha taarifa yako. Unaweza kuwasilisha kwa njia ya siri (Anonymous) au kwa kutambulisha kwenye akaunti yako.', 'Choose how you want to submit your information. You can submit anonymously or via your registered account.')}</p>
+      <div className="wizardChoiceCards">
+        <button type="button" className="wizardChoiceCard anonymous" onClick={() => { setAnonymousMode(true); setPreScreen('anonymous_intro'); setForm({ ...initialForm, submissionMode: 'anonymous', reporterRole: 'anonymous' }); }}>
+          <LockKeyhole size={28} />
+          <strong>{t('Wasilisha bila kujitambulisha', 'Submit anonymously')}</strong>
+          <span>{t('Hakuna jina, hakuna akaunti, hakuna arifa. Taarifa yako itasalia kuwa ya siri.', 'No name, no account, no notifications. Your report stays confidential.')}</span>
+          <b className="choiceArrow">{t('Anza bila akaunti', 'Start without account')} <ArrowRight size={16} /></b>
+        </button>
+        <button type="button" className="wizardChoiceCard registered" onClick={() => { setAnonymousMode(false); setPreScreen('wizard'); if (!user) { window.location.hash = ''; setTimeout(() => window.location.href = '/account?mode=login&next=/toa-taarifa', 50); return; } }}>
+          <Check size={28} />
+          <strong>{t('Wasilisha kwenye akaunti yangu', 'Submit via my account')}</strong>
+          <span>{t('Utaweza kufuatilia hali, kuongeza ushahidi zaidi, na kuwasiliana na Tume moja kwa moja.', 'Track status, add more evidence, and message the Commission directly.')}</span>
+          <b className="choiceArrow">{t('Ingia kwenye akaunti', 'Sign in to account')} <ArrowRight size={16} /></b>
+        </button>
+      </div>
+      <small className="inquiryDisclaimer">{t('Taarifa zako ni za siri na zitaonekana kwa Tume pekee.', 'Your information is private and visible only to the Commission.')}</small>
+    </section>;
+  }
+
+  if (preScreen === 'anonymous_intro') {
+    return <section className="section page inquiryWizardPage">
+      <span className="kicker">{t('UWASILISHAJI WA SIRI', 'ANONYMOUS SUBMISSION')}</span>
+      <h1 className="pageTitle">{t('Kabla ya kuanza', 'Before you begin')}</h1>
+      <div className="wizardPrivacyNotice"><LockKeyhole size={20} /><p>{t('Taarifa yako itahifadhiwa bila jina lako, bila namba ya simu, na bila barua pepe. Tume haitaweza kukutumia arifa wala kufuatilia na wewe moja kwa moja. Hifadhi namba ya marejeo utakayopokea mwishoni ili uweze kuifahamu baadaye.', 'Your report will be saved with no name, no phone number, and no email. The Commission will not be able to send you notifications or follow up with you directly. Save the reference number you receive at the end so you can recognize it later.')}</p></div>
+      <ol className="wizardAnonymousSteps">
+        <li>{t('Jibu maswali mafupi ili kuelezea aina ya taarifa.', 'Answer a few short questions to describe the type of report.')}</li>
+        <li>{t('Jaza fomu kwa maelezo ya tukio, eneo na ushahidi.', 'Fill the form with incident details, location, and evidence.')}</li>
+        <li>{t('Pokea namba ya marejeo. Hifadhi mahali salama.', 'Receive a reference number. Save it somewhere safe.')}</li>
+      </ol>
+      <div className="wizardActions">
+        <button type="button" className="secondary" onClick={() => { setPreScreen('choose'); setAnonymousMode(false); }}><ArrowLeft size={16} /> {t('Rudi', 'Back')}</button>
+        <button type="button" className="primary" onClick={() => setPreScreen('anonymous_questions')}>{t('Endelea kwenye maswali', 'Continue to questions')} <ArrowRight size={16} /></button>
+      </div>
+    </section>;
+  }
+
+  if (preScreen === 'anonymous_questions') {
+    const canProceed = anonAnswers.witnessed && anonAnswers.happenedRecently && (anonAnswers.location || form.region);
+    return <section className="section page inquiryWizardPage">
+      <span className="kicker">{t('MASWALI YA UPIMAJI', 'SCREENING QUESTIONS')}</span>
+      <h1 className="pageTitle">{t('Jibu maswali mafupi', 'Answer a few short questions')}</h1>
+      <p className="lead">{t('Jibu kwa ufuatiliaji wa haraka ili tuweze kukuelekeza kwenye fomu sahihi.', 'Answer briefly so we can route you to the right form.')}</p>
+      <fieldset className="wizardAnonymousQ">
+        <legend>{t('1. Umeona tukio hili kwa macho yako mwenyewe?', '1. Did you witness this incident with your own eyes?')}</legend>
+        <div className="wizardChoiceGrid">
+          {[['yes', 'Ndiyo, nililiona', 'Yes, I saw it'], ['no', 'Hapana, nilisikia tu', 'No, I only heard about it'], ['not_sure', 'Sijui kikamilifu', 'Not sure']].map(([value, sw, en]) => <label className="wizardChoice" key={value}><input type="radio" name="witnessed" checked={anonAnswers.witnessed === value} onChange={() => setAnonAnswers(a => ({ ...a, witnessed: value }))} /><span>{t(sw, en)}</span></label>)}
+        </div>
+      </fieldset>
+      <fieldset className="wizardAnonymousQ">
+        <legend>{t('2. Tukio lilitokea lini?', '2. When did the incident happen?')}</legend>
+        <div className="wizardChoiceGrid">
+          {[['today', 'Leo', 'Today'], ['week', 'Ndani ya wiki iliyopita', 'Within the past week'], ['month', 'Ndani ya mwezi uliopita', 'Within the past month'], ['earlier', 'Muda mrefu uliopita', 'Longer ago']].map(([value, sw, en]) => <label className="wizardChoice" key={value}><input type="radio" name="happenedRecently" checked={anonAnswers.happenedRecently === value} onChange={() => setAnonAnswers(a => ({ ...a, happenedRecently: value }))} /><span>{t(sw, en)}</span></label>)}
+        </div>
+      </fieldset>
+      <fieldset className="wizardAnonymousQ">
+        <legend>{t('3. Tukio lilitokea wapi?', '3. Where did the incident happen?')}</legend>
+        <label className="wizardAnonLocation">{t('Mkoa', 'Region')}<select value={form.region} onChange={e => { update('region', e.target.value); update('district', ''); update('ward', ''); }}><option value="">{t('Chagua mkoa', 'Select region')}</option>{TANZANIA_REGION_NAMES.map(region => <option key={region} value={region}>{region}</option>)}</select></label>
+        <label className="wizardAnonLocation">{t('Wilaya', 'District')}<select value={form.district} disabled={!form.region} onChange={e => { update('district', e.target.value); update('ward', ''); }}><option value="">{t('Chagua wilaya', 'Select district')}</option>{(TANZANIA_REGIONS[form.region] || []).map(district => <option key={district} value={district}>{district}</option>)}</select></label>
+        <label className="wizardAnonLocation">{t('Kata/Mtaa', 'Ward/Street')}<input value={anonAnswers.location || form.ward || form.streetVillage} maxLength={160} onChange={e => { setAnonAnswers(a => ({ ...a, location: e.target.value })); update('streetVillage', e.target.value); }} placeholder={t('Andika jina la kata, mtaa au kitongoji', 'Type the ward, street, or sub-village name')} /></label>
+      </fieldset>
+      <div className="wizardActions">
+        <button type="button" className="secondary" onClick={() => setPreScreen('anonymous_intro')}><ArrowLeft size={16} /> {t('Rudi', 'Back')}</button>
+        <button type="button" className="primary" disabled={!canProceed} onClick={() => setPreScreen('wizard')}>{t('Endelea kwenye fomu', 'Continue to the form')} <ArrowRight size={16} /></button>
+      </div>
+    </section>;
+  }
+
+  if (!anonymousMode && !user) return <section className="section page inquiryPage"><span className="kicker">{t('AKAUNTI INAHITAJIKA', 'ACCOUNT REQUIRED')}</span><h1 className="pageTitle">{t('Ingia ili kuwasilisha taarifa', 'Sign in to submit information')}</h1><p className="lead">{t('Taarifa zako zitaunganishwa na akaunti yako ili uweze kufuatilia hatua zake.', 'Your report will be linked to your account so you can track its progress.')}</p><div className="commissionActions"><Link className="primary linkBtn" to="/account?mode=login">{t('Ingia', 'Sign in')} <ArrowRight size={17} /></Link><Link className="secondary linkBtn" to="/account?mode=signup">{t('Jisajili', 'Sign up')} <ArrowRight size={17} /></Link></div></section>;
+
+  if (reference) return <section className="section page inquiryPage"><div className="inquirySuccess"><CheckCircle2 /><div><span>{t('TAARIFA IMEWASILISHWA', 'SUBMISSION RECEIVED')}</span><h2>{reference}</h2><p>{anonymousMode ? t('Hifadhi namba hii kwa usalama wako. Tume haitaweza kukufuata moja kwa moja kwa sababu taarifa hii ni ya siri kabisa.', 'Save this reference safely. The Commission cannot follow up with you directly because this report is fully anonymous.') : t('Hifadhi namba hii kwa marejeo. Unaweza kufuatilia hali kwenye ukurasa wa Taarifa Zangu.', 'Save this reference. You can track its status on My Submissions.')}</p>{anonymousMode ? <Link to="/">{t('Rudi mwanzo', 'Back to home')}</Link> : <Link to="/taarifa-zangu">{t('Nenda Taarifa Zangu', 'Go to My Submissions')}</Link>}</div></div></section>;
+
+  const update = (key: keyof WizardForm, value: any) => setForm(current => ({ ...current, [key]: value }));
+  const updateEvidence = (index: number, key: 'description' | 'capturedAt' | 'originalUnmodified', value: string | boolean) => setFiles(current => current.map((item, itemIndex) => itemIndex === index ? { ...item, [key]: value } : item));
+  const dateToday = new Date().toISOString().slice(0, 10);
+  const selectionLabel = (group: string, value: string) => {
+    const options: Record<string, Record<string, [string, string]>> = {
+      submissionType: { eyewitness: ['Simulizi la shahidi', 'Eyewitness account'], photo: ['Picha', 'Photo evidence'], video: ['Video', 'Video evidence'], document: ['Hati', 'Document'], audio: ['Sauti', 'Audio recording'], other: ['Nyingine', 'Other'] },
+      reporterRole: { victim: ['Mhasiriwa', 'Victim'], witness: ['Shahidi', 'Witness'], third_party: ['Mtu wa tatu', 'Third party'], anonymous: ['Bila kutaja jina', 'Anonymous'] },
+      time: { morning: ['Asubuhi', 'Morning'], afternoon: ['Mchana', 'Afternoon'], evening: ['Jioni', 'Evening'], night: ['Usiku', 'Night'], unknown: ['Haijulikani', 'Unknown'] },
+      authorities: { police: ['Polisi', 'Police'], military: ['Jeshi', 'Military'], unknown: ['Haijulikani', 'Unknown'], no: ['Hakuna', 'None'], unsure: ['Sijui', 'Unsure'] },
+      mode: { identified: ['Ninajitambulisha', 'Identified'], confidential: ['Siri kwa umma', 'Confidential'], anonymous: ['Bila kutaja jina', 'Anonymous'] },
+      contact: { phone: ['Simu', 'Phone'], sms: ['SMS', 'SMS'], email: ['Barua pepe', 'Email'], none: ['Usiwasiliane nami', 'None'] },
+      evidence: { none: ['Hakuna faili', 'No files'], image: ['Picha', 'Image'], video: ['Video', 'Video'], audio: ['Sauti', 'Audio'], document: ['PDF au Word', 'PDF or Word'], other: ['Nyingine', 'Other'], mixed: ['Mchanganyiko', 'Mixed'] },
+      peopleRole: Object.fromEntries(peopleRoles.map(([value, sw, en]) => [value, [sw, en]])),
+      shortTitle: Object.fromEntries(SHORT_TITLE_OPTIONS.map(([value, sw, en]) => [value, [sw, en]]))
     };
-    const pair=options[group]?.[value];return pair?t(pair[0],pair[1]):value;
+    const pair = options[group]?.[value];
+    return pair ? t(pair[0], pair[1]) : value;
   };
-  const saveDraft=async()=>{
-    setSaving(true);setMessage('');
-    const formData={...form,evidenceFiles:files.map(item=>({name:item.file.name,size:item.file.size,type:item.file.type,description:item.description,capturedAt:item.capturedAt,originalUnmodified:item.originalUnmodified,evidenceType:item.evidenceType}))};
-    const {error}=await supabase.from('inquiry_drafts').upsert({user_id:user.id,current_step:step,form_data:formData,updated_at:new Date().toISOString()},{onConflict:'user_id'});
-    setSaving(false);setDraftMessage(error?t('Rasimu haijahifadhiwa. Jaribu tena.','Draft could not be saved. Try again.'):t('Rasimu imehifadhiwa. Faili utazichagua tena utakapoendelea.','Draft saved. Re-select files when you resume.'));
-    if(!error)setDraftLoaded(true);
+
+  const saveDraft = async () => {
+    if (anonymousMode) { setDraftMessage(t('Rasimu haiwe kuhifadhiwa kwa wasilishaji bila akaunti.', 'Drafts cannot be saved for anonymous submissions.')); return; }
+    setSaving(true); setMessage('');
+    if (!user) { setSaving(false); return; }
+    const formData = { ...form, evidenceFiles: files.map(item => ({ name: item.file.name, size: item.file.size, type: item.file.type, description: item.description, capturedAt: item.capturedAt, originalUnmodified: item.originalUnmodified, evidenceType: item.evidenceType })) };
+    const { error } = await supabase.from('inquiry_drafts').upsert({ user_id: user.id, current_step: step, form_data: formData, updated_at: new Date().toISOString() }, { onConflict: 'user_id' });
+    setSaving(false); setDraftMessage(error ? t('Rasimu haijahifadhiwa. Jaribu tena.', 'Draft could not be saved. Try again.') : t('Rasimu imehifadhiwa. Faili utazichagua tena utakapoendelea.', 'Draft saved. Re-select files when you resume.'));
+    if (!error) setDraftLoaded(true);
   };
-  const validateStep=(activeStep:number)=>{
-    if(activeStep===1&&(!form.submissionType||!form.reporterRole))return t('Chagua aina ya taarifa na nafasi yako.','Choose a submission type and your role.');
-    if(activeStep===2){if(!form.incidentDate||form.incidentDate<'2025-10-01'||form.incidentDate>dateToday)return t('Tarehe iwe kuanzia Oktoba 2025 hadi leo.','Choose a date from October 2025 through today.');if(!form.region)return t('Chagua mkoa.','Choose a region.');if(!form.violationTypes.length)return t('Chagua angalau aina moja ya ukiukwaji.','Choose at least one violation type.')}
-    if(activeStep===3){if(form.title.trim().length<5)return t('Kichwa kiwe na angalau herufi 5.','Title must be at least 5 characters.');if(form.description.trim().length<100)return t('Maelezo ya tukio yawe na angalau herufi 100.','Detailed account must be at least 100 characters.');if(form.reportedElsewhere&&!form.reportingPlace.trim())return t('Eleza uliripoti wapi.','Say where you reported it.')}
-    if(activeStep===4){if(files.length>5)return t('Unaweza kuchagua hadi faili 5.','Choose up to 5 files.');if(files.length===0&&form.evidenceCategory!=='none')return t('Chagua faili au weka aina ya ushahidi kuwa hakuna faili.','Attach a file or select no files.');if(files.length>0&&form.evidenceCategory==='none')return t('Chagua aina ya ushahidi ulioweka.','Choose the type of evidence you attached.');if(form.submissionType!=='eyewitness'&&form.submissionType!=='other'&&!files.length)return t('Aina uliyochagua inahitaji faili la ushahidi.','The selected submission type requires an evidence file.');if(files.some(item=>item.evidenceType!==form.evidenceCategory&&form.evidenceCategory!=='mixed'))return t('Aina ya ushahidi haifanani na faili ulilochagua. Chagua Mchanganyiko au linganisha aina.','The evidence type does not match the selected file. Choose Mixed or change the type.')}
-    if(activeStep===5){if(form.submissionMode==='identified'&&!form.fullName.trim())return t('Weka jina lako kamili.','Enter your full name.');if(form.contactConsent&&form.contactMethod==='phone'&&!form.phone.trim())return t('Weka namba ya simu.','Enter your phone number.');if(form.contactConsent&&form.contactMethod==='email'&&!form.email.trim())return t('Weka barua pepe.','Enter your email address.')}
+
+  const validateStep = (activeStep: number) => {
+    if (activeStep === 1 && (!form.submissionType || !form.reporterRole)) return t('Chagua aina ya taarifa na nafasi yako.', 'Choose a submission type and your role.');
+    if (activeStep === 2) {
+      if (!form.incidentDate || form.incidentDate < '2025-10-01' || form.incidentDate > dateToday) return t('Tarehe iwe kuanzia Oktoba 2025 hadi leo.', 'Choose a date from October 2025 through today.');
+      if (!form.region) return t('Chagua mkoa.', 'Choose a region.');
+      if (!form.district) return t('Chagua wilaya.', 'Choose a district.');
+      if (!form.ward && !form.streetVillage) return t('Chagua kata au andika mtaa/kitongoji.', 'Choose a ward or type a street/village.');
+      if (!form.violationTypes.length) return t('Chagua angalau aina moja ya ukiukwaji.', 'Choose at least one violation type.');
+    }
+    if (activeStep === 3) {
+      if (!form.shortTitleCategory) return t('Chagua kichwa kifupi.', 'Choose a short title.');
+      if (form.title.trim().length < 5 && form.shortTitleCategory !== 'mengineyo') return t('Kichwa kiwe na angalau herufi 5.', 'Title must be at least 5 characters.');
+      if (form.description.trim().length < 100) return t('Maelezo ya tukio yawe na angalau herufi 100.', 'Detailed account must be at least 100 characters.');
+      if (form.reportedElsewhere && !form.reportingPlace.trim()) return t('Eleza uliripoti wapi.', 'Say where you reported it.');
+    }
+    if (activeStep === 4) {
+      if (files.length > 5) return t('Unaweza kuchagua hadi faili 5.', 'Choose up to 5 files.');
+      if (files.length === 0 && form.evidenceCategory !== 'none') return t('Chagua faili au weka aina ya ushahidi kuwa hakuna faili.', 'Attach a file or select no files.');
+      if (files.length > 0 && form.evidenceCategory === 'none') return t('Chagua aina ya ushahidi ulioweka.', 'Choose the type of evidence you attached.');
+      if (form.submissionType !== 'eyewitness' && form.submissionType !== 'other' && !files.length) return t('Aina uliyochagua inahitaji faili la ushahidi.', 'The selected submission type requires an evidence file.');
+      if (files.some(item => item.evidenceType !== form.evidenceCategory && form.evidenceCategory !== 'mixed')) return t('Aina ya ushahidi haifanani na faili ulilochagua. Chagua Mchanganyiko au linganisha aina.', 'The evidence type does not match the selected file. Choose Mixed or change the type.');
+    }
+    if (activeStep === 5 && !anonymousMode) {
+      if (form.submissionMode === 'identified' && !form.fullName.trim()) return t('Weka jina lako kamili.', 'Enter your full name.');
+      if (form.contactConsent && form.contactMethod === 'phone' && !form.phone.trim()) return t('Weka namba ya simu.', 'Enter your phone number.');
+      if (form.contactConsent && form.contactMethod === 'email' && !form.email.trim()) return t('Weka barua pepe.', 'Enter your email address.');
+    }
     return '';
   };
-  const toggleViolation=(value:string)=>setForm(current=>({...current,violationTypes:current.violationTypes.includes(value)?current.violationTypes.filter(item=>item!==value):[...current.violationTypes,value]}));
-  const addFiles=(list:FileList|null)=>{const selected=Array.from(list||[]);if(files.length+selected.length>5||selected.some(file=>!allowedTypes.includes(file.type)||file.size<1||file.size>maxFileBytes)){setMessage(t('Chagua hadi faili 5 za aina zinazoruhusiwa, kila moja hadi MB 50.','Choose up to 5 allowed files, each up to 50 MB.'));return}setFiles(current=>[...current,...selected.map(file=>({file,description:'',capturedAt:'',originalUnmodified:false,evidenceType:evidenceKind(file.type),previewUrl:file.type.startsWith('image/')?URL.createObjectURL(file):undefined}))]);setMessage('')};
-  const removeFile=(index:number)=>setFiles(current=>{const item=current[index];if(item?.previewUrl)URL.revokeObjectURL(item.previewUrl);return current.filter((_,itemIndex)=>itemIndex!==index)});
-  const nextStep=()=>{const error=validateStep(step);if(error){setMessage(error);return}setMessage('');setStep(current=>Math.min(6,current+1))};
-  const previousStep=()=>{setMessage('');setStep(current=>Math.max(1,current-1))};
-  const editSection=(targetStep:number)=>{setStep(targetStep);setMessage('')};
-  const dateField=(key:'incidentDate'|'residenceRegion'|'reportingPlace',label:string,options?:string[])=>options?<label>{label}<select value={form[key]} onChange={e=>update(key,e.target.value)}><option value="">{t('Chagua','Select')}</option>{options.map(name=><option key={name} value={name}>{name}</option>)}</select></label>:<label>{label}<input value={form[key]} onChange={e=>update(key,e.target.value)} /></label>;
+
+  const toggleViolation = (value: string) => setForm(current => ({ ...current, violationTypes: current.violationTypes.includes(value) ? current.violationTypes.filter(item => item !== value) : [...current.violationTypes, value] }));
+  const addFiles = (list: FileList | null) => {
+    const selected = Array.from(list || []);
+    if (files.length + selected.length > 5 || selected.some(file => !allowedTypes.includes(file.type) || file.size < 1 || file.size > maxFileBytes)) { setMessage(t('Chagua hadi faili 5 za aina zinazoruhusiwa, kila moja hadi MB 50.', 'Choose up to 5 allowed files, each up to 50 MB.')); return; }
+    setFiles(current => [...current, ...selected.map(file => ({ file, description: '', capturedAt: '', originalUnmodified: false, evidenceType: evidenceKind(file.type), previewUrl: file.type.startsWith('image/') ? URL.createObjectURL(file) : undefined }))]); setMessage('');
+  };
+  const removeFile = (index: number) => setFiles(current => { const item = current[index]; if (item?.previewUrl) URL.revokeObjectURL(item.previewUrl); return current.filter((_, itemIndex) => itemIndex !== index); });
+  const nextStep = () => { const error = validateStep(step); if (error) { setMessage(error); return; } setMessage(''); setStep(current => Math.min(6, current + 1)); };
+  const previousStep = () => { setMessage(''); setStep(current => Math.max(1, current - 1)); };
+  const editSection = (targetStep: number) => { setStep(targetStep); setMessage(''); };
+
+  // People-involved list helpers (+ icon to add new person, X to remove)
+  const addPerson = () => setForm(current => ({ ...current, peopleInvolved: [...current.peopleInvolved, { name: '', role: 'civilian' }] }));
+  const updatePerson = (index: number, key: 'name' | 'role', value: string) => setForm(current => ({ ...current, peopleInvolved: current.peopleInvolved.map((p, i) => i === index ? { ...p, [key]: value } : p) }));
+  const removePerson = (index: number) => setForm(current => ({ ...current, peopleInvolved: current.peopleInvolved.filter((_, i) => i !== index) }));
+
+  const wardsForDistrict = form.region && form.district ? getWards(form.region, form.district) : [];
 
   return <section className="section page inquiryWizardPage">
-    <span className="kicker">{t('USHIRIKI WA WANANCHI','CITIZEN SUBMISSION')}</span><h1 className="pageTitle">{t('Wasilisha taarifa kwa Tume','Submit information to the Commission')}</h1>
-    <div className="wizardHeader"><div><strong>{t('Hatua','Step')} {step} {t('kati ya','of')} 6</strong><span>{t(stepNames[step-1][0],stepNames[step-1][1])}</span></div><button type="button" className="wizardSave" onClick={saveDraft} disabled={saving}>{saving?<Save size={16}/>:<Save size={16}/>} {saving?t('Inahifadhi...','Saving...'):t('Hifadhi rasimu','Save draft')}</button></div>
-    <div className="wizardProgress" role="progressbar" aria-valuemin={1} aria-valuemax={6} aria-valuenow={step}><span style={{width:(step/6*100)+'%'}}/></div>
-    <div className="wizardStepTrack">{stepNames.map((name,index)=><button key={name[0]} type="button" className={index+1===step?'current':index+1<step?'complete':''} onClick={()=>index+1<step&&editSection(index+1)} disabled={index+1>step}><b>{index+1<step?<Check size={14}/>:index+1}</b><span>{t(name[0],name[1])}</span></button>)}</div>
-    {draftMessage&&<div className="wizardDraftMessage" role="status">{draftMessage}</div>}{message&&<div className="authMessage" role="alert">{message}</div>}
+    <span className="kicker">{t('USHIRIKI WA WANANCHI', 'CITIZEN SUBMISSION')}</span>
+    <h1 className="pageTitle">{t('Wasilisha taarifa kwa Tume', 'Submit information to the Commission')}</h1>
+    {anonymousMode && <div className="wizardPrivacyNotice"><LockKeyhole size={18} /><p>{t('Uko kwenye hali ya siri kabisa. Hakakaunti, hakuna arifa.', 'You are in fully anonymous mode. No account, no notifications.')}</p></div>}
+    <div className="wizardHeader"><div><strong>{t('Hatua', 'Step')} {step} {t('kati ya', 'of')} 6</strong><span>{t(stepNames[step - 1][0], stepNames[step - 1][1])}</span></div>{!anonymousMode && <button type="button" className="wizardSave" onClick={saveDraft} disabled={saving}><Save size={16} /> {saving ? t('Inahifadhi...', 'Saving...') : t('Hifadhi rasimu', 'Save draft')}</button>}</div>
+    <div className="wizardProgress" role="progressbar" aria-valuemin={1} aria-valuemax={6} aria-valuenow={step}><span style={{ width: (step / 6 * 100) + '%' }} /></div>
+    <div className="wizardStepTrack">{stepNames.map((name, index) => <button key={name[0]} type="button" className={index + 1 === step ? 'current' : index + 1 < step ? 'complete' : ''} onClick={() => index + 1 < step && editSection(index + 1)} disabled={index + 1 > step}><b>{index + 1 < step ? <Check size={14} /> : index + 1}</b><span>{t(name[0], name[1])}</span></button>)}</div>
+    {draftMessage && <div className="wizardDraftMessage" role="status">{draftMessage}</div>}
+    {message && <div className="authMessage" role="alert">{message}</div>}
     <form className="wizardForm" onSubmit={submit}>
-      {step===1&&<section className="wizardStep"><h2>{t('Una wasilisha nini?','What are you submitting?')}</h2><p>{t('Chagua aina inayofanana zaidi na taarifa yako.','Choose the type that best describes your submission.')}</p><label>{t('Aina ya taarifa','Submission type')}<select value={form.submissionType} onChange={e=>update('submissionType',e.target.value)}><option value="">{t('Chagua aina','Select a type')}</option>{['eyewitness','photo','video','document','audio','other'].map(value=><option key={value} value={value}>{selectionLabel('submissionType',value)}</option>)}</select></label><fieldset><legend>{t('Wewe ni nani katika tukio hili?','What is your role in this incident?')}</legend><div className="wizardChoiceGrid">{['victim','witness','third_party','anonymous'].map(value=><label className="wizardChoice" key={value}><input type="radio" name="reporterRole" checked={form.reporterRole===value} onChange={()=>update('reporterRole',value)}/><span>{selectionLabel('reporterRole',value)}</span></label>)}</div></fieldset></section>}
-      {step===2&&<section className="wizardStep"><h2>{t('Tukio lilitokea lini na wapi?','When and where did it happen?')}</h2><div className="wizardTwo"><label>{t('Tarehe ya tukio','Incident date')}<input type="date" min="2025-10-01" max={dateToday} value={form.incidentDate} onChange={e=>update('incidentDate',e.target.value)}/></label><label>{t('Muda wa takriban','Approximate time')}<select value={form.incidentTime} onChange={e=>update('incidentTime',e.target.value)}>{['morning','afternoon','evening','night','unknown'].map(value=><option key={value} value={value}>{selectionLabel('time',value)}</option>)}</select></label></div><div className="wizardTwo"><label>{t('Mkoa','Region')}<select value={form.region} onChange={e=>{update('region',e.target.value);update('district','')}}><option value="">{t('Chagua mkoa','Select region')}</option>{TANZANIA_REGION_NAMES.map(region=><option key={region} value={region}>{region}</option>)}</select></label><label>{t('Wilaya','District')}<select value={form.district} disabled={!form.region} onChange={e=>update('district',e.target.value)}><option value="">{t('Chagua wilaya','Select district')}</option>{(TANZANIA_REGIONS[form.region]||[]).map(district=><option key={district} value={district}>{district}</option>)}</select></label></div><div className="wizardTwo"><label>{t('Kata','Ward')}<input value={form.ward} maxLength={160} onChange={e=>update('ward',e.target.value)} placeholder={t('Kata au mtaa','Ward or street')}/></label><label>{t('Alama ya eneo','Landmark')}<input value={form.location} maxLength={500} onChange={e=>update('location',e.target.value)} placeholder={t('Jengo, kituo au eneo linalojulikana','Building, station, or known location')}/></label></div><fieldset><legend>{t('Aina ya ukiukwaji (chagua zote zinazohusika)','Type of violation (select all that apply)')}</legend><div className="wizardCheckGrid">{violationOptions.map(([value,sw,en])=><label className="wizardChoice" key={value}><input type="checkbox" checked={form.violationTypes.includes(value)} onChange={()=>toggleViolation(value)}/><span>{t(sw,en)}</span></label>)}</div></fieldset></section>}
-      {step===3&&<section className="wizardStep"><h2>{t('Eleza ulichokiona au unachokijua','Describe what you saw or know')}</h2><label>{t('Kichwa kifupi','Short title')}<input value={form.title} maxLength={200} onChange={e=>update('title',e.target.value)} placeholder={t('Muhtasari wa taarifa','Brief summary')}/></label><label>{t('Maelezo ya kina','Detailed account')}<textarea value={form.description} maxLength={10000} onChange={e=>update('description',e.target.value)} placeholder={t('Eleza kilichotokea, lini, wapi na jinsi unavyojua. Angalau herufi 100.','Describe what happened, when, where, and how you know. Minimum 100 characters.')}/><small className="wizardCounter">{form.description.length}/10,000 · {t('angalau herufi 100','minimum 100 characters')}</small></label><label>{t('Watu waliohusika (majina au nafasi, kama zinajulikana)','People involved (names or roles, if known)')}<textarea className="wizardShortText" value={form.peopleInvolved} maxLength={3000} onChange={e=>update('peopleInvolved',e.target.value)}/></label><div className="wizardTwo"><label>{t('Maafisa wa mamlaka walikuwepo?','Were authorities present?')}<select value={form.authoritiesPresent} onChange={e=>update('authoritiesPresent',e.target.value)}>{['police','military','unknown','no','unsure'].map(value=><option key={value} value={value}>{selectionLabel('authorities',value)}</option>)}</select></label><label>{t('Uliripoti tukio kwingine?','Did you report this elsewhere?')}<select value={form.reportedElsewhere?'yes':'no'} onChange={e=>update('reportedElsewhere',e.target.value==='yes')}><option value="no">{t('Hapana','No')}</option><option value="yes">{t('Ndiyo','Yes')}</option></select></label></div>{form.reportedElsewhere&&<label>{t('Uliripoti wapi?','Where did you report it?')}<input value={form.reportingPlace} maxLength={500} onChange={e=>update('reportingPlace',e.target.value)}/></label>}</section>}
-      {step===4&&<section className="wizardStep"><h2>{t('Ongeza ushahidi','Add evidence')}</h2><p>{t('Faili huanza kupakiwa utakapotuma taarifa. Hadi faili 5, MB 50 kila moja.','Files upload when you submit. Up to 5 files, 50 MB each.')}</p><label>{t('Aina ya ushahidi','Evidence type')}<select value={form.evidenceCategory} onChange={e=>update('evidenceCategory',e.target.value)}>{['image','video','audio','document','other','mixed'].map(value=><option key={value} value={value}>{selectionLabel('evidence',value)}</option>)}</select></label><label className="wizardFilePicker"><Upload size={19}/><span><b>{t('Chagua faili','Choose files')}</b><small>{t('PDF, Word, picha, video au sauti','PDF, Word, image, video, or audio')}</small></span><input type="file" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.mp4,.webm,.mov,.mp3,.wav,.m4a,.ogg,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,image/jpeg,image/png,image/webp,video/mp4,video/webm,video/quicktime,audio/mpeg,audio/wav,audio/mp4,audio/ogg" onChange={e=>addFiles(e.target.files)}/></label>{files.map((item,index)=><article className="wizardEvidenceItem" key={item.file.name+item.file.lastModified}>{item.previewUrl?<img src={item.previewUrl} alt={item.file.name}/>:<FileText/>}<div><strong>{item.file.name}</strong><small>{(item.file.size/1024/1024).toFixed(1)} MB · {selectionLabel('evidence',item.evidenceType)}</small><label>{t('Maelezo ya faili (hiari)','File description (optional)')}<input value={item.description} maxLength={500} onChange={e=>updateEvidence(index,'description',e.target.value)}/></label><label>{t('Tarehe ilipopigwa/kurekodiwa','Date captured/recorded')}<input type="date" min="2025-10-01" max={dateToday} value={item.capturedAt} onChange={e=>updateEvidence(index,'capturedAt',e.target.value)}/></label><label className="wizardInlineCheck"><input type="checkbox" checked={item.originalUnmodified} onChange={e=>updateEvidence(index,'originalUnmodified',e.target.checked)}/>{t('Nathibitisha faili hili ni la asili/halijabadilishwa','I confirm this file is original/unmodified')}</label><button type="button" className="wizardRemoveFile" onClick={()=>removeFile(index)}>{t('Ondoa faili','Remove file')}</button></div></article>)}{draftLoaded&&files.length===0&&<div className="wizardDraftMessage">{t('Rasimu imehifadhiwa. Faili ulizochagua awali hazijahifadhiwa; zichague tena kabla ya kutuma.','Your draft is saved. Previously selected files are not stored; choose them again before submitting.')}</div>}</section>}
-      {step===5&&<section className="wizardStep"><h2>{t('Ungependa kuwasilisha kwa namna gani?','How would you like to submit?')}</h2><fieldset><legend>{t('Njia ya kujitambulisha','Submission mode')}</legend><div className="wizardChoiceGrid">{['identified','confidential','anonymous'].map(value=><label className="wizardChoice" key={value}><input type="radio" name="submissionMode" checked={form.submissionMode===value} onChange={()=>update('submissionMode',value)}/><span>{selectionLabel('mode',value)}</span></label>)}</div></fieldset><div className="wizardPrivacyNotice"><LockKeyhole size={18}/><p>{form.submissionMode==='anonymous'?t('Jina na mawasiliano havitaongezwa kwenye taarifa. Akaunti yako bado huhifadhiwa kwa ajili ya ufuatiliaji wa siri.','Your name and contact details will not be added to the report. Your account is retained for private tracking.'):t('Taarifa na viambatisho vyako vitaonekana kwa wasimamizi wa Tume walioidhinishwa pekee.','Your report and evidence are visible only to authorized Commission staff.')}</p></div>{form.submissionMode!=='anonymous'&&<><label>{t('Jina kamili','Full name')}{form.submissionMode==='identified'&&<span aria-hidden="true"> *</span>}<input value={form.fullName} maxLength={160} autoComplete="name" onChange={e=>update('fullName',e.target.value)}/></label><div className="wizardTwo"><label>{t('Simu','Phone')}<input value={form.phone} type="tel" autoComplete="tel" onChange={e=>update('phone',e.target.value)}/></label><label>{t('Barua pepe','Email')}<input value={form.email} type="email" autoComplete="email" onChange={e=>update('email',e.target.value)}/></label></div><label>{t('Mkoa unaoishi (hiari)','Region of residence (optional)')}<select value={form.residenceRegion} onChange={e=>update('residenceRegion',e.target.value)}><option value="">{t('Chagua mkoa','Select region')}</option>{TANZANIA_REGION_NAMES.map(region=><option key={region}>{region}</option>)}</select></label><label className="wizardInlineCheck"><input type="checkbox" checked={form.contactConsent} onChange={e=>update('contactConsent',e.target.checked)}/>{t('Ninakubali Tume iwasiliane nami','I consent to being contacted by the Commission')}</label>{form.contactConsent&&<label>{t('Njia unayopendelea ya mawasiliano','Preferred contact method')}<select value={form.contactMethod} onChange={e=>update('contactMethod',e.target.value)}>{['phone','sms','email','none'].map(value=><option key={value} value={value}>{selectionLabel('contact',value)}</option>)}</select></label>}</>}</section>}
-      {step===6&&<section className="wizardStep"><h2>{t('Kagua taarifa zako','Review your submission')}</h2>{[[1,t('Aina na nafasi','Type and role'),[selectionLabel('submissionType',form.submissionType),selectionLabel('reporterRole',form.reporterRole)]],[2,t('Tukio','Incident'),[form.incidentDate,selectionLabel('time',form.incidentTime),[form.region,form.district,form.ward,form.location].filter(Boolean).join(', '),form.violationTypes.map(value=>t(violationOptions.find(option=>option[0]===value)?.[1]||value,violationOptions.find(option=>option[0]===value)?.[2]||value)).join(', ')]],[3,t('Simulizi','Account'),[form.title,form.description]],[4,t('Ushahidi','Evidence'),files.length?files.map(item=>item.file.name).join(', '):t('Hakuna faili lililoongezwa','No files attached')],[5,t('Mwasilishaji','Your details'),[selectionLabel('mode',form.submissionMode),form.submissionMode==='anonymous'?t('Bila kutaja jina','Anonymous'):[form.fullName,form.contactConsent?(form.contactMethod==='email'?form.email:form.phone):''].filter(Boolean).join(' · ')]]].map(([target,title,summary]:any)=><article className="wizardReviewSection" key={target}><div><strong>{title}</strong><button type="button" onClick={()=>editSection(target)}>{t('Hariri','Edit')}</button></div>{summary.map((item:string,index:number)=><p key={index}>{item}</p>)}</article>)}<label className="wizardDeclaration"><input type="checkbox" checked={form.truthDeclared} onChange={e=>update('truthDeclared',e.target.checked)}/><span>{t('Ninathibitisha kuwa taarifa hii ni ya kweli kwa kadiri ya ufahamu wangu.','I declare this information is true to the best of my knowledge.')}</span></label>{files.length>0&&<div className="wizardCaptcha" ref={widgetHost}/>} {!siteKey&&files.length>0&&<div className="inquirySetupNotice">{t('Uwasilishaji wa ushahidi utawezeshwa baada ya kusanidi uthibitisho wa usalama.','Evidence submission will be enabled after security verification is configured.')}</div>}</section>}
-      {uploadProgress&&<div className="wizardUploadStatus" role="status">{uploadProgress}</div>}
-      <div className="wizardActions">{step>1&&<button type="button" className="secondary" onClick={previousStep}><ArrowLeft size={16}/>{t('Rudi','Back')}</button>}<button type="button" className="wizardSave" onClick={saveDraft} disabled={saving||busy}><Save size={16}/>{saving?t('Inahifadhi...','Saving...'):t('Hifadhi rasimu','Save draft')}</button>{step<6?<button type="button" className="primary" onClick={nextStep}>{t('Endelea','Continue')} <ArrowRight size={16}/></button>:<button type="submit" className="primary" disabled={busy||!form.truthDeclared||(files.length>0&&(!siteKey||!captchaToken))}>{busy?t('Inawasilisha...','Submitting...'):t('Wasilisha kwa Tume','Submit to the Commission')} <ArrowRight size={16}/></button>}</div>
-      {draftMessage&&<small className="wizardDraftStatus" role="status">{draftMessage}</small>}
+      {/* Step 1: Type & role */}
+      {step === 1 && <section className="wizardStep">
+        <h2>{t('Una wasilisha nini?', 'What are you submitting?')}</h2>
+        <p>{t('Chagua aina inayofanana zaidi na taarifa yako.', 'Choose the type that best describes your submission.')}</p>
+        <label>{t('Aina ya taarifa', 'Submission type')}
+          <select value={form.submissionType} onChange={e => update('submissionType', e.target.value)}>
+            <option value="">{t('Chagua aina', 'Select a type')}</option>
+            {['eyewitness', 'photo', 'video', 'document', 'audio', 'other'].map(value => <option key={value} value={value}>{selectionLabel('submissionType', value)}</option>)}
+          </select>
+        </label>
+        <fieldset>
+          <legend>{t('Wewe ni nani katika tukio hili?', 'What is your role in this incident?')}</legend>
+          <div className="wizardChoiceGrid">
+            {['victim', 'witness', 'third_party', 'anonymous'].map(value => <label className="wizardChoice" key={value}><input type="radio" name="reporterRole" checked={form.reporterRole === value} disabled={anonymousMode && value !== 'anonymous'} onChange={() => update('reporterRole', value)} /><span>{selectionLabel('reporterRole', value)}</span></label>)}
+          </div>
+        </fieldset>
+      </section>}
+
+      {/* Step 2: When & where — region → district → ward cascade + street/village */}
+      {step === 2 && <section className="wizardStep">
+        <h2>{t('Tukio lilitokea lini na wapi?', 'When and where did it happen?')}</h2>
+        <div className="wizardTwo">
+          <label>{t('Tarehe ya tukio', 'Incident date')}<input type="date" min="2025-10-01" max={dateToday} value={form.incidentDate} onChange={e => update('incidentDate', e.target.value)} /></label>
+          <label>{t('Muda wa takriban', 'Approximate time')}<select value={form.incidentTime} onChange={e => update('incidentTime', e.target.value)}>{['morning', 'afternoon', 'evening', 'night', 'unknown'].map(value => <option key={value} value={value}>{selectionLabel('time', value)}</option>)}</select></label>
+        </div>
+        <div className="wizardTwo">
+          <label>{t('Mkoa', 'Region')}<select value={form.region} onChange={e => { update('region', e.target.value); update('district', ''); update('ward', ''); update('wardCustom', false); }}><option value="">{t('Chagua mkoa', 'Select region')}</option>{TANZANIA_REGION_NAMES.map(region => <option key={region} value={region}>{region}</option>)}</select></label>
+          <label>{t('Wilaya', 'District')}<select value={form.district} disabled={!form.region} onChange={e => { update('district', e.target.value); update('ward', ''); update('wardCustom', false); }}><option value="">{t('Chagua wilaya', 'Select district')}</option>{(TANZANIA_REGIONS[form.region] || []).map(district => <option key={district} value={district}>{district}</option>)}</select></label>
+        </div>
+        <div className="wizardThree">
+          <label>{t('Kata', 'Ward')}
+            <select value={form.wardCustom ? '__custom__' : form.ward} disabled={!form.district} onChange={e => { if (e.target.value === '__custom__') { update('wardCustom', true); update('ward', ''); } else { update('wardCustom', false); update('ward', e.target.value); } }}>
+              <option value="">{t('Chagua kata', 'Select ward')}</option>
+              {wardsForDistrict.map(ward => <option key={ward} value={ward}>{ward}</option>)}
+              <option value="__custom__">{t('+ Kata nyingine (andika mwenyewe)', '+ Other ward (type your own)')}</option>
+            </select>
+            {form.wardCustom && <input className="wardCustomInput" value={form.ward} maxLength={160} onChange={e => update('ward', e.target.value)} placeholder={t('Andika jina la kata', 'Type the ward name')} />}
+          </label>
+          <label>{t('Mtaa / Kitongoji / Kijiji', 'Street / Sub-village / Village')}<input value={form.streetVillage} maxLength={200} onChange={e => update('streetVillage', e.target.value)} placeholder={t('Andika jina la mtaa au kijiji', 'Type the street or village name')} /></label>
+          <label>{t('Alama ya eneo', 'Landmark')}<input value={form.location} maxLength={500} onChange={e => update('location', e.target.value)} placeholder={t('Jengo, kituo au eneo linalojulikana', 'Building, station, or known location')} /></label>
+        </div>
+        <fieldset>
+          <legend>{t('Aina ya ukiukwaji (chagua zote zinazohusika)', 'Type of violation (select all that apply)')}</legend>
+          <div className="wizardCheckGrid">{violationOptions.map(([value, sw, en]) => <label className="wizardChoice" key={value}><input type="checkbox" checked={form.violationTypes.includes(value)} onChange={() => toggleViolation(value)} /><span>{t(sw, en)}</span></label>)}</div>
+        </fieldset>
+      </section>}
+
+      {/* Step 3: Account (description) — short title is now a dropdown + people-involved as dynamic list */}
+      {step === 3 && <section className="wizardStep">
+        <h2>{t('Eleza ulichokiona au unachokijua', 'Describe what you saw or know')}</h2>
+        <label>{t('Kichwa kifupi', 'Short title')}
+          <select value={form.shortTitleCategory} onChange={e => { update('shortTitleCategory', e.target.value); if (e.target.value !== 'mengineyo') update('title', selectionLabel('shortTitle', e.target.value)); }}>
+            <option value="">{t('Chagua kichwa', 'Select a short title')}</option>
+            {SHORT_TITLE_OPTIONS.map(([value, sw, en]) => <option key={value} value={value}>{t(sw, en)}</option>)}
+          </select>
+        </label>
+        {form.shortTitleCategory === 'mengineyo' && <label>{t('Andika kichwa chako', 'Type your own title')}<input value={form.title} maxLength={200} onChange={e => update('title', e.target.value)} placeholder={t('Muhtasari wa taarifa', 'Brief summary')} /></label>}
+        <label>{t('Maelezo ya kina', 'Detailed account')}<textarea value={form.description} maxLength={10000} onChange={e => update('description', e.target.value)} placeholder={t('Eleza kilichotokea, lini, wapi na jinsi unavyojua. Angalau herufi 100.', 'Describe what happened, when, where, and how you know. Minimum 100 characters.')} /><small className="wizardCounter">{form.description.length}/10,000 · {t('angalau herufi 100', 'minimum 100 characters')}</small></label>
+
+        {/* People involved — dynamic + icon to add a person, X to remove, role tag dropdown */}
+        <div className="wizardPeopleBlock">
+          <div className="wizardPeopleHeader">
+            <strong>{t('Watu waliohusika (majina au nafasi, kama zinajulikana)', 'People involved (names or roles, if known)')}</strong>
+            <button type="button" className="wizardAddPersonBtn" onClick={addPerson} aria-label={t('Ongeza mtu', 'Add person')}><Plus size={16} /> {t('Ongeza mtu', 'Add person')}</button>
+          </div>
+          {form.peopleInvolved.length === 0 && <p className="wizardPeopleEmpty">{t('Bado hujaongeza mtu. Bofya "Ongeza mtu" kuanza.', 'No people added yet. Click "Add person" to start.')}</p>}
+          {form.peopleInvolved.map((person, index) => <div className="wizardPersonRow" key={index}>
+            <input className="wizardPersonName" value={person.name} maxLength={200} onChange={e => updatePerson(index, 'name', e.target.value)} placeholder={t('Jina au maelezo', 'Name or description')} />
+            <select className="wizardPersonRole" value={person.role} onChange={e => updatePerson(index, 'role', e.target.value)}>
+              {peopleRoles.map(([value, sw, en]) => <option key={value} value={value}>{t(sw, en)}</option>)}
+            </select>
+            <button type="button" className="wizardRemovePersonBtn" onClick={() => removePerson(index)} aria-label={t('Ondoa mtu', 'Remove person')}><X size={14} /></button>
+          </div>)}
+        </div>
+
+        <div className="wizardTwo">
+          <label>{t('Maafisa wa mamlaka walikuwepo?', 'Were authorities present?')}<select value={form.authoritiesPresent} onChange={e => update('authoritiesPresent', e.target.value)}>{['police', 'military', 'unknown', 'no', 'unsure'].map(value => <option key={value} value={value}>{selectionLabel('authorities', value)}</option>)}</select></label>
+          <label>{t('Uliripoti tukio kwingine?', 'Did you report this elsewhere?')}<select value={form.reportedElsewhere ? 'yes' : 'no'} onChange={e => update('reportedElsewhere', e.target.value === 'yes')}><option value="no">{t('Hapana', 'No')}</option><option value="yes">{t('Ndiyo', 'Yes')}</option></select></label>
+        </div>
+        {form.reportedElsewhere && <label>{t('Uliripoti wapi?', 'Where did you report it?')}<input value={form.reportingPlace} maxLength={500} onChange={e => update('reportingPlace', e.target.value)} /></label>}
+      </section>}
+
+      {/* Step 4: Evidence */}
+      {step === 4 && <section className="wizardStep">
+        <h2>{t('Ongeza ushahidi', 'Add evidence')}</h2>
+        <p>{t('Faili huanza kupakiwa utakapotuma taarifa. Hadi faili 5, MB 50 kila moja.', 'Files upload when you submit. Up to 5 files, 50 MB each.')}</p>
+        <label>{t('Aina ya ushahidi', 'Evidence type')}<select value={form.evidenceCategory} onChange={e => update('evidenceCategory', e.target.value)}>{['none', 'image', 'video', 'audio', 'document', 'other', 'mixed'].map(value => <option key={value} value={value}>{selectionLabel('evidence', value)}</option>)}</select></label>
+        <label className="wizardFilePicker"><Upload size={19} /><span><b>{t('Chagua faili', 'Choose files')}</b><small>{t('PDF, Word, picha, video au sauti', 'PDF, Word, image, video, or audio')}</small></span><input type="file" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.mp4,.webm,.mov,.mp3,.wav,.m4a,.ogg,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,image/jpeg,image/png,image/webp,video/mp4,video/webm,video/quicktime,audio/mpeg,audio/wav,audio/mp4,audio/ogg" onChange={e => addFiles(e.target.files)} /></label>
+        {files.map((item, index) => <article className="wizardEvidenceItem" key={item.file.name + item.file.lastModified}>
+          {item.previewUrl ? <img src={item.previewUrl} alt={item.file.name} /> : <FileText />}
+          <div>
+            <strong>{item.file.name}</strong>
+            <small>{(item.file.size / 1024 / 1024).toFixed(1)} MB · {selectionLabel('evidence', item.evidenceType)}</small>
+            <label>{t('Maelezo ya faili (hiari)', 'File description (optional)')}<input value={item.description} maxLength={500} onChange={e => updateEvidence(index, 'description', e.target.value)} /></label>
+            <label>{t('Tarehe ilipopigwa/kurekodiwa', 'Date captured/recorded')}<input type="date" min="2025-10-01" max={dateToday} value={item.capturedAt} onChange={e => updateEvidence(index, 'capturedAt', e.target.value)} /></label>
+            <label className="wizardInlineCheck"><input type="checkbox" checked={item.originalUnmodified} onChange={e => updateEvidence(index, 'originalUnmodified', e.target.checked)} />{t('Nathibitisha faili hili ni la asili/halijabadilishwa', 'I confirm this file is original/unmodified')}</label>
+            <button type="button" className="wizardRemoveFile" onClick={() => removeFile(index)}>{t('Ondoa faili', 'Remove file')}</button>
+          </div>
+        </article>)}
+        {draftLoaded && files.length === 0 && <div className="wizardDraftMessage">{t('Rasimu imehifadhiwa. Faili ulizochagua awali hazijahifadhiwa; zichague tena kabla ya kutuma.', 'Your draft is saved. Previously selected files are not stored; choose them again before submitting.')}</div>}
+      </section>}
+
+      {/* Step 5: Your details — skipped for anonymous mode */}
+      {step === 5 && (anonymousMode ? (
+        <section className="wizardStep">
+          <h2>{t('Taarifa ya siri kabisa', 'Fully anonymous report')}</h2>
+          <div className="wizardPrivacyNotice"><LockKeyhole size={20} /><p>{t('Taarifa yako haitakuwa na jina wala mawasiliano. Tume haitaweza kukufuata. Endelea kwenye ukaguzi.', 'Your report will not include a name or contact details. The Commission cannot follow up with you. Continue to review.')}</p></div>
+        </section>
+      ) : (
+        <section className="wizardStep">
+          <h2>{t('Ungependa kuwasilisha kwa namna gani?', 'How would you like to submit?')}</h2>
+          <fieldset>
+            <legend>{t('Njia ya kujitambulisha', 'Submission mode')}</legend>
+            <div className="wizardChoiceGrid">{['identified', 'confidential', 'anonymous'].map(value => <label className="wizardChoice" key={value}><input type="radio" name="submissionMode" checked={form.submissionMode === value} onChange={() => update('submissionMode', value)} /><span>{selectionLabel('mode', value)}</span></label>)}</div>
+          </fieldset>
+          <div className="wizardPrivacyNotice"><LockKeyhole size={18} /><p>{form.submissionMode === 'anonymous' ? t('Jina na mawasiliano havitaongezwa kwenye taarifa. Akaunti yako bado huhifadhiwa kwa ajili ya ufuatiliaji wa siri.', 'Your name and contact details will not be added to the report. Your account is retained for private tracking.') : t('Taarifa na viambatisho vyako vitaonekana kwa wasimamizi wa Tume walioidhinishwa pekee.', 'Your report and evidence are visible only to authorized Commission staff.')}</p></div>
+          {form.submissionMode !== 'anonymous' && <>
+            <label>{t('Jina kamili', 'Full name')}{form.submissionMode === 'identified' && <span aria-hidden="true"> *</span>}<input value={form.fullName} maxLength={160} autoComplete="name" onChange={e => update('fullName', e.target.value)} /></label>
+            <div className="wizardTwo">
+              <label>{t('Simu', 'Phone')}<input value={form.phone} type="tel" autoComplete="tel" onChange={e => update('phone', e.target.value)} /></label>
+              <label>{t('Barua pepe', 'Email')}<input value={form.email} type="email" autoComplete="email" onChange={e => update('email', e.target.value)} /></label>
+            </div>
+            <label>{t('Mkoa unaoishi (hiari)', 'Region of residence (optional)')}<select value={form.residenceRegion} onChange={e => update('residenceRegion', e.target.value)}><option value="">{t('Chagua mkoa', 'Select region')}</option>{TANZANIA_REGION_NAMES.map(region => <option key={region} value={region}>{region}</option>)}</select></label>
+            <label className="wizardInlineCheck"><input type="checkbox" checked={form.contactConsent} onChange={e => update('contactConsent', e.target.checked)} />{t('Ninakubali Tume iwasiliane nami', 'I consent to being contacted by the Commission')}</label>
+            {form.contactConsent && <label>{t('Njia unayopendelea ya mawasiliano', 'Preferred contact method')}<select value={form.contactMethod} onChange={e => update('contactMethod', e.target.value)}>{['phone', 'sms', 'email', 'none'].map(value => <option key={value} value={value}>{selectionLabel('contact', value)}</option>)}</select></label>}
+          </>}
+        </section>
+      ))}
+
+      {/* Step 6: Review — wraps every summary item in an array (fixes summary.map is not a function) */}
+      {step === 6 && <section className="wizardStep">
+        <h2>{t('Kagua taarifa zako', 'Review your submission')}</h2>
+        {(() => {
+          const sections: [number, string, any[]][] = [
+            [1, t('Aina na nafasi', 'Type and role'), [selectionLabel('submissionType', form.submissionType), selectionLabel('reporterRole', form.reporterRole)]],
+            [2, t('Tukio', 'Incident'), [form.incidentDate, selectionLabel('time', form.incidentTime), [form.region, form.district, form.ward, form.streetVillage, form.location].filter(Boolean).join(', '), form.violationTypes.map(value => t(violationOptions.find(option => option[0] === value)?.[1] || value, violationOptions.find(option => option[0] === value)?.[2] || value)).join(', ')]],
+            [3, t('Simulizi', 'Account'), [form.title, form.description, t('Watu waliohusika:', 'People involved:') + ' ' + (form.peopleInvolved.filter(p => p.name.trim()).map(p => `${p.name.trim()} (${selectionLabel('peopleRole', p.role)})`).join('; ') || t('Hakuna', 'None'))]],
+            [4, t('Ushahidi', 'Evidence'), [files.length ? files.map(item => item.file.name).join(', ') : t('Hakuna faili lililoongezwa', 'No files attached')]],
+            [5, t('Mwasilishaji', 'Your details'), [anonymousMode ? t('Bila kutaja jina (siri kabisa)', 'Anonymous (fully confidential)') : selectionLabel('mode', form.submissionMode), anonymousMode ? t('Hakuna arifa zitakazotumwa', 'No notifications will be sent') : (form.submissionMode === 'anonymous' ? t('Bila kutaja jina', 'Anonymous') : [form.fullName, form.contactConsent ? (form.contactMethod === 'email' ? form.email : form.phone) : ''].filter(Boolean).join(' · '))]]
+          ];
+          return sections.map(([target, title, summary]) => <article className="wizardReviewSection" key={target}>
+            <div><strong>{title}</strong><button type="button" onClick={() => editSection(target)}>{t('Hariri', 'Edit')}</button></div>
+            {Array.isArray(summary) ? summary.filter(item => item !== null && item !== undefined && item !== '').map((item, index) => <p key={index}>{item}</p>) : <p>{summary}</p>}
+          </article>);
+        })()}
+        <label className="wizardDeclaration"><input type="checkbox" checked={form.truthDeclared} onChange={e => update('truthDeclared', e.target.checked)} /><span>{t('Ninathibitisha kuwa taarifa hii ni ya kweli kwa kadiri ya ufahamu wangu.', 'I declare this information is true to the best of my knowledge.')}</span></label>
+        {files.length > 0 && <div className="wizardCaptcha" ref={widgetHost} />}
+        {!siteKey && files.length > 0 && <div className="inquirySetupNotice">{t('Uwasilishaji wa ushahidi utawezeshwa baada ya kusanidi uthibitisho wa usalama.', 'Evidence submission will be enabled after security verification is configured.')}</div>}
+      </section>}
+
+      {uploadProgress && <div className="wizardUploadStatus" role="status">{uploadProgress}</div>}
+      <div className="wizardActions">
+        {step > 1 && <button type="button" className="secondary" onClick={previousStep}><ArrowLeft size={16} /> {t('Rudi', 'Back')}</button>}
+        {!anonymousMode && <button type="button" className="wizardSave" onClick={saveDraft} disabled={saving || busy}><Save size={16} />{saving ? t('Inahifadhi...', 'Saving...') : t('Hifadhi rasimu', 'Save draft')}</button>}
+        {step < 6 ? <button type="button" className="primary" onClick={nextStep}>{t('Endelea', 'Continue')} <ArrowRight size={16} /></button> : <button type="submit" className="primary" disabled={busy || !form.truthDeclared || (files.length > 0 && (!siteKey || !captchaToken))}>{busy ? t('Inawasilisha...', 'Submitting...') : t('Wasilisha kwa Tume', 'Submit to the Commission')} <ArrowRight size={16} /></button>}
+      </div>
+      {draftMessage && <small className="wizardDraftStatus" role="status">{draftMessage}</small>}
     </form>
-    <small className="inquiryDisclaimer">{t('Taarifa zako ni za siri na zitaonekana kwa Tume pekee.','Your information is private and visible only to the Commission.')}</small>
+    <small className="inquiryDisclaimer">{t('Taarifa zako ni za siri na zitaonekana kwa Tume pekee.', 'Your information is private and visible only to the Commission.')}</small>
   </section>;
 }
