@@ -1,2 +1,0 @@
-create index if not exists unofficial_constitution_drafts_reviewed_by_idx on public.unofficial_constitution_drafts(reviewed_by) where reviewed_by is not null;
-create index if not exists unofficial_draft_comments_user_id_idx on public.unofficial_draft_comments(user_id);
