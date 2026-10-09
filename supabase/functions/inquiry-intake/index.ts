@@ -79,7 +79,7 @@ Deno.serve(async (req) => {
     }
 
     const incidentDate = String(report.incidentDate || "");
-    const validDate = /^\d{4}-\d{2}-\d{2}$/.test(incidentDate) && incidentDate >= "2025-10-01" && incidentDate <= new Date().toISOString().slice(0, 10);
+    const validDate = /^\\d{4}-\\d{2}-\\d{2}$/.test(incidentDate) && incidentDate >= "2025-10-25" && incidentDate <= "2025-11-01";
     const title = String(report.title || "").trim(), description = String(report.description || "").trim();
     const violations = Array.isArray(report.violationTypes) ? report.violationTypes.map(String) : [];
     if (!validDate || !title || title.length > 200 || !String(report.region || "").trim() || !String(report.district || "").trim() || description.length < 100 || description.length > 10000) return json({ error: "Required fields are invalid" }, 400);
