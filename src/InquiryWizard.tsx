@@ -177,7 +177,7 @@ export function InquiryWizard() {
   }
 
   if (preScreen === 'anonymous_questions') {
-    const canProceed = anonAnswers.witnessed && anonAnswers.happenedRecently && (anonAnswers.location || form.region);
+    const canProceed = Boolean(anonAnswers.witnessed && form.incidentDate >= '2025-10-25' && form.incidentDate <= '2025-11-01' && (anonAnswers.location || form.region));
     return <section className="section page inquiryWizardPage">
       <span className="kicker">{t('MASWALI YA UPIMAJI', 'SCREENING QUESTIONS')}</span>
       <h1 className="pageTitle">{t('Jibu maswali mafupi', 'Answer a few short questions')}</h1>
@@ -190,15 +190,14 @@ export function InquiryWizard() {
       </fieldset>
       <fieldset className="wizardAnonymousQ">
         <legend>{t('2. Tukio lilitokea lini?', '2. When did the incident happen?')}</legend>
-        <div className="wizardChoiceGrid">
-          {[['today', 'Leo', 'Today'], ['week', 'Ndani ya wiki iliyopita', 'Within the past week'], ['month', 'Ndani ya mwezi uliopita', 'Within the past month'], ['earlier', 'Muda mrefu uliopita', 'Longer ago']].map(([value, sw, en]) => <label className="wizardChoice" key={value}><input type="radio" name="happenedRecently" checked={anonAnswers.happenedRecently === value} onChange={() => setAnonAnswers(a => ({ ...a, happenedRecently: value }))} /><span>{t(sw, en)}</span></label>)}
-        </div>
+        <p>{t('Chagua tarehe kati ya 25 Oktoba na 1 Novemba 2025 pekee.', 'Select a date from 25 October through 1 November 2025 only.')}</p>
+        <label className="wizardAnonLocation">{t('Tarehe ya tukio', 'Incident date')}<input type="date" required min="2025-10-25" max="2025-11-01" value={form.incidentDate} onChange={e => setForm(current => ({ ...current, incidentDate: e.target.value }))} /></label>
       </fieldset>
       <fieldset className="wizardAnonymousQ">
         <legend>{t('3. Tukio lilitokea wapi?', '3. Where did the incident happen?')}</legend>
-        <label className="wizardAnonLocation">{t('Mkoa', 'Region')}<select value={form.region} onChange={e => { update('region', e.target.value); update('district', ''); update('ward', ''); }}><option value="">{t('Chagua mkoa', 'Select region')}</option>{TANZANIA_REGION_NAMES.map(region => <option key={region} value={region}>{region}</option>)}</select></label>
-        <label className="wizardAnonLocation">{t('Wilaya', 'District')}<select value={form.district} disabled={!form.region} onChange={e => { update('district', e.target.value); update('ward', ''); }}><option value="">{t('Chagua wilaya', 'Select district')}</option>{(TANZANIA_REGIONS[form.region] || []).map(district => <option key={district} value={district}>{district}</option>)}</select></label>
-        <label className="wizardAnonLocation">{t('Kata/Mtaa', 'Ward/Street')}<input value={anonAnswers.location || form.ward || form.streetVillage} maxLength={160} onChange={e => { setAnonAnswers(a => ({ ...a, location: e.target.value })); update('streetVillage', e.target.value); }} placeholder={t('Andika jina la kata, mtaa au kitongoji', 'Type the ward, street, or sub-village name')} /></label>
+        <label className="wizardAnonLocation">{t('Mkoa', 'Region')}<select value={form.region} onChange={e => setForm(current => ({ ...current, region: e.target.value, district: '', ward: '' }))}><option value="">{t('Chagua mkoa', 'Select region')}</option>{TANZANIA_REGION_NAMES.map(region => <option key={region} value={region}>{region}</option>)}</select></label>
+        <label className="wizardAnonLocation">{t('Wilaya', 'District')}<select value={form.district} disabled={!form.region} onChange={e => setForm(current => ({ ...current, district: e.target.value, ward: '' }))}><option value="">{t('Chagua wilaya', 'Select district')}</option>{(TANZANIA_REGIONS[form.region] || []).map(district => <option key={district} value={district}>{district}</option>)}</select></label>
+        <label className="wizardAnonLocation">{t('Kata/Mtaa', 'Ward/Street')}<input value={anonAnswers.location || form.ward || form.streetVillage} maxLength={160} onChange={e => { setAnonAnswers(a => ({ ...a, location: e.target.value })); setForm(current => ({ ...current, streetVillage: e.target.value })); }} placeholder={t('Andika jina la kata, mtaa au kitongoji', 'Type the ward, street, or sub-village name')} /></label>
       </fieldset>
       <div className="wizardActions">
         <button type="button" className="secondary" onClick={() => setPreScreen('anonymous_intro')}><ArrowLeft size={16} /> {t('Rudi', 'Back')}</button>
@@ -243,7 +242,7 @@ export function InquiryWizard() {
   const validateStep = (activeStep: number) => {
     if (activeStep === 1 && (!form.submissionType || !form.reporterRole)) return t('Chagua aina ya taarifa na nafasi yako.', 'Choose a submission type and your role.');
     if (activeStep === 2) {
-      if (!form.incidentDate || form.incidentDate < '2025-10-01' || form.incidentDate > dateToday) return t('Tarehe iwe kuanzia Oktoba 2025 hadi leo.', 'Choose a date from October 2025 through today.');
+      if (!form.incidentDate || form.incidentDate < '2025-10-25' || form.incidentDate > '2025-11-01') return t('Tarehe ya tukio iwe kati ya 25 Oktoba na 1 Novemba 2025.', 'Choose an incident date from 25 October through 1 November 2025.');
       if (!form.region) return t('Chagua mkoa.', 'Choose a region.');
       if (!form.district) return t('Chagua wilaya.', 'Choose a district.');
       if (!form.ward && !form.streetVillage) return t('Chagua kata au andika mtaa/kitongoji.', 'Choose a ward or type a street/village.');
@@ -320,7 +319,7 @@ export function InquiryWizard() {
       {step === 2 && <section className="wizardStep">
         <h2>{t('Tukio lilitokea lini na wapi?', 'When and where did it happen?')}</h2>
         <div className="wizardTwo">
-          <label>{t('Tarehe ya tukio', 'Incident date')}<input type="date" min="2025-10-01" max={dateToday} value={form.incidentDate} onChange={e => update('incidentDate', e.target.value)} /></label>
+          <label>{t('Tarehe ya tukio', 'Incident date')}<input type="date" required min="2025-10-25" max="2025-11-01" value={form.incidentDate} onChange={e => update('incidentDate', e.target.value)} /></label>
           <label>{t('Muda wa takriban', 'Approximate time')}<select value={form.incidentTime} onChange={e => update('incidentTime', e.target.value)}>{['morning', 'afternoon', 'evening', 'night', 'unknown'].map(value => <option key={value} value={value}>{selectionLabel('time', value)}</option>)}</select></label>
         </div>
         <div className="wizardTwo">
