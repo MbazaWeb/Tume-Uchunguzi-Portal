@@ -1,0 +1,51 @@
+{
+  "section": "45",
+  "language": "sw",
+  "plainLanguage": "Section 45 inakataza advised attempt ya kuwatoa members wa vyombo vilivyotajwa kwenye duty/allegiance, kuwachochea mutiny au traitorous/mutinous act, au kuwachochea kufanya mutinous assembly.",
+  "meaning": "The provision focuses on an advised attempt to achieve one of three specified purposes involving members of the Police Force, Prisons Service, National Service or another law-enforcement organ.",
+  "keyPoints": [
+    "The section expressly covers attempts.",
+    "The targeted person must fall within a listed service or other law-enforcement organ.",
+    "Paragraphs (a)-(c) specify distinct prohibited purposes.",
+    "The stated penalty is imprisonment for life."
+  ],
+  "legalTerms": [
+    {
+      "term": "mutiny",
+      "meaning": "Uasi wa aina inayotambuliwa na provision dhidi ya duty/authority ndani ya service husika."
+    },
+    {
+      "term": "advisedly attempts",
+      "meaning": "Wording ya statutory inayohitaji intentional/deliberate attempt; facts lazima zipimwe dhidi ya element hiyo."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Element check",
+      "scenario": "Prosecution allegation is assessed against the exact wording of this section.",
+      "analysis": "Kila statutory element lazima ithibitishwe; label ya offence peke yake haitoshi."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 45 forms part of Chapter VII, Treason and Other Offences Against the Republic.",
+    "notes": [
+      "Official wording checked against the R.E. 2022 source before explanation."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Elements",
+      "view": "Analysis should follow the exact statutory verbs and mental elements rather than a broad description of the alleged conduct."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Evidence",
+      "view": "The evidence should be matched separately to each required element and any express qualification in the provision."
+    }
+  ],
+  "debateQuestion": "Je, evidence inayodaiwa inathibitisha kila element ya section 45 bila kupanua wording ya statute?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

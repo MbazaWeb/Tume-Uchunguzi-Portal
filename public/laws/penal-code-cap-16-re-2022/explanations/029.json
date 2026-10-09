@@ -1,0 +1,72 @@
+{
+  "section": "29",
+  "language": "sw",
+  "plainLanguage": "Section 29 inaweka default rules za fines pale sheria inayoweka fine haina express provisions zake kuhusu fine. Ina-cover amount, court discretion, imprisonment in default, recovery against property, maximum default-imprisonment scale, na termination ya default imprisonment baada ya fine kulipwa au kulevywa.",
+  "meaning": "Paragraph (a) says where no maximum sum is expressed, fine is unlimited but must not be excessive. Paragraph (b) gives discretion where offence is punishable with fine or imprisonment. Paragraph (c) permits default imprisonment and distress/sale warrant in stated cases. Paragraph (d) limits default imprisonment by a monetary scale. Paragraph (e) requires default imprisonment to terminate once fine is paid or levied by process of law.",
+  "keyPoints": [
+    "These are default rules only in absence of express fine provisions in the relevant law.",
+    "No expressed maximum: fine may be unlimited but not excessive.",
+    "Fine versus imprisonment may be discretionary where offence is framed that way.",
+    "Court may order imprisonment in default and levy against movable/immovable property in paragraph (c) cases.",
+    "Paragraph (d) imposes maximum default-imprisonment periods tied to fine amount.",
+    "Default imprisonment ends when fine is paid or legally levied."
+  ],
+  "legalTerms": [
+    {
+      "term": "fine",
+      "meaning": "Monetary punishment imposed by court under statutory authority."
+    },
+    {
+      "term": "default of payment",
+      "meaning": "Failure to pay the adjudged fine, potentially triggering lawfully ordered default consequences."
+    },
+    {
+      "term": "distress and sale",
+      "meaning": "Enforcement against property under warrant to levy the amount."
+    },
+    {
+      "term": "not excessive",
+      "meaning": "Express statutory restraint on an otherwise unstated maximum fine."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Law states fine but no maximum",
+      "scenario": "Offence says offender is liable to a fine but states no upper amount and has no special fine rules.",
+      "analysis": "Section 29(a) supplies the default: amount may be unlimited but must not be excessive."
+    },
+    {
+      "title": "Fine later paid",
+      "scenario": "Offender is serving imprisonment imposed in default of fine and the fine is then paid.",
+      "analysis": "Section 29(e) states default imprisonment terminates when fine is paid or levied by process of law."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 29 supplies general fine rules when the creating law is silent. The official R.E. 2022 text includes paragraph (d), a scale limiting imprisonment in default according to fine amount.",
+    "notes": [
+      "During this digitisation pass paragraph (d) was found entirely missing from repository section 29 and was restored from the official R.E. 2022 text.",
+      "The monetary thresholds should be displayed as statutory text, not silently updated for inflation."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Default nature",
+      "view": "Before applying section 29, first ask whether the offence statute has its own express fine provisions; those can displace these defaults."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Excessiveness",
+      "view": "An unstated ceiling does not mean unconstrained sentencing: paragraph (a) expressly says the fine shall not be excessive."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Default imprisonment",
+      "view": "Imprisonment for non-payment is governed by specific statutory limits and terminates upon payment/levy; it should not be confused with the substantive imprisonment sentence for the offence."
+    }
+  ],
+  "debateQuestion": "Sheria ya offence ina special fine rules, au section 29 defaults apply; na kama default imprisonment imeamriwa, paragraph (d) scale inaruhusu maximum gani?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

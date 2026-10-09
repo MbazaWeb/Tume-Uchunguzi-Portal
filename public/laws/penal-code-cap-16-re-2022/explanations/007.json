@@ -1,0 +1,54 @@
+{
+  "section": "7",
+  "language": "sw",
+  "plainLanguage": "Kifungu hiki kinahusu kitendo ambacho kingekuwa kosa chini ya Penal Code kama kingefanyika chote ndani ya jurisdiction ya mahakama, lakini sehemu yake imefanyika ndani na sehemu nyingine nje ya jurisdiction hiyo.",
+  "meaning": "Mtu anayefanya sehemu ya kitendo hicho akiwa ndani ya jurisdiction anaweza kushtakiwa na kuadhibiwa chini ya Penal Code kwa namna ileile kana kwamba kitendo kizima kilifanyika ndani ya jurisdiction.",
+  "keyPoints": [
+    "Kitendo kinachozungumziwa lazima kiwe cha aina ambayo, kama kingefanyika chote ndani ya jurisdiction, kingekuwa offence dhidi ya Penal Code.",
+    "Kitendo kinaweza kuwa kimefanyika partly within na partly beyond jurisdiction.",
+    "Mtu anayefanya sehemu yoyote ya kitendo hicho ndani ya jurisdiction anaweza tried and punished chini ya Penal Code kana kwamba kitendo kizima kilifanyika ndani ya jurisdiction."
+  ],
+  "legalTerms": [
+    {
+      "term": "jurisdiction",
+      "meaning": "Mamlaka ya mahakama inayorejelewa na kifungu kushughulikia kosa."
+    },
+    {
+      "term": "tried and punished",
+      "meaning": "Kushtakiwa/kusikilizwa shauri na kuadhibiwa kwa mujibu wa Penal Code kama masharti ya kifungu yanatimia."
+    }
+  ],
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria.",
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Kiungo cha ndani ya jurisdiction",
+      "view": "Msisitizo unaweza kuwekwa kwenye sehemu ya act iliyofanywa ndani ya jurisdiction: kifungu kinamruhusu mtu aliyefanya sehemu hiyo kujaribiwa kana kwamba act nzima ilifanyika ndani."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Sharti la msingi",
+      "view": "Kabla ya kutumia kifungu, uchambuzi mwingine huanza kwa kuuliza kama act hiyo, ikiwa ingefanyika wholly within jurisdiction, kweli ingekuwa offence against the Code."
+    },
+    {
+      "label": "Hoja ya uchambuzi",
+      "focus": "Facts za mpakani",
+      "view": "Katika tukio linalovuka jurisdiction, mgogoro unaweza kuwa ni kutambua ni sehemu gani ya act ilifanyika ndani na nani aliifanya."
+    }
+  ],
+  "debateQuestion": "Ni facts zipi zinatosha kuonyesha kwamba accused alifanya “any part” ya act ndani ya jurisdiction?",
+  "examples": [
+    {
+      "title": "Mfano wa kitendo kuvuka jurisdiction",
+      "scenario": "Sehemu ya act inayodaiwa kuwa offence inafanywa ndani ya jurisdiction na sehemu nyingine nje yake.",
+      "analysis": "Section 7 inaelekeza kuuliza kama act, ikiwa ingefanyika wholly within jurisdiction, ingekuwa offence, na kama mtu husika alifanya sehemu yoyote ya act ndani ya jurisdiction."
+    }
+  ],
+  "history": {
+    "summary": "Section 7 inaonekana pia katika matoleo ya zamani ya Penal Code kwa formulation inayofanana kuhusu acts zinazofanyika partly within na partly beyond jurisdiction.",
+    "notes": [
+      "Historia inaweza kusaidia kufuatilia continuity ya rule, lakini application ya sasa lazima ianze na R.E. 2022."
+    ],
+    "sourceUrl": "https://www.sheria.go.tz/uploads/documents/sw-1677665965-THE%20PENAL%20CODE.pdf"
+  }
+}

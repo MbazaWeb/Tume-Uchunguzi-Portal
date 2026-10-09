@@ -1,0 +1,82 @@
+{
+  "section": "89B",
+  "language": "sw",
+  "plainLanguage": "Mtu anayetumia ulezi au vitisho bila mamlaka ya kisheria kwa nia ya kumlazimisha mtu mwingine (a) kujiepusha na act anayo haki ya kisheria kufanya, au (b) kufanya act ambayo anayo haki ya kisheria kujiepusha nayo — anafanya kosa. Adhabu ni kifungo cha mwaka mmoja.",
+  "meaning": "Section 89B inaweka kosa la 'intimidation' kwa kushinikiza mtu kimatendo, kimamlaka, au kisaikolojia ili kumlazimisha kufanya au kujiepusha na kitendo ambacho ana haki ya kisheria ya kukitenda au kukitenga. Tofauti na 89A ambayo inalenga conduct ya kimwili ya 'watching/besetting' eneo, 89B inalenga intimidation kwa jumla — ikiwa ni 'wrongful and without legal authority'.",
+  "keyPoints": [
+    "Conduct: 'wrongfully and without legal authority intimidates' — ulezi au vitisho visivyo na mamlaka ya kisheria.",
+    "Mental element: 'with a view to compelling' — nia ya kumlazimisha mwathirika.",
+    "Purpose (a): kumlazimisha mwathirika kujiepusha na act ambayo ana haki ya kisheria kufanya.",
+    "Purpose (b): kumlazimisha mwathirika kufanya act ambayo ana haki ya kisheria kujiepusha nayo.",
+    "Penalty: imprisonment for one year.",
+    "Masharti mawili ya pamoja: conduct lazima iwe 'wrongful' na 'without legal authority'."
+  ],
+  "legalTerms": [
+    {
+      "term": "wrongfully",
+      "meaning": "Kwa njia isiyokuwa sahihi kisheria — si ruhusa au haki ya kutumia ulezi huo."
+    },
+    {
+      "term": "without legal authority",
+      "meaning": "Hakuna mamlaka ya kisheria inayoruhusu conduct hilo — mfano wa polisi anayefanya mamlaka yake halali haingii hapa."
+    },
+    {
+      "term": "intimidates",
+      "meaning": "Kutumia vitisho, woga, au shinikizo la kisaikolojia kumlazimisha mtu kufanya au kujiepusha na kitendo."
+    },
+    {
+      "term": "compelling",
+      "meaning": "Kumlazimisha mtu kufanya kitendo bila ridhaa yake ya hiari."
+    },
+    {
+      "term": "legal right to do / legal right to abstain from doing",
+      "meaning": "Act ambayo mtu ana haki ya kisheria ya kufanya (au kujiepusha nayo) — mfano wa kuhudhuria mkutano, kuomba, kutoa taarifa, au kutokutoa sahihi."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Purpose (a) — kumlazimisha kujiepusha na act halali",
+      "scenario": "Mtu anamtishia mwathirika atoe malalamishi yake ya polisi au atatoka kwenye kikundi cha kisiasa.",
+      "analysis": "Intimidation iko 'wrongful and without legal authority', na purpose ni kumlazimisha mwathirika kujiepusha na act anayo haki ya kisheria (kuandika malalamishi). Inakidhi purpose (a)."
+    },
+    {
+      "title": "Purpose (b) — kumlazimisha kufanya act anaweza kujiepusha nayo",
+      "scenario": "Mtu anamtishia mwathirika atoe sahihi kwenye hati fulani au atatangaza hadharani kuunga mkono suala fulani.",
+      "analysis": "Mtendaji anamtishia mwathirika kufanya act ambalo ana haki ya kisheria kujiepusha nayo (kutoa sahihi/tangazo) — inakidhi purpose (b)."
+    },
+    {
+      "title": "Mamlaka ya kisheria haifungwi",
+      "scenario": "Polisi anamtisha mwana shuki kwa njia ya kisheria kwamba atakamatwa asipotoa taarifa — hii si kosa chini ya 89B kama inafanywa chini ya mamlaka halali.",
+      "analysis": "Section 89B inawahusu tu wale ambao conduct ni 'wrongful and without legal authority'. Polisi anayefanya kazi yake halali chini ya sheria hatwaliwi na 89B."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 89B ilianzishwa kukamilisha 89A kwa kushughulikia intimidation kwa ujumla — si tu 'watching/besetting' eneo. Inatoa adhabu kubwa zaidi (mwaka 1 vs miezi 6 ya 89A), ikionyesha kwamba inalenga vitisho vikubwa zaidi.",
+    "notes": [
+      "Masharti mawili ya 'wrongful' na 'without legal authority' ni ya pamoja — yote lazima yathibitishwe.",
+      "Adhabu ya mwaka 1 ni kubwa kuliko 89A (miezi 6), ikionyesha kwamba 89B inalenga intimidation kubwa zaidi kuliko watching/besetting pekee.",
+      "Tafsiri inapaswa kufuata maandishi halisi ya kifungu bila kutoa maana zaidi."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Two-fold qualifier",
+      "view": "Masharti 'wrongfully' na 'without legal authority' ni ya pamoja — prosecution lazima ithibitishe yote mawili. Mamlaka halali ya kisheria inazuia application ya 89B."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Distinction from 89A",
+      "view": "89A inalenga 'watching/besetting' eneo (conduct ya kimwili), lakini 89B inalenga intimidation kwa ujumla — ikiwa ni sauti, maandishi, au vitisho vingine vya kisaikolojia."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Compelling vs. persuasion halali",
+      "view": "Section 89B haifungi persuasion au debate halali — mfano wa campaign ya kisiasa inayojaribu kushawishi wengine. Inalenga tu intimidation (shinikizo la kimamlaka) si hoja za kidemokrasia."
+    }
+  ],
+  "debateQuestion": "Je, conduct lilikuwa 'wrongful' na 'without legal authority', na mtu alikuwa na nia ya kumlazimisha mwathirika kujiepusha na act halali (purpose a) au kufanya act ambacho anaweza kujiepusha nayo (purpose b)?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

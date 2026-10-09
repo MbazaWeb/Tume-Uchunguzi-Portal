@@ -1,0 +1,41 @@
+{
+  "section": "44",
+  "language": "sw",
+  "plainLanguage": "R.E. 2022 haijaweka substantive offence katika section 44; inaonyesha kuwa provision hiyo ilibadilishwa ('Replaced') na C.A. 2 of 1962 section 36.",
+  "meaning": "The current Penal Code text does not supply operative section 44 wording here. The replacement notation is a legislative-history marker and should not be expanded into a current offence without consulting the cited constitutional/legal instrument.",
+  "keyPoints": [
+    "Section 44 is marked 'Replaced'.",
+    "The notation cites C.A. 2 of 1962 s. 36.",
+    "No substantive current offence text appears under section 44 in R.E. 2022.",
+    "Historical or replacement content must be sourced separately."
+  ],
+  "legalTerms": [
+    {
+      "term": "replaced",
+      "meaning": "Notation ya legislative history kwamba provision ya awali ilibadilishwa na instrument iliyotajwa."
+    }
+  ],
+  "examples": [],
+  "cases": [],
+  "history": {
+    "summary": "R.E. 2022 states: Replaced by C.A. 2 of 1962 s. 36.",
+    "notes": [
+      "The library preserves that status rather than inventing the former or replacement wording."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Digital integrity",
+      "view": "A replaced section should remain visibly marked as such so users do not mistake historical numbering for an operative offence."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Traceability",
+      "view": "A future historical note should link directly to the cited 1962 instrument or another authoritative legislative source."
+    }
+  ],
+  "debateQuestion": "Ni authoritative source gani inaonyesha full legal effect ya replacement iliyofanywa na C.A. 2 of 1962 s. 36?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

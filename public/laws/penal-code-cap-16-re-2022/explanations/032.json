@@ -1,0 +1,53 @@
+{
+  "section": "32",
+  "language": "sw",
+  "plainLanguage": "Court inaweza kuamuru convicted person kulipa costs zinazohusiana na prosecution yote au sehemu yake, lakini power hiyo iko subject to limitations za section 345 ya Criminal Procedure Act.",
+  "meaning": "Section 32 ni cross-reference sentencing/costs provision. Conviction peke yake haimaanishi costs lazima ziorderwe. Neno 'may' linaonyesha judicial discretion, na discretion hiyo imewekewa limitations na CPA section 345.",
+  "keyPoints": [
+    "Order follows conviction.",
+    "Court may order costs of whole or part of prosecution.",
+    "Costs can include matters incidental to prosecution within lawful scope.",
+    "Power is subject to CPA section 345 limitations.",
+    "It is discretionary, not automatic."
+  ],
+  "legalTerms": [
+    {
+      "term": "costs",
+      "meaning": "Gharama ambazo court inaweza kuorder kwa statutory authority relating to prosecution."
+    },
+    {
+      "term": "incidental to prosecution",
+      "meaning": "Gharama zinazohusiana na prosecution kwa namna inayotambuliwa na applicable law."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Prosecution costs requested",
+      "scenario": "Baada ya conviction, prosecution inaomba order ya costs.",
+      "analysis": "Court lazima itumie section 32 pamoja na CPA section 345; conviction yenyewe haitoshi kufanya order automatic."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "The Penal Code keeps the costs power expressly subordinate to Criminal Procedure Act limitations.",
+    "notes": [
+      "Do not quote section 32 without its CPA cross-reference.",
+      "Current CPA text should be checked for live litigation."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/70"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Discretion",
+      "view": "The word 'may' requires a judicial decision; costs are not a mandatory consequence of every conviction."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Procedural limits",
+      "view": "The Penal Code itself signals that the CPA supplies boundaries, so an explanation that omits section 345 is incomplete."
+    }
+  ],
+  "debateQuestion": "Ni prosecution costs zipi zinaombwa, na CPA section 345 limitations zinaruhusu court kuziorder kwa kiwango gani?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

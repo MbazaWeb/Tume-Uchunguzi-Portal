@@ -1,0 +1,12 @@
+-- Social notification triggers for Katiba Yetu community features.
+-- Live schema counterpart: Supabase project xckqpkymphvhxgxyolpz.
+-- Events: profile follow, group invite, group announcement/poll, discussion reply.
+-- Trigger functions are SECURITY DEFINER because notifications are system-generated.
+-- EXECUTE is revoked from public/anon/authenticated; functions are trigger-only.
+--
+-- NOTE: This file documents the live behavior. Keep in sync with the database.
+--
+-- profile_follows INSERT -> follower target gets /profile/:follower_id notification
+-- community_group_invites INSERT(pending) -> invitee gets /groups/invites
+-- community_group_activities INSERT announcement/poll -> active members except author get /groups/:slug
+-- discussions INSERT with parent_id -> parent author gets /groups/:slug for group threads, otherwise /discussions

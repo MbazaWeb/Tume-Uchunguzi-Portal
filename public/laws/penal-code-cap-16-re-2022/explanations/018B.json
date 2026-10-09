@@ -1,0 +1,76 @@
+{
+  "section": "18B",
+  "language": "sw",
+  "plainLanguage": "Mtumie tu nguvu inayoingia akilini na inayohitajika kwa ulinzi. Nguvu zaidi ya hiyo inaweza kukufanya wahusika wa kosa. Na kama mtu anakufa kwa sababu ya nguvu ya wingi uliyotumia kujilinda, utahukumiwa kwa manslaughter.",
+  "meaning": "Section 18B inaweka kikomo cha ndani cha haki ya self-defence: nguvu lazima iwe reasonable na necessary. Kama mtu anatumia excessive force na mtu anakufa, ana criminal liability na atakuwa amefanya manslaughter. Hii inafafanua kwamba self-defence si kibali cha kufanya lolote.",
+  "keyPoints": [
+    "(1) Nguvu inayotumika inapaswa kuwa reasonable na necessary tu kwa ajili ya defence.",
+    "(2) Mtu anaweza kuhukumiwa kwa kosa lolote linalotokea kutokana na excessive force.",
+    "(3) Kama excessive force inasababisha kifo, hatua ni manslaughter — si murder.",
+    "Haki ya self-defence ina kikomo cha ndani: reasonableness na necessity.",
+    "Excessive force inaondoa haki ya defence kwa sehemu iliyozidi, na inaleta liability."
+  ],
+  "legalTerms": [
+    {
+      "term": "reasonable force",
+      "meaning": "Nguvu inayoingia akilini na inayohitajika tu kwa ajili ya ulinzi, ikizingatia hali ya tukio."
+    },
+    {
+      "term": "excessive force",
+      "meaning": "Nguvu inayozidi kile ambacho kilikuwa necessary na reasonable kwa defence — inaondoa protection ya kifungu."
+    },
+    {
+      "term": "manslaughter",
+      "meaning": "Kifungu kinachohusisha kusababisha kifo bila malice aforethought; chini ya 18B(3) kinatoka kutokana na excessive force inayosababisha death."
+    },
+    {
+      "term": "criminally liable",
+      "meaning": "Kubebeshwa lawama ya jinai kwa kosa linalotokea kutokana na excessive force."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Reasonable force",
+      "scenario": "Mtu anashambuliwa kwa ngumi; anampiga mwangalifu mara moja na kukimbia.",
+      "analysis": "Hii ni nguvu inayoingia akilini na inayohitajika tu — inaweza kufunikwa na section 18B(1)."
+    },
+    {
+      "title": "Excessive force isiyosababisha kifo",
+      "scenario": "Mtu anashambuliwa kwa ngumi, baada ya washambuliwa kuanguka na kujisalimisha, anampa pigo zaidi la kutosha kuvuruga.",
+      "analysis": "Hiyo ni excessive force chini ya 18B(2) na anaweza kuhukumiwa kwa offence linalotokea — kama vile assault."
+    },
+    {
+      "title": "Excessive force inayosababisha kifo",
+      "scenario": "Mtumie silaha isiyo halali kujilinda dhidi ya threat isiyo ya kuua na mtu anakufa.",
+      "analysis": "Chini ya 18B(3), hatua ni manslaughter kwa sababu kifo kilitokana na excessive force in defence."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 18B ilianzishwa kufafanua kikomo cha nguvu inayoruhusiwa katika self-defence. Inajaza pengo lililokuwepo kati ya haki ya jumla (18A) na hali mahususi za kusababisha kifo (18C).",
+    "notes": [
+      "Subsections (1), (2), na (3) zinafanya sequence: reasonableness → excessive force liability → manslaughter kwa kifo.",
+      "Manslaughter chini ya 18B(3) ni specific statutory offence ya excessive force in defence, si common-law manslaughter."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Reasonableness ni objective",
+      "view": "Kile cha 'reasonable force' kinachungwa kwa standard ya objective — si kile mtu mwenyewe alichofikiri, bali kile ambacho mtu wa kawaida angeona ni necessary."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Manslaughter si murder",
+      "view": "Section 18B(3) inafafanua kwamba kifo kutokana na excessive force in defence ni manslaughter — si murder. Hii ni tofauti muhimu kwa sababu inaonyesha kwamba mtu bado ana haki ya msingi ya defence, lakini alizidi kiasi."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Proportional response",
+      "view": "Nguvu inapaswa kuwa proportional kwa threat. Kama threat ni dogo na response ni kubwa, section 18B inazuia protection ya kifungu kwa sehemu iliyozidi."
+    }
+  ],
+  "debateQuestion": "Je, nguvu iliyotumika ilikuwa reasonable na necessary kwa hali hiyo, au ilikuwa excessive na kwa hiyo ikasababisha liability chini ya 18B(2) au (3)?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

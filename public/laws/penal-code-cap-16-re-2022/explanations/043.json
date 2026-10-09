@@ -1,0 +1,50 @@
+{
+  "section": "43",
+  "language": "sw",
+  "plainLanguage": "Bila lawful authority, mtu anayefanya, kuandaa, kusaidia au kupanga war au warlike undertaking na/au dhidi ya mtu au kundi ndani ya United Republic anaweza kuwajibika chini ya section 43.",
+  "meaning": "Section 43 criminalises specified participation in a war or warlike undertaking where lawful authority is absent. Liability is not confined to personally carrying it on; preparation, aid and devising are expressly included.",
+  "keyPoints": [
+    "Absence of lawful authority is expressly required.",
+    "Covers carrying on and preparing a war or warlike undertaking.",
+    "Also covers aiding or devising it.",
+    "The undertaking may be with, for, by or against persons or groups in the United Republic.",
+    "Penalty stated is imprisonment for life."
+  ],
+  "legalTerms": [
+    {
+      "term": "lawful authority",
+      "meaning": "Mamlaka ya kisheria inayoweza kuondoa element ya 'without lawful authority' iliyowekwa na section."
+    },
+    {
+      "term": "warlike undertaking",
+      "meaning": "Neno la statutory linalohitaji kutumika kwa facts na authoritative interpretation, si kila mgogoro au vurugu."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Preparation",
+      "scenario": "Madai yanahusu maandalizi ya undertaking badala ya undertaking iliyokwisha kuanza.",
+      "analysis": "Section 43 expressly includes preparation, lakini prosecution bado lazima ithibitishe kuwa undertaking ni ya aina inayofunikwa na section na hakuna lawful authority."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "The R.E. 2022 text records Act No. 2 of 1970 in relation to this provision.",
+    "notes": [],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Scope of participation",
+      "view": "The verbs in the provision deliberately reach beyond direct execution to preparation, aid and devising."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Statutory threshold",
+      "view": "'Warlike undertaking' should not be replaced by a looser label; the proved facts must meet the statutory concept."
+    }
+  ],
+  "debateQuestion": "Facts zinazodaiwa zinaonyesha war or warlike undertaking na participation ipi kati ya verbs zilizoorodheshwa na section 43?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

@@ -1,0 +1,77 @@
+{
+  "section": "15",
+  "language": "sw",
+  "plainLanguage": "Section 15 inaweka rules maalum za criminal responsibility kwa watoto wadogo. Mtu chini ya miaka 10 hana criminal responsibility kwa act au omission. Kwa mtu chini ya miaka 12, criminal responsibility haitokei isipokuwa ithibitishwe kwamba wakati wa act/omission alikuwa na capacity ya kujua kwamba hapaswi kufanya hivyo. Pia kuna presumption maalum kuhusu male person chini ya miaka 12 na sexual intercourse, na subsection (4) inaelekeza mtoto chini ya miaka 12 aliyefanya unlawful act/omission kushughulikiwa chini ya Law of the Child Act.",
+  "meaning": "Age categories lazima zitenganishwe kwa usahihi. Under 10 ni absolute statutory rule ya no criminal responsibility. Kwa child ambaye ni 10 au 11, prosecution-facing question ni capacity at the material time: je, imethibitishwa kwamba alijua he ought not to do the act/omission? Subsection (3) ni specific sexual-intercourse presumption kwa male under 12. Subsection (4) inaonyesha kwamba absence ya ordinary criminal responsibility haimaanishi unlawful conduct haina legal framework; Law of the Child Act ndiyo referenced framework.",
+  "keyPoints": [
+    "Under 10: no criminal responsibility for any act or omission.",
+    "Age 10 to under 12: no criminal responsibility unless required capacity is proved for the material act/omission.",
+    "Capacity inayotajwa ni kujua kwamba he ought not to do the act/omission.",
+    "Male under 12 is presumed incapable of having sexual intercourse under subsection (3).",
+    "Under-12 unlawful acts/omissions are directed to the Law of the Child Act by subsection (4)."
+  ],
+  "legalTerms": [
+    {
+      "term": "immature age",
+      "meaning": "Statutory rules zinazopunguza au kuondoa criminal responsibility kutokana na umri na, kwa category fulani, capacity."
+    },
+    {
+      "term": "capacity",
+      "meaning": "Kwa subsection (2), uwezo wa kujua wakati wa act/omission kwamba hapaswi kufanya act au omission hiyo."
+    },
+    {
+      "term": "presumed incapable",
+      "meaning": "Presumption maalum iliyowekwa na subsection (3) kwa male person under twelve kuhusu sexual intercourse."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Mtoto wa miaka 9",
+      "scenario": "Mtoto mwenye miaka 9 anafanya act ambayo kwa mtu mzima ingekuwa offence.",
+      "analysis": "Section 15(1) inasema person under ten is not criminally responsible for any act or omission."
+    },
+    {
+      "title": "Mtoto wa miaka 11",
+      "scenario": "Mtoto wa miaka 11 anadaiwa kufanya unlawful act.",
+      "analysis": "Age peke yake haimalizi inquiry kama ilivyo kwa under 10. Subsection (2) inahitaji proof kwamba at the material time alikuwa na capacity to know he ought not to do the act/omission."
+    }
+  ],
+  "cases": [
+    {
+      "name": "R v Mkeja s/o Mashauri",
+      "citation": "(1969) H.C.D. No. 220",
+      "court": "High Court of Tanzania",
+      "year": "1969",
+      "relevance": "Reported Tanzanian juvenile authority commonly cited on capacity of an 11-year-old accused; it illustrates the fact-specific inquiry into whether the child understood the wrongfulness required by the immature-age rule.",
+      "sourceUrl": "https://www.tanzanianweb.co.tz/2024/11/criminal-law-student-guide.html"
+    }
+  ],
+  "history": {
+    "summary": "The current age framework reflects legislative amendment. The Sexual Offences Special Provisions Act, No. 4 of 1998 repealed and replaced section 15 with the under-10 and under-12 capacity rules and the male-under-12 presumption. R.E. 2022 also records Act No. 21 of 2009, section 174, and contains subsection (4) referring under-12 unlawful conduct to the Law of the Child Act.",
+    "notes": [
+      "Act No. 4 of 1998 is an important trace point for the present wording of subsections (1)-(3).",
+      "The R.E. 2022 marginal legislative history records Acts Nos. 4 of 1998 s.4 and 21 of 2009 s.174.",
+      "Child-justice procedure and protective measures require reading the Law of the Child Act alongside this Penal Code provision."
+    ],
+    "sourceUrl": "https://www.refworld.org/legal/legislation/natlegbod/1998/93476"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Age as threshold",
+      "view": "Exact age at the material time is foundational. The legal route changes materially between under 10 and age 10-to-under-12."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Capacity evidence",
+      "view": "For a 10- or 11-year-old, analysis should identify evidence specifically showing whether the child knew he ought not to do the act, rather than assuming capacity from the act alone."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Child justice framework",
+      "view": "Subsection (4) prevents the provision being read in isolation: unlawful conduct by an under-12 child is expressly connected to the Law of the Child Act."
+    }
+  ],
+  "debateQuestion": "Exact age ya child ilikuwa ipi at the material time, na kama alikuwa 10 au 11, ni evidence gani inathibitisha capacity inayotakiwa na subsection (2)?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

@@ -1,0 +1,53 @@
+{
+  "section": "31",
+  "language": "sw",
+  "plainLanguage": "Baada ya conviction, court inaweza kuamuru offender amlipe compensation mtu aliyejeruhiwa na offence yake. Section 31 haisimami peke yake: power hiyo inatumika kwa mujibu wa section 348 ya Criminal Procedure Act.",
+  "meaning": "Compensation inaweza kuwa in addition to punishment nyingine au in substitution for punishment nyingine. Lakini entitlement, assessment na procedure hazipaswi kubuniwa kutoka Penal Code pekee; section 31 expressly imports the Criminal Procedure Act framework.",
+  "keyPoints": [
+    "Conviction ni statutory starting point.",
+    "Recipient ni person injured by the offence.",
+    "Compensation may supplement or substitute another punishment.",
+    "Power is expressly governed by CPA section 348.",
+    "Amount and procedure require the applicable CPA framework and evidence of injury/loss."
+  ],
+  "legalTerms": [
+    {
+      "term": "compensation",
+      "meaning": "Court-ordered payment to a person injured by the offence, under the statutory framework."
+    },
+    {
+      "term": "in substitution for",
+      "meaning": "Kutumika badala ya punishment nyingine pale sheria na court determination vinaporuhusu."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Property loss",
+      "scenario": "Victim amepata proven loss kutokana na offence na accused ametiwa hatiani.",
+      "analysis": "Section 31 opens compensation route, but court must apply CPA section 348 and evidence rather than assume an amount."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 31 deliberately links Penal Code sentencing to the Criminal Procedure Act compensation mechanism.",
+    "notes": [
+      "Cross-reference to CPA section 348 is part of the official text.",
+      "Live sentencing should verify the current CPA provision before calculating or advising on compensation."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/70"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Victim loss",
+      "view": "Compensation analysis should be evidence-led: identify the person injured and the loss/injury causally connected to the offence."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Sentencing structure",
+      "view": "Because compensation can supplement or substitute another punishment, the court must situate it within the complete lawful sentence."
+    }
+  ],
+  "debateQuestion": "Ni injury/loss gani imethibitishwa kuwa imesababishwa na offence, na CPA section 348 inaruhusu compensation ipangwe vipi?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

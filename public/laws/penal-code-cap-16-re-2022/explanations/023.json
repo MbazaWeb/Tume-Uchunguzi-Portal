@@ -1,0 +1,77 @@
+{
+  "section": "23",
+  "language": "sw",
+  "plainLanguage": "Watu wawili au zaidi wak形成 common intention ya kutekeleza unlawful purpose pamoja, na katika kutekeleza purpose hiyo offence ikafanyika ambayo ilikuwa probable consequence ya purpose hiyo, kila mmoja anaweza deemed to have committed that offence.",
+  "meaning": "Section 23 si rule ya guilt by association. Inahitaji common intention, unlawful purpose, prosecution of that purpose in conjunction, actual commission of an offence, na relationship ya probable consequence. Kwa hiyo analysis lazima iunganishe accused na shared unlawful purpose na pia ipime kama resulting offence ilikuwa probable consequence, si event isiyohusiana kabisa na common purpose.",
+  "keyPoints": [
+    "Lazima kuwe na two or more persons.",
+    "Lazima waform common intention.",
+    "Common intention lazima iwe to prosecute an unlawful purpose jointly.",
+    "Offence lazima itokee in prosecution of that purpose.",
+    "Resulting offence lazima iwe probable consequence ya prosecution ya unlawful purpose.",
+    "Masharti yakitimia, each participant is deemed to have committed the resulting offence."
+  ],
+  "legalTerms": [
+    {
+      "term": "common intention",
+      "meaning": "Nia ya pamoja kati ya watu wawili au zaidi kutekeleza unlawful purpose kwa pamoja."
+    },
+    {
+      "term": "unlawful purpose",
+      "meaning": "Lengo lisilo halali ambalo participants wamekusudia kulitekeleza jointly."
+    },
+    {
+      "term": "probable consequence",
+      "meaning": "Resulting offence ambayo commission yake ilikuwa consequence inayoweza kutarajiwa/probable kutokana na prosecution ya common unlawful purpose."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Joint violent robbery",
+      "scenario": "A na B wanakubaliana kufanya violent robbery. Katika execution, mmoja anafanya assault ambayo ni probable consequence ya plan hiyo.",
+      "analysis": "Section 23 inaweza kuleta deemed liability kwa wote ikiwa common intention, unlawful purpose na probable-consequence link zimethibitishwa."
+    },
+    {
+      "title": "Independent personal act",
+      "scenario": "Watu wana shared unlawful purpose, lakini mmoja anafanya offence tofauti kabisa kwa sababu binafsi na isiyo probable consequence ya shared purpose.",
+      "analysis": "Common presence alone haitoshi; probable-consequence requirement lazima ichunguzwe."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Dickson Elia Nsamba Shapwata & Another v Republic",
+      "citation": "Criminal Appeal No. 92 of 2007; [2008] TZCA 65",
+      "court": "Court of Appeal of Tanzania",
+      "year": "2008",
+      "relevance": "The Court of Appeal discussed common intention under section 23 and the circumstances from which a shared intention may be inferred.",
+      "sourceUrl": "https://media.tanzlii.org/media/judgment/260715/source_file/dickson-elia-nsamba-shapwata-another-vs-republic-2008-tzca-65-16-may-2008.pdf"
+    }
+  ],
+  "history": {
+    "summary": "Section 23 is the Code's common-intention/common-purpose rule within Chapter V. Its structure makes probable consequence an express boundary on deemed liability for the resulting offence.",
+    "notes": [
+      "The doctrine should not be reduced to 'they were together'; the statutory ingredients remain necessary.",
+      "Case law may permit common intention to be inferred from conduct and circumstances, but the inference must be grounded in evidence."
+    ],
+    "sourceUrl": "https://www.sheria.go.tz/uploads/documents/sw-1677665965-THE%20PENAL%20CODE.pdf"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Shared intention",
+      "view": "Evidence of planning, coordinated conduct, roles, words and behaviour before/during/after the event may be relevant to whether common intention existed."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Probable consequence",
+      "view": "Even after common unlawful purpose is proved, section 23 separately asks whether the particular resulting offence was a probable consequence of prosecuting that purpose."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Individualised evidence",
+      "view": "Because deemed liability is powerful, analysis should identify the evidential route connecting each accused to the common intention rather than treating group presence as enough."
+    }
+  ],
+  "debateQuestion": "Common unlawful purpose ilikuwa ipi, evidence gani inaonyesha accused aliishiriki, na offence iliyotokea ilikuwa probable consequence yake?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

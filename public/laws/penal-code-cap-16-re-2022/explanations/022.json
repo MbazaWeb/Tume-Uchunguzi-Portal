@@ -1,0 +1,86 @@
+{
+  "section": "22",
+  "language": "sw",
+  "plainLanguage": "Section 22 inaeleza nani anaweza kuhesabiwa principal offender. Si mtu aliyefanya physical act pekee: anayesaidia kuwezesha, anayeaid/abet, na anayecounsel au procure mwingine anaweza pia deemed to have taken part and be guilty of the offence.",
+  "meaning": "Subsection (1) ina categories nne za participation. Paragraph (a) ni actual perpetrator; (b) ni act/omission done for purpose of enabling or aiding; (c) ni aiding/abetting; (d) ni counselling/procuring. Subsections (2)-(3) zinaweka charging na consequences za counselling/procuring. Subsection (4) pia inashughulikia procuring another to perform an act/omission ambayo ingekuwa offence kama procurer mwenyewe angeifanya.",
+  "keyPoints": [
+    "Actual perpetrator ni principal offender under (1)(a).",
+    "Enabling/aiding conduct under (1)(b) inaweza kuleta principal liability.",
+    "Aiding or abetting under (1)(c) ni separate statutory route.",
+    "Counselling/procuring under (1)(d) pia huleta liability.",
+    "Counsellor/procurer may be charged as committing or counselling/procuring under subsection (2).",
+    "Conviction for counselling/procuring has same consequences as conviction of committing under subsection (3).",
+    "Subsection (4) covers procurement of another's act/omission where the procurer's own performance would constitute an offence."
+  ],
+  "legalTerms": [
+    {
+      "term": "principal offender",
+      "meaning": "Mtu ambaye section 22 inamdeem kuwa ameshiriki na kuwa guilty of the offence."
+    },
+    {
+      "term": "aid",
+      "meaning": "Kutoa msaada unaohusiana na commission ya offence."
+    },
+    {
+      "term": "abet",
+      "meaning": "Kuhamasisha/kusaidia commission ya offence katika sense ya criminal participation."
+    },
+    {
+      "term": "counsel",
+      "meaning": "Kushauri au kuhimiza mwingine kufanya offence."
+    },
+    {
+      "term": "procure",
+      "meaning": "Kusababisha/kufanikisha mwingine kufanya act au offence kwa namna inayotambuliwa na section 22."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Dereva anayesaidia robbery",
+      "scenario": "A anajua mpango wa robbery na kwa purpose ya kuwezesha offence anawaendesha offenders kwenda na kutoka eneo la tukio.",
+      "analysis": "Depending on proof of purpose and participation, facts zinaweza kuchunguzwa chini ya section 22(1)(b) au (c); kuwa nje ya building hakumalizi liability."
+    },
+    {
+      "title": "Mtu anayeshauri offence",
+      "scenario": "A anamshawishi B kufanya offence na B anaifanya.",
+      "analysis": "Section 22(1)(d), (2) na (3) zinaweza kufanya counselling/procuring route kuwa legally equivalent in consequences to committing the offence."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Augustino Mwenda v Republic",
+      "citation": "Criminal Appeal No. 219 of 2005; [2007] TZCA 145",
+      "court": "Court of Appeal of Tanzania",
+      "year": "2007",
+      "relevance": "Tanzanian appellate authority discussing principal-offender liability and the need for evidence connecting an accused to participation rather than guilt by association.",
+      "sourceUrl": "https://media.tanzlii.org/media/judgment/260738/source_file/augustino-mwenda-vs-republic-2007-tzca-145-15-june-2007.pdf"
+    }
+  ],
+  "history": {
+    "summary": "Section 22 begins Chapter V, Parties to Offences, and codifies multiple forms of participation as principal liability rather than limiting guilt to the hand that physically completes the offence.",
+    "notes": [
+      "During this digitisation pass, repository section 22 was found truncated after subsection (1). Subsections (2)-(4) were restored from the official R.E. 2022 text.",
+      "Sections 22, 23 and 24 should be distinguished: participation, common intention/common purpose, and consequences of counselling are related but separate rules."
+    ],
+    "sourceUrl": "https://www.sheria.go.tz/uploads/documents/sw-1677665965-THE%20PENAL%20CODE.pdf"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Conduct",
+      "view": "Identify the accused's own act or omission first and map it to paragraph (a), (b), (c) or (d); presence or association alone should not substitute for evidence of participation."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Purpose and knowledge",
+      "view": "For enabling/aiding allegations, the purpose and context of the accused's conduct can distinguish innocent assistance from criminal participation."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "No physical-act monopoly",
+      "view": "Section 22 deliberately removes the assumption that only the person who physically completes the offence can be treated as a principal offender."
+    }
+  ],
+  "debateQuestion": "Ni act, omission, aid, abetment, counsel au procurement gani inayomhusisha accused, na evidence inaunganisha conduct hiyo na commission ya offence kwa kiwango gani?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

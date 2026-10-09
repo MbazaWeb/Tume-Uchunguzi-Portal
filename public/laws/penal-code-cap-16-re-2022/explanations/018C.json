@@ -1,0 +1,82 @@
+{
+  "section": "18C",
+  "language": "sw",
+  "plainLanguage": "Haki ya self-defence, defence of another, au defence of property inaweza kufikia hata kusababisha kifo au grievous harm, lakini tu ikiwa mtu anafanya hivyo kwa good faith na ana honest belief ya kwamba act ni necessary kwa ajili ya kuhifadhi maisha yake, mwili wake, au maisha/mwili wa mtu mwingine, au mali. Hiyo belief lazima iwe based on reasonable grounds.",
+  "meaning": "Section 18C inaweka standard ya juu kabisa ya kile ambacho self-defence inaweza kufikia. Inaruhusu kusababisha kifo au grievous harm lakini tu ikiwa: (a) mtu anafanya kwa good faith; (b) kuna honest belief; (c) belief hiyo ina based on reasonable grounds; na (d) act ni necessary kwa preservation of life/limb/property. Nyoyo nne hizi ni za muhimu na za cumulative.",
+  "keyPoints": [
+    "Haki inaweza kufikia kusababisha death au grievous harm.",
+    "Act lazima iwe kwa good faith.",
+    "Lazyama kuwepo honest belief ya kwamba act ni necessary.",
+    "Belief hiyo lazima iwe based on reasonable grounds — si tu subjective.",
+    "Purpose lazima iwe preservation of: (i) life au limb ya mtu mwenyewe, au (ii) life au limb ya mtu mwingine, au (iii) property.",
+    "Standard hii ni ya juu kuliko 18B kwa sababu inaruhusu kifo/grievous harm."
+  ],
+  "legalTerms": [
+    {
+      "term": "grievous harm",
+      "meaning": "Madhara makubwa ya kimwili yanayofafanuliwa chini ya Penal Code; zaidi ya kuchubua au kuumiza kwa kawaida."
+    },
+    {
+      "term": "good faith",
+      "meaning": "Kufanya kitendo kwa nia njema bila kudanganya au kudhuru, kwa makini na uaminifu."
+    },
+    {
+      "term": "honest belief",
+      "meaning": "Imani ya kweli (subjective) ya mtu kwamba act wake ni necessary — lakini lazima iwe pamoja na reasonable grounds."
+    },
+    {
+      "term": "reasonable grounds",
+      "meaning": "Msingi wa kimantiki unaoweza kuthibitishwa kwa mtu wa kawaida kuona kwamba belief ilikuwa na msingi."
+    },
+    {
+      "term": "preservation of life or limb",
+      "meaning": "Kulinda maisha au viungo vya mwili dhidi ya hatari ya moja kwa moja."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Defence ya kifo dhidi ya tishio la kifo",
+      "scenario": "Mshambuliwa ana silaha ya kuua na anatishia kumuua; mwathirika anamtumia silaha kumuzuia na kumsababishia kifo.",
+      "analysis": "Ikiwa act limefanywa kwa good faith, na honest belief based on reasonable grounds kwamba ilikuwa necessary kwa preservation of life — section 18C inaweza kutoa protection."
+    },
+    {
+      "title": "Defence ya property isiyofikia kifo",
+      "scenario": "Mwizi anajaribu kuiba gari lake na ana threaten na silaha; mmiliki anamtumia nguvu inayomsababishia kifo.",
+      "analysis": "Section 18C inaruhusu protection ya property hata ikifika kifo, lakini lazima zote nyoyo nne ziwe proved: good faith, honest belief, reasonable grounds, na necessary kwa preservation of life/limb/property."
+    },
+    {
+      "title": "Hakumaanikii kama belief haikuwa reasonable",
+      "scenario": "Mtu anadanganyika na kuamini bila msingi wowote wa kimantiki kwamba anatishiwa na kumuua.",
+      "analysis": "Section 18C inahitaji reasonable grounds. Belief ya tu bila msingi wa kimantiki haitoshi — protection inaweza isitumike."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 18C ilianzishwa kufafanua kilele cha haki ya self-defence — kusababisha kifo au grievous harm. Inaweka standard ya juu zaidi kuliko 18B ili kuhakikisha kwamba kifo hakitokei isipokuwa katika hali za msingi wa kimantiki na good faith.",
+    "notes": [
+      "Standard ya 18C ni ya juu kuliko 18B kwa sababu inaruhusu kifo/grievous harm — lakini ina masharti makali zaidi.",
+      "Masharti manne ya cumulative: good faith + honest belief + reasonable grounds + necessary kwa preservation of life/limb/property.",
+      "Tafsiri ya 18C inapaswa kufuata maandishi halisi bila kupanua au kupunguza."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Standard ya juu",
+      "view": "Section 18C inaweka standard ya juu kuliko 18B kwa sababu inaruhusu kifo. Court lazima ithibitishe nyoyo nne zote — si moja tu."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Subjective + objective",
+      "view": "Honest belief ni ya subjective (mtu mwenyewe), lakini reasonable grounds ni ya objective. Standard hii inajumuisha pande zote mbili."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Property pia inalindwa",
+      "view": "Neno 'property' limejumuishwa — ikimaanisha kwamba defence ya property inaweza kufikia kifo chini ya 18C, mradi nyoyo nne ziwe fulfilled."
+    }
+  ],
+  "debateQuestion": "Je, mtu aliyecause death au grievous harm amethibitisha kwamba: alikuwa kwa good faith, ana honest belief, hiyo belief iko based on reasonable grounds, na act ilikuwa necessary kwa preservation of life, limb, au property?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

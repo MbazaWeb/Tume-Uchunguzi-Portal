@@ -1,0 +1,37 @@
+{
+  "section": "5",
+  "language": "sw",
+  "plainLanguage": "Kifungu hiki kinaweka maana maalum za baadhi ya maneno yanapotumika ndani ya Penal Code, isipokuwa pale ambapo muktadha unahitaji maana tofauti. Maandishi yaliyohifadhiwa hapa yanafafanua “court”, “dwelling house”, “harm”, “dangerous harm” na “grievous harm”.",
+  "meaning": "Athari yake ni kufanya maneno haya yasomwe kwa maana zilizowekwa na Code wakati wa kutumia vifungu vingine. Kwa mfano, “harm” inajumuisha bodily hurt, disease au disorder, iwe ya kudumu au ya muda; “dangerous harm” ni harm inayohatarisha maisha; na “grievous harm” ina wigo mpana wa madhara makubwa kama ulivyoainishwa katika maandishi rasmi.",
+  "keyPoints": [
+    "Utangulizi: definitions hizi hutumika “unless the context requires otherwise”.",
+    "“court”: ni court of competent jurisdiction.",
+    "“dwelling house”: inajumuisha building au structure inayohifadhiwa na owner au occupier kwa makazi yake, familia yake au servants; si lazima iwe inakaliwa kila wakati.",
+    "“harm”: bodily hurt, disease au disorder, ya kudumu au ya muda.",
+    "“dangerous harm”: harm endangering life.",
+    "“grievous harm”: inajumuisha maim au dangerous harm, madhara makubwa au ya kudumu kwa afya, permanent disfigurement, au permanent/serious injury kwa organ, member au sense."
+  ],
+  "legalTerms": [
+    {
+      "term": "court of competent jurisdiction",
+      "meaning": "Mahakama yenye mamlaka ya kisheria kushughulikia jambo husika."
+    },
+    {
+      "term": "dwelling house",
+      "meaning": "Building au structure inayohifadhiwa kwa makazi ya owner/occupier, familia au servants kama ilivyoelezwa katika kifungu; inaweza kuwa haikaliwi wakati fulani."
+    },
+    {
+      "term": "harm",
+      "meaning": "Bodily hurt, disease au disorder, iwe permanent au temporary."
+    },
+    {
+      "term": "dangerous harm",
+      "meaning": "Harm inayohatarisha maisha."
+    },
+    {
+      "term": "grievous harm",
+      "meaning": "Harm nzito yenye sifa zilizoorodheshwa kwenye kifungu, ikiwemo maim, dangerous harm, madhara makubwa/ya kudumu kwa afya, disfigurement ya kudumu, au injury kubwa/ya kudumu kwa organ, member au sense."
+    }
+  ],
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

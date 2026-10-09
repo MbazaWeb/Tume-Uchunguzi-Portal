@@ -1,0 +1,49 @@
+{
+  "section": "34",
+  "language": "sw",
+  "plainLanguage": "Section 34 imefutwa (repealed). R.E. 2022 haibebi substantive rule hapa; ina historical marker kwamba section ilirepealed by Ordinance No. 5 of 1961, section 2.",
+  "meaning": "Repealed provision haipaswi kutafsiriwa kana kwamba bado ina offence, defence au punishment. Digital library inaihifadhi kwa numbering continuity na legislative trace. Ili kujua rule ya zamani iliyokuwa hapa, researcher lazima aende kwenye historical edition/amending Ordinance, si kubuni content kutoka repeal note.",
+  "keyPoints": [
+    "Section is repealed.",
+    "Current R.E. 2022 contains no operative substantive text for section 34.",
+    "Repeal citation is Ord. No. 5 of 1961 s.2.",
+    "Number remains useful for legislative history and citation continuity.",
+    "Do not generate a modern legal rule from a repealed placeholder."
+  ],
+  "legalTerms": [
+    {
+      "term": "repealed",
+      "meaning": "Provision imeondolewa kutoka operative law na legislature; historical text may still matter for old events/research."
+    }
+  ],
+  "examples": [
+    {
+      "title": "User asks what section 34 currently requires",
+      "scenario": "Reader anataka kujua current obligation chini ya section 34.",
+      "analysis": "Answer is that the provision is repealed; app should not invent an obligation."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "The official revised text records: '34. [Repealed by Ord. No. 5 of 1961 s. 2.]'",
+    "notes": [
+      "The repeal marker is preserved exactly for traceability.",
+      "Historical reconstruction should use the relevant pre-repeal text and Ordinance if needed."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Digital integrity",
+      "view": "Keeping repealed numbers visible prevents later sections from being renumbered incorrectly and preserves citation history."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Temporal law",
+      "view": "A repealed provision can matter historically for conduct during an earlier legal period, but that requires the law in force at that time."
+    }
+  ],
+  "debateQuestion": "Swali linahusu current law au historical event ya kabla ya repeal, na ni edition gani ya Penal Code ndiyo governing source?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

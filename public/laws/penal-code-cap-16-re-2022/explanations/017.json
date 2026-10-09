@@ -1,0 +1,92 @@
+{
+  "section": "17",
+  "language": "sw",
+  "plainLanguage": "Compulsion inaweza kuondoa criminal responsibility pale offence inafanywa na offenders wawili au zaidi na mtu anafanya/anaacha kufanya act kwa sababu, katika muda wote wa act/omission, offender mwingine anamshurutisha kwa threat ya kumuua papo hapo au kumletea grievous bodily harm akigoma. Threats za future injury kwa kawaida hazitoshi, lakini statute ina exception kwa offender ambaye ni child.",
+  "meaning": "Section 17 ina requirements zinazobana defence. Threat lazima itoke kwa other offender/offenders, iwe ya instant death au grievous bodily harm, na compulsion iendelee during the whole time act/omission inafanyika. Hivyo fear, authority, pressure, au future threat si sawa moja kwa moja na statutory compulsion.",
+  "keyPoints": [
+    "Offence lazima ihusishe two or more offenders.",
+    "Threat lazima itoke kwa other offender/offenders.",
+    "Threat ni instantly to kill au do grievous bodily harm if the person refuses.",
+    "Compulsion lazima iwepo during the whole of the time act/omission inafanyika.",
+    "Future injury does not excuse an offence, unless the offender is a child."
+  ],
+  "legalTerms": [
+    {
+      "term": "compulsion",
+      "meaning": "Kulazimishwa kutenda/kuacha kutenda offence chini ya threats zinazokidhi section 17."
+    },
+    {
+      "term": "instantly",
+      "meaning": "Threat ya madhara ya papo hapo, tofauti na threat ya future injury."
+    },
+    {
+      "term": "grievous bodily harm",
+      "meaning": "Madhara makubwa ya mwili; section 17 inayataja kama kiwango cha threat kinachoweza kuhusika."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Threat wakati wote wa offence",
+      "scenario": "A anamshurutisha B kushiriki offence huku akimtishia B papo hapo kumuua akijaribu kukataa, na threat inaendelea wakati wote B anafanya act.",
+      "analysis": "Huu ni mfano wa facts zinazolenga requirements za immediacy na continuity; court bado lazima ithibitishe evidence na requirements zote."
+    },
+    {
+      "title": "Threat ya wiki ijayo",
+      "scenario": "Mtu anaambiwa atadhuriwa wiki ijayo asiposhiriki offence leo.",
+      "analysis": "Kwa adult, text ya section 17 inasema threats of future injury do not excuse the offence. Statute itself makes a child exception."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Ramadhani Salum v Republic",
+      "citation": "Criminal Appeal No. 5 of 2004; [2007] TZCA 178",
+      "court": "Court of Appeal of Tanzania",
+      "year": "2007",
+      "relevance": "The Court held that fear of displeasing another or threats of future injury do not satisfy section 17; compulsion must persist through the act under threat of instant death or grievous bodily harm.",
+      "sourceUrl": "https://media.tanzlii.org/media/judgment/260745/source_file/ramadhani-salum-vs-republic-2007-tzca-178-16-march-2007.pdf"
+    },
+    {
+      "name": "Benito Makombe v Republic",
+      "citation": "Criminal Appeal No. 440 of 2019; [2021] TZCA 512",
+      "court": "Court of Appeal of Tanzania",
+      "year": "2021",
+      "relevance": "The Court considered and rejected a compulsion defence that did not meet section 17's statutory conditions.",
+      "sourceUrl": "https://sheriahub.com/cases/tz/caselaw/benito-makombe-vs-republic-criminal-appeal-440-of-2019-2021-tzca-512-23-september-2021"
+    },
+    {
+      "name": "Rex v Palamba and Another",
+      "citation": "Criminal Appeals Nos. 138 and 139 of 1947; [1947] EACA 35",
+      "court": "Court of Appeal for Eastern Africa",
+      "year": "1947",
+      "relevance": "An early East African authority applying section 17; it recognized that the required threat can be inferred from conduct and surrounding circumstances rather than requiring an articulated formula of words.",
+      "sourceUrl": "https://media.tanzlii.org/media/judgment/367824/source_file/8698d80a9ba97a60/rex-v-palamba-and-another-criminal-appeals-nos-138-and-139-of-1947-1947-eaca-35-1-january-1947.pdf"
+    }
+  ],
+  "history": {
+    "summary": "Compulsion has long appeared among the Penal Code's general rules. Tanzanian appellate authority continues to apply the statutory requirements strictly, particularly immediacy and continuity of the threat.",
+    "notes": [
+      "Older East African decisions can illuminate the wording but must be read against the current R.E. 2022 text.",
+      "The final child exception to future injury is part of the current statutory wording and should not be omitted."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Immediacy",
+      "view": "The statutory phrase 'instantly to kill ... or do grievous bodily harm' makes immediacy a central dividing line between compulsion and general fear."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Continuity",
+      "view": "The words 'during the whole of the time' make timing evidence especially important: a threat that ended before the criminal act may fail the statutory test."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Inference from circumstances",
+      "view": "Palamba shows that the threat need not always be expressed in exact words; conduct and surrounding circumstances may matter, while the statutory level of threat must still be met."
+    }
+  ],
+  "debateQuestion": "Threat ilikuwa ya papo hapo na iliendelea wakati wote wa act/omission, au evidence inaonyesha fear/future pressure ambayo haifikii section 17?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

@@ -1,0 +1,67 @@
+{
+  "section": "30",
+  "language": "sw",
+  "plainLanguage": "Section 30 inaruhusu court, baada ya conviction under section 111 or 112, kuorder forfeiture to the Republic ya property iliyopita in connection with commission of offence. Kama property haiwezi forfeited au kupatikana, court inaweza assess value yake na kuorder sum hiyo; enforcement ya sum inafuata incidents za fine.",
+  "meaning": "Power hii ni offence-linked, si general forfeiture power kwa kila Penal Code conviction. Trigger ni conviction under section 111 or 112. Court may order forfeiture in addition to or in lieu of another penalty. Property must have passed in connection with commission of the offence. Substitute-value order applies where property cannot be forfeited or found.",
+  "keyPoints": [
+    "Trigger is conviction under section 111 or 112.",
+    "Forfeiture may be additional to or instead of another penalty.",
+    "Property must have passed in connection with commission of offence.",
+    "If property cannot be forfeited/found, court may assess its value.",
+    "Payment of substitute value is enforced like a fine."
+  ],
+  "legalTerms": [
+    {
+      "term": "forfeiture",
+      "meaning": "Court-ordered loss of property to the Republic under statutory authority."
+    },
+    {
+      "term": "in addition to or in lieu of",
+      "meaning": "Forfeiture can supplement another penalty or replace it where the provision allows."
+    },
+    {
+      "term": "assessed value",
+      "meaning": "Sum fixed by court as value of property where actual property cannot be forfeited or found."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Connected property available",
+      "scenario": "After conviction under section 111/112, property that passed in connection with the offence is identified and legally available.",
+      "analysis": "Section 30 gives court discretion to order forfeiture to the Republic, subject to the statutory connection."
+    },
+    {
+      "title": "Property cannot be found",
+      "scenario": "Qualifying property has disappeared and cannot be forfeited.",
+      "analysis": "Court may assess its value and order that sum; enforcement follows fine mechanisms."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 30 is a targeted forfeiture provision tied expressly to sections 111 and 112 rather than a free-standing general asset-forfeiture regime.",
+    "notes": [
+      "Reader should open sections 111 and 112 to understand the offences that activate this provision.",
+      "Other Tanzanian laws may contain separate forfeiture/confiscation regimes; they should not be merged into section 30 without their own statutory basis."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Jurisdictional trigger",
+      "view": "The first check is the conviction provision: without section 111 or 112, section 30 itself does not create this forfeiture power."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Property nexus",
+      "view": "The phrase 'passed in connection with' requires an evidential link between the property and commission of the qualifying offence."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Substitute value",
+      "view": "The value route prevents the power from necessarily failing merely because connected property cannot physically be located, while still requiring judicial assessment."
+    }
+  ],
+  "debateQuestion": "Conviction ni chini ya section 111/112, property gani passed in connection with offence, na evidence ina-support forfeiture ya property yenyewe au assessed-value order?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

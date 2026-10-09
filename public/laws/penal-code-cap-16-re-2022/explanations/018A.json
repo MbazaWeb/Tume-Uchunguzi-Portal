@@ -1,0 +1,81 @@
+{
+  "section": "18A",
+  "language": "sw",
+  "plainLanguage": "Kila mtu ana haki ya kujilinda mwenyewe, kumlinda mtu mwingine, au kulinda mali yake au mali ya mtu mwingine dhidi ya kitendo cha kisheria kisicho halali. Haki hii inatumika kwa: (a) kujilinda au kumlinda mtu mwingine dhidi ya act, assault, au violence mwilini; na (b) kulinda mali yake au mali aliyo nayo kisheria au mali ya mtu mwingine dhidi ya seizure, destruction au violence.",
+  "meaning": "Section 18A inaweka haki ya msingi ya self-defence, defence of another, na defence of property. Haki hii ni ya kila mtu (subject to other provisions of the Code), ikimaanisha kwamba wala si kosa kufanya kitendo cha kujilinda ikiwa prophiri na halali. Lakini haki hii haikuweki kilele cha nguvu inayoruhusiwa — kilele hicho kinawekwa na section 18B (reasonable force) na section 18C (when causing death is allowed).",
+  "keyPoints": [
+    "Haki hii ni ya kila mtu, si tu kwa wahasiriwa wa kawaida.",
+    "Ina sehemu mbili: (a) defence of person, na (b) defence of property.",
+    "Defence of person inalinda dhidi ya unlawful act, assault au violence mwilini.",
+    "Defence of property inalinda dhidi ya seizure, destruction au violence juu ya mali.",
+    "Mali inayolindwa inaweza kuwa ya mtu mwenyewe au ya mtu mwingine aliye iko under lawful possession, custody au care.",
+    "Haki hii ni subject to other provisions of the Code — si absolute."
+  ],
+  "legalTerms": [
+    {
+      "term": "self defence",
+      "meaning": "Haki ya mtu kujilinda mwenyewe dhidi ya act, assault au violence isiyo halali."
+    },
+    {
+      "term": "defence of another",
+      "meaning": "Haki ya kumlinda mtu mwingine dhidi ya tukio lisilo halali la kisheria au vurugu mwilini."
+    },
+    {
+      "term": "defence of property",
+      "meaning": "Haki ya kulinda mali ya mtu mwenyewe au mali aliyo nayo kisheria dhidi ya seizure, destruction au violence."
+    },
+    {
+      "term": "lawful possession, custody or care",
+      "meaning": "Kumiliki, kuwa na udhamini, au kuwa na utunzaji wa mali kwa njia inayotambuliwa na sheria."
+    },
+    {
+      "term": "subject to the provisions of this Code",
+      "meaning": "Haki haiwezi kutumika kama kuna sheria nyingine ndani ya Penal Code inayoiwekea kikwazo au masharti."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Kujilinda dhidi ya assault",
+      "scenario": "Mtu anashambuliwa na mtu mwingine anayejaribu kumpiga. Mtu huyo anatumia nguvu ya kutosha tu ili kuzuia shambulio.",
+      "analysis": "Section 18A(1)(a) inamipa haki ya kujilinda dhidi ya violence mwilini. Nguvu inayotumika inapaswa kuwa reasonable chini ya section 18B."
+    },
+    {
+      "title": "Kumlinda mtu mwingine",
+      "scenario": "Mtu anaona mtu mwingine aneshambuliwa na anakanyaga kati ili kumlinda.",
+      "analysis": "Hii ni defence of another person chini ya 18A(1)(a). Haki hii ni sawa na self-defence kimaana."
+    },
+    {
+      "title": "Kulinda mali ya jirani",
+      "scenario": "Mtu anamwona mwizi anajaribu kuiba gari la jirani lake na anaingilia kati.",
+      "analysis": "Section 18A(1)(b) inaruhusu kulinda hata mali ya mtu mwingine, ikiwa mtu anayedhamini mali hiyo au anaijali."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 18A ilianzishwa kufafanua haki ya self-defence na kuiweka wazi ndani ya Penal Code. Sehemu hii inatanguliza sections 18B na 18C ambazo zinaweka kikomo cha nguvu inayoruhusiwa na hali ambazo zinaweza kusababisha kifo.",
+    "notes": [
+      "Section 18A inaweka haki; section 18B inaweka kikomo (reasonable force); section 18C inaweka hali mahususi za kusababisha kifo.",
+      "Tafsiri ya haki hii inapaswa kuzingatia maandishi halisi ya section bila kutoa maana zaidi ya yaliyomo."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Haki ya msingi",
+      "view": "Section 18A inaweka haki ya msingi ya kujilinda na kulinda wengine, lakini si kibali cha kutumia nguvu yoyote — lazima zingatiwe na 18B na 18C."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Defence of property",
+      "view": "Haki ya kulinda mali inapatikana kwa mtu mwenye mali yake au mali ya mtu mwingine aliye iko under lawful possession, custody au care — si kwa mtu yeyote anayeingilia kati."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Subject to other provisions",
+      "view": "Kifungu cha 'subject to the provisions of this Code' kina maana kwamba haki hii inaweza kupunguzwa au kukanushwa na kifungu kingine, kama vile section 18B inayoweka kikomo cha nguvu."
+    }
+  ],
+  "debateQuestion": "Je, mtu aliyetumia nguvu ilikuwa inahitajika na reasonable kwa hali hiyo, au alikuwa anajaribu tu kujilinda kwa njia isiyo halali?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

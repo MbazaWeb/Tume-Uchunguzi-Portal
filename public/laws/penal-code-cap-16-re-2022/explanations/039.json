@@ -1,0 +1,61 @@
+{
+  "section": "39",
+  "language": "sw",
+  "plainLanguage": "Section 39 inaweka aina kadhaa za treason kwa mtu aliye chini ya allegiance kwa United Republic. Inahusu, miongoni mwa mambo yaliyotajwa, mashambulizi dhidi ya Rais, levying war, nia fulani dhidi ya taasisi za dola inapodhihirishwa kwa writing au overt act, kusaidia maadui, invasion, na vitendo vya kusaidia enemy.",
+  "meaning": "The provision is not limited to the two acts in subsection (1). Subsections (2)-(4) separately define additional treason conduct and mental elements. The prosecution must prove the applicable statutory elements, including allegiance and, where required, intention plus manifestation by writing or an overt act.",
+  "keyPoints": [
+    "Subsection (1) covers specified conduct including murdering/attempting to murder the President and levying war.",
+    "Subsection (2) requires a specified intention and manifestation through writing/printing or an overt act or deed.",
+    "Subsection (3) addresses adherence or aid to enemies, instigating armed invasion, and taking up arms for specified coercive purposes.",
+    "Subsection (4) addresses acts done with intent to help an enemy in the circumstances stated.",
+    "The statutory text provides the stated capital penalty on conviction."
+  ],
+  "legalTerms": [
+    {
+      "term": "allegiance",
+      "meaning": "Uhusiano wa kisheria wa utii kwa United Republic ambao ni element ya offences zilizoainishwa hapa."
+    },
+    {
+      "term": "overt act",
+      "meaning": "Kitendo cha wazi kinachotumika kudhihirisha intention inayohitajika na subsection (2)."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Intention pekee",
+      "scenario": "Kuna madai ya nia lakini hakuna writing, printing, overt act au deed inayodhihirisha nia hiyo chini ya subsection (2).",
+      "analysis": "Subsection (2) expressly requires manifestation; intention alone should not be substituted for that statutory requirement."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Hatibu Gandhi and Others v Republic",
+      "citation": "Criminal Appeal No. 3 of 1986; reported [1996] TLR",
+      "court": "Court of Appeal of Tanzania",
+      "year": 1996,
+      "relevance": "The reported decision discusses section 39(2)(a) and states that a treason conviction requires proof of an overt act together with the appropriate intention and allegiance.",
+      "sourceUrl": "https://media.tanzlii.org/media/judgment/373566/source_file/6f7f490dd94f4f9b/Criminal_Appeal_No._3_Of_1986.pdf"
+    }
+  ],
+  "history": {
+    "summary": "The R.E. 2022 text records Act No. 2 of 1970 in relation to section 39.",
+    "notes": [
+      "The repository copy previously contained only subsection (1); subsections (2)-(4) were restored against the official R.E. 2022 source before this explanation was added."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Elements",
+      "view": "Each subsection should be analysed separately; the precise act, intention and allegiance requirements cannot be collapsed into a generic notion of treason."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Overt act",
+      "view": "For subsection (2), manifestation is a distinct statutory requirement and case law treats the overt act and relevant intention as matters requiring proof."
+    }
+  ],
+  "debateQuestion": "Ni subsection ipi ya section 39 inayodaiwa kuvunjwa, na prosecution evidence inathibitisha kila element yake tofauti?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

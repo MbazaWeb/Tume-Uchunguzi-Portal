@@ -1,0 +1,88 @@
+{
+  "section": "11",
+  "language": "sw",
+  "plainLanguage": "Kifungu hiki kinahusu kosa la ukweli (mistake of fact), si kutokujua sheria. Mtu akifanya au kuacha kufanya jambo akiwa na imani ambayo ni ya kweli kwa upande wake (honest), yenye msingi wa kimantiki (reasonable), lakini kimakosa kuhusu hali fulani ya mambo, uwajibikaji wake wa kijinai hauendi zaidi ya vile ambavyo ungekuwa kama hali aliyoiamini ingekuwa kweli.",
+  "meaning": "Subsection (1) inaweka vipimo vinavyofanya kazi pamoja: belief lazima iwe honest, reasonable, mistaken, na ihusu state of things/facts. Mahakama huuliza pia: kama facts zingekuwa kama accused alivyoamini, angekuwa bado ametenda offence? Kama ndiyo, mistake hiyo haiwezi kumwondolea criminal responsibility kwa offence hiyo. Subsection (2) ni kikomo muhimu: sheria inayohusu subject husika inaweza, expressly au impliedly, kuondoa operation ya rule hii.",
+  "keyPoints": [
+    "Mistake lazima iwe kuhusu fact/state of things, si ignorance of law.",
+    "Belief lazima iwe honest: accused kweli alikuwa na belief hiyo.",
+    "Belief lazima pia iwe reasonable: si kila madai ya mistake yanatosha.",
+    "Uwajibikaji hupimwa kana kwamba real state of things ilikuwa kama accused alivyoamini.",
+    "Subsection (2) inaruhusu express au implied provisions za sheria husika kuondoa operation ya defence."
+  ],
+  "legalTerms": [
+    {
+      "term": "mistake of fact",
+      "meaning": "Imani yenye makosa kuhusu hali ya ukweli/facts inayokuwepo wakati wa act au omission."
+    },
+    {
+      "term": "honest belief",
+      "meaning": "Imani ambayo mtu alikuwa nayo kwa kweli, si maelezo yaliyotengenezwa baadaye."
+    },
+    {
+      "term": "reasonable belief",
+      "meaning": "Imani yenye msingi unaoweza kutazamwa kuwa wa kimantiki katika circumstances husika."
+    },
+    {
+      "term": "state of things",
+      "meaning": "Hali ya facts ambayo mtu aliamini kuwepo."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Kivuli shambani usiku",
+      "scenario": "Mlinzi wa shamba anaona movement gizani na, baada ya mazingira fulani, anaamini kwa kweli kuwa ni mnyama anayeharibu mazao; kumbe ni mtu.",
+      "analysis": "Swali si tu kama alikosea. Section 11 inahitaji kuchunguza honesty na reasonableness ya belief, pamoja na criminal responsibility ambayo ingebaki kama facts alizoamini zingekuwa kweli."
+    },
+    {
+      "title": "Mistake ambayo haisaidii",
+      "scenario": "Mtu anakusudia kumdhuru B lakini kwa makosa anadhani C ndiye B na anamdhuru C.",
+      "analysis": "Kubadilika kwa identity pekee hakumaanishi defence inafanikiwa. Test ya section 11 inauliza pia criminal responsibility kama facts zingekuwa kama accused alivyoamini."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Musa and Others v Republic",
+      "citation": "[1970] 1 EA 42; Criminal Appeal No. 58 of 1969",
+      "court": "Court of Appeal for East Africa at Dar es Salaam",
+      "year": "1969",
+      "relevance": "Reported authority on section 11: belief relied upon must be honest and reasonable, must concern facts, and mistake of law is insufficient.",
+      "sourceUrl": "https://portalkc.iuiu.ac.ug/digitallib/mobile/content/LAW%20LIBRARY/East%20African%20Law%20reports/%5B1970%5D%20East%20Africa%20Law%20Reports.pdf"
+    },
+    {
+      "name": "R v Sultan Maginga",
+      "citation": "(1969) H.C.D. No. 33",
+      "court": "High Court of Tanzania",
+      "year": "1969",
+      "relevance": "Frequently cited Tanzanian authority involving a person killed after being mistaken for an animal while a field was being guarded; used to illustrate the honest-and-reasonable mistake inquiry.",
+      "sourceUrl": "https://www.tanzanianweb.co.tz/2024/10/key-legal-defenses-in-criminal-law.html"
+    }
+  ],
+  "history": {
+    "summary": "Mistake of fact is part of Chapter IV's general rules of criminal responsibility. The core formulation predates R.E. 2022 and continues in the current revised text.",
+    "notes": [
+      "The rule is deliberately narrower than a general claim of 'I made a mistake': honesty and reasonableness are express statutory requirements.",
+      "Section 8 (ignorance of law) and section 11 (mistake of fact) should be read separately."
+    ],
+    "sourceUrl": "https://elibrary.osg.go.tz/bitstreams/8d1378f7-5d7a-4768-9e3b-5f042bda1fcd/download"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Subjective honesty",
+      "view": "Uchambuzi mmoja huanza na accused mwenyewe: je, ushahidi unaonyesha kweli alikuwa na mistaken belief aliyodai?"
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Objective reasonableness",
+      "view": "Hata belief ikiwa genuinely held, section 11 inaongeza requirement ya reasonableness. Circumstances zinakuwa muhimu katika kupima kama belief hiyo ilikuwa reasonable."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Counterfactual test",
+      "view": "Hatua nyingine ni kuuliza matokeo ya kisheria kama facts zingekuwa kama accused alivyoamini. Hii huzuia mistake isiyobadilisha criminality ya act kutumika kama defence."
+    }
+  ],
+  "debateQuestion": "Ni facts zipi zinathibitisha kwamba belief ilikuwa both honest and reasonable, na kama belief hiyo ingekuwa kweli accused angekuwa criminally responsible kwa kiwango gani?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

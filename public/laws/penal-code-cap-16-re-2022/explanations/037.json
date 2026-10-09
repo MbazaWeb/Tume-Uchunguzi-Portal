@@ -1,0 +1,51 @@
+{
+  "section": "37",
+  "language": "sw",
+  "plainLanguage": "Mfungwa aliyekimbia akikamatwa na kupewa hukumu mpya, sheria inaeleza jinsi hukumu mpya na sehemu iliyobaki ya hukumu ya zamani zitakavyotekelezwa.",
+  "meaning": "Section 37 distinguishes a new sentence that is severer than the sentence being served at escape from one that is not. It then fixes the order in which the new imprisonment and the unexpired portion of the former imprisonment are served.",
+  "keyPoints": [
+    "Applies to an escaped convict who later receives a sentence under the Code.",
+    "Death, fine or corporal punishment take effect immediately subject to the Code.",
+    "If the new imprisonment is severer, it takes effect immediately and the unexpired former term follows.",
+    "If the new sentence is not severer, the sequencing follows paragraph (b) of the section."
+  ],
+  "legalTerms": [
+    {
+      "term": "escaped convict",
+      "meaning": "Mtu aliyekuwa akitumikia hukumu na akatoroka."
+    },
+    {
+      "term": "unexpired sentence",
+      "meaning": "Sehemu ya hukumu ya awali iliyokuwa bado haijamalizika wakati wa kutoroka."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Sehemu ya zamani bado ipo",
+      "scenario": "Mfungwa anatoroka kabla hajamaliza kifungo, kisha anahukumiwa kwa kosa jingine baada ya kukamatwa.",
+      "analysis": "Mahakama na mamlaka za utekelezaji lazima zitumie mpangilio wa section 37 kulingana na ukali wa hukumu mpya."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "The provision prevents escape from extinguishing the unserved balance of an earlier sentence and specifies sequencing after recapture.",
+    "notes": [
+      "The exact comparison of severity depends on the sentences involved; the statutory text should be consulted."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Continuity of sentence",
+      "view": "The unexpired part of the earlier sentence remains legally relevant after recapture."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Sequencing",
+      "view": "The key operational question is whether the new sentence is severer than the sentence being served at escape."
+    }
+  ],
+  "debateQuestion": "Kwa facts za kesi husika, hukumu mpya ni 'severer' kwa maana ya section 37, na hilo linaathirije mpangilio wa vifungo?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

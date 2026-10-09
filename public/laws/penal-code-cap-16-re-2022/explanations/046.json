@@ -1,0 +1,51 @@
+{
+  "section": "46",
+  "language": "sw",
+  "plainLanguage": "Section 46 inahusu kusaidia, kuabet au kuwa accessory to mutiny, na pia kuchochea member wa vyombo vilivyotajwa kufanya sedition au kutotii lawful order ya superior officer.",
+  "meaning": "The section creates liability through participation in mutiny and through specified incitement to sedition or disobedience of a lawful superior order.",
+  "keyPoints": [
+    "Aiding, abetting and accessory liability are expressly included.",
+    "The mutiny must involve a member of a listed service or other law-enforcement organ.",
+    "Paragraph (b) covers incitement to sedition or disobedience to a lawful superior order.",
+    "The current text creates the offence; any penalty must be determined from applicable law rather than invented."
+  ],
+  "legalTerms": [
+    {
+      "term": "aids or abets",
+      "meaning": "Aina za participation katika offence zilizotajwa moja kwa moja na section."
+    },
+    {
+      "term": "lawful order",
+      "meaning": "Amri ya superior officer ambayo ni halali; legality is part of the wording."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Element check",
+      "scenario": "Prosecution allegation is assessed against the exact wording of this section.",
+      "analysis": "Kila statutory element lazima ithibitishwe; label ya offence peke yake haitoshi."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 46 forms part of Chapter VII, Treason and Other Offences Against the Republic.",
+    "notes": [
+      "Official wording checked against the R.E. 2022 source before explanation."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Elements",
+      "view": "Analysis should follow the exact statutory verbs and mental elements rather than a broad description of the alleged conduct."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Evidence",
+      "view": "The evidence should be matched separately to each required element and any express qualification in the provision."
+    }
+  ],
+  "debateQuestion": "Je, evidence inayodaiwa inathibitisha kila element ya section 46 bila kupanua wording ya statute?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

@@ -1,0 +1,53 @@
+{
+  "section": "38A",
+  "language": "sw",
+  "plainLanguage": "Mtu aliyepewa conditional discharge akipatikana na hatia ya kosa jingine alilotenda ndani ya kipindi cha masharti, anaweza kurudishwa mbele ya mahakama iliyompa discharge na kuhukumiwa kwa kosa la awali.",
+  "meaning": "Section 38A creates the procedure and sentencing consequence where a person subject to conditional discharge is convicted of an offence committed during the conditional period. It covers summons or warrant, custody or bail in specified circumstances, return to the original court, and sentencing for the original offence.",
+  "keyPoints": [
+    "Trigger is conviction for an offence committed during the conditional-discharge period.",
+    "A judge or magistrate may issue summons or warrant on the statutory basis.",
+    "The person is directed back to the court that made the conditional-discharge order.",
+    "That court may impose a sentence it could have imposed on the original conviction.",
+    "Special provision applies where the later conviction is by the High Court.",
+    "Once sentenced for the original offence under this section, the conditional-discharge order ceases to have effect."
+  ],
+  "legalTerms": [
+    {
+      "term": "period of conditional discharge",
+      "meaning": "Kipindi kilichowekwa chini ya section 38 ambacho mtu anatakiwa asitende kosa jingine."
+    },
+    {
+      "term": "summons / warrant",
+      "meaning": "Njia za kisheria za kumtaka mtu afike mahakamani au kukamatwa na kufikishwa mahakamani."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Kosa jipya ndani ya kipindi",
+      "scenario": "Mtu yuko kwenye conditional discharge ya miezi sita na anapatikana na hatia ya kosa alilotenda mwezi wa tatu.",
+      "analysis": "Section 38A inaweza kuruhusu hatua za kumrudisha mbele ya mahakama ya awali na sentencing ya original offence."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 38A supplies the enforcement mechanism for the condition created by section 38.",
+    "notes": [
+      "It is linked directly to section 38B, which addresses the legal effect of conviction and discharge."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Trigger",
+      "view": "A mere allegation of a new offence is not the same as the conviction contemplated by the section."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Original court",
+      "view": "The statutory procedure repeatedly connects further proceedings to the court that made the conditional-discharge order, subject to the High Court provision."
+    }
+  ],
+  "debateQuestion": "Je, masharti yote ya section 38A yametimia kabla ya mtu kuhukumiwa upya kwa original offence?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

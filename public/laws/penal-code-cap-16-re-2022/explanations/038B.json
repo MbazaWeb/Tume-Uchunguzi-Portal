@@ -1,0 +1,52 @@
+{
+  "section": "38B",
+  "language": "sw",
+  "plainLanguage": "Kwa matumizi mengi ya kisheria, conviction iliyoishia kwa absolute au conditional discharge haitachukuliwa kama conviction, isipokuwa kwa proceedings zilizotajwa na section hii; lakini hali inaweza kubadilika ikiwa mtu wa conditional discharge baadaye anahukumiwa chini ya section 38A.",
+  "meaning": "Section 38B limits the legal effect of a conviction followed by discharge under section 38. Subject to subsection (2), the conviction is deemed not to be a conviction except for the proceedings in which the order was made and later proceedings under section 38A. If a conditionally discharged person is later sentenced under section 38A, the protection ceases for that offence and the conviction is deemed to occur on the sentencing date.",
+  "keyPoints": [
+    "Applies to convictions followed by absolute or conditional discharge under section 38.",
+    "Creates a statutory deeming rule limiting when that conviction counts as a conviction.",
+    "Preserves the proceedings in which discharge was ordered and proceedings under section 38A.",
+    "If later sentenced under section 38A, the special protection ceases for that offence.",
+    "Subsection (2) preserves appeal/same-offence protections and specified property consequences."
+  ],
+  "legalTerms": [
+    {
+      "term": "deemed not to be a conviction",
+      "meaning": "Sheria inaagiza conviction hiyo isitazamwe kama conviction kwa madhumuni mengi, isipokuwa exceptions zilizowekwa."
+    },
+    {
+      "term": "subsequent proceedings",
+      "meaning": "Proceedings zinazofuata, hasa zile zinazoweza kuchukuliwa chini ya section 38A."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Absolute discharge",
+      "scenario": "Mtu amepatikana na hatia lakini amepewa absolute discharge chini ya section 38.",
+      "analysis": "Section 38B inaweka special rule kuhusu madhumuni ambayo conviction hiyo itahesabika."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 38B completes the discharge framework by defining the downstream legal status of a conviction followed by discharge.",
+    "notes": [
+      "The exceptions in subsection (2) are important and should not be omitted when applying the deeming rule."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Limited legal effect",
+      "view": "The section does not erase the historical fact of proceedings; it prescribes how the conviction is treated for legal purposes."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Exceptions",
+      "view": "The appeal, same-offence and property-related exceptions in subsection (2) prevent an overbroad reading of subsection (1)."
+    }
+  ],
+  "debateQuestion": "Kwa purpose inayoulizwa, conviction iliyofuatiwa na discharge inahesabika au inaangukia kwenye deeming rule au exception ya section 38B?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

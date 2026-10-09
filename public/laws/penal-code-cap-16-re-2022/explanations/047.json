@@ -1,0 +1,52 @@
+{
+  "section": "47",
+  "language": "sw",
+  "plainLanguage": "Section 47 inakataza, moja kwa moja au indirectly, kushawishi desertion, kusaidia desertion, au kumficha mtu ukiwa na reason to believe kuwa ni deserter, kwa members wa vyombo vilivyotajwa.",
+  "meaning": "The section reaches procurement/persuasion, assistance/accessory conduct, and harbouring/concealment where the required reason to believe exists.",
+  "keyPoints": [
+    "Direct and indirect conduct are covered.",
+    "Attempts to procure or persuade desertion are included.",
+    "Aiding, abetting or being accessory to desertion is included.",
+    "Harbouring/concealing requires reason to believe the person is a deserter.",
+    "The stated penalty is six months' imprisonment."
+  ],
+  "legalTerms": [
+    {
+      "term": "desertion",
+      "meaning": "Kuacha service/duty kwa namna inayotambuliwa na sheria husika."
+    },
+    {
+      "term": "reason to believe",
+      "meaning": "Statutory mental threshold attached to harbouring or concealment."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Element check",
+      "scenario": "Prosecution allegation is assessed against the exact wording of this section.",
+      "analysis": "Kila statutory element lazima ithibitishwe; label ya offence peke yake haitoshi."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 47 forms part of Chapter VII, Treason and Other Offences Against the Republic.",
+    "notes": [
+      "Official wording checked against the R.E. 2022 source before explanation."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Elements",
+      "view": "Analysis should follow the exact statutory verbs and mental elements rather than a broad description of the alleged conduct."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Evidence",
+      "view": "The evidence should be matched separately to each required element and any express qualification in the provision."
+    }
+  ],
+  "debateQuestion": "Je, evidence inayodaiwa inathibitisha kila element ya section 47 bila kupanua wording ya statute?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

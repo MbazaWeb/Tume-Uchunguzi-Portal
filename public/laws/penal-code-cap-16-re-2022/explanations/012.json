@@ -1,0 +1,73 @@
+{
+  "section": "12",
+  "language": "sw",
+  "plainLanguage": "Sheria inaanza na presumption kwamba kila mtu ana sound mind, na alikuwa na sound mind katika wakati wowote unaokuwa muhimu katika shauri, mpaka ushahidi uthibitishe kinyume.",
+  "meaning": "Section 12 ni starting presumption, si hitimisho lisiloweza kupingwa. 'Until the contrary is proved' ina maana presumption inaweza rebutted. Kwa criminal responsibility, section 12 inasomwa kwa karibu na section 13, ambayo inaweka substantive conditions za insanity defence.",
+  "keyPoints": [
+    "Default legal presumption ni sound mind.",
+    "Presumption inahusu pia material time inayoulizwa katika case.",
+    "Presumption si absolute; inaweza kuondolewa kwa proof to the contrary.",
+    "Section 12 haijitoshelezi kueleza insanity defence; section 13 ndiyo inaweka effects za disease affecting the mind zinazohitajika."
+  ],
+  "legalTerms": [
+    {
+      "term": "presumption",
+      "meaning": "Msimamo ambao sheria inaanzia nao mpaka ushahidi wa kinyume uthibitishwe."
+    },
+    {
+      "term": "sound mind",
+      "meaning": "Hali ya akili inayodhaniwa na section 12 mpaka contrary proved."
+    },
+    {
+      "term": "material time",
+      "meaning": "Wakati unaohusika moja kwa moja na suala linalochunguzwa, hasa wakati wa alleged act/omission."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Mental illness history pekee",
+      "scenario": "Accused ana historia ya matibabu ya afya ya akili.",
+      "analysis": "Historia hiyo inaweza kuwa relevant evidence, lakini section 12 bado inaelekeza swali kwenye proof inayohusiana na soundness of mind, na section 13 inaelekeza zaidi kwenye condition na effect yake wakati wa act/omission."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Hilda Abel v Republic",
+      "citation": "[1993] TLR 246 (CA); Criminal Appeal No. 119 of 1993",
+      "court": "Court of Appeal of Tanzania",
+      "year": "1993",
+      "relevance": "A leading Tanzanian insanity authority. The Court treated insanity as a question of fact inferable from circumstances and conduct and held that a court is not automatically bound by medical expert evidence where there are good reasons.",
+      "sourceUrl": "https://www.tanzanianweb.co.tz/2022/05/hilda-abel-v-republic-1993-tlr-246-ca.html"
+    },
+    {
+      "name": "Republic v Frank s/o Jaston Mwaihojo",
+      "citation": "[2020] TZHC 368",
+      "court": "High Court of Tanzania",
+      "year": "2020",
+      "relevance": "The High Court expressly discussed section 12's presumption of sanity while considering an insanity defence and medical evidence.",
+      "sourceUrl": "https://media.tanzlii.org/media/judgment/214123/source_file/republic-vs-frank-so-jaston-mwaihojo-2020-tzhc-368-5-march-2020.pdf"
+    }
+  ],
+  "history": {
+    "summary": "The presumption of sanity is a longstanding general rule in Tanzania's Penal Code and functions as the statutory starting point before the section 13 insanity inquiry.",
+    "notes": [
+      "The existence of a diagnosis and the legal test for criminal insanity are related but not identical questions.",
+      "The legally critical time is the time relevant to the act/omission in issue."
+    ],
+    "sourceUrl": "https://elibrary.osg.go.tz/bitstreams/8d1378f7-5d7a-4768-9e3b-5f042bda1fcd/download"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Starting presumption",
+      "view": "Section 12 allocates the starting position: sound mind is presumed. It therefore structures how evidence of insanity enters the criminal-responsibility inquiry."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Evidence, not labels",
+      "view": "A diagnostic label alone should not replace the statutory analysis. The evidence must be connected to the legally relevant mental condition and material time."
+    }
+  ],
+  "debateQuestion": "Ni evidence gani inayolenga mental condition ya accused katika material time, na inatosha vipi kuondoa presumption ya section 12?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

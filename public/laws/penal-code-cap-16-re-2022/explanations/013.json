@@ -1,0 +1,96 @@
+{
+  "section": "13",
+  "language": "sw",
+  "plainLanguage": "Mtu hatakuwa criminally responsible ikiwa, wakati wa act au omission, disease affecting his mind ilisababisha moja ya effects tatu zilizotajwa: kutoweza kuelewa anachofanya; kutoweza kutambua kwamba hapaswi kufanya act/omission hiyo; au kutokuwa na control ya act/omission. Kuwa na mental disease peke yake hakutoshi kama haikusababisha mojawapo ya effects hizo kwa act/omission husika.",
+  "meaning": "Section 13 inaunganisha disease affecting the mind na functional effect yake at the time of the act/omission. Subsection (1)(a)-(c) ni alternative statutory effects. Subsection (2) inasisitiza causal link: mtu anaweza kuwa na disease affecting the mind lakini bado akawa criminally responsible ikiwa disease hiyo haikusababisha effect yoyote iliyoorodheshwa kuhusu act/omission hiyo.",
+  "keyPoints": [
+    "Timing ni muhimu: condition inaangaliwa at the time of doing the act or making the omission.",
+    "Lazima kuwe na disease affecting the mind.",
+    "Disease lazima iwe imesababisha angalau moja ya statutory effects katika (a), (b), au (c).",
+    "(a) inalenga capacity ya understanding; (b) appreciation kwamba act/omission ought not be done; (c) control.",
+    "Subsection (2) inaonyesha diagnosis/disease peke yake si automatic exemption from criminal responsibility."
+  ],
+  "legalTerms": [
+    {
+      "term": "disease affecting the mind",
+      "meaning": "Disease inayohusishwa na akili ambayo effect yake lazima ichunguzwe kwa tests za subsection (1)."
+    },
+    {
+      "term": "incapable of understanding",
+      "meaning": "Kutokuwa na uwezo wa kuelewa anachofanya wakati wa act/omission."
+    },
+    {
+      "term": "incapable of appreciating",
+      "meaning": "Kutokuwa na uwezo wa kutambua kwamba hapaswi kufanya act au omission hiyo."
+    },
+    {
+      "term": "control",
+      "meaning": "Uwezo wa kudhibiti act au omission; section 13(1)(c) inatambua kutokuwa na control kama effect tofauti."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Diagnosis bila statutory effect",
+      "scenario": "Accused ana diagnosed mental disease lakini evidence inaonyesha disease haikuathiri understanding, appreciation au control yake kuhusu act inayoshtakiwa.",
+      "analysis": "Section 13(2) inaonyesha kwamba existence ya disease pekee haitoshi; effect yake kwa act/omission ndiyo critical."
+    },
+    {
+      "title": "Disease na inability to appreciate",
+      "scenario": "Evidence inaonyesha disease affecting the mind ilimfanya accused ashindwe appreciate kwamba hapaswi kufanya act hiyo wakati huo.",
+      "analysis": "Hii inaelekeza kwenye section 13(1)(b), lakini court lazima iamue facts na evidence ya case."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Hilda Abel v Republic",
+      "citation": "[1993] TLR 246 (CA); Criminal Appeal No. 119 of 1993",
+      "court": "Court of Appeal of Tanzania",
+      "year": "1993",
+      "relevance": "The Court held that insanity under section 13 is a question of fact inferable from circumstances and conduct, and that medical expert evidence is important but not automatically binding on the court.",
+      "sourceUrl": "https://www.tanzanianweb.co.tz/2022/05/hilda-abel-v-republic-1993-tlr-246-ca.html"
+    },
+    {
+      "name": "Republic v Maneno",
+      "citation": "Criminal Sessions Case No. 61 of 2001; [2005] TZHC 60",
+      "court": "High Court of Tanzania",
+      "year": "2005",
+      "relevance": "The court considered psychiatric evidence that disease affecting the accused's mind deprived him of legally relevant capacity/control and applied the insanity framework.",
+      "sourceUrl": "https://media.tanzlii.org/media/judgment/190150/source_file/republic-vs-maneno-2005-tzhc-60-11-november-2005.pdf"
+    },
+    {
+      "name": "Frank Sadala v Republic",
+      "citation": "Criminal Appeal No. 223 of 2023; [2025] TZCA 248",
+      "court": "Court of Appeal of Tanzania",
+      "year": "2025",
+      "relevance": "A recent Court of Appeal decision treating section 13(1) insanity as an absolute defence when proved and emphasizing correct handling of insanity-related criminal procedure.",
+      "sourceUrl": "https://www.scribd.com/document/948682082/Frank-Sadala-vs-Republic-Criminal-Appeal-No-223-of-2023-2025-TZCA-248-20-March-2025"
+    }
+  ],
+  "history": {
+    "summary": "The R.E. 2022 text records Act No. 31 of 1997 in the legislative history of section 13. The modern wording expressly separates understanding, appreciation of wrongfulness, and control.",
+    "notes": [
+      "Older authorities remain useful only insofar as their propositions fit the current statutory wording.",
+      "Procedural questions about an accused's mental condition are also governed by the Criminal Procedure Act; they should not be confused with the substantive section 13 test."
+    ],
+    "sourceUrl": "https://elibrary.osg.go.tz/bitstreams/8d1378f7-5d7a-4768-9e3b-5f042bda1fcd/download"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Medical evidence",
+      "view": "Psychiatric evidence can be central to proving disease and its effects, especially where it addresses the accused's condition at the material time."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Legal finding",
+      "view": "Insanity is ultimately a legal/factual determination under the statutory test. Hilda Abel demonstrates why a medical opinion does not mechanically decide the legal conclusion."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Functional test",
+      "view": "The strongest analysis maps evidence separately onto understanding, appreciation and control rather than stopping at the existence of mental illness."
+    }
+  ],
+  "debateQuestion": "Disease affecting the mind imethibitishwa vipi, na evidence inaunganisha disease hiyo na ipi kati ya effects za section 13(1)(a)-(c) katika material time?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

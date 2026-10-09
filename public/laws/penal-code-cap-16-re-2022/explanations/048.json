@@ -1,0 +1,51 @@
+{
+  "section": "48",
+  "language": "sw",
+  "plainLanguage": "Section 48 inahusu kusaidia enemy prisoner of war kutoroka kwa kujua na kwa makusudi, na pia negligently au unlawfully kuruhusu escape ya mtu huyo.",
+  "meaning": "Paragraph (a) criminalises knowing and advised assistance to escape by an enemy prisoner of war in the circumstances stated; paragraph (b) separately covers negligent or unlawful permission of such escape.",
+  "keyPoints": [
+    "Paragraph (a) requires knowingly and advisedly aiding escape.",
+    "It covers confinement in prison or elsewhere and specified parole circumstances.",
+    "Paragraph (a) states life imprisonment.",
+    "Paragraph (b) separately addresses negligent or unlawful permission of escape."
+  ],
+  "legalTerms": [
+    {
+      "term": "prisoner of war",
+      "meaning": "Enemy of the United Republic mwenye status ya prisoner of war katika context ya section."
+    },
+    {
+      "term": "parole",
+      "meaning": "Hali inayotajwa ambapo prisoner ameruhusiwa kuwa at large subject to parole."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Element check",
+      "scenario": "Prosecution allegation is assessed against the exact wording of this section.",
+      "analysis": "Kila statutory element lazima ithibitishwe; label ya offence peke yake haitoshi."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 48 forms part of Chapter VII, Treason and Other Offences Against the Republic.",
+    "notes": [
+      "Official wording checked against the R.E. 2022 source before explanation."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Elements",
+      "view": "Analysis should follow the exact statutory verbs and mental elements rather than a broad description of the alleged conduct."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Evidence",
+      "view": "The evidence should be matched separately to each required element and any express qualification in the provision."
+    }
+  ],
+  "debateQuestion": "Je, evidence inayodaiwa inathibitisha kila element ya section 48 bila kupanua wording ya statute?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

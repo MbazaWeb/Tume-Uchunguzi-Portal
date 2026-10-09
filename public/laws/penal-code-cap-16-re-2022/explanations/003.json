@@ -1,0 +1,44 @@
+{
+  "section": "3",
+  "language": "sw",
+  "plainLanguage": "Kifungu hiki kinaeleza kwamba kuwepo kwa Penal Code hakuondoi baadhi ya uwajibikaji, mamlaka na taratibu nyingine za kisheria. Pia, mtu akifanya kosa linaloadhibiwa chini ya Penal Code na pia chini ya sheria nyingine iliyotajwa katika kifungu hiki, hawezi kuadhibiwa kwa kosa hilo chini ya sheria zote mbili.",
+  "meaning": "Kwa vitendo, Penal Code inaendelea kufanya kazi sambamba na maeneo yaliyohifadhiwa na kifungu hiki: makosa chini ya common law au sheria nyingine inayotumika Mainland Tanzania, mamlaka fulani kuhusu vitendo vilivyofanywa nje ya mamlaka ya kawaida ya mahakama, adhabu ya contempt of court, na mamlaka ya Rais kuhusu msamaha au mabadiliko ya utekelezaji wa adhabu. Hata hivyo, subsection (2) inazuia adhabu mbili kwa kosa lilelile chini ya Code na sheria nyingine ya aina iliyotajwa hapa.",
+  "keyPoints": [
+    "(1)(a): Penal Code haiathiri liability, trial au punishment kwa kosa dhidi ya common law au sheria nyingine inayotumika Mainland Tanzania, isipokuwa Code yenyewe.",
+    "(1)(b): Haiathiri liability ya mtu kushtakiwa au kuadhibiwa chini ya sheria kuhusu jurisdiction ya mahakama kwa vitendo vilivyofanywa nje ya ordinary jurisdiction yake.",
+    "(1)(c): Haiathiri mamlaka ya mahakama kumuadhibu mtu kwa contempt of court.",
+    "(1)(d): Haiathiri mamlaka ya Rais kutoa pardon, remit au commute adhabu, au respite utekelezaji wa sentence.",
+    "(2): Kosa moja likiadhibiwa chini ya Code na pia sheria nyingine iliyotajwa hapa, mtu haadhibiwi kwa kosa hilo chini ya sheria zote mbili."
+  ],
+  "legalTerms": [
+    {
+      "term": "liability",
+      "meaning": "Uwajibikaji wa kisheria unaoweza kumfanya mtu awajibishwe, ashtakiwe au aadhibiwe kwa mujibu wa kifungu."
+    },
+    {
+      "term": "jurisdiction",
+      "meaning": "Mamlaka ya mahakama kushughulikia jambo au kitendo fulani."
+    },
+    {
+      "term": "contempt of court",
+      "meaning": "Dhana ya kisheria inayohusu kudharau au kuingilia mamlaka au mwenendo wa mahakama; kifungu hiki kinahifadhi mamlaka ya mahakama kuadhibu kwa contempt."
+    },
+    {
+      "term": "pardon",
+      "meaning": "Msamaha unaotajwa katika kifungu kama mojawapo ya mamlaka ya Rais ambayo Code haiathiri."
+    },
+    {
+      "term": "remit",
+      "meaning": "Kupunguza au kuondoa, kwa jumla au sehemu, adhabu kama ilivyoelezwa katika mamlaka ya Rais kwenye kifungu."
+    },
+    {
+      "term": "commute",
+      "meaning": "Kubadilisha adhabu kuwa adhabu nyingine kupitia mamlaka iliyotajwa katika kifungu."
+    },
+    {
+      "term": "respite",
+      "meaning": "Kuahirisha utekelezaji wa sentence kama ilivyotajwa katika kifungu."
+    }
+  ],
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

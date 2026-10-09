@@ -1,0 +1,58 @@
+{
+  "section": "21",
+  "language": "sw",
+  "plainLanguage": "Mtu hapaswi kupewa punishment mara mbili kwa offence ileile, iwe punishment zote zinadaiwa chini ya Penal Code au moja chini ya Penal Code na nyingine chini ya sheria nyingine.",
+  "meaning": "Section 21 inalenga punishment for the same offence. Uchambuzi unahitaji kutofautisha 'same offence' na situation ambayo facts moja zinaweza kuzaa legally distinct offences. Kifungu hiki chenyewe hakisemi kwamba kila prosecution, charge au proceeding ya pili ni automatically barred; wording yake inalenga kutoadhibu twice for the same offence, huku procedural protections nyingine zikisomwa pamoja na Constitution na Criminal Procedure Act inapohusika.",
+  "keyPoints": [
+    "Prohibition ni punishment twice.",
+    "Ina-cover Penal Code na any other law.",
+    "Trigger ni 'same offence', hivyo identity ya offence ni muhimu.",
+    "Same transaction si lazima automatically iwe same offence; legal elements na applicable law lazima zichunguzwe.",
+    "Section 21 ni substantive Penal Code protection na inaweza kuhusiana na broader double-jeopardy/procedural protections."
+  ],
+  "legalTerms": [
+    {
+      "term": "same offence",
+      "meaning": "Offence ileile kwa madhumuni ya prohibition ya section 21; analysis haiishii kwenye kufanana kwa facts pekee."
+    },
+    {
+      "term": "punished twice",
+      "meaning": "Kupewa punishment mara mbili kwa same offence, jambo ambalo section 21 inakataza."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Punishment chini ya sheria mbili",
+      "scenario": "Conduct moja imeadhibiwa tayari kama offence fulani, halafu authority inataka punishment nyingine chini ya sheria tofauti kwa offence ileile.",
+      "analysis": "Section 21 expressly extends prohibition across the Code and other law; swali kuu ni kama legally ni same offence."
+    },
+    {
+      "title": "Offences tofauti kutoka tukio moja",
+      "scenario": "Tukio moja lina acts/elements zinazoweza kuunda offences mbili tofauti.",
+      "analysis": "Usitumie section 21 mechanically. Lazima kwanza kulinganisha legal identity/elements za offences kabla ya kusema ni 'same offence'."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "The protection against double punishment has long appeared in Tanzania's Penal Code. It sits at the end of Chapter IV immediately before the Code turns to parties to offences.",
+    "notes": [
+      "For litigation, section 21 should be read together with applicable constitutional and criminal-procedure protections.",
+      "No case has been inserted in this batch without a sufficiently traceable primary authority directly needed for this explanation."
+    ],
+    "sourceUrl": "https://www.sheria.go.tz/uploads/documents/sw-1677665965-THE%20PENAL%20CODE.pdf"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Identity of offence",
+      "view": "The most important threshold question is whether the two punishments truly concern the same legal offence, not merely the same factual episode."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Cross-statute protection",
+      "view": "The words 'or under any other law' prevent the protection from being avoided merely by switching the statutory source of punishment where the offence is the same."
+    }
+  ],
+  "debateQuestion": "Punishment ya pili inalenga offence ileile kisheria, au offence tofauti yenye elements zake hata kama imetokana na tukio moja?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

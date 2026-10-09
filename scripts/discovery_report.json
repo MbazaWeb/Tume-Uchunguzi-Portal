@@ -1,0 +1,4208 @@
+{
+  "union": {
+    "source_root": "public/katiba/Katiba/Tanzania",
+    "explanation_dir": "public/katiba/Katiba/Tanzania/Explanations",
+    "total_articles": 162,
+    "existing_explanations": 162,
+    "missing_explanations": 0,
+    "articles": [
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 107A.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 107A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 107A.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 107B.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 107B.json",
+        "explanation_exists": true,
+        "filename": "Ibara 107B.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 108.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 108.json",
+        "explanation_exists": true,
+        "filename": "Ibara 108.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 109.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 109.json",
+        "explanation_exists": true,
+        "filename": "Ibara 109.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 110.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 110.json",
+        "explanation_exists": true,
+        "filename": "Ibara 110.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 110A.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 110A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 110A.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 111.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 111.json",
+        "explanation_exists": true,
+        "filename": "Ibara 111.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 112.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 112.json",
+        "explanation_exists": true,
+        "filename": "Ibara 112.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 113.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 113.json",
+        "explanation_exists": true,
+        "filename": "Ibara 113.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 113A.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 113A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 113A.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 114.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 114.json",
+        "explanation_exists": true,
+        "filename": "Ibara 114.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 115.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 115.json",
+        "explanation_exists": true,
+        "filename": "Ibara 115.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 116.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 116.json",
+        "explanation_exists": true,
+        "filename": "Ibara 116.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 117.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 117.json",
+        "explanation_exists": true,
+        "filename": "Ibara 117.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 118.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 118.json",
+        "explanation_exists": true,
+        "filename": "Ibara 118.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 119.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 119.json",
+        "explanation_exists": true,
+        "filename": "Ibara 119.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 120.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 120.json",
+        "explanation_exists": true,
+        "filename": "Ibara 120.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 120A.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 120A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 120A.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 121.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 121.json",
+        "explanation_exists": true,
+        "filename": "Ibara 121.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 122.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 122.json",
+        "explanation_exists": true,
+        "filename": "Ibara 122.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 123.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 123.json",
+        "explanation_exists": true,
+        "filename": "Ibara 123.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 124.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 124.json",
+        "explanation_exists": true,
+        "filename": "Ibara 124.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 125.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 125.json",
+        "explanation_exists": true,
+        "filename": "Ibara 125.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 126.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 126.json",
+        "explanation_exists": true,
+        "filename": "Ibara 126.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 127.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 127.json",
+        "explanation_exists": true,
+        "filename": "Ibara 127.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tano/Ibara 128.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 128.json",
+        "explanation_exists": true,
+        "filename": "Ibara 128.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Nane/Ibara 145.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 145.json",
+        "explanation_exists": true,
+        "filename": "Ibara 145.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Nane/Ibara 146.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 146.json",
+        "explanation_exists": true,
+        "filename": "Ibara 146.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 33.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 33.json",
+        "explanation_exists": true,
+        "filename": "Ibara 33.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 34.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 34.json",
+        "explanation_exists": true,
+        "filename": "Ibara 34.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 35.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 35.json",
+        "explanation_exists": true,
+        "filename": "Ibara 35.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 36.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 36.json",
+        "explanation_exists": true,
+        "filename": "Ibara 36.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 37.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 37.json",
+        "explanation_exists": true,
+        "filename": "Ibara 37.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 38.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 38.json",
+        "explanation_exists": true,
+        "filename": "Ibara 38.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 39.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 39.json",
+        "explanation_exists": true,
+        "filename": "Ibara 39.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 40.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 40.json",
+        "explanation_exists": true,
+        "filename": "Ibara 40.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 41.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 41.json",
+        "explanation_exists": true,
+        "filename": "Ibara 41.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 42.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 42.json",
+        "explanation_exists": true,
+        "filename": "Ibara 42.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 43.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 43.json",
+        "explanation_exists": true,
+        "filename": "Ibara 43.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 44.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 44.json",
+        "explanation_exists": true,
+        "filename": "Ibara 44.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 45.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 45.json",
+        "explanation_exists": true,
+        "filename": "Ibara 45.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 46.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 46.json",
+        "explanation_exists": true,
+        "filename": "Ibara 46.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 46A.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 46A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 46A.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 46B.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 46B.json",
+        "explanation_exists": true,
+        "filename": "Ibara 46B.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 47.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 47.json",
+        "explanation_exists": true,
+        "filename": "Ibara 47.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 48.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 48.json",
+        "explanation_exists": true,
+        "filename": "Ibara 48.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 49.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 49.json",
+        "explanation_exists": true,
+        "filename": "Ibara 49.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 50.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 50.json",
+        "explanation_exists": true,
+        "filename": "Ibara 50.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 51.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 51.json",
+        "explanation_exists": true,
+        "filename": "Ibara 51.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 52.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 52.json",
+        "explanation_exists": true,
+        "filename": "Ibara 52.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 53.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 53.json",
+        "explanation_exists": true,
+        "filename": "Ibara 53.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 53A.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 53A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 53A.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 54.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 54.json",
+        "explanation_exists": true,
+        "filename": "Ibara 54.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 55.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 55.json",
+        "explanation_exists": true,
+        "filename": "Ibara 55.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 56.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 56.json",
+        "explanation_exists": true,
+        "filename": "Ibara 56.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 57.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 57.json",
+        "explanation_exists": true,
+        "filename": "Ibara 57.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 58.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 58.json",
+        "explanation_exists": true,
+        "filename": "Ibara 58.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 59.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 59.json",
+        "explanation_exists": true,
+        "filename": "Ibara 59.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 59A.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 59A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 59A.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 59B.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 59B.json",
+        "explanation_exists": true,
+        "filename": "Ibara 59B.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 60.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 60.json",
+        "explanation_exists": true,
+        "filename": "Ibara 60.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Pili/Ibara 61.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 61.json",
+        "explanation_exists": true,
+        "filename": "Ibara 61.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Nne/Ibara 102.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 102.json",
+        "explanation_exists": true,
+        "filename": "Ibara 102.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Nne/Ibara 103.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 103.json",
+        "explanation_exists": true,
+        "filename": "Ibara 103.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Nne/Ibara 104.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 104.json",
+        "explanation_exists": true,
+        "filename": "Ibara 104.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Nne/Ibara 105.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 105.json",
+        "explanation_exists": true,
+        "filename": "Ibara 105.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Nne/Ibara 106.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 106.json",
+        "explanation_exists": true,
+        "filename": "Ibara 106.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Nne/Ibara 107.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 107.json",
+        "explanation_exists": true,
+        "filename": "Ibara 107.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 1.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 1.json",
+        "explanation_exists": true,
+        "filename": "Ibara 1.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 10.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 10.json",
+        "explanation_exists": true,
+        "filename": "Ibara 10.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 11.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 11.json",
+        "explanation_exists": true,
+        "filename": "Ibara 11.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 12.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 12.json",
+        "explanation_exists": true,
+        "filename": "Ibara 12.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 13.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 13.json",
+        "explanation_exists": true,
+        "filename": "Ibara 13.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 14.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 14.json",
+        "explanation_exists": true,
+        "filename": "Ibara 14.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 15.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 15.json",
+        "explanation_exists": true,
+        "filename": "Ibara 15.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 16.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 16.json",
+        "explanation_exists": true,
+        "filename": "Ibara 16.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 17.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 17.json",
+        "explanation_exists": true,
+        "filename": "Ibara 17.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 18.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 18.json",
+        "explanation_exists": true,
+        "filename": "Ibara 18.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 19.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 19.json",
+        "explanation_exists": true,
+        "filename": "Ibara 19.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 2.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 2.json",
+        "explanation_exists": true,
+        "filename": "Ibara 2.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 20.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 20.json",
+        "explanation_exists": true,
+        "filename": "Ibara 20.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 21.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 21.json",
+        "explanation_exists": true,
+        "filename": "Ibara 21.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 22.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 22.json",
+        "explanation_exists": true,
+        "filename": "Ibara 22.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 23.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 23.json",
+        "explanation_exists": true,
+        "filename": "Ibara 23.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 24.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 24.json",
+        "explanation_exists": true,
+        "filename": "Ibara 24.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 25.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 25.json",
+        "explanation_exists": true,
+        "filename": "Ibara 25.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 26.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 26.json",
+        "explanation_exists": true,
+        "filename": "Ibara 26.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 27.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 27.json",
+        "explanation_exists": true,
+        "filename": "Ibara 27.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 28.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 28.json",
+        "explanation_exists": true,
+        "filename": "Ibara 28.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 29.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 29.json",
+        "explanation_exists": true,
+        "filename": "Ibara 29.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 3.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 3.json",
+        "explanation_exists": true,
+        "filename": "Ibara 3.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 30.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 30.json",
+        "explanation_exists": true,
+        "filename": "Ibara 30.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 31.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 31.json",
+        "explanation_exists": true,
+        "filename": "Ibara 31.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 32.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 32.json",
+        "explanation_exists": true,
+        "filename": "Ibara 32.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 4.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 4.json",
+        "explanation_exists": true,
+        "filename": "Ibara 4.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 5.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 5.json",
+        "explanation_exists": true,
+        "filename": "Ibara 5.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 6.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 6.json",
+        "explanation_exists": true,
+        "filename": "Ibara 6.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 7.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 7.json",
+        "explanation_exists": true,
+        "filename": "Ibara 7.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 8.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 8.json",
+        "explanation_exists": true,
+        "filename": "Ibara 8.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kwanza/Ibara 9.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 9.json",
+        "explanation_exists": true,
+        "filename": "Ibara 9.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kumi/Ibara 149.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 149.json",
+        "explanation_exists": true,
+        "filename": "Ibara 149.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kumi/Ibara 150.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 150.json",
+        "explanation_exists": true,
+        "filename": "Ibara 150.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kumi/Ibara 151.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 151.json",
+        "explanation_exists": true,
+        "filename": "Ibara 151.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Kumi/Ibara 152.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 152.json",
+        "explanation_exists": true,
+        "filename": "Ibara 152.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tisa/Ibara 147.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 147.json",
+        "explanation_exists": true,
+        "filename": "Ibara 147.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tisa/Ibara 148.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 148.json",
+        "explanation_exists": true,
+        "filename": "Ibara 148.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Sita/Ibara 129.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 129.json",
+        "explanation_exists": true,
+        "filename": "Ibara 129.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Sita/Ibara 130.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 130.json",
+        "explanation_exists": true,
+        "filename": "Ibara 130.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Sita/Ibara 131.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 131.json",
+        "explanation_exists": true,
+        "filename": "Ibara 131.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Sita/Ibara 132.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 132.json",
+        "explanation_exists": true,
+        "filename": "Ibara 132.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 133.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 133.json",
+        "explanation_exists": true,
+        "filename": "Ibara 133.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 134.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 134.json",
+        "explanation_exists": true,
+        "filename": "Ibara 134.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 135.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 135.json",
+        "explanation_exists": true,
+        "filename": "Ibara 135.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 136.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 136.json",
+        "explanation_exists": true,
+        "filename": "Ibara 136.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 137.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 137.json",
+        "explanation_exists": true,
+        "filename": "Ibara 137.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 138.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 138.json",
+        "explanation_exists": true,
+        "filename": "Ibara 138.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 139.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 139.json",
+        "explanation_exists": true,
+        "filename": "Ibara 139.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 140.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 140.json",
+        "explanation_exists": true,
+        "filename": "Ibara 140.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 141.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 141.json",
+        "explanation_exists": true,
+        "filename": "Ibara 141.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 142.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 142.json",
+        "explanation_exists": true,
+        "filename": "Ibara 142.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 143.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 143.json",
+        "explanation_exists": true,
+        "filename": "Ibara 143.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Saba/Ibara 144.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 144.json",
+        "explanation_exists": true,
+        "filename": "Ibara 144.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 100.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 100.json",
+        "explanation_exists": true,
+        "filename": "Ibara 100.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 101.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 101.json",
+        "explanation_exists": true,
+        "filename": "Ibara 101.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 62.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 62.json",
+        "explanation_exists": true,
+        "filename": "Ibara 62.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 63.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 63.json",
+        "explanation_exists": true,
+        "filename": "Ibara 63.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 64.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 64.json",
+        "explanation_exists": true,
+        "filename": "Ibara 64.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 65.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 65.json",
+        "explanation_exists": true,
+        "filename": "Ibara 65.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 66.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 66.json",
+        "explanation_exists": true,
+        "filename": "Ibara 66.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 67.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 67.json",
+        "explanation_exists": true,
+        "filename": "Ibara 67.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 68.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 68.json",
+        "explanation_exists": true,
+        "filename": "Ibara 68.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 69.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 69.json",
+        "explanation_exists": true,
+        "filename": "Ibara 69.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 70.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 70.json",
+        "explanation_exists": true,
+        "filename": "Ibara 70.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 71.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 71.json",
+        "explanation_exists": true,
+        "filename": "Ibara 71.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 72.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 72.json",
+        "explanation_exists": true,
+        "filename": "Ibara 72.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 73.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 73.json",
+        "explanation_exists": true,
+        "filename": "Ibara 73.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 74.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 74.json",
+        "explanation_exists": true,
+        "filename": "Ibara 74.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 75.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 75.json",
+        "explanation_exists": true,
+        "filename": "Ibara 75.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 76.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 76.json",
+        "explanation_exists": true,
+        "filename": "Ibara 76.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 77.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 77.json",
+        "explanation_exists": true,
+        "filename": "Ibara 77.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 78.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 78.json",
+        "explanation_exists": true,
+        "filename": "Ibara 78.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 79.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 79.json",
+        "explanation_exists": true,
+        "filename": "Ibara 79.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 80.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 80.json",
+        "explanation_exists": true,
+        "filename": "Ibara 80.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 81.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 81.json",
+        "explanation_exists": true,
+        "filename": "Ibara 81.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 82.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 82.json",
+        "explanation_exists": true,
+        "filename": "Ibara 82.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 83.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 83.json",
+        "explanation_exists": true,
+        "filename": "Ibara 83.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 84.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 84.json",
+        "explanation_exists": true,
+        "filename": "Ibara 84.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 85.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 85.json",
+        "explanation_exists": true,
+        "filename": "Ibara 85.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 86.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 86.json",
+        "explanation_exists": true,
+        "filename": "Ibara 86.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 87.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 87.json",
+        "explanation_exists": true,
+        "filename": "Ibara 87.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 88.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 88.json",
+        "explanation_exists": true,
+        "filename": "Ibara 88.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 89.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 89.json",
+        "explanation_exists": true,
+        "filename": "Ibara 89.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 90.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 90.json",
+        "explanation_exists": true,
+        "filename": "Ibara 90.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 91.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 91.json",
+        "explanation_exists": true,
+        "filename": "Ibara 91.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 92.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 92.json",
+        "explanation_exists": true,
+        "filename": "Ibara 92.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 93.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 93.json",
+        "explanation_exists": true,
+        "filename": "Ibara 93.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 94.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 94.json",
+        "explanation_exists": true,
+        "filename": "Ibara 94.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 95.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 95.json",
+        "explanation_exists": true,
+        "filename": "Ibara 95.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 96.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 96.json",
+        "explanation_exists": true,
+        "filename": "Ibara 96.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 97.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 97.json",
+        "explanation_exists": true,
+        "filename": "Ibara 97.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 98.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 98.json",
+        "explanation_exists": true,
+        "filename": "Ibara 98.json",
+        "dataset": "union"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Tanzania/Sura ya Tatu/Ibara 99.json",
+        "explanation_path": "public/katiba/Katiba/Tanzania/Explanations/Ibara 99.json",
+        "explanation_exists": true,
+        "filename": "Ibara 99.json",
+        "dataset": "union"
+      }
+    ]
+  },
+  "zanzibar": {
+    "source_root": "public/katiba/Katiba/Zanzibar",
+    "explanation_dir": "public/katiba/Katiba/Zanzibar/Explanations",
+    "total_articles": 146,
+    "existing_explanations": 146,
+    "missing_explanations": 0,
+    "articles": [
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 63.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 63.json",
+        "explanation_exists": true,
+        "filename": "Ibara 63.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 64.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 64.json",
+        "explanation_exists": true,
+        "filename": "Ibara 64.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 65.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 65.json",
+        "explanation_exists": true,
+        "filename": "Ibara 65.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 66.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 66.json",
+        "explanation_exists": true,
+        "filename": "Ibara 66.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 67.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 67.json",
+        "explanation_exists": true,
+        "filename": "Ibara 67.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 68.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 68.json",
+        "explanation_exists": true,
+        "filename": "Ibara 68.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 69.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 69.json",
+        "explanation_exists": true,
+        "filename": "Ibara 69.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 70.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 70.json",
+        "explanation_exists": true,
+        "filename": "Ibara 70.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 71.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 71.json",
+        "explanation_exists": true,
+        "filename": "Ibara 71.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 72.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 72.json",
+        "explanation_exists": true,
+        "filename": "Ibara 72.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 73.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 73.json",
+        "explanation_exists": true,
+        "filename": "Ibara 73.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 74.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 74.json",
+        "explanation_exists": true,
+        "filename": "Ibara 74.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 75.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 75.json",
+        "explanation_exists": true,
+        "filename": "Ibara 75.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 76.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 76.json",
+        "explanation_exists": true,
+        "filename": "Ibara 76.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 77.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 77.json",
+        "explanation_exists": true,
+        "filename": "Ibara 77.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 78.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 78.json",
+        "explanation_exists": true,
+        "filename": "Ibara 78.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 79.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 79.json",
+        "explanation_exists": true,
+        "filename": "Ibara 79.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 80.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 80.json",
+        "explanation_exists": true,
+        "filename": "Ibara 80.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 80A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 80A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 80A.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 81.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 81.json",
+        "explanation_exists": true,
+        "filename": "Ibara 81.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 82.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 82.json",
+        "explanation_exists": true,
+        "filename": "Ibara 82.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 83.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 83.json",
+        "explanation_exists": true,
+        "filename": "Ibara 83.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 84.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 84.json",
+        "explanation_exists": true,
+        "filename": "Ibara 84.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 85.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 85.json",
+        "explanation_exists": true,
+        "filename": "Ibara 85.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 86.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 86.json",
+        "explanation_exists": true,
+        "filename": "Ibara 86.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 87.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 87.json",
+        "explanation_exists": true,
+        "filename": "Ibara 87.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 88.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 88.json",
+        "explanation_exists": true,
+        "filename": "Ibara 88.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 89.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 89.json",
+        "explanation_exists": true,
+        "filename": "Ibara 89.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 90.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 90.json",
+        "explanation_exists": true,
+        "filename": "Ibara 90.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 91.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 91.json",
+        "explanation_exists": true,
+        "filename": "Ibara 91.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tano/Ibara 92.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 92.json",
+        "explanation_exists": true,
+        "filename": "Ibara 92.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nane/Ibara 116.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 116.json",
+        "explanation_exists": true,
+        "filename": "Ibara 116.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nane/Ibara 117.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 117.json",
+        "explanation_exists": true,
+        "filename": "Ibara 117.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nane/Ibara 118.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 118.json",
+        "explanation_exists": true,
+        "filename": "Ibara 118.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Pili/Ibara 10.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 10.json",
+        "explanation_exists": true,
+        "filename": "Ibara 10.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Pili/Ibara 10A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 10A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 10A.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Pili/Ibara 8.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 8.json",
+        "explanation_exists": true,
+        "filename": "Ibara 8.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Pili/Ibara 9.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 9.json",
+        "explanation_exists": true,
+        "filename": "Ibara 9.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 26.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 26.json",
+        "explanation_exists": true,
+        "filename": "Ibara 26.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 27.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 27.json",
+        "explanation_exists": true,
+        "filename": "Ibara 27.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 28.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 28.json",
+        "explanation_exists": true,
+        "filename": "Ibara 28.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 29.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 29.json",
+        "explanation_exists": true,
+        "filename": "Ibara 29.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 30.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 30.json",
+        "explanation_exists": true,
+        "filename": "Ibara 30.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 31.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 31.json",
+        "explanation_exists": true,
+        "filename": "Ibara 31.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 32.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 32.json",
+        "explanation_exists": true,
+        "filename": "Ibara 32.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 33.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 33.json",
+        "explanation_exists": true,
+        "filename": "Ibara 33.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 34.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 34.json",
+        "explanation_exists": true,
+        "filename": "Ibara 34.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 35.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 35.json",
+        "explanation_exists": true,
+        "filename": "Ibara 35.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 36.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 36.json",
+        "explanation_exists": true,
+        "filename": "Ibara 36.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 37.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 37.json",
+        "explanation_exists": true,
+        "filename": "Ibara 37.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 38.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 38.json",
+        "explanation_exists": true,
+        "filename": "Ibara 38.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 39.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 39.json",
+        "explanation_exists": true,
+        "filename": "Ibara 39.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 39A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 39A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 39A.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 40.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 40.json",
+        "explanation_exists": true,
+        "filename": "Ibara 40.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 41.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 41.json",
+        "explanation_exists": true,
+        "filename": "Ibara 41.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 42.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 42.json",
+        "explanation_exists": true,
+        "filename": "Ibara 42.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 42A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 42A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 42A.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 43.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 43.json",
+        "explanation_exists": true,
+        "filename": "Ibara 43.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 44.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 44.json",
+        "explanation_exists": true,
+        "filename": "Ibara 44.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 45.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 45.json",
+        "explanation_exists": true,
+        "filename": "Ibara 45.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 46.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 46.json",
+        "explanation_exists": true,
+        "filename": "Ibara 46.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 47.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 47.json",
+        "explanation_exists": true,
+        "filename": "Ibara 47.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 48.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 48.json",
+        "explanation_exists": true,
+        "filename": "Ibara 48.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 49.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 49.json",
+        "explanation_exists": true,
+        "filename": "Ibara 49.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 50.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 50.json",
+        "explanation_exists": true,
+        "filename": "Ibara 50.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 51.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 51.json",
+        "explanation_exists": true,
+        "filename": "Ibara 51.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 52.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 52.json",
+        "explanation_exists": true,
+        "filename": "Ibara 52.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 53.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 53.json",
+        "explanation_exists": true,
+        "filename": "Ibara 53.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 54.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 54.json",
+        "explanation_exists": true,
+        "filename": "Ibara 54.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 55.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 55.json",
+        "explanation_exists": true,
+        "filename": "Ibara 55.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 56.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 56.json",
+        "explanation_exists": true,
+        "filename": "Ibara 56.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 56A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 56A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 56A.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 57.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 57.json",
+        "explanation_exists": true,
+        "filename": "Ibara 57.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 58.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 58.json",
+        "explanation_exists": true,
+        "filename": "Ibara 58.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 59.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 59.json",
+        "explanation_exists": true,
+        "filename": "Ibara 59.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 60.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 60.json",
+        "explanation_exists": true,
+        "filename": "Ibara 60.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 61.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 61.json",
+        "explanation_exists": true,
+        "filename": "Ibara 61.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Nne/Ibara 62.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 62.json",
+        "explanation_exists": true,
+        "filename": "Ibara 62.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Mbili/Ibara 129.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 129.json",
+        "explanation_exists": true,
+        "filename": "Ibara 129.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Mbili/Ibara 130.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 130.json",
+        "explanation_exists": true,
+        "filename": "Ibara 130.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Mbili/Ibara 131.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 131.json",
+        "explanation_exists": true,
+        "filename": "Ibara 131.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Mbili/Ibara 132.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 132.json",
+        "explanation_exists": true,
+        "filename": "Ibara 132.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Mbili/Ibara 133.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 133.json",
+        "explanation_exists": true,
+        "filename": "Ibara 133.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Mbili/Ibara 134.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 134.json",
+        "explanation_exists": true,
+        "filename": "Ibara 134.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Mbili/Ibara 134A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 134A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 134A.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Mbili/Ibara 135.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 135.json",
+        "explanation_exists": true,
+        "filename": "Ibara 135.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kwanza/Ibara 1.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 1.json",
+        "explanation_exists": true,
+        "filename": "Ibara 1.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kwanza/Ibara 2.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 2.json",
+        "explanation_exists": true,
+        "filename": "Ibara 2.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kwanza/Ibara 2A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 2A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 2A.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kwanza/Ibara 3.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 3.json",
+        "explanation_exists": true,
+        "filename": "Ibara 3.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kwanza/Ibara 4.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 4.json",
+        "explanation_exists": true,
+        "filename": "Ibara 4.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kwanza/Ibara 5.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 5.json",
+        "explanation_exists": true,
+        "filename": "Ibara 5.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kwanza/Ibara 5A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 5A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 5A.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kwanza/Ibara 6.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 6.json",
+        "explanation_exists": true,
+        "filename": "Ibara 6.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kwanza/Ibara 7.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 7.json",
+        "explanation_exists": true,
+        "filename": "Ibara 7.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi/Ibara 121.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 121.json",
+        "explanation_exists": true,
+        "filename": "Ibara 121.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi/Ibara 122.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 122.json",
+        "explanation_exists": true,
+        "filename": "Ibara 122.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi/Ibara 123.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 123.json",
+        "explanation_exists": true,
+        "filename": "Ibara 123.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi/Ibara 124.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 124.json",
+        "explanation_exists": true,
+        "filename": "Ibara 124.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Moja/Ibara 125.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 125.json",
+        "explanation_exists": true,
+        "filename": "Ibara 125.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Moja/Ibara 126.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 126.json",
+        "explanation_exists": true,
+        "filename": "Ibara 126.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Moja/Ibara 127.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 127.json",
+        "explanation_exists": true,
+        "filename": "Ibara 127.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Kumi na Moja/Ibara 128.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 128.json",
+        "explanation_exists": true,
+        "filename": "Ibara 128.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tisa/Ibara 119.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 119.json",
+        "explanation_exists": true,
+        "filename": "Ibara 119.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tisa/Ibara 120.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 120.json",
+        "explanation_exists": true,
+        "filename": "Ibara 120.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 100.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 100.json",
+        "explanation_exists": true,
+        "filename": "Ibara 100.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 101.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 101.json",
+        "explanation_exists": true,
+        "filename": "Ibara 101.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 102.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 102.json",
+        "explanation_exists": true,
+        "filename": "Ibara 102.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 102A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 102A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 102A.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 103.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 103.json",
+        "explanation_exists": true,
+        "filename": "Ibara 103.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 93.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 93.json",
+        "explanation_exists": true,
+        "filename": "Ibara 93.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 94.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 94.json",
+        "explanation_exists": true,
+        "filename": "Ibara 94.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 95.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 95.json",
+        "explanation_exists": true,
+        "filename": "Ibara 95.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 96.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 96.json",
+        "explanation_exists": true,
+        "filename": "Ibara 96.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 97.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 97.json",
+        "explanation_exists": true,
+        "filename": "Ibara 97.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 98.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 98.json",
+        "explanation_exists": true,
+        "filename": "Ibara 98.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 99.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 99.json",
+        "explanation_exists": true,
+        "filename": "Ibara 99.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Sita/Ibara 99A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 99A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 99A.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 104.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 104.json",
+        "explanation_exists": true,
+        "filename": "Ibara 104.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 105.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 105.json",
+        "explanation_exists": true,
+        "filename": "Ibara 105.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 106.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 106.json",
+        "explanation_exists": true,
+        "filename": "Ibara 106.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 107.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 107.json",
+        "explanation_exists": true,
+        "filename": "Ibara 107.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 108.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 108.json",
+        "explanation_exists": true,
+        "filename": "Ibara 108.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 109.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 109.json",
+        "explanation_exists": true,
+        "filename": "Ibara 109.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 110.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 110.json",
+        "explanation_exists": true,
+        "filename": "Ibara 110.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 111.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 111.json",
+        "explanation_exists": true,
+        "filename": "Ibara 111.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 112.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 112.json",
+        "explanation_exists": true,
+        "filename": "Ibara 112.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 113.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 113.json",
+        "explanation_exists": true,
+        "filename": "Ibara 113.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 114.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 114.json",
+        "explanation_exists": true,
+        "filename": "Ibara 114.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Saba/Ibara 115.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 115.json",
+        "explanation_exists": true,
+        "filename": "Ibara 115.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 11.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 11.json",
+        "explanation_exists": true,
+        "filename": "Ibara 11.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 12.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 12.json",
+        "explanation_exists": true,
+        "filename": "Ibara 12.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 13.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 13.json",
+        "explanation_exists": true,
+        "filename": "Ibara 13.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 14.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 14.json",
+        "explanation_exists": true,
+        "filename": "Ibara 14.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 15.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 15.json",
+        "explanation_exists": true,
+        "filename": "Ibara 15.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 16.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 16.json",
+        "explanation_exists": true,
+        "filename": "Ibara 16.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 17.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 17.json",
+        "explanation_exists": true,
+        "filename": "Ibara 17.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 18.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 18.json",
+        "explanation_exists": true,
+        "filename": "Ibara 18.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 19.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 19.json",
+        "explanation_exists": true,
+        "filename": "Ibara 19.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 20.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 20.json",
+        "explanation_exists": true,
+        "filename": "Ibara 20.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 21.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 21.json",
+        "explanation_exists": true,
+        "filename": "Ibara 21.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 22.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 22.json",
+        "explanation_exists": true,
+        "filename": "Ibara 22.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 23.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 23.json",
+        "explanation_exists": true,
+        "filename": "Ibara 23.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 24.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 24.json",
+        "explanation_exists": true,
+        "filename": "Ibara 24.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 25.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 25.json",
+        "explanation_exists": true,
+        "filename": "Ibara 25.json",
+        "dataset": "zanzibar"
+      },
+      {
+        "article_path": "public/katiba/Katiba/Zanzibar/Sura ya Tatu/Ibara 25A.json",
+        "explanation_path": "public/katiba/Katiba/Zanzibar/Explanations/Ibara 25A.json",
+        "explanation_exists": true,
+        "filename": "Ibara 25A.json",
+        "dataset": "zanzibar"
+      }
+    ]
+  },
+  "rasimu": {
+    "source_root": "public/katiba/Rasimu za Katiba/Tanzania",
+    "explanation_dir": "public/katiba/Rasimu za Katiba/Tanzania/Explanations",
+    "total_articles": 289,
+    "existing_explanations": 289,
+    "missing_explanations": 0,
+    "articles": [
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 222.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 222.json",
+        "explanation_exists": true,
+        "filename": "Ibara 222.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 223.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 223.json",
+        "explanation_exists": true,
+        "filename": "Ibara 223.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 224.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 224.json",
+        "explanation_exists": true,
+        "filename": "Ibara 224.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 225.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 225.json",
+        "explanation_exists": true,
+        "filename": "Ibara 225.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 226.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 226.json",
+        "explanation_exists": true,
+        "filename": "Ibara 226.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 227.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 227.json",
+        "explanation_exists": true,
+        "filename": "Ibara 227.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 228.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 228.json",
+        "explanation_exists": true,
+        "filename": "Ibara 228.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 229.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 229.json",
+        "explanation_exists": true,
+        "filename": "Ibara 229.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 230.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 230.json",
+        "explanation_exists": true,
+        "filename": "Ibara 230.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 231.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 231.json",
+        "explanation_exists": true,
+        "filename": "Ibara 231.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 232.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 232.json",
+        "explanation_exists": true,
+        "filename": "Ibara 232.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 233.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 233.json",
+        "explanation_exists": true,
+        "filename": "Ibara 233.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 234.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 234.json",
+        "explanation_exists": true,
+        "filename": "Ibara 234.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 235.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 235.json",
+        "explanation_exists": true,
+        "filename": "Ibara 235.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 236.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 236.json",
+        "explanation_exists": true,
+        "filename": "Ibara 236.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 237.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 237.json",
+        "explanation_exists": true,
+        "filename": "Ibara 237.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 238.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 238.json",
+        "explanation_exists": true,
+        "filename": "Ibara 238.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 239.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 239.json",
+        "explanation_exists": true,
+        "filename": "Ibara 239.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 240.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 240.json",
+        "explanation_exists": true,
+        "filename": "Ibara 240.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 241.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 241.json",
+        "explanation_exists": true,
+        "filename": "Ibara 241.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tano/Ibara 242.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 242.json",
+        "explanation_exists": true,
+        "filename": "Ibara 242.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 31.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 31.json",
+        "explanation_exists": true,
+        "filename": "Ibara 31.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 32.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 32.json",
+        "explanation_exists": true,
+        "filename": "Ibara 32.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 33.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 33.json",
+        "explanation_exists": true,
+        "filename": "Ibara 33.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 34.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 34.json",
+        "explanation_exists": true,
+        "filename": "Ibara 34.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 35.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 35.json",
+        "explanation_exists": true,
+        "filename": "Ibara 35.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 36.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 36.json",
+        "explanation_exists": true,
+        "filename": "Ibara 36.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 37.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 37.json",
+        "explanation_exists": true,
+        "filename": "Ibara 37.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 38.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 38.json",
+        "explanation_exists": true,
+        "filename": "Ibara 38.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 39.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 39.json",
+        "explanation_exists": true,
+        "filename": "Ibara 39.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 40.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 40.json",
+        "explanation_exists": true,
+        "filename": "Ibara 40.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 41.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 41.json",
+        "explanation_exists": true,
+        "filename": "Ibara 41.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 42.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 42.json",
+        "explanation_exists": true,
+        "filename": "Ibara 42.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 43.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 43.json",
+        "explanation_exists": true,
+        "filename": "Ibara 43.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 44.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 44.json",
+        "explanation_exists": true,
+        "filename": "Ibara 44.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 45.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 45.json",
+        "explanation_exists": true,
+        "filename": "Ibara 45.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 46.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 46.json",
+        "explanation_exists": true,
+        "filename": "Ibara 46.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 47.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 47.json",
+        "explanation_exists": true,
+        "filename": "Ibara 47.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 48.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 48.json",
+        "explanation_exists": true,
+        "filename": "Ibara 48.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 49.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 49.json",
+        "explanation_exists": true,
+        "filename": "Ibara 49.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 50.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 50.json",
+        "explanation_exists": true,
+        "filename": "Ibara 50.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 51.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 51.json",
+        "explanation_exists": true,
+        "filename": "Ibara 51.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 52.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 52.json",
+        "explanation_exists": true,
+        "filename": "Ibara 52.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 53.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 53.json",
+        "explanation_exists": true,
+        "filename": "Ibara 53.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 54.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 54.json",
+        "explanation_exists": true,
+        "filename": "Ibara 54.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 55.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 55.json",
+        "explanation_exists": true,
+        "filename": "Ibara 55.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 56.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 56.json",
+        "explanation_exists": true,
+        "filename": "Ibara 56.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 57.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 57.json",
+        "explanation_exists": true,
+        "filename": "Ibara 57.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 58.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 58.json",
+        "explanation_exists": true,
+        "filename": "Ibara 58.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 59.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 59.json",
+        "explanation_exists": true,
+        "filename": "Ibara 59.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 60.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 60.json",
+        "explanation_exists": true,
+        "filename": "Ibara 60.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 61.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 61.json",
+        "explanation_exists": true,
+        "filename": "Ibara 61.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 62.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 62.json",
+        "explanation_exists": true,
+        "filename": "Ibara 62.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 63.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 63.json",
+        "explanation_exists": true,
+        "filename": "Ibara 63.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tano/Ibara 64.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 64.json",
+        "explanation_exists": true,
+        "filename": "Ibara 64.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 258.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 258.json",
+        "explanation_exists": true,
+        "filename": "Ibara 258.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 259.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 259.json",
+        "explanation_exists": true,
+        "filename": "Ibara 259.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 260.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 260.json",
+        "explanation_exists": true,
+        "filename": "Ibara 260.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 261.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 261.json",
+        "explanation_exists": true,
+        "filename": "Ibara 261.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 262.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 262.json",
+        "explanation_exists": true,
+        "filename": "Ibara 262.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 263.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 263.json",
+        "explanation_exists": true,
+        "filename": "Ibara 263.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 264.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 264.json",
+        "explanation_exists": true,
+        "filename": "Ibara 264.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 265.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 265.json",
+        "explanation_exists": true,
+        "filename": "Ibara 265.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 266.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 266.json",
+        "explanation_exists": true,
+        "filename": "Ibara 266.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 267.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 267.json",
+        "explanation_exists": true,
+        "filename": "Ibara 267.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 268.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 268.json",
+        "explanation_exists": true,
+        "filename": "Ibara 268.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Saba/Ibara 269.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 269.json",
+        "explanation_exists": true,
+        "filename": "Ibara 269.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 100.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 100.json",
+        "explanation_exists": true,
+        "filename": "Ibara 100.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 101.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 101.json",
+        "explanation_exists": true,
+        "filename": "Ibara 101.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 102.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 102.json",
+        "explanation_exists": true,
+        "filename": "Ibara 102.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 103.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 103.json",
+        "explanation_exists": true,
+        "filename": "Ibara 103.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 104.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 104.json",
+        "explanation_exists": true,
+        "filename": "Ibara 104.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 105.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 105.json",
+        "explanation_exists": true,
+        "filename": "Ibara 105.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 106.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 106.json",
+        "explanation_exists": true,
+        "filename": "Ibara 106.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 107.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 107.json",
+        "explanation_exists": true,
+        "filename": "Ibara 107.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 108.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 108.json",
+        "explanation_exists": true,
+        "filename": "Ibara 108.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 109.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 109.json",
+        "explanation_exists": true,
+        "filename": "Ibara 109.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 110.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 110.json",
+        "explanation_exists": true,
+        "filename": "Ibara 110.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 111.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 111.json",
+        "explanation_exists": true,
+        "filename": "Ibara 111.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 112.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 112.json",
+        "explanation_exists": true,
+        "filename": "Ibara 112.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 113.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 113.json",
+        "explanation_exists": true,
+        "filename": "Ibara 113.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 114.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 114.json",
+        "explanation_exists": true,
+        "filename": "Ibara 114.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 115.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 115.json",
+        "explanation_exists": true,
+        "filename": "Ibara 115.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 116.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 116.json",
+        "explanation_exists": true,
+        "filename": "Ibara 116.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 117.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 117.json",
+        "explanation_exists": true,
+        "filename": "Ibara 117.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 118.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 118.json",
+        "explanation_exists": true,
+        "filename": "Ibara 118.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 119.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 119.json",
+        "explanation_exists": true,
+        "filename": "Ibara 119.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 120.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 120.json",
+        "explanation_exists": true,
+        "filename": "Ibara 120.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 121.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 121.json",
+        "explanation_exists": true,
+        "filename": "Ibara 121.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 76.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 76.json",
+        "explanation_exists": true,
+        "filename": "Ibara 76.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 77.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 77.json",
+        "explanation_exists": true,
+        "filename": "Ibara 77.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 78.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 78.json",
+        "explanation_exists": true,
+        "filename": "Ibara 78.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 79.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 79.json",
+        "explanation_exists": true,
+        "filename": "Ibara 79.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 80.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 80.json",
+        "explanation_exists": true,
+        "filename": "Ibara 80.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 81.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 81.json",
+        "explanation_exists": true,
+        "filename": "Ibara 81.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 82.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 82.json",
+        "explanation_exists": true,
+        "filename": "Ibara 82.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 83.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 83.json",
+        "explanation_exists": true,
+        "filename": "Ibara 83.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 84.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 84.json",
+        "explanation_exists": true,
+        "filename": "Ibara 84.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 85.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 85.json",
+        "explanation_exists": true,
+        "filename": "Ibara 85.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 86.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 86.json",
+        "explanation_exists": true,
+        "filename": "Ibara 86.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 87.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 87.json",
+        "explanation_exists": true,
+        "filename": "Ibara 87.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 88.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 88.json",
+        "explanation_exists": true,
+        "filename": "Ibara 88.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 89.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 89.json",
+        "explanation_exists": true,
+        "filename": "Ibara 89.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 90.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 90.json",
+        "explanation_exists": true,
+        "filename": "Ibara 90.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 91.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 91.json",
+        "explanation_exists": true,
+        "filename": "Ibara 91.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 92.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 92.json",
+        "explanation_exists": true,
+        "filename": "Ibara 92.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 93.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 93.json",
+        "explanation_exists": true,
+        "filename": "Ibara 93.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 94.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 94.json",
+        "explanation_exists": true,
+        "filename": "Ibara 94.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 95.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 95.json",
+        "explanation_exists": true,
+        "filename": "Ibara 95.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 96.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 96.json",
+        "explanation_exists": true,
+        "filename": "Ibara 96.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 97.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 97.json",
+        "explanation_exists": true,
+        "filename": "Ibara 97.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 98.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 98.json",
+        "explanation_exists": true,
+        "filename": "Ibara 98.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nane/Ibara 99.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 99.json",
+        "explanation_exists": true,
+        "filename": "Ibara 99.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 11.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 11.json",
+        "explanation_exists": true,
+        "filename": "Ibara 11.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 12.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 12.json",
+        "explanation_exists": true,
+        "filename": "Ibara 12.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 13.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 13.json",
+        "explanation_exists": true,
+        "filename": "Ibara 13.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 14.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 14.json",
+        "explanation_exists": true,
+        "filename": "Ibara 14.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 15.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 15.json",
+        "explanation_exists": true,
+        "filename": "Ibara 15.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 16.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 16.json",
+        "explanation_exists": true,
+        "filename": "Ibara 16.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 17.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 17.json",
+        "explanation_exists": true,
+        "filename": "Ibara 17.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 18.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 18.json",
+        "explanation_exists": true,
+        "filename": "Ibara 18.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 19.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 19.json",
+        "explanation_exists": true,
+        "filename": "Ibara 19.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 20.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 20.json",
+        "explanation_exists": true,
+        "filename": "Ibara 20.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Pili/Ibara 21.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 21.json",
+        "explanation_exists": true,
+        "filename": "Ibara 21.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nne/Ibara 27.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 27.json",
+        "explanation_exists": true,
+        "filename": "Ibara 27.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nne/Ibara 28.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 28.json",
+        "explanation_exists": true,
+        "filename": "Ibara 28.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nne/Ibara 29.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 29.json",
+        "explanation_exists": true,
+        "filename": "Ibara 29.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Nne/Ibara 30.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 30.json",
+        "explanation_exists": true,
+        "filename": "Ibara 30.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 275.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 275.json",
+        "explanation_exists": true,
+        "filename": "Ibara 275.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 276.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 276.json",
+        "explanation_exists": true,
+        "filename": "Ibara 276.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 277.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 277.json",
+        "explanation_exists": true,
+        "filename": "Ibara 277.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 278.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 278.json",
+        "explanation_exists": true,
+        "filename": "Ibara 278.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 279.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 279.json",
+        "explanation_exists": true,
+        "filename": "Ibara 279.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 280.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 280.json",
+        "explanation_exists": true,
+        "filename": "Ibara 280.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 281.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 281.json",
+        "explanation_exists": true,
+        "filename": "Ibara 281.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 282.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 282.json",
+        "explanation_exists": true,
+        "filename": "Ibara 282.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 283.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 283.json",
+        "explanation_exists": true,
+        "filename": "Ibara 283.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 284.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 284.json",
+        "explanation_exists": true,
+        "filename": "Ibara 284.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 285.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 285.json",
+        "explanation_exists": true,
+        "filename": "Ibara 285.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 286.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 286.json",
+        "explanation_exists": true,
+        "filename": "Ibara 286.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 287.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 287.json",
+        "explanation_exists": true,
+        "filename": "Ibara 287.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 288.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 288.json",
+        "explanation_exists": true,
+        "filename": "Ibara 288.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tisa/Ibara 289.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 289.json",
+        "explanation_exists": true,
+        "filename": "Ibara 289.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 162.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 162.json",
+        "explanation_exists": true,
+        "filename": "Ibara 162.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 163.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 163.json",
+        "explanation_exists": true,
+        "filename": "Ibara 163.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 164.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 164.json",
+        "explanation_exists": true,
+        "filename": "Ibara 164.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 165.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 165.json",
+        "explanation_exists": true,
+        "filename": "Ibara 165.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 166.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 166.json",
+        "explanation_exists": true,
+        "filename": "Ibara 166.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 167.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 167.json",
+        "explanation_exists": true,
+        "filename": "Ibara 167.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 168.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 168.json",
+        "explanation_exists": true,
+        "filename": "Ibara 168.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 169.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 169.json",
+        "explanation_exists": true,
+        "filename": "Ibara 169.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 170.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 170.json",
+        "explanation_exists": true,
+        "filename": "Ibara 170.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 171.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 171.json",
+        "explanation_exists": true,
+        "filename": "Ibara 171.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 172.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 172.json",
+        "explanation_exists": true,
+        "filename": "Ibara 172.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 173.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 173.json",
+        "explanation_exists": true,
+        "filename": "Ibara 173.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 174.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 174.json",
+        "explanation_exists": true,
+        "filename": "Ibara 174.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 175.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 175.json",
+        "explanation_exists": true,
+        "filename": "Ibara 175.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 176.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 176.json",
+        "explanation_exists": true,
+        "filename": "Ibara 176.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 177.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 177.json",
+        "explanation_exists": true,
+        "filename": "Ibara 177.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 178.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 178.json",
+        "explanation_exists": true,
+        "filename": "Ibara 178.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 179.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 179.json",
+        "explanation_exists": true,
+        "filename": "Ibara 179.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 180.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 180.json",
+        "explanation_exists": true,
+        "filename": "Ibara 180.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 181.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 181.json",
+        "explanation_exists": true,
+        "filename": "Ibara 181.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 182.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 182.json",
+        "explanation_exists": true,
+        "filename": "Ibara 182.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 183.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 183.json",
+        "explanation_exists": true,
+        "filename": "Ibara 183.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 184.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 184.json",
+        "explanation_exists": true,
+        "filename": "Ibara 184.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 185.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 185.json",
+        "explanation_exists": true,
+        "filename": "Ibara 185.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 186.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 186.json",
+        "explanation_exists": true,
+        "filename": "Ibara 186.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 187.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 187.json",
+        "explanation_exists": true,
+        "filename": "Ibara 187.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 188.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 188.json",
+        "explanation_exists": true,
+        "filename": "Ibara 188.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 189.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 189.json",
+        "explanation_exists": true,
+        "filename": "Ibara 189.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 190.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 190.json",
+        "explanation_exists": true,
+        "filename": "Ibara 190.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 191.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 191.json",
+        "explanation_exists": true,
+        "filename": "Ibara 191.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 192.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 192.json",
+        "explanation_exists": true,
+        "filename": "Ibara 192.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 193.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 193.json",
+        "explanation_exists": true,
+        "filename": "Ibara 193.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 194.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 194.json",
+        "explanation_exists": true,
+        "filename": "Ibara 194.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 195.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 195.json",
+        "explanation_exists": true,
+        "filename": "Ibara 195.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 196.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 196.json",
+        "explanation_exists": true,
+        "filename": "Ibara 196.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 197.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 197.json",
+        "explanation_exists": true,
+        "filename": "Ibara 197.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 198.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 198.json",
+        "explanation_exists": true,
+        "filename": "Ibara 198.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 199.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 199.json",
+        "explanation_exists": true,
+        "filename": "Ibara 199.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 200.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 200.json",
+        "explanation_exists": true,
+        "filename": "Ibara 200.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 201.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 201.json",
+        "explanation_exists": true,
+        "filename": "Ibara 201.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Mbili/Ibara 202.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 202.json",
+        "explanation_exists": true,
+        "filename": "Ibara 202.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 209.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 209.json",
+        "explanation_exists": true,
+        "filename": "Ibara 209.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 210.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 210.json",
+        "explanation_exists": true,
+        "filename": "Ibara 210.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 211.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 211.json",
+        "explanation_exists": true,
+        "filename": "Ibara 211.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 212.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 212.json",
+        "explanation_exists": true,
+        "filename": "Ibara 212.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 213.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 213.json",
+        "explanation_exists": true,
+        "filename": "Ibara 213.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 214.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 214.json",
+        "explanation_exists": true,
+        "filename": "Ibara 214.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 215.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 215.json",
+        "explanation_exists": true,
+        "filename": "Ibara 215.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 216.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 216.json",
+        "explanation_exists": true,
+        "filename": "Ibara 216.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 217.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 217.json",
+        "explanation_exists": true,
+        "filename": "Ibara 217.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 218.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 218.json",
+        "explanation_exists": true,
+        "filename": "Ibara 218.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 219.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 219.json",
+        "explanation_exists": true,
+        "filename": "Ibara 219.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 220.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 220.json",
+        "explanation_exists": true,
+        "filename": "Ibara 220.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nne/Ibara 221.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 221.json",
+        "explanation_exists": true,
+        "filename": "Ibara 221.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kwanza/Ibara 1.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 1.json",
+        "explanation_exists": true,
+        "filename": "Ibara 1.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kwanza/Ibara 10.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 10.json",
+        "explanation_exists": true,
+        "filename": "Ibara 10.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kwanza/Ibara 2.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 2.json",
+        "explanation_exists": true,
+        "filename": "Ibara 2.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kwanza/Ibara 3.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 3.json",
+        "explanation_exists": true,
+        "filename": "Ibara 3.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kwanza/Ibara 4.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 4.json",
+        "explanation_exists": true,
+        "filename": "Ibara 4.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kwanza/Ibara 5.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 5.json",
+        "explanation_exists": true,
+        "filename": "Ibara 5.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kwanza/Ibara 6.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 6.json",
+        "explanation_exists": true,
+        "filename": "Ibara 6.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kwanza/Ibara 7.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 7.json",
+        "explanation_exists": true,
+        "filename": "Ibara 7.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kwanza/Ibara 8.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 8.json",
+        "explanation_exists": true,
+        "filename": "Ibara 8.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kwanza/Ibara 9.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 9.json",
+        "explanation_exists": true,
+        "filename": "Ibara 9.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 124.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 124.json",
+        "explanation_exists": true,
+        "filename": "Ibara 124.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 125.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 125.json",
+        "explanation_exists": true,
+        "filename": "Ibara 125.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 126.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 126.json",
+        "explanation_exists": true,
+        "filename": "Ibara 126.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 127.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 127.json",
+        "explanation_exists": true,
+        "filename": "Ibara 127.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 128.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 128.json",
+        "explanation_exists": true,
+        "filename": "Ibara 128.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 129.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 129.json",
+        "explanation_exists": true,
+        "filename": "Ibara 129.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 130.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 130.json",
+        "explanation_exists": true,
+        "filename": "Ibara 130.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 131.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 131.json",
+        "explanation_exists": true,
+        "filename": "Ibara 131.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 132.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 132.json",
+        "explanation_exists": true,
+        "filename": "Ibara 132.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 133.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 133.json",
+        "explanation_exists": true,
+        "filename": "Ibara 133.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 134.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 134.json",
+        "explanation_exists": true,
+        "filename": "Ibara 134.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 135.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 135.json",
+        "explanation_exists": true,
+        "filename": "Ibara 135.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 136.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 136.json",
+        "explanation_exists": true,
+        "filename": "Ibara 136.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 137.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 137.json",
+        "explanation_exists": true,
+        "filename": "Ibara 137.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 138.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 138.json",
+        "explanation_exists": true,
+        "filename": "Ibara 138.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 139.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 139.json",
+        "explanation_exists": true,
+        "filename": "Ibara 139.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 140.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 140.json",
+        "explanation_exists": true,
+        "filename": "Ibara 140.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 141.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 141.json",
+        "explanation_exists": true,
+        "filename": "Ibara 141.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 142.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 142.json",
+        "explanation_exists": true,
+        "filename": "Ibara 142.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 143.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 143.json",
+        "explanation_exists": true,
+        "filename": "Ibara 143.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 144.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 144.json",
+        "explanation_exists": true,
+        "filename": "Ibara 144.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 145.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 145.json",
+        "explanation_exists": true,
+        "filename": "Ibara 145.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 146.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 146.json",
+        "explanation_exists": true,
+        "filename": "Ibara 146.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 147.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 147.json",
+        "explanation_exists": true,
+        "filename": "Ibara 147.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 148.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 148.json",
+        "explanation_exists": true,
+        "filename": "Ibara 148.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 149.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 149.json",
+        "explanation_exists": true,
+        "filename": "Ibara 149.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 150.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 150.json",
+        "explanation_exists": true,
+        "filename": "Ibara 150.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 151.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 151.json",
+        "explanation_exists": true,
+        "filename": "Ibara 151.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 152.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 152.json",
+        "explanation_exists": true,
+        "filename": "Ibara 152.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 153.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 153.json",
+        "explanation_exists": true,
+        "filename": "Ibara 153.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 154.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 154.json",
+        "explanation_exists": true,
+        "filename": "Ibara 154.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 155.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 155.json",
+        "explanation_exists": true,
+        "filename": "Ibara 155.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 156.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 156.json",
+        "explanation_exists": true,
+        "filename": "Ibara 156.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi/Ibara 157.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 157.json",
+        "explanation_exists": true,
+        "filename": "Ibara 157.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 243.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 243.json",
+        "explanation_exists": true,
+        "filename": "Ibara 243.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 244.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 244.json",
+        "explanation_exists": true,
+        "filename": "Ibara 244.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 245.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 245.json",
+        "explanation_exists": true,
+        "filename": "Ibara 245.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 246.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 246.json",
+        "explanation_exists": true,
+        "filename": "Ibara 246.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 247.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 247.json",
+        "explanation_exists": true,
+        "filename": "Ibara 247.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 248.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 248.json",
+        "explanation_exists": true,
+        "filename": "Ibara 248.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 249.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 249.json",
+        "explanation_exists": true,
+        "filename": "Ibara 249.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 250.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 250.json",
+        "explanation_exists": true,
+        "filename": "Ibara 250.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 251.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 251.json",
+        "explanation_exists": true,
+        "filename": "Ibara 251.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 252.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 252.json",
+        "explanation_exists": true,
+        "filename": "Ibara 252.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 253.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 253.json",
+        "explanation_exists": true,
+        "filename": "Ibara 253.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 254.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 254.json",
+        "explanation_exists": true,
+        "filename": "Ibara 254.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 255.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 255.json",
+        "explanation_exists": true,
+        "filename": "Ibara 255.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 256.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 256.json",
+        "explanation_exists": true,
+        "filename": "Ibara 256.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Sita/Ibara 257.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 257.json",
+        "explanation_exists": true,
+        "filename": "Ibara 257.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Moja/Ibara 158.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 158.json",
+        "explanation_exists": true,
+        "filename": "Ibara 158.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Moja/Ibara 159.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 159.json",
+        "explanation_exists": true,
+        "filename": "Ibara 159.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Moja/Ibara 160.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 160.json",
+        "explanation_exists": true,
+        "filename": "Ibara 160.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Moja/Ibara 161.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 161.json",
+        "explanation_exists": true,
+        "filename": "Ibara 161.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tisa/Ibara 122.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 122.json",
+        "explanation_exists": true,
+        "filename": "Ibara 122.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tisa/Ibara 123.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 123.json",
+        "explanation_exists": true,
+        "filename": "Ibara 123.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Sita/Ibara 65.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 65.json",
+        "explanation_exists": true,
+        "filename": "Ibara 65.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Sita/Ibara 66.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 66.json",
+        "explanation_exists": true,
+        "filename": "Ibara 66.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Sita/Ibara 67.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 67.json",
+        "explanation_exists": true,
+        "filename": "Ibara 67.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Sita/Ibara 68.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 68.json",
+        "explanation_exists": true,
+        "filename": "Ibara 68.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Sita/Ibara 69.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 69.json",
+        "explanation_exists": true,
+        "filename": "Ibara 69.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Saba/Ibara 70.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 70.json",
+        "explanation_exists": true,
+        "filename": "Ibara 70.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Saba/Ibara 71.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 71.json",
+        "explanation_exists": true,
+        "filename": "Ibara 71.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Saba/Ibara 72.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 72.json",
+        "explanation_exists": true,
+        "filename": "Ibara 72.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Saba/Ibara 73.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 73.json",
+        "explanation_exists": true,
+        "filename": "Ibara 73.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Saba/Ibara 74.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 74.json",
+        "explanation_exists": true,
+        "filename": "Ibara 74.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Saba/Ibara 75.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 75.json",
+        "explanation_exists": true,
+        "filename": "Ibara 75.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nane/Ibara 270.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 270.json",
+        "explanation_exists": true,
+        "filename": "Ibara 270.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nane/Ibara 271.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 271.json",
+        "explanation_exists": true,
+        "filename": "Ibara 271.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nane/Ibara 272.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 272.json",
+        "explanation_exists": true,
+        "filename": "Ibara 272.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nane/Ibara 273.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 273.json",
+        "explanation_exists": true,
+        "filename": "Ibara 273.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Nane/Ibara 274.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 274.json",
+        "explanation_exists": true,
+        "filename": "Ibara 274.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tatu/Ibara 203.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 203.json",
+        "explanation_exists": true,
+        "filename": "Ibara 203.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tatu/Ibara 204.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 204.json",
+        "explanation_exists": true,
+        "filename": "Ibara 204.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tatu/Ibara 205.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 205.json",
+        "explanation_exists": true,
+        "filename": "Ibara 205.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tatu/Ibara 206.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 206.json",
+        "explanation_exists": true,
+        "filename": "Ibara 206.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tatu/Ibara 207.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 207.json",
+        "explanation_exists": true,
+        "filename": "Ibara 207.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Kumi na Tatu/Ibara 208.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 208.json",
+        "explanation_exists": true,
+        "filename": "Ibara 208.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tatu/Ibara 22.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 22.json",
+        "explanation_exists": true,
+        "filename": "Ibara 22.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tatu/Ibara 23.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 23.json",
+        "explanation_exists": true,
+        "filename": "Ibara 23.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tatu/Ibara 24.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 24.json",
+        "explanation_exists": true,
+        "filename": "Ibara 24.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tatu/Ibara 25.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 25.json",
+        "explanation_exists": true,
+        "filename": "Ibara 25.json",
+        "dataset": "rasimu"
+      },
+      {
+        "article_path": "public/katiba/Rasimu za Katiba/Tanzania/Sura ya Tatu/Ibara 26.json",
+        "explanation_path": "public/katiba/Rasimu za Katiba/Tanzania/Explanations/Ibara 26.json",
+        "explanation_exists": true,
+        "filename": "Ibara 26.json",
+        "dataset": "rasimu"
+      }
+    ]
+  }
+}

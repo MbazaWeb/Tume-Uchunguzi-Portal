@@ -1,0 +1,86 @@
+{
+  "section": "89C",
+  "language": "sw",
+  "plainLanguage": "Mtu anayejaribu kuzuia, kukwamiza, au kushindwa mpango wa self-help scheme alioidhinisha Regional Commissioner au District Commissioner — kwa kumshawishi au kumjaribu kumshawishi mtu asitoe huduma au asisaidie katika scheme hiyo — anafanya kosa. Adhabu ni faini hadi shilingi 100,000 au kifungo cha miezi 6 au vyote viwili.",
+  "meaning": "Section 89C inalinda miradi ya self-help iliyoidhinishwa na Regional Commissioner au District Commissioner dhidi ya wale wanaojaribu kuizuia. Kosa linahitaji: (a) intent ya impede/obstruct/prevent/defeat scheme hiyo; (b) conduct ya kushawishi au jaribio la kushawishi mtu asihudumie scheme hiyo. Ni kosa la kujaribu (inakata na attempt).",
+  "keyPoints": [
+    "Intent: 'impede, obstruct, prevent or defeat' — nia ya kuzuia au kukwamisha scheme.",
+    "Target: self-help scheme iliyoidhinishwa na Regional Commissioner au District Commissioner.",
+    "Conduct: 'dissuades or attempts to dissuade' — kushawishi au kujaribu kushawishi.",
+    "Subject: mtu asitoe huduma au asisaidie kwenye scheme hiyo.",
+    "Penalty: fine hadi TSh 100,000 au imprisonment hadi miezi 6 au vyote viwili.",
+    "Inakata na attempt — mtu anayejaribu kushawishi (hata kama hafanikiwi) bado anaweza kuhukumiwa."
+  ],
+  "legalTerms": [
+    {
+      "term": "self-help scheme",
+      "meaning": "Mradi wa kijamii au kiuchumi unaoratibiwa na jamii yenyewe kwa kujisaidia — mfano wa ujenzi wa shule, barabara, au mradi wa maji."
+    },
+    {
+      "term": "Regional Commissioner",
+      "meaning": "Mkurugenzi wa Mkoa — ofisa mkuu wa serikali katika ngazi ya mkoa anayeidhinisha schemes za self-help."
+    },
+    {
+      "term": "District Commissioner",
+      "meaning": "Mkurugenzi wa Wilaya — ofisa mkuu wa serikali katika ngazi ya wilaya anayeidhinisha schemes za self-help."
+    },
+    {
+      "term": "impede / obstruct / prevent / defeat",
+      "meaning": "Maneno manne yanayoashiria nia ya kuzuia au kukwamisha scheme — yote yana maana ile ile ya 'kuzuia kuendelea'."
+    },
+    {
+      "term": "dissuades",
+      "meaning": "Kushawishi mtu asifanye kitendo — kinyume cha 'persuades' (kushawisha afanye)."
+    },
+    {
+      "term": "attempts to dissuade",
+      "meaning": "Kujaribu kushawishi mtu asitoe huduma, hata kama jaribio halifanikiwi — bado ni kosa chini ya 89C."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Kushawishi asisaidie scheme",
+      "scenario": "Mtu anaenda kwenye kijiji na kuwaambia wananchi wasitoe nguvu kwa ajili ya ujenzi wa kituo cha afya kilichoidhinishwa na DC.",
+      "analysis": "Intent ya kuzuia scheme (impede/defeat), conduct ya kushawishi (dissuade) — inakidhi 89C hata kama wananchi bado wanaendelea kusaidia."
+    },
+    {
+      "title": "Attempt ya kushawishi iliyoshindikana",
+      "scenario": "Mtu anajaribu kumshawishi fundi asifanye kazi kwenye mradi wa barabara ulioidhinishwa na RC, lakini fundi anakataa na kufanya kazi yake.",
+      "analysis": "Hata kama jaribio halikufanikiwa, 89C inakata na 'attempts to dissuade' — bado ni kosa."
+    },
+    {
+      "title": "Scheme haijaidhinishwa — si kosa chini ya 89C",
+      "scenario": "Mtu anajaribu kuzuia mradi wa kijiji ambao haujaidhinishwa na RC au DC.",
+      "analysis": "89C inahitaji scheme iwe 'approved by the Regional Commissioner or the District Commissioner'. Kama haijaidhinishwa, kifungu hiki hakina matumizi."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 89C ilianzishwa kulinda miradi ya self-help iliyoidhinishwa na mamlaka za kitaifa (RC au DC) dhidi ya wale wanaoiuzuia kupitia ushawishi wa kimatendo. Inaonyesha msisimko wa serikali katika kuhakikisha miradi ya kijamii inaendelea bila kukwamishwa.",
+    "notes": [
+      "Section 89C inakata na 'attempts to dissuade' — si lazima kufanikiwa kushawishi.",
+      "Adhabu ni ya chini kuliko 89A (miezi 6 vs 89B mwaka 1), ikionyesha kwamba inalenga conduct ya kiutendaji si vitisho vya moja kwa moja kwa mtu.",
+      "Idhini ya RC au DC ni sharti — scheme isiyoidhinishwa haifungi 89C."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Idhini ni sharti",
+      "view": "Section 89C inatumika tu kwa schemes zilizoidhinishwa na RC au DC. Miradi isiyoidhinishwa haiwezi kufungwa na kifungu hiki."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Attempt inakata",
+      "view": "Kifungu kinakata na 'attempts to dissuade' — hivyo mtu anayejribu kushawishi asiwezi kuhukumiwa kwa kutumia hoja ya 'halikufanikiwa'."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Toleo la pamoja la faini au kifungo",
+      "view": "Adhabu inatoa chaguo la faini pekee au kifungo pekee au vyote — court inaweza kuchagua mchanganyiko unaofaa kulingana na hali ya kosa."
+    }
+  ],
+  "debateQuestion": "Je, scheme ilikuwa imeidhinishwa na RC au DC, na mtu alikuwa na intent ya impede/obstruct/prevent/defeat scheme hiyo kwa kushawishi au kujaribu kushawishi mtu asitoe huduma au asisaidie?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

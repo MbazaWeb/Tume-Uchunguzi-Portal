@@ -1,0 +1,78 @@
+{
+  "section": "9",
+  "language": "sw",
+  "plainLanguage": "Kifungu hiki kinaeleza mazingira ya offence relating to property ambapo mtu hatakuwa criminally responsible: pale kitendo au omission kuhusu property kilifanywa katika exercise of an honest claim of right na bila intention to defraud.",
+  "meaning": "Masharti yaliyoandikwa yanaunganisha mambo mawili: kuwepo kwa honest claim of right kuhusu property na kutokuwepo kwa intention to defraud. Kifungu hiki kinahusu offences relating to property.",
+  "keyPoints": [
+    "Kifungu kinahusu offence relating to property.",
+    "Act au omission kuhusu property lazima iwe imefanywa katika exercise of an honest claim of right.",
+    "Pia lazima iwe bila intention to defraud.",
+    "Masharti hayo yakitimia kama yalivyoandikwa, kifungu kinasema mtu si criminally responsible kwa offence hiyo inayohusiana na property."
+  ],
+  "legalTerms": [
+    {
+      "term": "bona fide / honest claim of right",
+      "meaning": "Dai la haki linaloelezwa na kifungu kama honest claim of right kuhusu property."
+    },
+    {
+      "term": "criminally responsible",
+      "meaning": "Kuwajibika kijinai kwa offence inayozungumziwa."
+    },
+    {
+      "term": "intention to defraud",
+      "meaning": "Nia ya kufanya udanganyifu; kifungu kinahitaji kitendo au omission iwe bila nia hiyo."
+    }
+  ],
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria.",
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Honest claim of right",
+      "view": "Kifungu kinaelekeza umakini kwenye honesty ya claim of right kuhusu property, si tu kuwepo kwa mgogoro wa ownership kwa jina."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Intention to defraud",
+      "view": "Hata kama claim of right inadaiwa, maandishi yanaweka pia sharti la kutokuwepo intention to defraud; vipengele hivyo vinapaswa kuchambuliwa pamoja."
+    },
+    {
+      "label": "Hoja ya uchambuzi",
+      "focus": "Scope",
+      "view": "Kifungu kimeandikwa kwa offence relating to property. Kwa hiyo uchambuzi wa kwanza ni kama offence inayodaiwa iko ndani ya scope hiyo."
+    }
+  ],
+  "debateQuestion": "Je, facts zinaonyesha honest claim of right na, tofauti na hilo, zinaonyesha kuwepo au kutokuwepo kwa intention to defraud?",
+  "examples": [
+    {
+      "title": "Mfano wa disputed property",
+      "scenario": "Mtu anaingilia au kuchukua property akidai kwa uaminifu kwamba ana haki juu yake.",
+      "analysis": "Section 9 inaelekeza kuchunguza honesty ya claim of right na kama kulikuwa na intention to defraud; madai ya ownership peke yake hayamalizi uchambuzi."
+    }
+  ],
+  "cases": [
+    {
+      "name": "John Chize Bahinganyi v Republic",
+      "citation": "1988 TLR 234 (HC)",
+      "court": "High Court of Tanzania, Tabora",
+      "year": "1988",
+      "relevance": "Kesi inayohusishwa moja kwa moja na section 9; mahakama ilichunguza bona fide claim of right katika charge ya malicious damage to property na ikaeleza umuhimu wa claim kushikiliwa honestly kwa kuzingatia facts na circumstances.",
+      "sourceUrl": "https://www.tanzanianweb.co.tz/2022/08/john-chize-bahinganyi-v-republic-1988.html"
+    },
+    {
+      "name": "Salum s/o Athumani v Republic",
+      "citation": "1991 TLR 137 (HC)",
+      "court": "High Court of Tanzania, Tabora",
+      "year": "1991",
+      "relevance": "Katika cattle-theft dispute, mahakama ilijadili mipaka ya bona fide claim of right na ikaona close relationship peke yake haitoshi bila colour of right.",
+      "sourceUrl": "https://www.tanzanianweb.co.tz/2022/06/salum-so-athumani-v-republic-1991-tlr.html"
+    }
+  ],
+  "history": {
+    "summary": "Bona fide claim of right imekuwa sehemu ya general rules of criminal responsibility katika Penal Code kwa matoleo ya muda mrefu. Case law husaidia kuonyesha namna courts zilivyochunguza honesty na factual basis ya claim.",
+    "notes": [
+      "Case citation inapaswa kufunguliwa na hukumu/full report inapopatikana kabla ya kutegemewa katika legal work.",
+      "R.E. 2022 section 9 ndiyo statutory text ya msingi katika app."
+    ],
+    "sourceUrl": "https://www.sheria.go.tz/uploads/documents/sw-1677665965-THE%20PENAL%20CODE.pdf"
+  }
+}

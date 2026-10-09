@@ -1,0 +1,96 @@
+{
+  "section": "14",
+  "language": "sw",
+  "plainLanguage": "Kanuni ya msingi ni kwamba intoxication yenyewe si defence kwa criminal charge. Section 14 ina exceptions na matumizi maalum: defence inaweza kutokea chini ya subsection (2) ikiwa intoxication ilimfanya accused asielewe anachofanya na pia ikatokana bila consent yake na malicious/negligent act ya mwingine, au intoxication ikamfanya insane. Subsection (4) pia inaruhusu intoxication kuzingatiwa wakati wa kuamua kama required intention iliundwa.",
+  "meaning": "Section 14 ina routes tofauti ambazo hazipaswi kuchanganywa. (1) inaanza na general exclusion. (2) ina defence yenye conjunctive requirements. (3) inaeleza legal consequence baada ya subsection (2) defence kuthibitishwa: paragraph (a) leads to discharge; paragraph (b) invokes Penal Code na Criminal Procedure Act provisions on insanity. (4) ni inquiry tofauti kuhusu formation of intention required by an offence. (5) inaweka narcotics/drugs ndani ya maana ya intoxication.",
+  "keyPoints": [
+    "(1): Intoxication kwa kawaida si defence.",
+    "(2): Accused lazima, by reason of intoxication, not understand what he was doing, pamoja na (a) involuntary intoxication caused by another's malicious/negligent act au (b) insanity by reason of intoxication.",
+    "(3): Consequence ya (2)(a) ni discharge; kwa (2)(b), insanity provisions za Penal Code na Criminal Procedure Act apply.",
+    "(4): Intoxication inaweza kuzingatiwa katika kuamua kama accused formed intention, specific or otherwise, ambayo bila hiyo asingekuwa guilty.",
+    "(5): Intoxication includes state produced by narcotics or drugs."
+  ],
+  "legalTerms": [
+    {
+      "term": "intoxication",
+      "meaning": "Kwa section 14, inajumuisha pia state produced by narcotics or drugs."
+    },
+    {
+      "term": "without his consent",
+      "meaning": "Sharti la subsection (2)(a) linalotofautisha intoxication iliyosababishwa bila consent ya accused."
+    },
+    {
+      "term": "specific intention",
+      "meaning": "Intention ambayo inaweza kuwa necessary kwa offence husika na ambayo formation yake inaweza kuchunguzwa chini ya subsection (4)."
+    },
+    {
+      "term": "discharged",
+      "meaning": "Matokeo yaliyotajwa na subsection (3) kwa defence inayofanikiwa chini ya subsection (2)(a)."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Kunyweshwa bila kujua",
+      "scenario": "Mtu anawekewa intoxicating substance bila consent yake na hali hiyo inamfanya asielewe anachofanya.",
+      "analysis": "Facts zinaweza kuleta subsection (2)(a), lakini lazima requirements zake zote zithibitishwe; si kila involuntary consumption automatically determines the case."
+    },
+    {
+      "title": "Voluntary drinking na required intention",
+      "scenario": "Accused alikunywa kwa hiari na anashtakiwa offence ambayo guilt inategemea formation ya particular intention.",
+      "analysis": "General defence ya subsection (2)(a) haitokani tu na voluntary intoxication, lakini subsection (4) inaweza kufanya intoxication relevant kwa swali kama required intention iliundwa."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Adam Salehe @ Ramadhani v Republic",
+      "citation": "Criminal Appeal No. 547 of 2020; [2022] TZCA 229",
+      "court": "Court of Appeal of Tanzania",
+      "year": "2022",
+      "relevance": "The Court considered whether intoxication could stand as a defence to murder and restated the limited statutory circumstances under section 14.",
+      "sourceUrl": "https://sheriahub.com/cases/tz/caselaw/adam-salehe-ramadhani-vs-republic-criminal-appeal-547-of-2020-2022-tzca-229-02-may-2022"
+    },
+    {
+      "name": "Republic v Abdalah Salim @ Swaha",
+      "citation": "Criminal Session No. 72 of 2020; [2022] TZHC 14765",
+      "court": "High Court of Tanzania",
+      "year": "2022",
+      "relevance": "The High Court applied section 14 to an accused who relied on drunkenness and emphasized that intoxication is generally not a defence except within the statutory conditions.",
+      "sourceUrl": "https://sheriahub.com/cases/tz/caselaw/the-republic-vs-abdalah-salim-swaha-criminal-session-72-of-2020-2022-tzhc-14765-11-october-2022"
+    },
+    {
+      "name": "Republic v Mbavumbili",
+      "citation": "[2005] TZCA 38",
+      "court": "Court of Appeal of Tanzania",
+      "year": "2005",
+      "relevance": "The Court discussed section 14(4), focusing on whether intoxication affected formation of the intention required for the offence.",
+      "sourceUrl": "https://media.tanzlii.org/media/judgment/260781/source_file/republic-vs-mbavumbili-2005-tzca-38-22-august-200.pdf"
+    }
+  ],
+  "history": {
+    "summary": "Section 14 has long distinguished intoxication as a defence from intoxication as evidence relevant to intention. The current R.E. 2022 official text contains subsections (1)-(5).",
+    "notes": [
+      "During digitisation, subsection (3) was found missing from the repository copy and has now been restored verbatim from the official R.E. 2022 source.",
+      "The statutory cross-reference in subsection (3) is to insanity provisions of the Penal Code and Criminal Procedure Act."
+    ],
+    "sourceUrl": "https://elibrary.osg.go.tz/bitstreams/8d1378f7-5d7a-4768-9e3b-5f042bda1fcd/download"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Defence under subsection (2)",
+      "view": "A rigorous analysis checks both inability to understand and one of the two statutory causes/conditions in paragraphs (a) or (b). Mere drunkenness is not enough."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Intention under subsection (4)",
+      "view": "Even where subsection (2) defence fails, intoxication may remain evidentially relevant if the offence requires an intention without which guilt would not arise."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Voluntary vs involuntary",
+      "view": "How intoxication arose is crucial for subsection (2)(a), while subsection (4) asks a different question about actual formation of intention."
+    }
+  ],
+  "debateQuestion": "Je, accused anategemea full defence ya subsection (2), insanity route, au anatumia intoxication chini ya subsection (4) kupinga formation ya required intention?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

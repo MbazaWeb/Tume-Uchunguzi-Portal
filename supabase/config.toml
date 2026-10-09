@@ -1,0 +1,4 @@
+project_id = "tume-uchunguzi-portal"
+
+[functions.inquiry-intake]
+verify_jwt = true

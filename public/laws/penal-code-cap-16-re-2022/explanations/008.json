@@ -1,0 +1,76 @@
+{
+  "section": "8",
+  "language": "sw",
+  "plainLanguage": "Kwa kawaida, kutokujua sheria si sababu ya kuondoa uwajibikaji kwa kitendo au kutotenda jambo ambalo vinginevyo lingekuwa kosa.",
+  "meaning": "Kifungu kinaweka exception moja iliyoandikwa wazi: kama offence yenyewe imetangaza expressly kwamba knowledge of the law ni element ya offence hiyo, basi maarifa hayo ya sheria yanakuwa sehemu ya mambo yanayohusika katika kosa hilo.",
+  "keyPoints": [
+    "Ignorance of the law kwa kawaida haitoi excuse kwa act au omission ambayo vinginevyo ingekuwa offence.",
+    "Exception ni pale ambapo knowledge of the law by the offender imetajwa expressly kuwa element of the offence."
+  ],
+  "legalTerms": [
+    {
+      "term": "ignorance of the law",
+      "meaning": "Kutokujua sheria."
+    },
+    {
+      "term": "act or omission",
+      "meaning": "Kitendo kilichofanywa au kutofanywa kwa jambo."
+    },
+    {
+      "term": "element of the offence",
+      "meaning": "Jambo ambalo sheria imelifanya kuwa sehemu ya kosa husika na ambalo kifungu hiki kinasema linaweza kujumuisha knowledge of the law ikiwa limetajwa expressly."
+    }
+  ],
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria.",
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Kanuni ya jumla",
+      "view": "Usomaji wa kawaida wa kifungu ni kwamba mtu haepuki offence kwa kusema hakujua sheria inayokataza act au omission hiyo."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Exception iliyoandikwa",
+      "view": "Uchambuzi lazima utenganishe ignorance ya kawaida na offence ambayo sheria imetaja expressly knowledge of the law kuwa element; katika hali hiyo knowledge yenyewe inakuwa suala la kuthibitishwa chini ya offence husika."
+    },
+    {
+      "label": "Hoja ya uchambuzi",
+      "focus": "Element vs excuse",
+      "view": "Tofauti muhimu ni kati ya kudai kutokujua sheria kama excuse na kuuliza kama prosecution imethibitisha element ya knowledge pale ambapo offence imeiweka expressly."
+    }
+  ],
+  "debateQuestion": "Je, offence inayotumika imetaja expressly knowledge of the law kuwa element, au hoja inayotolewa ni ignorance ya kawaida tu?",
+  "examples": [
+    {
+      "title": "Mfano wa ignorance of law",
+      "scenario": "Mtu anafanya act inayokatazwa kisha anasema hakujua kwamba sheria ilikuwa inaikataza.",
+      "analysis": "Kwa rule ya section 8, kutokujua sheria pekee si excuse, isipokuwa offence husika imetaja expressly knowledge of the law kuwa element."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Maulid v Republic",
+      "citation": "[1970] H.C.D. No. 346",
+      "court": "High Court of Tanzania",
+      "year": "1970",
+      "relevance": "Rejea za kisheria za Tanzania zinaitaja kwa principle kwamba ignorance of the legal requirement haikutoa defence.",
+      "sourceUrl": "https://www.tanzanianweb.co.tz/2024/11/criminal-law-student-guide.html"
+    },
+    {
+      "name": "Joseph and Others v Republic",
+      "citation": "[1970] H.C.D. No. 271",
+      "court": "High Court of Tanzania",
+      "year": "1970",
+      "relevance": "Inatajwa katika materials za Tanzania kuhusu kukataliwa kwa hoja ya ignorance of law katika mazingira ya illegal entry.",
+      "sourceUrl": "https://www.tanzanianweb.co.tz/2024/11/criminal-law-student-guide.html"
+    }
+  ],
+  "history": {
+    "summary": "Maxim kwamba ignorance of law si excuse ina historia ndefu katika criminal law. Mahakama za Tanzania pia zimeitaja katika contexts nyingine za procedural law, ingawa hizo si application ya section 8 yenyewe.",
+    "notes": [
+      "Kesi ya procedural extension of time haipaswi kuchanganywa moja kwa moja na criminal defence chini ya section 8.",
+      "Kwa offence ya sasa, text ya section 8 na elements za offence husika ndizo msingi."
+    ],
+    "sourceUrl": "https://www.sheria.go.tz/uploads/documents/sw-1677665965-THE%20PENAL%20CODE.pdf"
+  }
+}

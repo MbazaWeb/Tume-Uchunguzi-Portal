@@ -1,0 +1,75 @@
+{
+  "section": "16",
+  "language": "sw",
+  "plainLanguage": "Kifungu hiki kinatoa kinga ya jinai kwa judicial officer kwa act au omission iliyofanywa bona fide wakati wa kutekeleza judicial function, isipokuwa Penal Code yenyewe imeweka expressly vinginevyo.",
+  "meaning": "Kinga hii si kinga ya jumla kwa kila jambo analofanya judicial officer. Maandishi yana conditions mbili muhimu: conduct iwe bona fide na iwe katika exercise of judicial function. Kwa hiyo inquiry muhimu ni nature ya function iliyokuwa ikitekelezwa na good faith ya officer katika mazingira hayo.",
+  "keyPoints": [
+    "Kinga inahusu judicial officer.",
+    "Act au omission lazima iwe bona fide.",
+    "Lazima iwe katika exercise of judicial function.",
+    "Code inaweza expressly kuweka exception.",
+    "Presence ya office/title peke yake haitoshi kama conduct haikuwa judicial function."
+  ],
+  "legalTerms": [
+    {
+      "term": "judicial officer",
+      "meaning": "Afisa anayetekeleza judicial function; application ya term hutegemea legal office na function inayohusika."
+    },
+    {
+      "term": "bona fide",
+      "meaning": "Kwa nia njema/good faith katika utekelezaji wa function husika."
+    },
+    {
+      "term": "judicial function",
+      "meaning": "Kazi ya kimahakama au adjudicative function ambayo officer anatekeleza katika capacity yake ya judicial officer."
+    },
+    {
+      "term": "criminally liable",
+      "meaning": "Kuwajibika kijinai kwa act au omission inayozungumziwa."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Uamuzi wa kimahakama kwa nia njema",
+      "scenario": "Judicial officer anafanya procedural decision akiwa anatekeleza judicial function na kwa bona fide, lakini baadaye decision inapingwa.",
+      "analysis": "Section 16 inaelekeza kutenganisha alleged error katika bona fide judicial function na conduct inayoweza kuwa nje ya function au isiyo bona fide."
+    },
+    {
+      "title": "Kitendo nje ya judicial function",
+      "scenario": "Officer anafanya kitendo ambacho hakitokani na exercise ya judicial function yake.",
+      "analysis": "Section 16 haiwezi kutumika kwa title ya officer pekee; statutory connection na judicial function lazima ionekane."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Mzee Selemani v Republic",
+      "citation": "(1968) HCD No. 364",
+      "court": "High Court of Tanzania",
+      "year": "1968",
+      "relevance": "Tanzanian criminal-law materials cite the case for the proposition that immunity does not protect conduct outside the officer's judicial function; the reported dispute involved wrongful detention.",
+      "sourceUrl": "https://www.tanzanianweb.co.tz/2024/11/criminal-law-student-guide.html"
+    }
+  ],
+  "history": {
+    "summary": "Judicial immunity in section 16 forms part of the Code's general rules of criminal responsibility. Its statutory purpose is narrow: bona fide exercise of judicial function, subject to express provisions of the Code.",
+    "notes": [
+      "The provision should not be described as immunity for every act by a judicial officer.",
+      "For current statutory work, R.E. 2022 remains the app's source edition."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Functional approach",
+      "view": "Analysis should focus on what function the officer was actually performing, rather than relying only on official title."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Good faith boundary",
+      "view": "Bona fide is an express statutory boundary. Evidence suggesting conduct was not in good faith can therefore be central to whether section 16 applies."
+    }
+  ],
+  "debateQuestion": "Kitendo kilikuwa sehemu ya judicial function gani, na facts zinaonyesha vipi kwamba kilifanywa bona fide?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

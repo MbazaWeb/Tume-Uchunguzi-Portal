@@ -1,0 +1,72 @@
+{
+  "section": "26",
+  "language": "sw",
+  "plainLanguage": "Section 26 inaeleza statutory form ya sentence of death na exceptions mbili zilizoandikwa kwenye provision: pregnancy katika circumstances za proviso ya subsection (1), na mtu ambaye alikuwa under 18 wakati offence ilifanyika chini ya subsection (2).",
+  "meaning": "Subsection (1) inasema death sentence shall direct death by hanging, lakini ikiwa woman convicted of an offence punishable with death alleged to be pregnant, court must inquire; pregnancy ikithibitishwa to court's satisfaction, sentence becomes life imprisonment instead. Subsection (2) prohibits pronouncing or recording death sentence against a person who was under 18 at commission of offence and states the alternative statutory disposition. Huu ni maelezo ya R.E. 2022 text; current constitutional/appellate status of capital punishment must be checked separately when advising on a live case.",
+  "keyPoints": [
+    "Text states death by hanging.",
+    "Pregnancy allegation triggers court inquiry under the proviso.",
+    "Proved pregnancy changes the sentence described by the provision to life imprisonment.",
+    "Age is measured at commission of offence for subsection (2).",
+    "Under 18: death sentence shall not be pronounced or recorded.",
+    "Live-case analysis must distinguish statutory text from later constitutional, appellate, clemency and execution practice."
+  ],
+  "legalTerms": [
+    {
+      "term": "sentence of death",
+      "meaning": "Capital sentence described by section 26."
+    },
+    {
+      "term": "life imprisonment",
+      "meaning": "Alternative sentence expressly stated in the pregnancy proviso."
+    },
+    {
+      "term": "at the time of commission",
+      "meaning": "Relevant time for the under-18 rule is when the offence was committed, not merely age at trial/sentence."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Accused was 17 at offence",
+      "scenario": "Person is convicted later as an adult, but reliable evidence establishes age 17 when the offence occurred.",
+      "analysis": "Section 26(2) looks to age at commission and says death sentence shall not be pronounced or recorded."
+    },
+    {
+      "title": "Pregnancy alleged before sentence",
+      "scenario": "Woman convicted of an offence punishable with death is alleged to be pregnant.",
+      "analysis": "The proviso requires judicial inquiry; if pregnancy is proved to the court's satisfaction, the provision directs life imprisonment instead."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Mbushuu alias Dominic Mnyaroje and Another v Republic",
+      "citation": "[1995] TLR 97 (CA)",
+      "court": "Court of Appeal of Tanzania",
+      "year": "1995",
+      "relevance": "Leading Tanzanian authority on the constitutionality of the death penalty. The Court of Appeal reversed the High Court's declaration of unconstitutionality while discussing constitutional limitations and proportionality.",
+      "sourceUrl": "https://media.tanzlii.org/media/judgment/266805/source_file/mbushuu-alias-dominic-mnyaroje-and-another-v-republic-1995-tzca-1-30-january-1995.pdf"
+    }
+  ],
+  "history": {
+    "summary": "Section 26 sits within Chapter VI's punishment framework. Capital punishment has also been the subject of constitutional litigation in Tanzania, so the statutory wording should not be presented as the entire constitutional analysis.",
+    "notes": [
+      "Mbushuu remains an important Tanzanian constitutional authority concerning the death penalty.",
+      "The explanation deliberately distinguishes the official R.E. 2022 statutory text from broader constitutional and human-rights analysis."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Statutory sentencing",
+      "view": "Start with the exact offence penalty and section 26 conditions, including age and pregnancy where relevant."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Constitutional layer",
+      "view": "Capital sentencing cannot be analysed only by reading section 26; constitutional jurisprudence and later binding law must also be checked in a live matter."
+    }
+  ],
+  "debateQuestion": "Kwa case husika, ni statutory death-penalty provision gani inayotumika, na age, pregnancy, constitutional jurisprudence au later law vinaathiri vipi lawful sentence?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

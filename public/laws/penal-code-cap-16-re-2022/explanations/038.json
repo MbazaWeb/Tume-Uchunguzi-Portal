@@ -1,0 +1,53 @@
+{
+  "section": "38",
+  "language": "sw",
+  "plainLanguage": "Baada ya conviction, mahakama inaweza kumuachia mtu bila adhabu kabisa au kwa masharti ya kutotenda kosa jingine kwa kipindi kisichozidi miezi 12, ikiwa adhabu au probation si sahihi kwa mazingira hayo.",
+  "meaning": "Section 38 permits absolute or conditional discharge after conviction where the court considers punishment inexpedient and probation inappropriate, having regard to the circumstances, nature of the offence and character of the offender. A conditional discharge may last no more than twelve months.",
+  "keyPoints": [
+    "There must first be a conviction.",
+    "Court considers the circumstances, nature of offence and character of offender.",
+    "Discharge may be absolute or conditional.",
+    "Conditional period cannot exceed twelve months.",
+    "Before conditional discharge, the consequence of committing another offence must be explained in ordinary language.",
+    "Compensation under section 31 and costs under section 32 may still be ordered."
+  ],
+  "legalTerms": [
+    {
+      "term": "absolute discharge",
+      "meaning": "Kuachiliwa baada ya conviction bila sharti la kipindi cha conditional discharge."
+    },
+    {
+      "term": "conditional discharge",
+      "meaning": "Kuachiliwa kwa sharti la kutotenda kosa jingine ndani ya kipindi kilichoainishwa na mahakama."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Conditional discharge",
+      "scenario": "Mahakama inaona punishment si mwafaka na probation pia si sahihi, lakini inaweka kipindi cha miezi kadhaa bila kosa jipya.",
+      "analysis": "Hii inaweza kuingia ndani ya section 38 ikiwa masharti yote ya statutory yametimizwa."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Sections 38, 38A and 38B form a linked discharge regime: grant of discharge, consequences of a further offence, and legal effect of the conviction/discharge.",
+    "notes": [
+      "Section 38 should be read together with sections 38A and 38B."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Individualised sentencing",
+      "view": "The section expressly directs attention to both the offence and the offender before discharge."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Conditional warning",
+      "view": "The ordinary-language explanation required by subsection (3) is important because a new offence can reactivate sentencing for the original offence under section 38A."
+    }
+  ],
+  "debateQuestion": "Ni mambo gani katika nature of the offence na character of the offender yanaweza kuifanya discharge kuwa sahihi kuliko punishment au probation?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

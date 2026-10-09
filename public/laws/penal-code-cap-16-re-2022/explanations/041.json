@@ -1,0 +1,49 @@
+{
+  "section": "41",
+  "language": "sw",
+  "plainLanguage": "Section 41 inafanya misprision of treason kuwa offence kwa kuwa accessory after the fact to treason/treasonable offence, au kwa kujua nia ya mtu kufanya offence hiyo na kutotoa taarifa kwa haraka inayofaa au kutumia juhudi nyingine za kuizuia.",
+  "meaning": "The provision contains alternative routes to liability: post-offence assistance as an accessory after the fact, or knowing of an intended treason/treasonable offence and failing to take the specified reasonable steps. The section states life imprisonment on conviction.",
+  "keyPoints": [
+    "Paragraph (a) concerns being an accessory after the fact.",
+    "Paragraph (b) requires knowledge of another person's intended treason or treasonable offence.",
+    "Paragraph (b) refers to information given with all reasonable dispatch to specified public officers, or other reasonable endeavours to prevent the offence.",
+    "Penalty stated is imprisonment for life."
+  ],
+  "legalTerms": [
+    {
+      "term": "accessory after the fact",
+      "meaning": "Mtu anayehusika baada ya offence kwa namna inayotambuliwa na criminal law."
+    },
+    {
+      "term": "reasonable dispatch",
+      "meaning": "Kutoa taarifa kwa haraka inayofaa kwa mazingira, si kuchelewesha bila sababu."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Knowledge and response",
+      "scenario": "Mtu anapata taarifa ya mpango unaodaiwa kuwa treasonable lakini anachukua hatua za haraka kumjulisha police officer.",
+      "analysis": "Whether section 41(b) is satisfied depends on proof of knowledge and whether the statutory reporting/prevention obligation was met."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 41 follows the treason and treasonable-offence provisions and criminalises specified post-offence assistance or failure to act on known intended treason.",
+    "notes": [],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Knowledge",
+      "view": "Actual statutory knowledge is central to paragraph (b); mere suspicion should not automatically be equated with it."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Reasonableness",
+      "view": "The provision itself uses reasonableness language, making the circumstances of reporting or prevention relevant."
+    }
+  ],
+  "debateQuestion": "Evidence inaonyesha knowledge gani, na hatua zilizochukuliwa au kutokuchukuliwa zinakidhi vipi 'reasonable dispatch' au 'reasonable endeavours'?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

@@ -1,0 +1,49 @@
+{
+  "section": "55",
+  "language": "sw",
+  "plainLanguage": "Section 55 inafafanua seditious intention, lakini pia inaweka exceptions muhimu kwa criticism ya Serikali, kuonyesha defects, na kutafuta mabadiliko kwa lawful means.",
+  "meaning": "Subsection (1) lists intentions classified as seditious. Subsection (2) expressly limits that definition for specified criticism and lawful reform advocacy. Subsection (3) addresses determination of intention from natural consequences and context.",
+  "keyPoints": [
+    "Subsection (1) contains the definition.",
+    "Subsection (2) expressly protects listed criticism and lawful reform advocacy from being seditious merely for those reasons.",
+    "Subsection (3) supplies a rule for determining intention.",
+    "The complete section must be read together."
+  ],
+  "legalTerms": [
+    {
+      "term": "seditious intention",
+      "meaning": "Intention defined in subsection (1), subject to subsection (2)."
+    },
+    {
+      "term": "lawful means",
+      "meaning": "Njia halali za kutafuta mabadiliko, expressly distinguished by subsection (2)."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Lawful reform advocacy",
+      "scenario": "Citizens advocate changing a legal rule through lawful procedures.",
+      "analysis": "Subsection (2) is directly relevant and must be considered before characterising the conduct as seditious."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "The repository copy previously stopped after subsection (1); subsections (2) and (3) were restored from the official consolidated source.",
+    "notes": [],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Whole-section reading",
+      "view": "Subsection (1) should not be interpreted while omitting the express limitations in subsection (2)."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Context",
+      "view": "Subsection (3) makes circumstances and natural consequences relevant to determining intention."
+    }
+  ],
+  "debateQuestion": "Je, conduct inayodaiwa inaangukia definition ya subsection (1), au limitation ya subsection (2), ukizingatia context ya subsection (3)?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

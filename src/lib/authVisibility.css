@@ -1,0 +1,44 @@
+html:not([data-authenticated="true"]) .nav nav a:not(:first-child),
+html:not([data-authenticated="true"]) .navActions .searchLink,
+html:not([data-authenticated="true"]) .navActions .desktopMoreBtn,
+html:not([data-authenticated="true"]) .navActions .mobileMenuBtn,
+html:not([data-authenticated="true"]) .menuBackdrop,
+html:not([data-authenticated="true"]) .siteFooter .footerLinks {
+  display:none!important;
+}
+
+.siteFooter a[href="/katiba"] {
+  display:none!important;
+}
+
+.authShell {
+  background:#fff!important;
+  border-color:#d7e3da!important;
+  color:#17231b!important;
+}
+
+.authIntro {
+  background:#123d2b!important;
+  border-right:3px solid #c6a65a;
+}
+
+.authIntro>svg {color:#8be0b2!important}
+.authIntro h2,.authOfficialLogo strong {color:#fff!important}
+.authIntro p,.authOfficialLogo span {color:#dcebe1!important}
+.authForm {background:#fff!important;color:#17231b!important}
+.authForm label {color:#26352b!important}
+.authForm input {background:#fff!important;color:#17231b!important;border-color:#b8c8bd!important;color-scheme:light}
+.authForm input::placeholder {color:#6b776f!important;opacity:1}
+.authForm input:focus {border-color:#087a4b!important;box-shadow:0 0 0 3px rgba(8,122,75,.16)}
+.passwordToggle {color:#285d41!important}
+.authSwitch {color:#08683f!important}
+.authMessage[role="alert"] {background:#fff4e8!important;border:1px solid #e8cda9;color:#6b431a!important}
+
+.themeHeader{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.themeHeader:focus-visible{outline:3px solid #67b98a;outline-offset:2px}
+@media(max-width:1100px){
+  html:not([data-authenticated="true"]) .navActions .headerLanguage,
+  html:not([data-authenticated="true"]) .navActions .themeHeader,
+  html:not([data-authenticated="true"]) .navActions .headerAccountLink{display:inline-flex!important}
+}
+@media(max-width:640px){.navActions .themeHeader span{display:none}.navActions .themeHeader{padding:8px}}

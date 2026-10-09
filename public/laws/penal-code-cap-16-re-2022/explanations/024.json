@@ -1,0 +1,62 @@
+{
+  "section": "24",
+  "language": "sw",
+  "plainLanguage": "Mtu akimcounsel mwingine kufanya offence, na baada ya counsel hiyo mtu huyo akafanya offence, counsellor anaweza kuwajibika hata kama offence iliyofanyika si exactly ile aliyoshauri au haikufanywa kwa njia aliyopendekeza—mradi facts za offence iliyotokea ni probable consequence ya carrying out the counsel.",
+  "meaning": "Section 24 extends counselling liability to variations between advice na outcome. Statutory control ni probable consequence. Hivyo counsellor si automatically responsible kwa kila offence ambayo actor baadaye anafanya; lazima resulting offence/facts ziwe probable consequence ya kutekeleza counsel.",
+  "keyPoints": [
+    "Lazima kuwe na counselling to commit an offence.",
+    "Offence lazima actually committed after counsel by person counselled.",
+    "Resulting offence inaweza kuwa same au different.",
+    "Method inaweza kuwa same au different.",
+    "Critical limit ni kwamba facts constituting actual offence must be a probable consequence of carrying out the counsel."
+  ],
+  "legalTerms": [
+    {
+      "term": "counsel",
+      "meaning": "Kushauri/kuhimiza mwingine kufanya offence."
+    },
+    {
+      "term": "actual offence",
+      "meaning": "Offence ambayo person counselled hatimaye amefanya."
+    },
+    {
+      "term": "probable consequence",
+      "meaning": "Statutory link inayotakiwa kati ya carrying out counsel na facts za offence iliyotokea."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Method tofauti",
+      "scenario": "A anamshauri B kufanya offence kwa njia fulani; B anaifanya offence hiyo lakini kwa method tofauti.",
+      "analysis": "Method difference peke yake haitoi counsellor kwenye section 24 ikiwa actual offence remains a probable consequence of carrying out counsel."
+    },
+    {
+      "title": "Escalation isiyotarajiwa",
+      "scenario": "A anashauri offence ndogo, lakini B kwa sababu yake binafsi anafanya offence kubwa tofauti isiyo probable consequence ya counsel.",
+      "analysis": "Section 24 requires probable consequence; counsellor liability si unlimited."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 24 complements section 22's counselling/procuring rule by addressing what happens where the offence actually committed differs from the offence or method counselled.",
+    "notes": [
+      "Section 22 identifies counselling as participation; section 24 addresses consequential variation after counselling.",
+      "No case citation was inserted where a sufficiently traceable Tanzanian primary authority specifically applying this section was not established in this batch."
+    ],
+    "sourceUrl": "https://www.sheria.go.tz/uploads/documents/sw-1677665965-THE%20PENAL%20CODE.pdf"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Scope of counsel",
+      "view": "The content of what was actually counselled must be established before a court can assess whether the later offence was a probable consequence."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Causal/normative boundary",
+      "view": "Probable consequence acts as the boundary preventing counselling liability from expanding to every independent offence later committed by the person counselled."
+    }
+  ],
+  "debateQuestion": "Counsel halisi ilikuwa nini, offence gani ilifanyika, na ni kwa nini facts zake ni—or are not—a probable consequence of carrying out that counsel?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

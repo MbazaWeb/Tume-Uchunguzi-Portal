@@ -1,0 +1,86 @@
+{
+  "section": "63C",
+  "language": "sw",
+  "plainLanguage": "Mtu anayetumia, kuchapisha, kusambaza, kuwasilisha, kuonyesha, kucheza, kutoa, au kuelekeza maneno, mwenendo au nyenzo zenye vitisho, matusi au kumbeukaji — anafanya kosa ikiwa ana nia ya kuchochea chuki ya kikabila, AU kwa kuzingatia mazingira yote, chuki ya kikabila inaweza kuchochewa. Adhabu ni faini ya shilingi milioni tano au kifungo cha si chini ya miaka mitano au vyote viwili.",
+  "meaning": "Section 63C inaweka kosa la 'hate speech' linalolenga kupigia marufuku matumizi ya maneno au nyenzo zenye kuchukiza au kudhuru kikundi cha kikabila. Inatumia mifumo miwili ya pamoja: (i) subjective test (intent ya kuchochea ethnic hatred) AU (ii) objective test (kwa kuzingatia mazingira yote, ethnic hatred inaweza kuchochewa). Adhabu ni kubwa — milioni 5 au miaka 5 au zaidi au vyote.",
+  "keyPoints": [
+    "Conduct (8 verbs): use, publish, distribute, present, show, play, produce, direct.",
+    "Content: 'threatening, abusive or insulting words, behavior or material'.",
+    "Mental element (subjective): intent ya 'stir up ethnic hatred'.",
+    "Objective element: 'having regard to all the circumstances, ethnic hatred is likely to be stirred up' — inaweza kuthibitishwa hata bila proof ya intent.",
+    "Penalty: faini ya TSh 5,000,000 au imprisonment si chini ya miaka 5 au vyote viwili.",
+    "Mifumo miwili ni ya pamoja (subjective AU objective) — prosecution inaweza kuchagua mojawapo."
+  ],
+  "legalTerms": [
+    {
+      "term": "ethnic hatred",
+      "meaning": "Chuki au dharau dhidi ya kikundi kwa msingi wa rangi, asili, dini, au kabila — msingi wa kifungu hiki."
+    },
+    {
+      "term": "threatening, abusive or insulting",
+      "meaning": "Maneno au mwenendo unaotisha, kutukana, au kudhuru — vina vitisho vya moja kwa moja au vya moja kwa moja."
+    },
+    {
+      "term": "stir up",
+      "meaning": "Kuchochea, kufuatia, au kusukuma kuibuka kwa hisia fulani — hapa ni kusukuma kuibuka kwa ethnic hatred."
+    },
+    {
+      "term": "having regard to all the circumstances",
+      "meaning": "Kwa kuzingatia mazingira yote — ni objective test inayotathmini kama nyenzo iliweza kuchochea ethnic hatred kwa mtazamo wa kimantiki, si tu kwa nia ya mtendaji."
+    },
+    {
+      "term": "behavior",
+      "meaning": "Mwenendo au vitendo vya kimwili — si tu maneno, lakini ishara, picha, au video."
+    },
+    {
+      "term": "material",
+      "meaning": "Nyenzo — mfano wa makala, video, picha, au maandishi yaliyoandikwa/chapishwa."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Subjective test — intent ya kuchochea",
+      "scenario": "Mtu anachapisha makala yenye maneno ya kudhihi kikundi cha kikabila, na inathibitishwa kuwa alikuwa na intent ya kuchochea chuki ya kikabila.",
+      "analysis": "Hii inakidhi subjective test (intent ya stir up ethnic hatred). Hakuna haja ya kuthibitisha kuwa ethnic hatred ilichochewa kweli — intent pekee inatosha."
+    },
+    {
+      "title": "Objective test — likely to stir up",
+      "scenario": "Mtu anatoa hotuba yenye maneno ya kudhihi kikundi, na hata kama hakusema wazi ana intent ya kuchochea chuki, mazingira yote (mfano wa hadhira, mazingira ya kisiasa) yanaonyesha kwamba ethnic hatred inaweza kuchochewa.",
+      "analysis": "Hii inakidhi objective test (having regard to all the circumstances, ethnic hatred is likely to be stirred up). Hata bila proof ya intent, kosa linaweza kuthibitishwa."
+    },
+    {
+      "title": "Hakuna connection na ethnic — si kosa",
+      "scenario": "Mtu anatumik maneno ya matusi ya kawaida dhidi ya mtu binafsi, bila kuhusu kikundi cha kikabila.",
+      "analysis": "Section 63C inahitaji kuwepo kwa 'ethnic hatred' — maneno ya kawaida ya matusi bila element ya kikabila hayafungi kifungu hiki (ingawa yanaweza kufungwa na section nyingine kama vile 89)."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 63C ilianzishwa kama sehemu ya mageuzi ya Penal Code kupigania hate speech na kupunguza chuki ya kikabila nchini. Inapatikana katika Chapter VII ya Penal Code, inayohusisha offences against public order. Adhabu kubwa inaonyesha msisimko wa serikali katika kulinda amani ya kikabila.",
+    "notes": [
+      "Mifumo miwili ya pamoja (subjective AU objective) inapanua scope ya kifungu — prosecution inaweza kuchagua mojawapo.",
+      "Adhabu kubwa (millioni 5 au miaka 5+) inaonyesha kwamba hate speech inachukuliwa kama kosa serious.",
+      "Tafsiri inapaswa kufuata maandishi halisi — bila kutoa maana zaidi au kupunguza element za kifungu."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Subjective au objective",
+      "view": "Prosecution inaweza kuchagua kuthibitisha intent ya subjective AU likelihood ya objective. Hii inafanya kifungu kiwe rahisi kutekeleza lakini pia inaweza kusababisha kesi za over-broad."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Conduct ni pana",
+      "view": "Orodha ya tendaji 8 (use, publish, distribute, present, show, play, produce, direct) inaonyesha kuwa kifungu kinakata njia nyingi za kupitisha hate speech — si tu anayeandika, lakini anayeonyesha au kucheza."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Constitutional balance",
+      "view": "Kifungu kinaweza kukabiliana na concerns za freedom of expression chini ya Katiba. Hata hivyo, hate speech inayolenga kikundi cha kikabila si protected speech chini ya standard nyingi za kimataifa."
+    }
+  ],
+  "debateQuestion": "Je, conduct lilikuwa 'threatening, abusive or insulting', na prosecution imethibitisha kwamba mtu alikuwa na intent ya kuchochea ethnic hatred (subjective test) AU kwamba kwa kuzingatia mazingira yote, ethnic hatred ilikuwa likely kuchochewa (objective test)?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

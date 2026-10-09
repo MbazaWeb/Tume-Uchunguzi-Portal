@@ -1,0 +1,58 @@
+{
+  "section": "35",
+  "language": "sw",
+  "plainLanguage": "Penal Code ikitengeneza offence lakini haijaweka punishment expressly kwa offence hiyo, section 35 supplies general maximum: imprisonment not exceeding five years, fine, au both.",
+  "meaning": "Section 35 ni fallback penalty, si authority ya kuongeza punishment pale Code tayari imeweka penalty. Trigger yake ni absence of an expressly provided punishment in this Code. Maximum imprisonment supplied is five years; court may instead impose fine or both, subject to general sentencing law.",
+  "keyPoints": [
+    "Applies only where Code provides no express punishment for the offence.",
+    "Maximum fallback imprisonment is five years.",
+    "Fine is an alternative.",
+    "Court may impose both imprisonment and fine.",
+    "If a specific penalty exists elsewhere for that offence, use that specific provision rather than section 35 fallback."
+  ],
+  "legalTerms": [
+    {
+      "term": "general punishment",
+      "meaning": "Fallback punishment supplied where an offence lacks its own express penalty."
+    },
+    {
+      "term": "not exceeding five years",
+      "meaning": "Five years is the statutory ceiling for imprisonment under this fallback, not an automatic sentence."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Offence has no penalty clause",
+      "scenario": "A Penal Code provision clearly creates an offence but neither that provision nor applicable Code text expressly supplies punishment.",
+      "analysis": "Section 35 can supply up to five years imprisonment, fine, or both."
+    },
+    {
+      "title": "Specific penalty exists",
+      "scenario": "Offence provision expressly says punishment is seven years.",
+      "analysis": "Section 35 does not replace that express penalty; its trigger is absence of express punishment."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 35 closes Chapter VI by preventing a Penal Code offence from becoming penalty-less merely because no punishment was expressly attached to that particular offence.",
+    "notes": [
+      "Always search the offence and relevant linked provisions before concluding that no punishment is expressly provided.",
+      "'Not exceeding' creates a maximum, leaving lawful sentencing discretion below it."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Fallback only",
+      "view": "The interpretive sequence matters: first locate any specific punishment; only if none is expressly provided should section 35 be used."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Maximum versus sentence",
+      "view": "Five years is a ceiling, not a presumptive or mandatory term. Sentencing still requires lawful exercise of discretion."
+    }
+  ],
+  "debateQuestion": "Je, Code kweli haina express punishment kwa offence hiyo baada ya provisions zote zinazohusiana kukaguliwa, na ikiwa haina, sentence ipi ndani ya section 35 range ni lawful?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

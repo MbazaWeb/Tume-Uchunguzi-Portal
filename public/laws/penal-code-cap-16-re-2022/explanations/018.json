@@ -1,0 +1,81 @@
+{
+  "section": "18",
+  "language": "sw",
+  "plainLanguage": "Section 18 inatambua kwamba act iliyofanywa katika lawful exercise ya self-defence, defence of another, au defence of property inaweza kutokuwa na criminal liability. Lakini right hiyo si unlimited: section 18 yenyewe iko subject to section 18A na provisions nyingine za Code kuhusu namna na kiwango cha force.",
+  "meaning": "Section 18 ni gateway provision. Ili kuielewa kikamilifu lazima isomwe pamoja na sections 18A, 18B na 18C. Section 18A defines the right; 18B limits force to reasonable force necessary for defence and addresses consequences of excessive force; 18C specifies circumstances where causing death/grievous harm may fall within the right. Kwa hiyo kusema tu 'nilikuwa najilinda' hakumalizi inquiry.",
+  "keyPoints": [
+    "Right inaweza kuwa self-defence, defence of another, au defence of property.",
+    "Act lazima iwe katika exercise ya right inayotambuliwa na Code.",
+    "Section 18 expressly subject to section 18A.",
+    "Reasonableness na necessity ya force ni central under related provisions.",
+    "Excessive force can carry criminal consequences under section 18B."
+  ],
+  "legalTerms": [
+    {
+      "term": "self-defence",
+      "meaning": "Right ya mtu kujilinda dhidi ya unlawful assault/violence kwa masharti ya Code."
+    },
+    {
+      "term": "defence of another",
+      "meaning": "Kutumia right ya defence kumlinda mtu mwingine dhidi ya unlawful assault/violence."
+    },
+    {
+      "term": "defence of property",
+      "meaning": "Right inayohusu kulinda property dhidi ya unlawful seizure, destruction au violence kwa masharti ya Code."
+    },
+    {
+      "term": "reasonable force",
+      "meaning": "Force inayopimwa kwa necessity na reasonableness katika circumstances; related provisions limit the right accordingly."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Shambulio la papo hapo",
+      "scenario": "A anamshambulia B kwa violence; B anatumia force kuzuia shambulio.",
+      "analysis": "Inquiry haiishii kwenye existence ya assault. Court huangalia right under 18A na kama force iliyotumika ilikuwa necessary/reasonable chini ya framework ya sections 18A-18C."
+    },
+    {
+      "title": "Property na excessive force",
+      "scenario": "Mtu anatumia lethal-level force kulinda property katika circumstances ambazo threat haielekei kwenye life au grievous harm.",
+      "analysis": "Defence of property ipo, lakini degree ya force lazima ipimwe dhidi ya statutory limitations; property label pekee haitoi unlimited licence ya force."
+    }
+  ],
+  "cases": [
+    {
+      "name": "Nocolaus Nicolaus Kapinga and 4 Others v Republic",
+      "citation": "Criminal Appeal No. 45 of 1994; [1998] TZCA 3",
+      "court": "Court of Appeal of Tanzania",
+      "year": "1998",
+      "relevance": "The Court reviewed the post-1980 self-defence framework, including section 18B's reasonable-force requirement, and discussed the consequences where an accused honestly and reasonably acts in defence.",
+      "sourceUrl": "https://sheriahub.com/cases/tz/caselaw/nocolaus-nicolaus-kapinga-and-4-others-vs-the-republic-criminal-appeal-45-of-1994-1998-tzca-3-01-july-1998"
+    }
+  ],
+  "history": {
+    "summary": "The present statutory architecture was substantially shaped by the Penal Code (Amendment) Act, 1980. That Act replaced section 18 and inserted sections 18A, 18B and 18C, moving the defence into an express statutory framework.",
+    "notes": [
+      "Act No. 6 of 1980 replaced section 18.",
+      "The same amendment inserted the detailed right-of-defence provisions 18A-18C.",
+      "Older cases applying the pre-1980 wording require care when used to explain the current Code."
+    ],
+    "sourceUrl": "https://polis.parliament.go.tz/uploads/bills/acts/1566384915-The%20Penal%20Code%20%28Amendment%29%20Act%2C%201980.pdf"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Existence of the right",
+      "view": "First ask whether the accused was actually responding to an unlawful act covered by the statutory right."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Necessity and proportionality",
+      "view": "Even when the right exists, the degree of force remains a separate inquiry. Sections 18B-18C prevent the defence from becoming unlimited."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Honest and reasonable perception",
+      "view": "Appellate case law places importance on what the accused honestly and reasonably perceived in the circumstances, while still testing force against statutory limits."
+    }
+  ],
+  "debateQuestion": "Kulikuwa na unlawful threat gani, accused aliiona vipi, na force iliyotumika ilikuwa necessary na reasonable kwa defence hiyo?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

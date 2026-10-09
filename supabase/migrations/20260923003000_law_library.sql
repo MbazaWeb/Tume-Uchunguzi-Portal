@@ -1,0 +1,13 @@
+alter table public.library_uploads drop constraint if exists library_uploads_document_type_check;
+alter table public.library_uploads add constraint library_uploads_document_type_check check (document_type in ('katiba','rasimu','sheria','nyaraka_nyingine'));
+alter table public.library_uploads add column if not exists law_category text;
+alter table public.library_uploads add column if not exists chapter_number text;
+alter table public.library_uploads add column if not exists act_number text;
+create table if not exists public.law_section_comments(id uuid primary key default gen_random_uuid(),library_upload_id uuid not null references public.library_uploads(id) on delete cascade,section_number text not null,user_id uuid not null references public.profiles(id) on delete cascade,body text not null check(char_length(body) between 2 and 2000),created_at timestamptz not null default now());
+alter table public.law_section_comments enable row level security;
+create policy "Law comments public read" on public.law_section_comments for select to anon,authenticated using(true);
+create policy "Users create law comments" on public.law_section_comments for insert to authenticated with check((select auth.uid())=user_id);
+create policy "Users delete own law comments" on public.law_section_comments for delete to authenticated using((select auth.uid())=user_id);
+grant select on public.law_section_comments to anon,authenticated;
+grant insert,delete on public.law_section_comments to authenticated;
+create index if not exists law_section_comments_section_idx on public.law_section_comments(library_upload_id,section_number,created_at);

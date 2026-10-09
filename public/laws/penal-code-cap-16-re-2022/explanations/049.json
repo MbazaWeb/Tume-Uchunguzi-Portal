@@ -1,0 +1,51 @@
+{
+  "section": "49",
+  "language": "sw",
+  "plainLanguage": "Section 49 inaeleza maana pana ya overt act kwa offences za Chapter VII pale manifestation by overt act ni element: conspiracy to achieve the purpose na acts in furtherance by conspirators zinaweza kuhesabika kama overt acts.",
+  "meaning": "This is an interpretive provision for offences in the Chapter. Where manifestation by overt act is an element, it deems specified conspiracy and furtherance acts to constitute overt acts manifesting the intention.",
+  "keyPoints": [
+    "Applies to offences set out in Chapter VII.",
+    "Operates only where manifestation by overt act is an element.",
+    "Conspiring to effect the relevant purpose is deemed an overt act.",
+    "Acts in furtherance by persons conspiring are also deemed overt acts."
+  ],
+  "legalTerms": [
+    {
+      "term": "overt act",
+      "meaning": "Kitendo kinachodhihirisha intention kwa purposes za offences zinazohitaji manifestation hiyo."
+    },
+    {
+      "term": "in furtherance",
+      "meaning": "Kitendo kinachosukuma mbele purpose ya conspiracy."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Element check",
+      "scenario": "Prosecution allegation is assessed against the exact wording of this section.",
+      "analysis": "Kila statutory element lazima ithibitishwe; label ya offence peke yake haitoshi."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 49 forms part of Chapter VII, Treason and Other Offences Against the Republic.",
+    "notes": [
+      "Official wording checked against the R.E. 2022 source before explanation."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Elements",
+      "view": "Analysis should follow the exact statutory verbs and mental elements rather than a broad description of the alleged conduct."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Evidence",
+      "view": "The evidence should be matched separately to each required element and any express qualification in the provision."
+    }
+  ],
+  "debateQuestion": "Je, evidence inayodaiwa inathibitisha kila element ya section 49 bila kupanua wording ya statute?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

@@ -1,0 +1,52 @@
+{
+  "section": "40",
+  "language": "sw",
+  "plainLanguage": "Section 40 inalenga mtu ambaye si under allegiance to the United Republic lakini, akiwa Tanzania au nje, kwa nia ya kusaidia enemy wa United Republic, anafanya kitendo ambacho kingekuwa treason chini ya section 39.",
+  "meaning": "The section extends criminal liability to a person outside the allegiance element used in section 39 where the stated enemy-assistance intent and conduct are established. Its wording depends directly on section 39, so the relevant section 39 conduct must be identified rather than assumed.",
+  "keyPoints": [
+    "Applies to a person not under allegiance to the United Republic.",
+    "Can apply to conduct in the United Republic or elsewhere.",
+    "Requires intent to help an enemy of the United Republic.",
+    "The conduct must be of the kind that would amount to treason under section 39.",
+    "The section states a death sentence on conviction."
+  ],
+  "legalTerms": [
+    {
+      "term": "not being under allegiance",
+      "meaning": "Statutory distinction from section 39, which expressly addresses persons under allegiance."
+    },
+    {
+      "term": "enemy",
+      "meaning": "Term used by the section in connection with the required intent to help an enemy of the United Republic."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Section 39 cross-reference",
+      "scenario": "A person without allegiance is alleged to have acted to help an enemy.",
+      "analysis": "It is still necessary to identify the section 39 conduct that the alleged act would amount to; section 40 is not a free-standing generic enemy-assistance offence."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 40 is structurally tied to section 39 and addresses the absence of allegiance in the accused person.",
+    "notes": [
+      "The R.E. 2022 text records Act No. 2 of 1970."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Cross-reference",
+      "view": "Analysis should begin by identifying the corresponding section 39 conduct."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Mens rea",
+      "view": "The express intent to help an enemy is a statutory element and should be proved rather than inferred solely from the alleged act."
+    }
+  ],
+  "debateQuestion": "Ni conduct gani chini ya section 39 ambayo alleged act ya mtu asiye under allegiance inadaiwa kuifikia?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

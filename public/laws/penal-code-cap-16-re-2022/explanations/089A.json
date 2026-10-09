@@ -1,0 +1,86 @@
+{
+  "section": "89A",
+  "language": "sw",
+  "plainLanguage": "Mtu anayeangalia au kukesha eneo la nyumba au mahali pengine, au njia zinazoingia hapo, kwa nia ya kuzuia mtu mwingine afanye kitendo anachoruhusiwa kisheria, au kumlazimisha mtu mwingine afanye kitendo ambacho anaweza kisheria kukitenga — anafanya kosa. Adhabu ni kifungo cha miezi sita.",
+  "meaning": "Section 89A inalinda amani ya mtu binafsi na uhuru wake wa kisheria wa kufanya au kutokufanya vitendo. Inagusa mtu anayetumia surveillance au kukesha eneo la mwathirika kwa nia ya kumshinikiza kimatendo bila mamlaka ya kisheria. Kosa hili linahitaji kuthibitisha kilele (a) au (b): nia ya kuzuia act halali AU kumlazimisha act ambacho mwathirika anaweza kukitenga.",
+  "keyPoints": [
+    "Conduct: 'watches or besets' — kufuatilia, kukesha, au kufuatia eneo la mwathirika.",
+    "Location: 'premises or other place' au 'approaches' — nyumba, mahali, au njia zinazoingia.",
+    "Purpose (a): kuzuia mtu mwingine kufanya act anayoruhusiwa kisheria kufanya.",
+    "Purpose (b): kumlazimisha mtu mwingine kufanya act ambayo anaweza kisheria kujiepusha nayo.",
+    "Penalty: imprisonment for six months.",
+    "Act lazima liwe la kimwili (watching/besetting) pamoja na nia mahususi — si tu kuwa karibu na eneo hilo."
+  ],
+  "legalTerms": [
+    {
+      "term": "watching",
+      "meaning": "Kufuatilia au kufuatia kwa makini eneo au mtu, mara kwa mara au kwa muda mrefu."
+    },
+    {
+      "term": "besetting",
+      "meaning": "Kukesha, kujeruhiwa, au kuzunguka mtu au eneo kwa namna inayoleta shinikizo au wasiwasi."
+    },
+    {
+      "term": "premises",
+      "meaning": "Nyumba, jengo, au eneo la kimwili ambalo mtu anaendesha au analinda."
+    },
+    {
+      "term": "approaches",
+      "meaning": "Njia au mwelekeo wa kuingia eneo hilo — mfano barabara, lango, au njia ndogo inayoelekea hapo."
+    },
+    {
+      "term": "with a view to",
+      "meaning": "Kwa nia ya — inaashiria kuwa conduct ni lenye lengo mahususi, si bahati mbaya."
+    },
+    {
+      "term": "lawfully do / lawfully abstain from doing",
+      "meaning": "Act ambayo mtu ana haki ya kisheria kufanya (au kutokeana nayo) — kama vile kufanya kazi, kuomba, kuhudhuria mkokotoni, au kutopatia sahihi."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Purpose (a) — kuzuia act halali",
+      "scenario": "Mtu anakesha lango la duka la mwathirika kwa siku kadhaa kwa nia ya kumzuia mwathirika kufungua duka lake kibiashara.",
+      "analysis": "Conduct ni 'besetting' chini ya 89A, na nia ni kuzuia act halali (kufanya biashara) — inakidhi purpose (a)."
+    },
+    {
+      "title": "Purpose (b) — kumlazimisha act ambalo mwathirika anaweza kutenga",
+      "scenario": "Mtu anamfuatilia mwathirika nyumbani na kumzesha kutoa sahihi fulani au kumlazimisha kuondoka kwenye mjadala wa jumuiya.",
+      "analysis": "Mtendaji wa 'besetting' una nia ya kumlazimisha mwathirika kufanya act ambalo anaweza kisheria kujiepusha nayo — inakidhi purpose (b)."
+    },
+    {
+      "title": "Hakuna nia ya kuzuia/lazimisha — si kosa",
+      "scenario": "Mtu anapita mlangoni pa mwathirika kwa sababu ya kumsaidia jirani au kumpa lifti bila nia yoyote ya kumlazimisha au kumzuia.",
+      "analysis": "Kuwa karibu tu na eneo hilo si kosa — 89A inahitaji nia ya purpose (a) au (b) kuwepo."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 89A ilianzishwa kama sehemu ya public-order provisions za Chapter IX, inayolinda uhuru wa kisheria wa mtu binafsi dhidi ya surveillance na shinikizo la kimatendo.",
+    "notes": [
+      "Section 89A inahitaji conduct (watching/besetting) na nia mahususi (purpose a au b) — vina viwili vya cumulative.",
+      "Tofauti na section 89B (Intimidation) ambayo inahitaji 'wrongful and without legal authority' — 89A haiweki kauli hiyo wazi, lakini purpose yake ya kuzuia/lazimisha act halali inashikilia mfumo kama wa 'wrongful' kwa asili.",
+      "Tafsiri inapaswa kufuata maandishi halisi ya kifungu bila kutoa maana zaidi ya yaliyomo."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Conduct + purpose ni vya pamoja",
+      "view": "Kosa chini ya 89A linahitaji kuthibitishwa conduct (watching/besetting) na nia mahususi (purpose a au b). Hakuna moja tu inatosha."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Conduct halali haifungwi",
+      "view": "Section 89A haifungi conduct halali ya watching/besetting — mfano wa polisi au security guard anayefanya kazi yake halali. Inalenga tu conduct lenye nia ya kuzuia/lazimisha act halali."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Penalty ni ya chini",
+      "view": "Adhabu ya miezi 6 ni ndogo ikilinganishwa na 89B (mwaka 1). Inaonyesha kwamba 89A inalenga shinikizo la kimatendo la chini zaidi, na 89B inalenga intimidation kubwa zaidi."
+    }
+  ],
+  "debateQuestion": "Je, prosecution imethibitisha kwamba mtu alikuwa anafanya 'watching or besetting' na kwamba alikuwa na nia mahususi ya kuzuia act halali (purpose a) au kumlazimisha act ambacho mwathirika anaweza kujiepusha nayo (purpose b)?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

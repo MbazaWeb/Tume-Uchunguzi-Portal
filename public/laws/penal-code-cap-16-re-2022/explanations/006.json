@@ -1,0 +1,61 @@
+{
+  "section": "6",
+  "language": "sw",
+  "plainLanguage": "Kifungu hiki kinaeleza maeneo na mazingira ambayo mahakama za Tanzania zina mamlaka kwa madhumuni ya Penal Code. Mamlaka hayo yanafika kwenye maeneo ndani ya territorial waters, baadhi ya makosa yanayofanywa nje ya Tanzania, makosa kwenye ndege iliyosajiliwa Tanzania, na makosa yanayofanywa kwenye high seas.",
+  "meaning": "Kwa mujibu wa kifungu hiki, mamlaka ya mahakama za Tanzania chini ya Penal Code si lazima yaishie kwenye ardhi ya Tanzania pekee. Kifungu kinaorodhesha mazingira manne ambayo jurisdiction hiyo inafika, na pia kinafafanua maana ya “high seas” kwa matumizi ya kifungu hiki.",
+  "keyPoints": [
+    "(1)(a): Jurisdiction inafika kila mahali ndani ya territorial waters.",
+    "(1)(b): Inajumuisha kosa linalofanywa na raia wa Tanzania mahali popote nje ya Tanzania.",
+    "(1)(c): Inajumuisha kosa linalofanywa na mtu yeyote kwenye aircraft iliyosajiliwa Tanzania.",
+    "(1)(d): Inajumuisha offences zinazofanywa na mtu yeyote kwenye high seas.",
+    "(2): Kwa kifungu hiki, “high seas” ni open seas za dunia zilizo nje ya jurisdiction ya state yoyote."
+  ],
+  "legalTerms": [
+    {
+      "term": "jurisdiction",
+      "meaning": "Mamlaka ya mahakama kushughulikia jambo kwa madhumuni ya Penal Code."
+    },
+    {
+      "term": "territorial waters",
+      "meaning": "Maeneo ya maji ya taifa yanayotajwa na kifungu kama sehemu ambayo jurisdiction ya mahakama za Tanzania inafika."
+    },
+    {
+      "term": "high seas",
+      "meaning": "Kwa kifungu hiki, open seas za dunia zilizo nje ya jurisdiction ya state yoyote."
+    }
+  ],
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria.",
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Upeo wa mamlaka",
+      "view": "Kifungu kinaweza kusomwa kama upanuzi wa jurisdiction ya mahakama za Tanzania kwa mazingira yaliyotajwa wazi, badala ya kuifanya jurisdiction kuwa ya eneo la ardhi pekee."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Mipaka ya maandishi",
+      "view": "Uchambuzi wa tahadhari unasisitiza kuwa mamlaka ya nje ya Tanzania hapa isipanuliwe kwa inference zaidi ya categories zilizoorodheshwa katika subsection (1)."
+    },
+    {
+      "label": "Hoja ya uchambuzi",
+      "focus": "High seas",
+      "view": "Definition ya “high seas” katika subsection (2) ni muhimu kwa sababu kifungu chenyewe kinaifunga term hiyo kwenye open seas zilizo nje ya jurisdiction ya state yoyote."
+    }
+  ],
+  "debateQuestion": "Je, katika kesi yenye sehemu ya tukio nje ya Tanzania, ni category gani hasa ya subsection (1) inayotoa jurisdiction, na facts zinatosha kuingia ndani yake?",
+  "examples": [
+    {
+      "title": "Mfano wa jurisdiction",
+      "scenario": "Raia wa Tanzania anadaiwa kufanya offence akiwa nje ya Tanzania.",
+      "analysis": "Kifungu cha 6(1)(b) kinafanya citizenship na mahali offence ilipofanywa kuwa mambo muhimu ya kuanza kuchunguza jurisdiction; mfano huu hauamui kama offence imethibitishwa."
+    }
+  ],
+  "history": {
+    "summary": "Territorial-application provisions zimekuwepo katika Penal Code kwa muda mrefu, lakini upeo wa section 6 umebadilika katika matoleo ya sheria. Chanzo cha sasa cha mradi ni R.E. 2022.",
+    "notes": [
+      "Toleo la zamani linalopatikana Refworld linaonyesha formulation ya awali iliyokuwa nyembamba kuhusu territorial reach.",
+      "R.E. 2022 ndiyo official source inayotumika na app; historical text haibadilishi maandishi ya sasa."
+    ],
+    "sourceUrl": "https://www.sheria.go.tz/uploads/documents/sw-1677665965-THE%20PENAL%20CODE.pdf"
+  }
+}

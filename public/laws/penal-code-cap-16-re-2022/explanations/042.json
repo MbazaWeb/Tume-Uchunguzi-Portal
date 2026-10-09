@@ -1,0 +1,40 @@
+{
+  "section": "42",
+  "language": "sw",
+  "plainLanguage": "Katika Revised Edition 2022, section 42 imeandikwa tu kuwa 'Omitted'. Hakuna substantive offence text ya section 42 katika edition hii.",
+  "meaning": "An omitted provision should not be reconstructed from guesswork. The current library should preserve the official R.E. 2022 status and, if historical wording is needed, it should be sourced from an earlier authoritative edition or amending instrument.",
+  "keyPoints": [
+    "R.E. 2022 marks section 42 as omitted.",
+    "No current substantive text is supplied at this section number.",
+    "Historical content should not be presented as current law without authoritative sourcing."
+  ],
+  "legalTerms": [
+    {
+      "term": "omitted",
+      "meaning": "Provision haijachapishwa kama substantive operative text katika revised edition hii."
+    }
+  ],
+  "examples": [],
+  "cases": [],
+  "history": {
+    "summary": "The official R.E. 2022 source marks section 42 as omitted.",
+    "notes": [
+      "No historical wording has been invented in this library entry."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Current text",
+      "view": "The safest digital representation is to preserve the official 'Omitted' status."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Historical research",
+      "view": "Any explanation of what formerly occupied section 42 requires a traceable historical legislative source."
+    }
+  ],
+  "debateQuestion": "Ikiwa historical section 42 inahitajika, ni authoritative amendment au earlier edition ipi inayothibitisha wording na kipindi ilichokuwa inatumika?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

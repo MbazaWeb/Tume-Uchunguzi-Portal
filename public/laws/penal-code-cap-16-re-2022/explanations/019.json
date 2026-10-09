@@ -1,0 +1,73 @@
+{
+  "section": "19",
+  "language": "sw",
+  "plainLanguage": "Section 19 inaelekeza court jinsi ya kutathmini criminal charge inayotokana na arrest au attempted arrest ya mtu anayepinga kwa nguvu au anayejaribu kukwepa kukamatwa. Court inapopima kama means used zilikuwa necessary au degree of force ilikuwa reasonable, lazima izingatie gravity ya offence ya mtu anayekamatwa na circumstances ambazo offence hiyo ilifanyika/ilikuwa ikifanyika.",
+  "meaning": "Kifungu hakisemi kwamba arrest inahalalisha force yoyote. Kinaunda contextual test ya necessity na reasonableness. Gravity of underlying offence na circumstances zake ni express factors. Framework hii pia inapaswa kusomwa pamoja na Criminal Procedure Act rules on force in making arrest, ambazo zinakataza more force or greater indignity than necessary.",
+  "keyPoints": [
+    "Lazima kuwe na criminal charge arising out of arrest/attempted arrest.",
+    "Person being arrested must have forcibly resisted au attempted to evade arrest kwa wording ya section 19.",
+    "Court assesses necessity of means and reasonableness of degree of force.",
+    "Gravity ya underlying offence ni express consideration.",
+    "Circumstances of that offence pia lazima zizingatiwe.",
+    "Arrest is not a blanket licence for excessive force."
+  ],
+  "legalTerms": [
+    {
+      "term": "effecting arrest",
+      "meaning": "Kutekeleza kukamatwa kwa mtu kwa mujibu wa legal authority/rules applicable."
+    },
+    {
+      "term": "necessary means",
+      "meaning": "Njia ambazo court inachunguza kama zilihitajika kwa apprehension katika circumstances."
+    },
+    {
+      "term": "reasonable force",
+      "meaning": "Kiwango cha force kinachoweza kuonekana reasonable baada ya kuzingatia gravity ya offence na circumstances."
+    },
+    {
+      "term": "apprehension",
+      "meaning": "Kumkamata/kumweka chini ya control ya lawful arrest."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Suspect anakimbia",
+      "scenario": "Person anayekamatwa kwa alleged offence anajaribu kukimbia na arrestor anatumia force kumzuia.",
+      "analysis": "Court lazima ipime necessity na degree ya force, pamoja na gravity na circumstances za underlying offence; mere escape attempt haifanyi force yoyote kuwa reasonable."
+    },
+    {
+      "title": "Minor offence, severe force",
+      "scenario": "Arrestor anatumia force kali sana kwa resistance ndogo katika alleged low-gravity offence.",
+      "analysis": "Section 19 expressly makes gravity and circumstances relevant, hivyo mismatch kati ya threat/resistance na force inaweza kuwa muhimu."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 19 is part of the Penal Code's general criminal-responsibility framework, but arrest-force rules also operate under the Criminal Procedure Act. The current CPA states that an arresting person must not use more force or subject a person to greater indignity than necessary.",
+    "notes": [
+      "Penal Code section 19 focuses on the court's assessment where a criminal charge arises from an arrest/attempted arrest.",
+      "Criminal Procedure Act section 21 provides a complementary operational limit on force during arrest.",
+      "No case citation is inserted here unless its identity and treatment of the current rule can be traced reliably."
+    ],
+    "sourceUrl": "https://lrct.go.tz/uploads/documents/sw-1741676202-The%20Criminal%20Procedure%20Act%2C%20Cap%2020%20RE%202022.pdf"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Necessity",
+      "view": "The first question is whether force was needed at all to achieve the apprehension or prevent escape in the actual circumstances."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Degree of force",
+      "view": "Necessity does not automatically validate the amount of force. The statute separately directs attention to whether the degree used was reasonable."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Underlying offence",
+      "view": "Gravity and circumstances of the suspected offence are express statutory factors, preventing analysis from focusing only on the arrestor's objective."
+    }
+  ],
+  "debateQuestion": "Force ilikuwa necessary kiasi gani kwa arrest hiyo, na degree yake ilikuwa reasonable ukilinganisha resistance/escape, gravity ya offence na circumstances zote?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

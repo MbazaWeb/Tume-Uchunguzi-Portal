@@ -1,0 +1,72 @@
+{
+  "section": "25",
+  "language": "sw",
+  "plainLanguage": "Section 25 inaanza Chapter VI kuhusu punishments na inaorodhesha aina za punishments ambazo court inaweza impose: death, imprisonment, corporal punishment, fine, forfeiture, compensation, security to keep peace/be of good behaviour or come up for judgment, pamoja na punishment nyingine inayotolewa na Code au sheria nyingine.",
+  "meaning": "Hiki ni classification/enabling provision, si sentence ya automatic kwa kila offence. Punishment inayoweza kutolewa katika case fulani lazima itokane na penalty provision ya offence, sentencing law na procedural/legal restrictions zinazotumika. Orodha pia inaonyesha kuwa punishment si imprisonment au fine pekee.",
+  "keyPoints": [
+    "Death ni category iliyoorodheshwa katika paragraph (a).",
+    "Imprisonment ni paragraph (b).",
+    "Corporal punishment ni paragraph (c), subject to applicable law governing when/how it may lawfully be imposed.",
+    "Fine, forfeiture na compensation ni separate categories.",
+    "Security to keep peace/be of good behaviour or come up for judgment ni paragraph (g).",
+    "Paragraph (h) preserves any other punishment provided by this Code or another law.",
+    "Section 25 itself does not specify which punishment applies to a particular offence."
+  ],
+  "legalTerms": [
+    {
+      "term": "imprisonment",
+      "meaning": "Punishment ya kifungo, duration na conditions zake zikitawaliwa na applicable offence/sentencing provisions."
+    },
+    {
+      "term": "fine",
+      "meaning": "Adhabu ya fedha inayoweza kutolewa ambapo sheria inaruhusu."
+    },
+    {
+      "term": "forfeiture",
+      "meaning": "Kupoteza property/right kwa order inayoruhusiwa na sheria."
+    },
+    {
+      "term": "compensation",
+      "meaning": "Payment inayoweza kuamriwa kwa madhumuni ya compensation kwa mujibu wa applicable law."
+    },
+    {
+      "term": "security to keep the peace",
+      "meaning": "Requirement ya kutoa security kwa peace/good behaviour au kuja kwa judgment kama sheria inavyoruhusu."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Offence yenye fine au imprisonment",
+      "scenario": "Penalty section ya offence fulani inaruhusu fine, imprisonment, au combination kwa masharti fulani.",
+      "analysis": "Section 25 inaonyesha categories, lakini court lazima irudi kwenye penalty provision husika na sentencing rules kuamua lawful sentence."
+    },
+    {
+      "title": "Compensation",
+      "scenario": "Case inakidhi statutory conditions za court kuorder compensation.",
+      "analysis": "Compensation ni punishment category iliyotajwa section 25(f), lakini authority na amount lazima zitokane na applicable legal provisions."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 25 opens Chapter VI, which then deals with individual punishments in greater detail. Its list must therefore be read with sections 26 onward and any later legislation affecting sentencing.",
+    "notes": [
+      "The presence of a punishment in section 25 does not by itself establish that it is available for every offence.",
+      "Because punishment law can be amended and can engage constitutional/procedural requirements, current sentencing work should verify the operative offence and sentencing provisions, not rely only on this list."
+    ],
+    "sourceUrl": "https://www.sheria.go.tz/uploads/documents/sw-1677665965-THE%20PENAL%20CODE.pdf"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Classification, not tariff",
+      "view": "Section 25 is best read as a catalogue of punishment types; the actual sentencing power must still be located in the offence and other applicable provisions."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Legality of sentence",
+      "view": "A lawful sentence requires statutory authority for both the type and applicable limits of punishment; courts cannot infer a free-standing sentencing power from the list alone."
+    }
+  ],
+  "debateQuestion": "Kwa offence husika, ni provision gani hasa inayoruhusu punishment, inaweka kiwango gani, na section 25 inaingiaje kama classification ya punishment hiyo?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

@@ -1,0 +1,64 @@
+{
+  "section": "33",
+  "language": "sw",
+  "plainLanguage": "Kwa person convicted of an offence ambayo si punishable with death, court inaweza, badala ya au pamoja na punishment nyingine, kumuamuru aingie recognisance—akiwa mwenyewe na, court ikiamuru, sureties—ya kutunza amani na kuwa na good behaviour kwa kipindi court itakachoweka.",
+  "meaning": "Section 33 pia inaruhusu imprisonment until recognisance is entered, lakini ina explicit ceilings. Imprisonment for failure to enter recognisance cannot exceed one year, na pamoja na fixed imprisonment yoyote haiwezi kuzidi longest term ambayo offender angeweza kupewa imprisonment without fine kwa offence hiyo.",
+  "keyPoints": [
+    "Not available where offence is punishable with death.",
+    "May be instead of or additional to another punishment.",
+    "Recognisance may be with or without sureties.",
+    "Court fixes amount and period for keeping peace/good behaviour.",
+    "Imprisonment may secure entry into recognisance.",
+    "Non-entry imprisonment maximum is one year.",
+    "Combined custody is also capped by maximum imprisonment available for offence without fine."
+  ],
+  "legalTerms": [
+    {
+      "term": "recognisance",
+      "meaning": "Formal undertaking/obligation entered before court, here requiring peace and good behaviour."
+    },
+    {
+      "term": "surety",
+      "meaning": "Person/security supporting compliance with recognisance where court requires it."
+    },
+    {
+      "term": "keep the peace",
+      "meaning": "Statutory behavioural obligation imposed through recognisance."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Recognisance plus sentence",
+      "scenario": "Court convicts person of a non-capital offence and considers future peace/good behaviour important.",
+      "analysis": "Section 33 permits recognisance in addition to punishment, subject to amount, duration and custody ceilings."
+    },
+    {
+      "title": "Failure to enter recognisance",
+      "scenario": "Offender does not enter the recognisance ordered.",
+      "analysis": "Court may order imprisonment, but section 33 expressly limits that imprisonment and the combined custodial term."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 33 is a preventive sentencing mechanism embedded in Chapter VI, using recognisance and sureties rather than creating a new substantive offence.",
+    "notes": [
+      "The one-year limit is only one ceiling; the combined-term ceiling must also be checked.",
+      "Capital-punishable offences are expressly excluded."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Preventive function",
+      "view": "The recognisance focuses on future peace and good behaviour rather than only retrospective punishment."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Custody safeguards",
+      "view": "The explicit imprisonment ceilings are integral to the power and should always be shown alongside the recognisance mechanism."
+    }
+  ],
+  "debateQuestion": "Recognisance inahitajika kwa sababu gani, amount/period ni proportionate, na any imprisonment order iko ndani ya ceilings zote mbili?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

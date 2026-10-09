@@ -1,0 +1,61 @@
+{
+  "section": "27",
+  "language": "sw",
+  "plainLanguage": "Section 27(1) imeondolewa katika revised text. Subsection (2) inasema mtu ambaye liable to imprisonment anaweza kupewa fine badala ya imprisonment au pamoja nayo, na pale court inapofanya determination chini ya Community Service Act, community service inaweza kutolewa kupitia community service order.",
+  "meaning": "Provision hii haimaanishi fine/community service automatically available katika kila case. Court lazima iwe na sentencing jurisdiction na itumie offence-specific provisions pamoja na Community Service Act pale community service inapozingatiwa. Neno 'may' linaonyesha discretion, lakini discretion hiyo ni ya kisheria, si unrestricted.",
+  "keyPoints": [
+    "Subsection (1) is expressly omitted by virtue of section 3 of Cap. 357.",
+    "Fine may be imposed in addition to or instead of imprisonment where section applies.",
+    "Community service depends on court determination under Community Service Act.",
+    "Sentencing discretion remains subject to offence-specific and other applicable sentencing law."
+  ],
+  "legalTerms": [
+    {
+      "term": "liable to imprisonment",
+      "meaning": "Offence/person yuko ndani ya statutory exposure to imprisonment."
+    },
+    {
+      "term": "community service order",
+      "meaning": "Order ya community service inayotolewa chini ya Community Service Act kwa masharti yake."
+    },
+    {
+      "term": "in lieu of",
+      "meaning": "Badala ya punishment nyingine."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Fine instead of imprisonment",
+      "scenario": "Offence exposes offender to imprisonment and applicable law does not prohibit the alternative.",
+      "analysis": "Section 27(2) gives a route to fine instead, but court must exercise lawful sentencing discretion."
+    },
+    {
+      "title": "Community service",
+      "scenario": "Court considers a person suitable under the Community Service Act.",
+      "analysis": "Section 27(2) connects Penal Code sentencing to the separate statutory community-service framework; suitability cannot be assumed from section 27 alone."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "The present provision reflects later sentencing legislation: subsection (1) is omitted and subsection (2) expressly recognizes community service under the Community Service Act.",
+    "notes": [
+      "The omission marker in official text is legally meaningful and should remain visible in the digital edition.",
+      "Community service details should be sourced from the Community Service Act rather than invented inside section 27."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Sentencing discretion",
+      "view": "The provision broadens possible sentencing forms but does not displace statutory limits attached to the particular offence."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Alternative sanctions",
+      "view": "The community-service reference demonstrates a legislative route toward non-custodial sentencing where the separate Act's conditions are met."
+    }
+  ],
+  "debateQuestion": "Je, offence na circumstances zinaruhusu lawful alternative to imprisonment, na Community Service Act requirements zimetimizwa?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

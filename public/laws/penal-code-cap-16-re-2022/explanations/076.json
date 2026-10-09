@@ -1,0 +1,40 @@
+{
+  "section": "76",
+  "language": "sw",
+  "plainLanguage": "Section 76 inafanya participation katika riot kuwa offence.",
+  "meaning": "The section depends on the definition of riot in section 74(3). The prosecution must establish that the gathering had reached the statutory riot threshold and that the accused took part.",
+  "keyPoints": [
+    "The person must take part in a riot.",
+    "Section 74(3) supplies the riot definition.",
+    "The repository should not invent a penalty where section 76 itself does not state one; applicable punishment must be determined from the Code and other relevant sentencing provisions."
+  ],
+  "legalTerms": [
+    {
+      "term": "riot",
+      "meaning": "Unlawful assembly that has reached the section 74(3) threshold."
+    }
+  ],
+  "examples": [],
+  "cases": [],
+  "history": {
+    "summary": "Section 076 is recorded in Chapter IX of The Penal Code [CAP. 16 R.E. 2022].",
+    "notes": [
+      "Official R.E. 2022 text verified before explanation."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Elements",
+      "view": "The statutory definition should be applied element by element rather than from the label alone."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Context",
+      "view": "The nature of the gathering, common purpose, conduct and statutory threshold must be assessed from evidence and context."
+    }
+  ],
+  "debateQuestion": "Je, facts zinatimiza exact statutory requirements zinazohusiana na section 076?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

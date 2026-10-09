@@ -1,0 +1,927 @@
+{
+  "id": "penal-code-cap-16-re-2022",
+  "title": "The Penal Code",
+  "shortTitle": "Penal Code",
+  "chapterNumber": "16",
+  "year": 2022,
+  "edition": "Revised Edition 2022",
+  "category": "Jinai / Criminal",
+  "sourceFilename": "CHAPTER 16 The Penal Code R_E 2022.pdf",
+  "parts": [
+    {
+      "id": "part-i",
+      "title": "GENERAL PROVISIONS",
+      "chapters": [
+        {
+          "id": "chapter-i",
+          "title": "PRELIMINARY PROVISIONS",
+          "sections": [
+            {
+              "section": "1",
+              "title": "Short title",
+              "file": "sections/001.json"
+            },
+            {
+              "section": "2",
+              "title": "Disapplication",
+              "file": "sections/002.json"
+            },
+            {
+              "section": "3",
+              "title": "Saving of certain laws",
+              "file": "sections/003.json"
+            }
+          ]
+        },
+        {
+          "id": "chapter-ii",
+          "title": "INTERPRETATION",
+          "sections": [
+            {
+              "section": "4",
+              "title": "General rule of construction",
+              "file": "sections/004.json"
+            },
+            {
+              "section": "5",
+              "title": "Interpretation",
+              "file": "sections/005.json"
+            }
+          ]
+        },
+        {
+          "id": "chapter-iii",
+          "title": "TERRITORIAL APPLICATION OF THIS CODE",
+          "sections": [
+            {
+              "section": "6",
+              "title": "Extent of jurisdiction of local courts",
+              "file": "sections/006.json"
+            },
+            {
+              "section": "7",
+              "title": "Offences committed partly within and partly beyond jurisdiction",
+              "file": "sections/007.json"
+            }
+          ]
+        },
+        {
+          "id": "chapter-iv",
+          "title": "GENERAL RULES AS TO CRIMINAL RESPONSIBILITY",
+          "sections": [
+            {
+              "section": "8",
+              "title": "Ignorance of law",
+              "file": "sections/008.json"
+            },
+            {
+              "section": "9",
+              "title": "Bona fide claim of right",
+              "file": "sections/009.json"
+            },
+            {
+              "section": "10",
+              "title": "Relevance of intention or motive",
+              "file": "sections/010.json"
+            },
+            {
+              "section": "11",
+              "title": "Mistake of fact",
+              "file": "sections/011.json"
+            },
+            {
+              "section": "12",
+              "title": "Presumption of sanity",
+              "file": "sections/012.json"
+            },
+            {
+              "section": "13",
+              "title": "Insanity",
+              "file": "sections/013.json"
+            },
+            {
+              "section": "14",
+              "title": "Intoxication",
+              "file": "sections/014.json"
+            },
+            {
+              "section": "15",
+              "title": "Immature age",
+              "file": "sections/015.json"
+            },
+            {
+              "section": "16",
+              "title": "General immunity for officers",
+              "file": "sections/016.json"
+            },
+            {
+              "section": "17",
+              "title": "Compulsion",
+              "file": "sections/017.json"
+            },
+            {
+              "section": "18",
+              "title": "Defence of person or property",
+              "file": "sections/018.json"
+            },
+            {
+              "section": "18A",
+              "title": "Right of defence",
+              "file": "sections/018A.json"
+            },
+            {
+              "section": "18B",
+              "title": "Use of force in defence",
+              "file": "sections/018B.json"
+            },
+            {
+              "section": "18C",
+              "title": "When right of defence extends to causing death",
+              "file": "sections/018C.json"
+            },
+            {
+              "section": "19",
+              "title": "Use of force in effecting arrest",
+              "file": "sections/019.json"
+            },
+            {
+              "section": "20",
+              "title": "Compulsion by husband",
+              "file": "sections/020.json"
+            },
+            {
+              "section": "21",
+              "title": "Person not to be punished twice for same offence",
+              "file": "sections/021.json"
+            }
+          ]
+        },
+        {
+          "id": "chapter-v",
+          "title": "PARTIES TO OFFENCES",
+          "sections": [
+            {
+              "section": "22",
+              "title": "Principal offenders",
+              "file": "sections/022.json"
+            },
+            {
+              "section": "23",
+              "title": "Offences committed by joint offenders in prosecution of common purpose",
+              "file": "sections/023.json"
+            },
+            {
+              "section": "24",
+              "title": "Counseling another to commit offence",
+              "file": "sections/024.json"
+            }
+          ]
+        },
+        {
+          "id": "chapter-vi",
+          "title": "PUNISHMENTS",
+          "sections": [
+            {
+              "section": "25",
+              "title": "Kinds of punishments",
+              "file": "sections/025.json"
+            },
+            {
+              "section": "26",
+              "title": "Sentence of death",
+              "file": "sections/026.json"
+            },
+            {
+              "section": "27",
+              "title": "Imprisonment",
+              "file": "sections/027.json"
+            },
+            {
+              "section": "28",
+              "title": "Corporal punishment",
+              "file": "sections/028.json"
+            },
+            {
+              "section": "29",
+              "title": "Fines",
+              "file": "sections/029.json"
+            },
+            {
+              "section": "30",
+              "title": "Forfeiture",
+              "file": "sections/030.json"
+            },
+            {
+              "section": "31",
+              "title": "Compensation",
+              "file": "sections/031.json"
+            },
+            {
+              "section": "32",
+              "title": "Costs",
+              "file": "sections/032.json"
+            },
+            {
+              "section": "33",
+              "title": "Security for keeping peace",
+              "file": "sections/033.json"
+            },
+            {
+              "section": "34",
+              "title": "Repealed",
+              "file": "sections/034.json"
+            },
+            {
+              "section": "35",
+              "title": "General punishment for offences where penalty not prescribed",
+              "file": "sections/035.json"
+            },
+            {
+              "section": "36",
+              "title": "Sentences cumulative unless otherwise ordered",
+              "file": "sections/036.json"
+            },
+            {
+              "section": "37",
+              "title": "Escaped convicts to serve unexpired sentences when recaptured",
+              "file": "sections/037.json"
+            },
+            {
+              "section": "38",
+              "title": "Absolute and conditional discharge",
+              "file": "sections/038.json"
+            },
+            {
+              "section": "38A",
+              "title": "Commission of further offence",
+              "file": "sections/038A.json"
+            },
+            {
+              "section": "38B",
+              "title": "Effect of conviction and discharge",
+              "file": "sections/038B.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-ii",
+      "title": "CRIMES",
+      "divisions": [
+        {
+          "id": "division-i",
+          "title": "Offences against Public Order",
+          "chapters": [
+            {
+              "id": "chapter-vii",
+              "title": "TREASON AND OTHER OFFENCES AGAINST THE REPUBLIC",
+              "sections": [
+                {
+                  "section": "39",
+                  "title": "Treason",
+                  "file": "sections/039.json"
+                },
+                {
+                  "section": "40",
+                  "title": "Treasonable offences",
+                  "file": "sections/040.json"
+                },
+                {
+                  "section": "41",
+                  "title": "Misprision of treason",
+                  "file": "sections/041.json"
+                },
+                {
+                  "section": "42",
+                  "title": "Omitted",
+                  "file": "sections/042.json"
+                },
+                {
+                  "section": "43",
+                  "title": "Promoting warlike undertakings",
+                  "file": "sections/043.json"
+                },
+                {
+                  "section": "44",
+                  "title": "Replaced",
+                  "file": "sections/044.json"
+                },
+                {
+                  "section": "45",
+                  "title": "Inciting to mutiny",
+                  "file": "sections/045.json"
+                },
+                {
+                  "section": "46",
+                  "title": "Aiding soldiers or police officers in acts of mutiny",
+                  "file": "sections/046.json"
+                },
+                {
+                  "section": "47",
+                  "title": "Inducing soldiers or police officers to desert",
+                  "file": "sections/047.json"
+                },
+                {
+                  "section": "48",
+                  "title": "Aiding prisoners of war to escape",
+                  "file": "sections/048.json"
+                },
+                {
+                  "section": "49",
+                  "title": "Definition of overt act",
+                  "file": "sections/049.json"
+                },
+                {
+                  "section": "50-54",
+                  "title": "Repealed",
+                  "file": "sections/50-54.json"
+                },
+                {
+                  "section": "55",
+                  "title": "Seditious intention",
+                  "file": "sections/055.json"
+                },
+                {
+                  "section": "56-58",
+                  "title": "Repealed",
+                  "file": "sections/56-58.json"
+                },
+                {
+                  "section": "59",
+                  "title": "Unlawful oaths to commit offences",
+                  "file": "sections/059.json"
+                },
+                {
+                  "section": "60",
+                  "title": "Other unlawful oaths to commit offences",
+                  "file": "sections/060.json"
+                },
+                {
+                  "section": "61",
+                  "title": "Compulsion as defence",
+                  "file": "sections/061.json"
+                },
+                {
+                  "section": "62",
+                  "title": "Unlawful drilling",
+                  "file": "sections/062.json"
+                },
+                {
+                  "section": "63-63A",
+                  "title": "Repealed",
+                  "file": "sections/63-63A.json"
+                },
+                {
+                  "section": "63B",
+                  "title": "Raising discontent and ill-will for unlawful purposes",
+                  "file": "sections/63B.json"
+                },
+                {
+                  "section": "63C",
+                  "title": "Hate speech",
+                  "file": "sections/063C.json"
+                }
+              ]
+            },
+            {
+              "id": "chapter-viii",
+              "title": "OFFENCES AFFECTING RELATIONS WITH FOREIGN STATES AND EXTERNAL TRANQUILITY",
+              "sections": [
+                {
+                  "section": "64",
+                  "title": "Repealed",
+                  "file": "sections/064.json"
+                },
+                {
+                  "section": "65",
+                  "title": "Foreign enlistment",
+                  "file": "sections/065.json"
+                },
+                {
+                  "section": "66",
+                  "title": "Piracy",
+                  "file": "sections/066.json"
+                }
+              ]
+            },
+            {
+              "id": "chapter-ix",
+              "title": "UNLAWFUL ASSEMBLIES AND RIOTS AND OTHER OFFENCES AGAINST PUBLIC TRANQUILITY",
+              "sections": [
+                {
+                  "section": "67-73",
+                  "title": "Repealed",
+                  "file": "sections/67-73.json"
+                },
+                {
+                  "section": "74",
+                  "title": "Definition of unlawful assembly and riot",
+                  "file": "sections/074.json"
+                },
+                {
+                  "section": "75",
+                  "title": "Punishment for unlawful assembly",
+                  "file": "sections/075.json"
+                },
+                {
+                  "section": "76",
+                  "title": "Punishment for riot",
+                  "file": "sections/076.json"
+                },
+                {
+                  "section": "77",
+                  "title": "Making proclamation for rioters to disperse",
+                  "file": "sections/077.json"
+                },
+                {
+                  "section": "78",
+                  "title": "Dispersion of rioters after proclamation",
+                  "file": "sections/078.json"
+                },
+                {
+                  "section": "79",
+                  "title": "Rioting after proclamation",
+                  "file": "sections/079.json"
+                },
+                {
+                  "section": "80",
+                  "title": "Preventing or obstructing making of proclamation",
+                  "file": "sections/080.json"
+                },
+                {
+                  "section": "81",
+                  "title": "Rioters demolishing buildings, etc.",
+                  "file": "sections/081.json"
+                },
+                {
+                  "section": "82",
+                  "title": "Rioters damaging buildings, etc.",
+                  "file": "sections/082.json"
+                },
+                {
+                  "section": "83",
+                  "title": "Riotously interfering with railway, vehicle, etc.",
+                  "file": "sections/083.json"
+                },
+                {
+                  "section": "84",
+                  "title": "Going armed in public",
+                  "file": "sections/084.json"
+                },
+                {
+                  "section": "85",
+                  "title": "Forcible entry",
+                  "file": "sections/085.json"
+                },
+                {
+                  "section": "86",
+                  "title": "Forcible detainer",
+                  "file": "sections/086.json"
+                },
+                {
+                  "section": "87",
+                  "title": "Affray",
+                  "file": "sections/087.json"
+                },
+                {
+                  "section": "88",
+                  "title": "Challenge to fight duel",
+                  "file": "sections/088.json"
+                },
+                {
+                  "section": "89",
+                  "title": "Abusive language, brawling and threatening violence",
+                  "file": "sections/089.json"
+                },
+                {
+                  "section": "89A",
+                  "title": "Watching or besetting",
+                  "file": "sections/089A.json"
+                },
+                {
+                  "section": "89B",
+                  "title": "Intimidation",
+                  "file": "sections/089B.json"
+                },
+                {
+                  "section": "89C",
+                  "title": "Dissuading persons from assisting with self-help schemes",
+                  "file": "sections/089C.json"
+                },
+                {
+                  "section": "90",
+                  "title": "Assembling for purpose of smuggling",
+                  "file": "sections/090.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "division-ii",
+          "title": "Offences against the Administration of Lawful Authority",
+          "chapters": [
+            {
+              "id": "chapter-x",
+              "title": "ABUSE OF OFFICE",
+              "sections": [
+                {
+                  "section": "91-93",
+                  "title": "Repealed",
+                  "file": "sections/91-93.json"
+                },
+                {
+                  "section": "94",
+                  "title": "Officers charged with administration of property of special character with special duties",
+                  "file": "sections/094.json"
+                },
+                {
+                  "section": "95",
+                  "title": "False claims by officials",
+                  "file": "sections/095.json"
+                },
+                {
+                  "section": "96",
+                  "title": "Abuse of office",
+                  "file": "sections/096.json"
+                },
+                {
+                  "section": "97",
+                  "title": "False certificates by public officers",
+                  "file": "sections/097.json"
+                },
+                {
+                  "section": "98",
+                  "title": "Unauthorised administration of extra-judicial oath",
+                  "file": "sections/098.json"
+                },
+                {
+                  "section": "99",
+                  "title": "False assumption of authority",
+                  "file": "sections/099.json"
+                },
+                {
+                  "section": "100",
+                  "title": "Personating public officers",
+                  "file": "sections/100.json"
+                },
+                {
+                  "section": "101",
+                  "title": "Threat of injury to persons employed in public service",
+                  "file": "sections/101.json"
+                }
+              ]
+            },
+            {
+              "id": "chapter-xi",
+              "title": "OFFENCES RELATING TO THE ADMINISTRATION OF JUSTICE",
+              "sections": [
+                {
+                  "section": "102",
+                  "title": "Perjury",
+                  "file": "sections/102.json"
+                },
+                {
+                  "section": "103",
+                  "title": "False statements by interpreters",
+                  "file": "sections/103.json"
+                },
+                {
+                  "section": "104",
+                  "title": "Punishment of perjury",
+                  "file": "sections/104.json"
+                },
+                {
+                  "section": "105",
+                  "title": "Evidence on charge of perjury",
+                  "file": "sections/105.json"
+                },
+                {
+                  "section": "106",
+                  "title": "Fabricating evidence",
+                  "file": "sections/106.json"
+                },
+                {
+                  "section": "107",
+                  "title": "False swearing",
+                  "file": "sections/107.json"
+                },
+                {
+                  "section": "108",
+                  "title": "Deceiving witnesses",
+                  "file": "sections/108.json"
+                },
+                {
+                  "section": "109",
+                  "title": "Destroying evidence",
+                  "file": "sections/109.json"
+                },
+                {
+                  "section": "110",
+                  "title": "Conspiracy to defeat justice and interference with witnesses",
+                  "file": "sections/110.json"
+                },
+                {
+                  "section": "111",
+                  "title": "Compounding offences",
+                  "file": "sections/111.json"
+                },
+                {
+                  "section": "112",
+                  "title": "Compounding penal actions",
+                  "file": "sections/112.json"
+                },
+                {
+                  "section": "113",
+                  "title": "Advertisements for stolen property",
+                  "file": "sections/113.json"
+                },
+                {
+                  "section": "114",
+                  "title": "Contempt of court",
+                  "file": "sections/114.json"
+                },
+                {
+                  "section": "114A",
+                  "title": "Preventing or obstructing service or execution of process",
+                  "file": "sections/114A.json"
+                }
+              ]
+            },
+            {
+              "id": "chapter-xii",
+              "title": "RESCUES, ESCAPES AND OBSTRUCTING OFFICERS OF COURT OF LAW",
+              "sections": [
+                {
+                  "section": "115",
+                  "title": "Rescue",
+                  "file": "sections/115.json"
+                },
+                {
+                  "section": "116",
+                  "title": "Escape from lawful custody",
+                  "file": "sections/116.json"
+                },
+                {
+                  "section": "116A",
+                  "title": "Absence from extramural employment",
+                  "file": "sections/116A.json"
+                },
+                {
+                  "section": "117",
+                  "title": "Aiding prisoners to escape",
+                  "file": "sections/117.json"
+                },
+                {
+                  "section": "118",
+                  "title": "Removal, etc., of property under lawful seizure",
+                  "file": "sections/118.json"
+                },
+                {
+                  "section": "119",
+                  "title": "Repealed",
+                  "file": "sections/119.json"
+                }
+              ]
+            },
+            {
+              "id": "chapter-xiii",
+              "title": "MISCELLANEOUS OFFENCES AGAINST PUBLIC AUTHORITY",
+              "sections": [
+                {
+                  "section": "120",
+                  "title": "Frauds and breaches of trust by public officers",
+                  "file": "sections/120.json"
+                },
+                {
+                  "section": "121",
+                  "title": "Neglect of official duty",
+                  "file": "sections/121.json"
+                },
+                {
+                  "section": "122",
+                  "title": "False information to person employed in public service",
+                  "file": "sections/122.json"
+                },
+                {
+                  "section": "123",
+                  "title": "Disobedience of statutory duty",
+                  "file": "sections/123.json"
+                },
+                {
+                  "section": "124",
+                  "title": "Disobedience of lawful orders",
+                  "file": "sections/124.json"
+                },
+                {
+                  "section": "124A",
+                  "title": "Repealed",
+                  "file": "sections/124A.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "division-iii",
+          "title": "Offences Injurious to the Public in General",
+          "chapters": [
+            {
+              "id": "chapter-xiv",
+              "title": "OFFENCES RELATING TO RELIGION AND BURIALS",
+              "sections": [
+                {
+                  "section": "125",
+                  "title": "Insulting religion",
+                  "file": "sections/125.json"
+                },
+                {
+                  "section": "126",
+                  "title": "Disturbing religious assemblies",
+                  "file": "sections/126.json"
+                },
+                {
+                  "section": "127",
+                  "title": "Trespassing on burial or other places",
+                  "file": "sections/127.json"
+                },
+                {
+                  "section": "128",
+                  "title": "Hindering burial of dead body",
+                  "file": "sections/128.json"
+                },
+                {
+                  "section": "129",
+                  "title": "Uttering word with intent to wound religious feelings",
+                  "file": "sections/129.json"
+                }
+              ]
+            },
+            {
+              "id": "chapter-xv",
+              "title": "OFFENCES AGAINST MORALITY",
+              "sections": [
+                {
+                  "section": "129A",
+                  "title": "Definition of woman",
+                  "file": "sections/129A.json"
+                },
+                {
+                  "section": "130",
+                  "title": "Rape",
+                  "file": "sections/130.json"
+                },
+                {
+                  "section": "131",
+                  "title": "Punishment for rape",
+                  "file": "sections/131.json"
+                },
+                {
+                  "section": "131A",
+                  "title": "Punishment for gang rape",
+                  "file": "sections/131A.json"
+                },
+                {
+                  "section": "132",
+                  "title": "Attempted rape",
+                  "file": "sections/132.json"
+                },
+                {
+                  "section": "133",
+                  "title": "Abduction",
+                  "file": "sections/133.json"
+                },
+                {
+                  "section": "134",
+                  "title": "Abduction of girls under sixteen",
+                  "file": "sections/134.json"
+                },
+                {
+                  "section": "135",
+                  "title": "Sexual assault on persons and indecent assaults on women",
+                  "file": "sections/135.json"
+                },
+                {
+                  "section": "136",
+                  "title": "Repealed",
+                  "file": "sections/136.json"
+                },
+                {
+                  "section": "137",
+                  "title": "Defilement of idiots or imbeciles",
+                  "file": "sections/137.json"
+                },
+                {
+                  "section": "138",
+                  "title": "Defilement by husband of wife under eighteen, etc.",
+                  "file": "sections/138.json"
+                },
+                {
+                  "section": "138A",
+                  "title": "Act of gross indecency between persons",
+                  "file": "sections/138A.json"
+                },
+                {
+                  "section": "138B",
+                  "title": "Sexual exploitation of children",
+                  "file": "sections/138B.json"
+                },
+                {
+                  "section": "138C",
+                  "title": "Grave sexual abuse",
+                  "file": "sections/138C.json"
+                },
+                {
+                  "section": "138D",
+                  "title": "Sexual harassment",
+                  "file": "sections/138D.json"
+                },
+                {
+                  "section": "139",
+                  "title": "Procuration for prostitution",
+                  "file": "sections/139.json"
+                },
+                {
+                  "section": "139A",
+                  "title": "Repealed",
+                  "file": "sections/139A.json"
+                },
+                {
+                  "section": "140",
+                  "title": "Procuring rape",
+                  "file": "sections/140.json"
+                },
+                {
+                  "section": "141",
+                  "title": "House holder, etc., permitting defilement of girl on his premises",
+                  "file": "sections/141.json"
+                },
+                {
+                  "section": "142",
+                  "title": "House holder etc., permitting defilement of girl under eighteen years of age on his premises",
+                  "file": "sections/142.json"
+                },
+                {
+                  "section": "143",
+                  "title": "Detention in any premises with intent, or in brothel",
+                  "file": "sections/143.json"
+                },
+                {
+                  "section": "144",
+                  "title": "Power of search",
+                  "file": "sections/144.json"
+                },
+                {
+                  "section": "145",
+                  "title": "Male person living on earnings of prostitution or persistently soliciting",
+                  "file": "sections/145.json"
+                },
+                {
+                  "section": "146",
+                  "title": "Woman living on, or aiding, prostitution",
+                  "file": "sections/146.json"
+                },
+                {
+                  "section": "147",
+                  "title": "Power of search",
+                  "file": "sections/147.json"
+                },
+                {
+                  "section": "148",
+                  "title": "Brothels",
+                  "file": "sections/148.json"
+                },
+                {
+                  "section": "149",
+                  "title": "Conspiracy to induce unlawful sexual intercourse",
+                  "file": "sections/149.json"
+                },
+                {
+                  "section": "150",
+                  "title": "Attempts to procure abortion",
+                  "file": "sections/150.json"
+                },
+                {
+                  "section": "151",
+                  "title": "Procuring own miscarriage",
+                  "file": "sections/151.json"
+                },
+                {
+                  "section": "152",
+                  "title": "Supplying drugs or instruments to procure abortion",
+                  "file": "sections/152.json"
+                },
+                {
+                  "section": "153",
+                  "title": "Knowledge of age of female immaterial",
+                  "file": "sections/153.json"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

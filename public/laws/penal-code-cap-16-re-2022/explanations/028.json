@@ -1,0 +1,52 @@
+{
+  "section": "28",
+  "language": "sw",
+  "plainLanguage": "Pale Penal Code inaposema mtu may be liable to corporal punishment, section 28 haijitoshelezi kuamua adhabu hiyo. Inasema award hiyo iko subject to Minimum Sentences Act na, ikitolewa, lazima itekelezwe according to Corporal Punishment Act.",
+  "meaning": "Section 28 ni cross-reference provision. Inafanya statutes nyingine mbili kuwa muhimu: Minimum Sentences Act na Corporal Punishment Act. Kwa hiyo reader hapaswi kuchukulia listing ya corporal punishment katika Penal Code kama authority kamili bila kuangalia operative law, eligibility, procedure na restrictions.",
+  "keyPoints": [
+    "Section is expressly subject to Minimum Sentences Act.",
+    "It applies where the Code provides liability to corporal punishment.",
+    "If awarded, execution must comply with Corporal Punishment Act.",
+    "Availability, persons subject to it and procedure require checking current operative legislation."
+  ],
+  "legalTerms": [
+    {
+      "term": "corporal punishment",
+      "meaning": "Physical punishment regulated by specific legislation; section 28 cross-refers to the Corporal Punishment Act."
+    },
+    {
+      "term": "subject to",
+      "meaning": "Provision must operate consistently with the named governing legislation."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Penalty mentions corporal punishment",
+      "scenario": "Reader sees an offence provision that refers to corporal punishment.",
+      "analysis": "Do not stop at that offence provision. Section 28 requires checking Minimum Sentences Act and Corporal Punishment Act before stating lawful availability or procedure."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 28 functions mainly as a legislative bridge rather than a complete corporal-punishment code. Its wording expressly subordinates implementation to other Acts.",
+    "notes": [
+      "Because punishment rules can change, current application should verify the latest operative versions of the cross-referenced statutes.",
+      "No case was added merely to create content where a directly useful verified authority was not needed."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Cross-statute reading",
+      "view": "A correct answer cannot be produced from section 28 alone; the referenced Acts form part of the legal analysis."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Legality and procedure",
+      "view": "Even where a punishment is mentioned, lawful imposition and execution require strict statutory authority and compliance with applicable procedure."
+    }
+  ],
+  "debateQuestion": "Ni offence provision gani inataja corporal punishment, na current Minimum Sentences/Corporal Punishment legislation inaruhusu nini kwa offender huyo?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

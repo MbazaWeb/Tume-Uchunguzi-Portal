@@ -1,0 +1,67 @@
+{
+  "section": "20",
+  "language": "sw",
+  "plainLanguage": "Mke haondolewi criminal responsibility kwa sababu tu act/omission ilitokea mume wake akiwa present. Lakini kwa offence nyingine isipokuwa treason au murder, wife ana defence ikiwa atathibitisha kwamba offence ilifanywa both in the presence of husband na under his coercion.",
+  "meaning": "Section 20 inaondoa automatic assumption kwamba husband's presence peke yake inatosha. Defence yake ina specific cumulative conditions: accused awe wife/married woman; charge isiwe treason au murder; offence iwe committed in husband's presence; na iwe under his coercion. Presence bila coercion haitoshi.",
+  "keyPoints": [
+    "Husband's presence alone does not remove criminal responsibility.",
+    "Defence excludes treason and murder.",
+    "Offence must be committed in the husband's presence.",
+    "Wife must prove coercion by the husband.",
+    "Presence and coercion are separate requirements and both are stated in the provision."
+  ],
+  "legalTerms": [
+    {
+      "term": "coercion",
+      "meaning": "Kulazimishwa/shinikizo la mume linalotakiwa kuthibitishwa pamoja na presence yake chini ya section 20."
+    },
+    {
+      "term": "presence",
+      "meaning": "Requirement kwamba offence itself iwe committed mume akiwa present; si relationship ya ndoa pekee."
+    },
+    {
+      "term": "good defence",
+      "meaning": "Defence inayotambuliwa na statute ikiwa required facts are proved."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Mume yupo lakini hashurutishi",
+      "scenario": "Wife anafanya offence mume akiwa hapo lakini hakuna evidence ya coercion.",
+      "analysis": "Section 20 inaanza kwa kusema presence pekee haiondoi criminal responsibility."
+    },
+    {
+      "title": "Presence + coercion",
+      "scenario": "Kwa offence ambayo si murder wala treason, wife anafanya act mume akiwa present na evidence inaonyesha act ilifanywa under his coercion.",
+      "analysis": "Hizi ndizo factual requirements ambazo section 20 inazitaja kwa defence; court lazima iamue kama zimeproved."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "The rule traces to the older common-law doctrine concerning marital coercion. The current Tanzanian statutory wording rejects an automatic presumption based only on husband's presence and instead requires proof of presence and coercion, while excluding treason and murder.",
+    "notes": [
+      "Historical common-law presumptions should not be substituted for the actual current section 20 text.",
+      "A search for a reliably traceable Tanzanian judgment expressly applying current section 20 did not produce a sufficiently strong primary case source for inclusion in this batch."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "No automatic immunity",
+      "view": "The first sentence is important: marriage and physical presence do not themselves excuse criminal conduct."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Cumulative requirements",
+      "view": "The defence should be analysed element-by-element: qualifying offence, presence, and coercion. Failure of one statutory requirement may defeat the defence."
+    },
+    {
+      "label": "Mtazamo C",
+      "focus": "Distinct from section 17",
+      "view": "Section 20 is a specific marital-coercion provision and its wording differs from the instant-death/grievous-harm formulation in general compulsion under section 17."
+    }
+  ],
+  "debateQuestion": "Je, evidence inaonyesha both husband's presence and actual coercion wakati offence ilifanyika, na charge ni offence ambayo section 20 inaruhusu defence?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}

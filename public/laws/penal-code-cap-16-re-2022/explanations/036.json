@@ -1,0 +1,56 @@
+{
+  "section": "36",
+  "language": "sw",
+  "plainLanguage": "Kwa kawaida, mtu akihukumiwa kwa kosa jingine wakati tayari ana hukumu ya awali, hukumu mpya huanza baada ya hukumu ya awali kumalizika, isipokuwa mahakama iamuru ziende sambamba kwa yote au sehemu yake.",
+  "meaning": "Section 36 establishes consecutive sentences as the default for a later conviction occurring before sentence on the first conviction or before expiry of the first sentence. The court retains power to order concurrency, but the proviso excludes concurrency for imprisonment imposed in default of payment of a fine in the circumstance identified by section 29(c)(i).",
+  "keyPoints": [
+    "Default rule is consecutive execution of the later sentence.",
+    "Court may expressly order concurrent execution for all or part of the sentence.",
+    "The rule applies where the later conviction occurs before sentence on the first conviction or before that sentence expires.",
+    "The proviso restricts concurrency for imprisonment in default of payment of a fine under section 29(c)(i)."
+  ],
+  "legalTerms": [
+    {
+      "term": "cumulative / consecutive sentence",
+      "meaning": "Hukumu inayotekelezwa baada ya hukumu nyingine kumalizika."
+    },
+    {
+      "term": "concurrent sentence",
+      "meaning": "Hukumu inayotekelezwa kwa wakati mmoja na hukumu nyingine, kwa kiwango kilichoamriwa na mahakama."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Hukumu mbili mfululizo",
+      "scenario": "Mtu anayetekeleza kifungo cha kwanza anahukumiwa kifungo kingine na mahakama haitoi amri ya concurrency.",
+      "analysis": "Kwa kanuni ya section 36, hukumu mpya huanza baada ya ya kwanza kuisha."
+    },
+    {
+      "title": "Mahakama yaamuru concurrency",
+      "scenario": "Mahakama inaona mazingira yanahalalisha hukumu mpya kwenda sambamba na hukumu ya awali.",
+      "analysis": "Section 36 inaruhusu hilo kwa amri ya mahakama, isipokuwa pale proviso inapokataza."
+    }
+  ],
+  "cases": [],
+  "history": {
+    "summary": "Section 36 is part of Chapter VI on punishments and regulates the sequencing of multiple sentences.",
+    "notes": [
+      "Read together with section 29 where imprisonment arises from default in payment of a fine."
+    ],
+    "sourceUrl": "https://oagmis.oag.go.tz/portal/revised-acts/revised/87"
+  },
+  "expertPerspectives": [
+    {
+      "label": "Mtazamo A",
+      "focus": "Default rule",
+      "view": "Consecutive execution is the statutory starting point unless the court directs otherwise."
+    },
+    {
+      "label": "Mtazamo B",
+      "focus": "Judicial direction",
+      "view": "Any concurrency decision should be read from the actual sentencing order; it should not be assumed."
+    }
+  ],
+  "debateQuestion": "Ni mazingira gani yanayofaa kuifanya mahakama iamuru hukumu ziende sambamba badala ya mfululizo?",
+  "disclaimer": "Ufafanuzi huu si maandishi rasmi ya sheria."
+}
