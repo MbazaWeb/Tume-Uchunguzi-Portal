@@ -29,36 +29,6 @@ create table public.inquiry_drafts (
 	updated_at timestamptz not null default now()
 );
 
-alter table public.inquiry_drafts enable row level security;
-revoke all on public.inquiry_drafts from anon, authenticated;
-grant select, insert, update, delete on public.inquiry_drafts to authenticated;
-
-create policy "Users read their own inquiry draft"
-	on public.inquiry_drafts for select to authenticated
-	using ((select auth.uid()) = user_id);
-
-create policy "Users create their own inquiry draft"
-	on public.inquiry_drafts for insert to authenticated
-	with check ((select auth.uid()) = user_id);
-
-create policy "Users update their own inquiry draft"
-	on public.inquiry_drafts for update to authenticated
-	using ((select auth.uid()) = user_id)
-	with check ((select auth.uid()) = user_id);
-
-create policy "Users delete their own inquiry draft"
-	on public.inquiry_drafts for delete to authenticated
-	using ((select auth.uid()) = user_id);
-
-create table public.inquiry_drafts (
-	id uuid primary key default gen_random_uuid(),
-	user_id uuid not null unique references auth.users(id) on delete cascade,
-	current_step smallint not null default 1 check (current_step between 1 and 6),
-	form_data jsonb not null default '{}'::jsonb check (jsonb_typeof(form_data) = 'object'),
-	created_at timestamptz not null default now(),
-	updated_at timestamptz not null default now()
-);
-
 create index inquiry_drafts_user_id_idx on public.inquiry_drafts(user_id);
 alter table public.inquiry_drafts enable row level security;
 revoke all on public.inquiry_drafts from anon, authenticated;
