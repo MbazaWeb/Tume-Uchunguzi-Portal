@@ -1,7 +1,10 @@
 import {createClient} from '@supabase/supabase-js';
 
-export const supabaseUrl=import.meta.env.VITE_SUPABASE_URL||'https://xckqpkymphvhxgxyolpz.supabase.co';
-export const supabasePublishableKey=import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY||'sb_publishable_R3zZMxZL76iEAYAkhxzhVA_XK7S3iEU';
+// This application must use its own Tume Uchunguzi Supabase project.
+// Configure VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY in Vercel.
+// Never fall back to the Katiba Yetu project or commit private credentials.
+const supabaseUrl=import.meta.env.VITE_SUPABASE_URL||'https://tume-supabase-not-configured.invalid';
+const supabasePublishableKey=import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY||'tume-public-key-not-configured';
 
 export const supabase=createClient(supabaseUrl,supabasePublishableKey,{
   auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}
