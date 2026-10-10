@@ -1,5 +1,5 @@
 import {useEffect,useState} from 'react';
-import {NavLink,Outlet,useLocation} from 'react-router';
+import {NavLink,Outlet,useLocation,useNavigate} from 'react-router';
 import {Menu,X,ShieldCheck} from 'lucide-react';
 import {supabase} from './lib/supabase';
 import {AppLanguage,LanguageContext} from './lib/language';
@@ -8,6 +8,7 @@ import './lib/authVisibility';
 const nav=[['/','Tume','Commission'],['/toa-taarifa','Wasilisha Taarifa','Submit Information'],['/taarifa-zangu','Taarifa Zangu','My Submissions']];
 export default function App(){
   const location=useLocation();
+  const navigate=useNavigate();
   const [session,setSession]=useState<any>(null);
   const [userRole,setUserRole]=useState<string|null>(null);
   const [mobileOpen,setMobileOpen]=useState(false);
@@ -28,6 +29,7 @@ export default function App(){
     return()=>subscription.unsubscribe();
   },[]);
   useEffect(()=>{document.documentElement.lang=language},[language]);
+  useEffect(()=>{if(session?.user && location.pathname==='/account'){navigate('/dashboard',{replace:true});}},[session,location.pathname,navigate]);
   useEffect(()=>{document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;localStorage.setItem('tume-theme',theme)},[theme]);
   useEffect(()=>setMobileOpen(false),[location.pathname]);
   async function logout(){await supabase.auth.signOut();setSession(null);setUserRole(null)}

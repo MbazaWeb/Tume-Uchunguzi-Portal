@@ -1491,3 +1491,141 @@ button.lawDashboardCard{transition:transform .16s ease,box-shadow .16s ease}
 .groupMediaHint{margin:0!important;font-size:9px!important;color:var(--muted,#667)}
 @media(max-width:760px){.groupMediaUploadGrid{grid-template-columns:1fr}.groupMediaUrlOptions>div{grid-template-columns:1fr}.groupMediaUrlOptions button{width:100%}.groupMediaSettings>summary>small{display:none}.coverPreview{width:105px}}
 
+
+/* ==========================================================
+   ANONYMOUS SCREENING — kuboresha UI
+   ========================================================== */
+.anonScreeningPage { max-width: 780px; margin: 0 auto; }
+.anonScreeningHeader { margin-bottom: 2rem; }
+
+.anonChoiceStack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.anonChoiceCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: #fff;
+}
+
+.anonChoiceCard:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.anonChoiceCard.selected {
+  border-color: #0d7ea8;
+  background: #f0f9ff;
+  box-shadow: 0 0 0 3px rgba(13,126,168,0.12);
+}
+
+.anonChoiceCard input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #0d7ea8;
+  flex-shrink: 0;
+}
+
+.anonChoiceCard span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* Anonymous link kwenye home */
+.anonLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Wizard screening questions — clean up */
+.wizardAnonymousQ {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  background: #fff;
+}
+
+.wizardAnonymousQ legend {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0f172a;
+  padding: 0 0.5rem;
+}
+
+.wizardAnonLocation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.wizardAnonLocation select,
+.wizardAnonLocation input {
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.wizardAnonLocation select:focus,
+.wizardAnonLocation input:focus {
+  outline: none;
+  border-color: #0d7ea8;
+  box-shadow: 0 0 0 3px rgba(13,126,168,0.12);
+}
+
+/* ==========================================================
+   WARD FLOW — Mkoa > Wilaya > Kata > Mtaa/Kijiji
+   ========================================================== */
+.wardInputRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wardInputRow input {
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.wardInputRow input:disabled,
+.wizardAnonLocation input:disabled,
+.wizardAnonLocation select:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.wardBackBtn {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  color: #0d7ea8;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+.wardBackBtn:hover {
+  text-decoration: underline;
+}
