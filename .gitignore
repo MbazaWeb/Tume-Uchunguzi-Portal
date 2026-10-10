@@ -1,34 +1,129 @@
-﻿# Dependencies
+﻿# ==========================================================
+# TUME-UCHUNGUZI-PORTAL — .gitignore
+# ==========================================================
+
+# ---------------- DEPENDENCIES ----------------
 node_modules/
 .pnp
 .pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
 
-# Build output
-dist/
-build/
-*.tsbuildinfo
-
-# Environment
+# ---------------- ENVIRONMENT FILES ----------------
 .env
 .env.local
 .env.*.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.staging
+.env.staging.local
+.env.production
+.env.production.local
+!.env.example
 
-# Logs
-*.log
+# ---------------- NEXT.JS ----------------
+.next/
+out/
+build/
+dist/
+.swc/
+next-env.d.ts
+
+# ---------------- VITE ----------------
+.vite/
+*.local
+
+# ---------------- NODE ----------------
 npm-debug.log*
-build-errors.txt
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.npm
+.node_repl_history
+*.tgz
 
-# Editor / OS
-.vscode/
-.idea/
+# ---------------- TYPESCRIPT ----------------
+*.tsbuildinfo
+.next/cache/
+
+# ---------------- SUPABASE ----------------
+.supabase/
+supabase/.branches/
+supabase/.temp/
+supabase/.env
+supabase/.env.*
+
+# ---------------- PRISMA / DRIZZLE ----------------
+prisma/migrations/dev.db*
+*.db
+*.db-journal
+
+# ---------------- LOGS ----------------
+logs/
+*.log
+
+# ---------------- OS FILES ----------------
 .DS_Store
 Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# Vercel
+# ---------------- IDE / EDITORS ----------------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ---------------- CACHE ----------------
+.cache/
+.parcel-cache/
+.eslintcache
+.turbo/
 .vercel/
-.vercel-redeploy-*
+.netlify/
 
-# Backups / scratch
-backup-branding-*/
-election-law-01.txt
+# ---------------- TEST / COVERAGE ----------------
+coverage/
+.nyc_output/
+*.lcov
+
+# ---------------- MISC ----------------
+*.pem
+.vercel
+.netlify
+
+# ---------------- SCRATCH / REPORTS / BACKUPS ----------------
+*.txt
+!README.txt
+build-errors.txt
+repair-*.txt
+repair-output.txt
+verification-*.txt
+final-verification.txt
+npm-debug-*.txt
+demo-script-check.txt
+election-law-*.txt
+git-investigation.txt
+next-review.txt
+review-details.txt
 tume-source-inspection.txt
+
+backup-*/
+*.bak
+*.backup
+
+# ---------------- VERCEL / DEPLOY MARKERS ----------------
+.vercel-redeploy-*
+.vercel/
+.netlify/
+
+# ---------------- LOGS ----------------
+*.log
