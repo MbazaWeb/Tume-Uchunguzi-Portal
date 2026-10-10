@@ -1,10 +1,9 @@
 import {FormEvent,useEffect,useRef,useState} from 'react';
 import {createPortal} from 'react-dom';
-import {Link,useNavigate,useSearchParams} from 'react-router';
+import {Link,useSearchParams} from 'react-router';
 import {ArrowRight,CheckCircle2,Eye,EyeOff,ExternalLink,FileText,LockKeyhole,MapPin,Moon,ShieldCheck,Sun,Upload,Users} from 'lucide-react';
 import {Upload as TusUpload} from 'tus-js-client';
 import {supabase,supabasePublishableKey,supabaseUrl} from './lib/supabase';
-import {INCIDENT_DATES} from './data/incidentDates';
 import {useLanguage} from './lib/language';
 import './commission.css';
 
@@ -14,7 +13,6 @@ const maxFileBytes=50*1024*1024;
 
 export function AccountAccessPage(){
   const {t}=useLanguage();
-  const navigate=useNavigate();
   const [searchParams,setSearchParams]=useSearchParams();
   const [mode,setMode]=useState<'login'|'signup'>(()=>searchParams.get('mode')==='signup'?'signup':'login');
   const [session,setSession]=useState<any>(undefined);
@@ -48,13 +46,12 @@ export function AccountAccessPage(){
     if(mode==='signup'){
       const display_name=String(form.get('name')||'').trim(),mobile=String(form.get('mobile')||'').trim();
       const {data,error}=await supabase.auth.signUp({email,password,options:{data:{display_name,mobile,account_type:'individual'},emailRedirectTo:window.location.origin+'/account'}});
-      if(error){setMessage(error.message);setBusy(false);return}
-      if(data.session){navigate('/dashboard',{replace:true});setBusy(false);return}
-      setMessage(t('Akaunti imeundwa. Angalia barua pepe yako ili kuthibitisha.','Account created. Check your email to confirm.'));setBusy(false);return;
+      if(error)setMessage(error.message);
+      else setMessage(data.session?t('Akaunti imeundwa na umeingia moja kwa moja.','Your account is ready and you are signed in.'):t('Akaunti imeundwa. Angalia barua pepe yako ikiwa uthibitisho unahitajika.','Your account has been created. Check your email if confirmation is required.'));
     }else{
       const {error}=await supabase.auth.signInWithPassword({email,password});
       if(error)setMessage(error.message==='Invalid login credentials'?t('Barua pepe au nenosiri si sahihi.','Email or password is incorrect.'):error.message);
-      else navigate('/dashboard',{replace:true});
+      else setMessage(t('Umeingia kikamilifu.','You are signed in.'));
     }
     setBusy(false);
   }
@@ -93,7 +90,7 @@ export function CommissionHomePage(){
       </div>
       <aside className="commissionHeroAside">
         <div className="commissionSeal"><img src="https://www.tume.uchunguzi.go.tz/site/images/emblem.webp" alt="Nembo ya Tume ya Uchunguzi"/></div>
-        <span>UCHUNGUZI ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· OKTOBA 2025</span>
+        <span>UCHUNGUZI - OKTOBA 2025</span>
         <h2>Sauti na ushahidi wako ni muhimu.</h2>
         <p>Ingia au jisajili ili kuwasilisha maelezo kwa siri na kufuatilia hatua za taarifa zako.</p>
         <Link to={signedIn?'/toa-taarifa':'/account?mode=signup'}>{signedIn?'Wasilisha taarifa':'Jisajili kuanza'} <ArrowRight size={16}/></Link>
@@ -102,7 +99,7 @@ export function CommissionHomePage(){
 
     <section className="commissionSection commissionMembers">
       <div className="commissionSectionHeading"><span className="kicker">AKAUNTI YA MWANANCHI</span><h2>{signedIn?'Endelea na taarifa zako':'Ingia au jisajili kushiriki'}</h2><p>{signedIn?'Wasilisha taarifa mpya au kagua hali ya taarifa ulizowasilisha kwa Tume.':'Akaunti yako itakuwezesha kuwasilisha taarifa na kufuatilia hatua zake kwa faragha.'}</p></div>
-      <div className="commissionActions">{signedIn?<><Link className="primary linkBtn" to="/toa-taarifa">Wasilisha taarifa <ArrowRight size={17}/></Link><Link className="secondary linkBtn" to="/taarifa-zangu">Taarifa zangu <ArrowRight size={17}/></Link></>:<><Link className="primary linkBtn" to="/account?mode=signup">Jisajili <ArrowRight size={17}/></Link><Link className="secondary linkBtn" to="/account?mode=login">Ingia kwenye akaunti <ArrowRight size={17}/></Link><Link className="secondary linkBtn anonLink" to="/toa-taarifa?anonymous=1"><LockKeyhole size={15}/> Uwasilishaji wa Siri</Link></>}</div>
+      <div className="commissionActions">{signedIn?<><Link className="primary linkBtn" to="/toa-taarifa">Wasilisha taarifa <ArrowRight size={17}/></Link><Link className="secondary linkBtn" to="/taarifa-zangu">Taarifa zangu <ArrowRight size={17}/></Link></>:<><Link className="primary linkBtn" to="/account?mode=signup">Jisajili <ArrowRight size={17}/></Link><Link className="secondary linkBtn" to="/account?mode=login">Ingia kwenye akaunti <ArrowRight size={17}/></Link></>}</div>
     </section>
 
     <section className="commissionSection commissionHow">
@@ -197,7 +194,7 @@ export function InquirySubmissionPage(){
     {reference?<div className="inquirySuccess"><CheckCircle2/><div><span>TAARIFA IMEWASILISHWA</span><h2>{reference}</h2><p>Hifadhi namba hii kwa marejeo. Uwasilishaji wako hautaonekana hadharani kwenye portal.</p><Link to="/">Rudi mwanzo</Link></div></div>:<form className="inquiryForm" onSubmit={submit}>
       <div className="inquiryFormIntro"><LockKeyhole size={19}/><p><b>Uwasilishaji wa siri</b><br/>Maelezo na faili zako hazitaonyeshwa hadharani. Wasimamizi wa Tume walioidhinishwa pekee ndio wanaoweza kuzikagua.</p></div>
       <label>Maelezo ya tukio<textarea name="description" required minLength={50} maxLength={10000} placeholder="Eleza kilichotokea, ulichokiona au unachokijua. Jumuisha tarehe na eneo kadiri iwezekanavyo."/></label>
-      <div className="inquiryFormTwo"><label>Tarehe ya tukio<select name="incidentDate" required defaultValue=""><option value="" disabled>Chagua tarehe</option>{INCIDENT_DATES.map(([value, sw, en]) => <option key={value} value={value}>{sw}</option>)}</select></label><label>Mkoa<input name="region" required maxLength={100} placeholder="Mfano: Dar es Salaam"/></label></div>
+      <div className="inquiryFormTwo"><label>Tarehe ya tukio<input name="incidentDate" type="date" required max={new Date().toISOString().slice(0,10)}/></label><label>Mkoa<input name="region" required maxLength={100} placeholder="Mfano: Dar es Salaam"/></label></div>
       <div className="inquiryFormTwo"><label>Wilaya<input name="district" maxLength={100}/></label><label>Eneo au mahali<input name="location" maxLength={500} placeholder="Mtaa, kituo au alama ya eneo"/></label></div>
       <details className="inquiryOptional"><summary>Taarifa zako (hiari)</summary><div className="inquiryFormTwo"><label>Jina<input name="fullName" maxLength={160} autoComplete="name"/></label><label>Simu au barua pepe<input name="contact" maxLength={160} autoComplete="email"/></label></div><small>Ukiacha mawasiliano, Tume haitaweza kukuuliza maswali ya ufafanuzi.</small></details>
       <label className="inquiryFilePicker"><span><Upload size={18}/><b>Ambatisha ushahidi</b><small>PDF, picha au video. Hadi faili 5, MB 50 kila moja.</small></span><input type="file" accept=".pdf,.jpg,.jpeg,.png,.webp,.mp4,.webm,.mov,application/pdf,image/jpeg,image/png,image/webp,video/mp4,video/webm,video/quicktime" multiple onChange={e=>selectFiles(e.target.files)}/></label>
@@ -258,20 +255,20 @@ export function InquiryTrackingPage(){
     const isOpen=expandedRow===row.id;
     const messages=followups[row.id]||[];
     return <article className={`inquiryCase ${isOpen?'expanded':''}`} key={row.id}>
-      <header><div><span>{row.reference_code}</span><h2>{new Date(row.incident_date+'T00:00:00').toLocaleDateString('sw-TZ')} ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· {row.region}{row.district?', '+row.district:''}</h2></div><strong className={'inquiryStatus '+row.status}>{statusLabels[row.status]||row.status}</strong></header>
+      <header><div><span>{row.reference_code}</span><h2>{new Date(row.incident_date+'T00:00:00').toLocaleDateString('sw-TZ')} - {row.region}{row.district?', '+row.district:''}</h2></div><strong className={'inquiryStatus '+row.status}>{statusLabels[row.status]||row.status}</strong></header>
       {row.location&&<small>{row.location}</small>}
       <p>{row.description}</p>
       <small>{t('Iliwasilishwa','Submitted')}: {new Date(row.created_at).toLocaleString('sw-TZ')}</small>
       {row.review_note&&<div className="inquiryFormIntro"><p><b>{t('Ujumbe kutoka kwa mkaguzi','Message from the reviewer')}</b><br/>{row.review_note}</p></div>}
-      {(row.attachments||[]).map((file:any)=><button className="inquiryEvidenceLink" key={file.path} onClick={()=>openEvidence(file.path)}>{file.name} ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· {(file.size/1024/1024).toFixed(1)} MB</button>)}
+      {(row.attachments||[]).map((file:any)=><button className="inquiryEvidenceLink" key={file.path} onClick={()=>openEvidence(file.path)}>{file.name} - {(file.size/1024/1024).toFixed(1)} MB</button>)}
       <button type="button" className="followUpToggleBtn" onClick={()=>toggleExpand(row.id)}>{isOpen?t('Funga mazungumzo','Close conversation'):t('Fuatilia na uongeze ushahidi','Follow up & add more evidence')}</button>
       {isOpen&&<div className="followUpThread">
         <h3>{t('Mazungumzo na Tume','Conversation with the Commission')}</h3>
         {messages.length===0&&<p className="followUpEmpty">{t('Bado hakuna majadiliano. Anza kuongeza ujumbe au ushahidi wa ziada.','No messages yet. Start by adding a message or additional evidence.')}</p>}
         {messages.map(msg=><div key={msg.id} className={`followUpMessage ${msg.sender_role}`}>
-          <small>{msg.sender_role==='citizen'?t('Wewe','You'):'Tume'} ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· {new Date(msg.created_at).toLocaleString('sw-TZ')}</small>
+          <small>{msg.sender_role==='citizen'?t('Wewe','You'):'Tume'} - {new Date(msg.created_at).toLocaleString('sw-TZ')}</small>
           <p>{msg.body}</p>
-          {msg.attachment_path&&<button className="inquiryEvidenceLink" onClick={()=>openEvidence(msg.attachment_path)}>{msg.attachment_name} ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· {((msg.attachment_size||0)/1024/1024).toFixed(1)} MB</button>}
+          {msg.attachment_path&&<button className="inquiryEvidenceLink" onClick={()=>openEvidence(msg.attachment_path)}>{msg.attachment_name} - {((msg.attachment_size||0)/1024/1024).toFixed(1)} MB</button>}
         </div>)}
         <div className="followUpComposer">
           <textarea value={draftFollowup[row.id]||''} onChange={e=>setDraftFollowup(prev=>({...prev,[row.id]:e.target.value}))} placeholder={t('Andika ujumbe wako kwa Tume hapa...','Type your message to the Commission here...')} maxLength={5000} />
@@ -334,14 +331,14 @@ export function InquiryInboxPage(){
     const messages=staffFollowups[row.id]||[];
     const people=row.people_involved?String(row.people_involved).split(';').filter(Boolean):[];
     return <article className={`inquiryCase ${isOpen?'expanded':''}`} key={row.id}>
-      <header><div><span>{row.reference_code}</span><h2>{row.incident_date} ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· {row.region}{row.district?', '+row.district:''}{row.street_village?', '+row.street_village:''}</h2></div><select aria-label={'Hali ya '+row.reference_code} value={row.status} onChange={e=>review(row,e.target.value as 'reviewing'|'closed')} disabled={busy===row.id}><option value="submitted">{t('Imepokelewa','Received')}</option><option value="reviewing">{t('Inakaguliwa','Under review')}</option><option value="closed">{t('Imefungwa','Closed')}</option></select></header>
+      <header><div><span>{row.reference_code}</span><h2>{row.incident_date} - {row.region}{row.district?', '+row.district:''}{row.street_village?', '+row.street_village:''}</h2></div><select aria-label={'Hali ya '+row.reference_code} value={row.status} onChange={e=>review(row,e.target.value as 'reviewing'|'closed')} disabled={busy===row.id}><option value="submitted">{t('Imepokelewa','Received')}</option><option value="reviewing">{t('Inakaguliwa','Under review')}</option><option value="closed">{t('Imefungwa','Closed')}</option></select></header>
       {row.short_title_category&&<small>{t('Kichwa:','Title:')} {row.short_title_category}</small>}
       <p>{row.description}</p>
       {row.anonymous_flag&&<small className="anonFlag">{t('Taarifa bila akaunti (haiwezi kufuatiliwa)','Anonymous submission (cannot be tracked)')}</small>}
-      {(row.full_name||row.contact)&&<small>{[row.full_name,row.contact].filter(Boolean).join(' ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· ')}</small>}
+      {(row.full_name||row.contact)&&<small>{[row.full_name,row.contact].filter(Boolean).join(' - ')}</small>}
       {row.location&&<small>{row.location}</small>}
       {people.length>0&&<small>{t('Watu waliohusika','People involved')}: {people.join('; ')}</small>}
-      {(row.attachments||[]).map((file:any)=><button className="inquiryEvidenceLink" key={file.path} onClick={()=>openEvidence(file.path)}>{file.name} ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· {(file.size/1024/1024).toFixed(1)} MB</button>)}
+      {(row.attachments||[]).map((file:any)=><button className="inquiryEvidenceLink" key={file.path} onClick={()=>openEvidence(file.path)}>{file.name} - {(file.size/1024/1024).toFixed(1)} MB</button>)}
       <textarea aria-label={t('Dokezo la mapitio','Internal review note')} defaultValue={row.review_note||''} onChange={e=>row.editNote=e.target.value} placeholder={t('Dokezo la ndani','Internal note')}/>
       <button className="secondary" disabled={busy===row.id} onClick={()=>review(row,row.status==='closed'?'closed':'reviewing')}>{t('Hifadhi dokezo','Save note')}</button>
       <button type="button" className="followUpToggleBtn" onClick={()=>toggleExpand(row.id)}>{isOpen?t('Funga mazungumzo','Close conversation'):t('Mazungumzo na mwananchi','Citizen conversation')}</button>
@@ -349,9 +346,9 @@ export function InquiryInboxPage(){
         <h3>{t('Mazungumzo na mwananchi','Conversation with citizen')}</h3>
         {messages.length===0&&<p className="followUpEmpty">{t('Bado hakuna majadiliano.','No messages yet.')}</p>}
         {messages.map(msg=><div key={msg.id} className={`followUpMessage ${msg.sender_role}`}>
-          <small>{msg.sender_role==='staff'?t('Tume','Commission'):'Mwananchi'} ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· {new Date(msg.created_at).toLocaleString('sw-TZ')}</small>
+          <small>{msg.sender_role==='staff'?t('Tume','Commission'):'Mwananchi'} - {new Date(msg.created_at).toLocaleString('sw-TZ')}</small>
           <p>{msg.body}</p>
-          {msg.attachment_path&&<button className="inquiryEvidenceLink" onClick={()=>openEvidence(msg.attachment_path)}>{msg.attachment_name} ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· {((msg.attachment_size||0)/1024/1024).toFixed(1)} MB</button>}
+          {msg.attachment_path&&<button className="inquiryEvidenceLink" onClick={()=>openEvidence(msg.attachment_path)}>{msg.attachment_name} - {((msg.attachment_size||0)/1024/1024).toFixed(1)} MB</button>}
         </div>)}
         <div className="followUpComposer">
           <textarea value={staffDrafts[row.id]||''} onChange={e=>setStaffDrafts(prev=>({...prev,[row.id]:e.target.value}))} placeholder={t('Andika jibu kwa mwananchi hapa...','Type your reply to the citizen here...')} maxLength={5000} />

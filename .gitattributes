@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.tsx text eol=lf working-tree-encoding=UTF-8
+*.ts text eol=lf working-tree-encoding=UTF-8
+*.css text eol=lf working-tree-encoding=UTF-8
+*.html text eol=lf working-tree-encoding=UTF-8
+*.json text eol=lf
