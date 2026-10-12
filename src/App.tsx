@@ -29,7 +29,7 @@ export default function App(){
     return()=>subscription.unsubscribe();
   },[]);
   useEffect(()=>{document.documentElement.lang=language},[language]);
-  useEffect(()=>{if(session?.user && location.pathname==='/account'){navigate('/dashboard',{replace:true});}},[session,location.pathname,navigate]);
+  // Akaunti link should not redirect — remove the /account → /dashboard redirect
   useEffect(()=>{document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;localStorage.setItem('tume-theme',theme)},[theme]);
   useEffect(()=>setMobileOpen(false),[location.pathname]);
   async function logout(){await supabase.auth.signOut();setSession(null);setUserRole(null)}
@@ -37,13 +37,15 @@ export default function App(){
     <div className={'app '+(isAdminArea?'staffApp':'')}>
       <header className={'nav '+(isAdminArea?'adminNav':'')}>
         <NavLink to="/" className="brand"><div className="mark officialMark"><ShieldCheck size={24}/></div><div><strong>TUME YA UCHUNGUZI</strong><span>{t('PORTALI YA TAARIFA ZA UCHUNGUZI','INQUIRY REPORTING PORTAL')}</span></div></NavLink>
-        <nav>{!userRole||userRole==='citizen'?nav.map(([to,sw,en])=><NavLink key={to} to={to} end={to==='/'}>{t(sw,en)}</NavLink>):null}</nav>
+        <nav>
+          {(!userRole||userRole==='citizen')&&nav.map(([to,sw,en])=><NavLink key={to} to={to} end={to==='/'}>{t(sw,en)}</NavLink>)}
+          {userRole==='admin'&&<NavLink to="/admin">{t('Admin','Admin')}</NavLink>}
+          {userRole==='admin'&&<NavLink to="/admin/users">{t('Watumiaji','Users')}</NavLink>}
+          {(userRole==='admin'||userRole==='reviewer')&&<NavLink to="/workflow">{t('Kazi','Workflow')}</NavLink>}
+          {(userRole==='admin'||userRole==='committee')&&<NavLink to="/committee">{t('Kura','Committee')}</NavLink>}
+        </nav>
         <div className="navActions">
           <button className="ghost languageSwitch headerLanguage" onClick={()=>setLanguage(language==='sw'?'en':'sw')}><b>{language.toUpperCase()}</b> / {language==='sw'?'EN':'SW'}</button>
-          {userRole==='admin'&&<NavLink className="headerAdminLink" to="/admin">{t('Admin','Admin')}</NavLink>}
-          {userRole==='admin'&&<NavLink className="headerAdminLink" to="/admin/users">{t('Watumiaji','Users')}</NavLink>}
-          {(userRole==='admin'||userRole==='reviewer')&&<NavLink className="headerAdminLink" to="/workflow">{t('Kazi','Workflow')}</NavLink>}
-          {(userRole==='admin'||userRole==='committee')&&<NavLink className="headerAdminLink" to="/committee">{t('Kura','Committee')}</NavLink>}
           <NavLink className="headerAccountLink" to="/account">{session?.user?t('Akaunti','Account'):t('Ingia','Sign in')}</NavLink>
           <button className="mobileMenuBtn" onClick={()=>setMobileOpen(v=>!v)} aria-label={t('Fungua menyu','Open menu')}>{mobileOpen?<X size={21}/>:<Menu size={21}/>}</button>
         </div>

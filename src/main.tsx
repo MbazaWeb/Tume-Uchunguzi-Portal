@@ -6,6 +6,7 @@ import App from './App';
 import {AccountAccessPage,CommissionHomePage,InquiryInboxPage,InquiryTrackingPage} from './CommissionPortal';
 import {InquiryWizard as InquirySubmissionPage} from './InquiryWizard';
 import Dashboard from './Dashboard';
+import RoleBasedDashboard from './RoleBasedDashboard';
 import {AdminUsersPage,CommitteePage,WorkflowPage} from './StaffPages';
 import {AdminDashboard,CommitteeDashboard,WorkflowDashboard} from './StaffDashboards';
 import './styles.css';
@@ -15,7 +16,7 @@ const router=createBrowserRouter([{path:'/',Component:App,children:[
   {index:true,Component:CommissionHomePage},
   {path:'toa-taarifa',Component:InquirySubmissionPage},
   {path:'taarifa-zangu',Component:InquiryTrackingPage},
-  {path:'dashboard',Component:Dashboard},
+  {path:'dashboard',Component:RoleBasedDashboard},
   {path:'admin',Component:AdminDashboard},
   {path:'admin/inquiries',Component:InquiryInboxPage},
   {path:'admin/users',Component:AdminUsersPage},

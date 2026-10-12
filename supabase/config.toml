@@ -29,3 +29,5 @@ policy = "per_worker"
 
 [functions.inquiry-intake]
 verify_jwt = false
+[functions.admin-create-user]
+verify_jwt = true

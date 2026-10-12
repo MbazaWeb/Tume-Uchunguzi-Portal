@@ -64,7 +64,7 @@ function RoleBadge({role}:{role:string}){
 }
 
 // ==========================================================
-// PAGE 1: AdminUsersPage â€” manage users and their roles
+// PAGE 1: AdminUsersPage ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â manage users and their roles
 // ==========================================================
 export function AdminUsersPage(){
   const {t}=useLanguage();
@@ -73,6 +73,12 @@ export function AdminUsersPage(){
   const [busy,setBusy]=useState<string>('');
   const [message,setMessage]=useState('');
   const [search,setSearch]=useState('');
+  const [showCreateForm,setShowCreateForm]=useState(false);
+  const [createEmail,setCreateEmail]=useState('');
+  const [createPassword,setCreatePassword]=useState('');
+  const [createDisplayName,setCreateDisplayName]=useState('');
+  const [createRole,setCreateRole]=useState<'citizen'|'reviewer'|'committee'|'admin'>('reviewer');
+  const [creating,setCreating]=useState(false);
 
   async function load(){
     const {data:{user}}=await supabase.auth.getUser();
@@ -112,6 +118,42 @@ export function AdminUsersPage(){
     setBusy('');
   }
 
+  async function createUser(e:FormEvent){
+    e.preventDefault();
+    setCreating(true); setMessage('');
+
+    try {
+      const {data, error} = await supabase.functions.invoke('admin-create-user', {
+        body: {
+          email: createEmail.trim().toLowerCase(),
+          password: createPassword,
+          displayName: createDisplayName.trim(),
+          role: createRole,
+        },
+      });
+
+      if(error){
+        setMessage(error.message || t('Imeshindikana kuunda mtumiaji.','Could not create user.'));
+        setCreating(false);
+        return;
+      }
+
+      if(data?.error){
+        setMessage(data.error);
+        setCreating(false);
+        return;
+      }
+
+      setMessage(t(`Mtumiaji ameundwa: ${createEmail}`, `User created: ${createEmail}`));
+      setCreateEmail(''); setCreatePassword(''); setCreateDisplayName(''); setCreateRole('reviewer');
+      setShowCreateForm(false);
+      await load();
+    } catch(err:any){
+      setMessage(err?.message || t('Kosa la mtandao.','Network error.'));
+    }
+    setCreating(false);
+  }
+
   if(authorized===null) return <section className="section page"><h1 className="pageTitle">{t('Inapakia...','Loading...')}</h1></section>;
   if(!authorized) return <section className="section page"><h1 className="pageTitle">{t('Ufikiaji umezuiwa','Access restricted')}</h1><p className="lead">{t('Ukurasa huu ni wa wasimamizi wa Tume.','This page is for Commission administrators.')}</p><Link to="/">Rudi mwanzo</Link></section>;
 
@@ -127,6 +169,85 @@ export function AdminUsersPage(){
     <p className="lead">{t('Badilisha role za watumiaji ili kuwapa ufikiaji wa Tume.','Change user roles to grant Commission access.')}</p>
 
     {message && <div className="authMessage" role="status">{message}</div>}
+
+    {/* Create user form */}
+    <div style={{marginTop:'2rem',display:'flex',gap:'0.75rem',flexWrap:'wrap',alignItems:'center'}}>
+      <button
+        type="button"
+        className="primary"
+        onClick={()=>setShowCreateForm(v=>!v)}
+        style={{display:'inline-flex',alignItems:'center',gap:'0.5rem'}}
+      >
+        {showCreateForm ? t('Funga fomu','Close form') : t('+ Ongeza mtumiaji','+ Add user')}
+      </button>
+      <span style={{fontSize:'0.9rem',color:'#666'}}>
+        {users.length} {t('watumiaji','users')}
+      </span>
+    </div>
+
+    {showCreateForm && <form onSubmit={createUser} className="createUserForm">
+      <h3>{t('Kuunda mtumiaji mpya','Create new user')}</h3>
+
+      <div className="wizardTwo">
+        <label>{t('Jina la kuonyesha','Display name')}
+          <input
+            type="text"
+            required
+            minLength={2}
+            maxLength={80}
+            value={createDisplayName}
+            onChange={e=>setCreateDisplayName(e.target.value)}
+            placeholder={t('Mfano: Juma Mwangi','Example: John Doe')}
+          />
+        </label>
+        <label>{t('Role','Role')}
+          <select
+            value={createRole}
+            onChange={e=>setCreateRole(e.target.value as any)}
+          >
+            <option value="reviewer">{t('Mkaguzi','Reviewer')}</option>
+            <option value="committee">{t('Kamati','Committee')}</option>
+            <option value="admin">{t('Msimamizi','Admin')}</option>
+            <option value="citizen">{t('Mwananchi','Citizen')}</option>
+          </select>
+        </label>
+      </div>
+
+      <label>{t('Barua pepe','Email')}
+        <input
+          type="email"
+          required
+          value={createEmail}
+          onChange={e=>setCreateEmail(e.target.value)}
+          placeholder="mtu@tume.tz"
+        />
+      </label>
+
+      <label>{t('Nenosiri (angalau herufi 8)','Password (min 8 characters)')}
+        <input
+          type="text"
+          required
+          minLength={8}
+          value={createPassword}
+          onChange={e=>setCreatePassword(e.target.value)}
+          placeholder={t('Nenosiri la muda','Temporary password')}
+        />
+      </label>
+
+      <div style={{display:'flex',gap:'0.5rem',marginTop:'0.5rem'}}>
+        <button type="submit" className="primary" disabled={creating}>
+          {creating ? t('Inaunda...','Creating...') : t('Unda mtumiaji','Create user')}
+        </button>
+        <button
+          type="button"
+          className="secondary"
+          onClick={()=>{setShowCreateForm(false);setMessage('');}}
+          disabled={creating}
+        >
+          {t('Ghairi','Cancel')}
+        </button>
+      </div>
+    </form>}
 
     <div className="wizardTwo" style={{marginTop:'2rem'}}>
       <label>{t('Tafuta','Search')}
@@ -179,7 +300,7 @@ export function AdminUsersPage(){
 }
 
 // ==========================================================
-// PAGE 2: WorkflowPage â€” reviewer dashboard
+// PAGE 2: WorkflowPage ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â reviewer dashboard
 // ==========================================================
 export function WorkflowPage(){
   const {t}=useLanguage();
@@ -245,9 +366,9 @@ export function WorkflowPage(){
       </header>
       <p>{a.submission.description}</p>
       <small>
-        {a.submission.incident_date} Â· {a.submission.region}
+        {a.submission.incident_date} Ãƒâ€šÃ‚Â· {a.submission.region}
         {a.submission.district ? ', ' + a.submission.district : ''}
-        {a.submission.anonymous_flag ? ' Â· ' + t('Bila jina','Anonymous') : ''}
+        {a.submission.anonymous_flag ? ' Ãƒâ€šÃ‚Â· ' + t('Bila jina','Anonymous') : ''}
       </small>
       <div style={{display:'flex',gap:'0.5rem',marginTop:'1rem',flexWrap:'wrap'}}>
         <button
@@ -272,7 +393,7 @@ export function WorkflowPage(){
 }
 
 // ==========================================================
-// PAGE 3: CommitteePage â€” committee members vote
+// PAGE 3: CommitteePage ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â committee members vote
 // ==========================================================
 export function CommitteePage(){
   const {t}=useLanguage();
@@ -374,9 +495,9 @@ export function CommitteePage(){
         </header>
         <p>{s.description}</p>
         <small>
-          {s.incident_date} Â· {s.region}
+          {s.incident_date} Ãƒâ€šÃ‚Â· {s.region}
           {s.district ? ', ' + s.district : ''}
-          {s.anonymous_flag ? ' Â· ' + t('Bila jina','Anonymous') : ''}
+          {s.anonymous_flag ? ' Ãƒâ€šÃ‚Â· ' + t('Bila jina','Anonymous') : ''}
         </small>
 
         {myDecision ? (
