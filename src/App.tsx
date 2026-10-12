@@ -37,7 +37,7 @@ export default function App(){
     <div className={'app '+(isAdminArea?'staffApp':'')}>
       <header className={'nav '+(isAdminArea?'adminNav':'')}>
         <NavLink to="/" className="brand"><div className="mark officialMark"><ShieldCheck size={24}/></div><div><strong>TUME YA UCHUNGUZI</strong><span>{t('PORTALI YA TAARIFA ZA UCHUNGUZI','INQUIRY REPORTING PORTAL')}</span></div></NavLink>
-        <nav>{nav.map(([to,sw,en])=><NavLink key={to} to={to} end={to==='/'}>{t(sw,en)}</NavLink>)}</nav>
+        <nav>{!userRole||userRole==='citizen'?nav.map(([to,sw,en])=><NavLink key={to} to={to} end={to==='/'}>{t(sw,en)}</NavLink>):null}</nav>
         <div className="navActions">
           <button className="ghost languageSwitch headerLanguage" onClick={()=>setLanguage(language==='sw'?'en':'sw')}><b>{language.toUpperCase()}</b> / {language==='sw'?'EN':'SW'}</button>
           {userRole==='admin'&&<NavLink className="headerAdminLink" to="/admin">{t('Admin','Admin')}</NavLink>}
@@ -48,7 +48,7 @@ export default function App(){
           <button className="mobileMenuBtn" onClick={()=>setMobileOpen(v=>!v)} aria-label={t('Fungua menyu','Open menu')}>{mobileOpen?<X size={21}/>:<Menu size={21}/>}</button>
         </div>
       </header>
-      {mobileOpen&&<div className="menuBackdrop" onClick={()=>setMobileOpen(false)}><div className="mobileNav" onClick={e=>e.stopPropagation()}><nav>{nav.map(([to,sw,en])=><NavLink key={to} to={to} end={to==='/'}>{t(sw,en)}</NavLink>)}</nav>{userRole==='admin'&&<NavLink to="/admin">{t('Admin','Admin')}</NavLink>}
+      {mobileOpen&&<div className="menuBackdrop" onClick={()=>setMobileOpen(false)}><div className="mobileNav" onClick={e=>e.stopPropagation()}><nav>{!userRole||userRole==='citizen'?nav.map(([to,sw,en])=><NavLink key={to} to={to} end={to==='/'}>{t(sw,en)}</NavLink>):null}</nav>{userRole==='admin'&&<NavLink to="/admin">{t('Admin','Admin')}</NavLink>}
           {userRole==='admin'&&<NavLink to="/admin/users">{t('Watumiaji','Users')}</NavLink>}
           {(userRole==='admin'||userRole==='reviewer')&&<NavLink to="/workflow">{t('Kazi','Workflow')}</NavLink>}
           {(userRole==='admin'||userRole==='committee')&&<NavLink to="/committee">{t('Kura','Committee')}</NavLink>}{session?.user&&<button className="menuLogout" onClick={logout}>{t('Toka','Sign out')}</button>}</div></div>}

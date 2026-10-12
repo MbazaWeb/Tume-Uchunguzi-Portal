@@ -1491,3 +1491,130 @@ button.lawDashboardCard{transition:transform .16s ease,box-shadow .16s ease}
 .groupMediaHint{margin:0!important;font-size:9px!important;color:var(--muted,#667)}
 @media(max-width:760px){.groupMediaUploadGrid{grid-template-columns:1fr}.groupMediaUrlOptions>div{grid-template-columns:1fr}.groupMediaUrlOptions button{width:100%}.groupMediaSettings>summary>small{display:none}.coverPreview{width:105px}}
 
+
+/* ==========================================================
+   STAFF PAGES — Users, Workflow, Committee
+   ========================================================== */
+
+/* Role badges */
+.roleBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+/* User cards (AdminUsersPage) */
+.inquiryCase header select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  font-size: 0.875rem;
+  min-width: 140px;
+}
+
+.inquiryCase header select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form inputs kwenye staff pages */
+.inquiryCase input[type="text"],
+.inquiryCase textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: white;
+}
+
+.inquiryCase input[type="text"]:focus,
+.inquiryCase textarea:focus {
+  outline: none;
+  border-color: #087ea4;
+  box-shadow: 0 0 0 3px rgba(8,126,164,0.1);
+}
+
+/* Buttons kwenye staff pages */
+.inquiryCase button.primary,
+.inquiryCase button.secondary {
+  min-width: 120px;
+}
+
+.inquiryCase button.primary:disabled,
+.inquiryCase button.secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* User list kwenye /admin/users */
+.inquiryCase strong {
+  font-size: 1rem;
+}
+
+.inquiryCase small {
+  display: block;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Committee decision block */
+.inquiryCase label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.inquiryCase label select,
+.inquiryCase label textarea {
+  display: block;
+  margin-top: 0.35rem;
+  width: 100%;
+}
+
+/* Staff pages: empty state */
+.empty {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #666;
+  background: #f9f9f9;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.empty svg {
+  margin-bottom: 1rem;
+  color: #999;
+}
+
+/* Search input kwenye staff pages */
+.wizardTwo input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* Role badge kolori */
+.bg-red-100 { background-color: #fee2e2; }
+.bg-blue-100 { background-color: #dbeafe; }
+.bg-purple-100 { background-color: #f3e8ff; }
+.bg-gray-100 { background-color: #f3f4f6; }
+
+.text-red-800 { color: #991b1b; }
+.text-blue-800 { color: #1e40af; }
+.text-purple-800 { color: #6b21a8; }
+.text-gray-800 { color: #1f2937; }
+
+.border-red-200 { border-color: #fecaca; }
+.border-blue-200 { border-color: #bfdbfe; }
+.border-purple-200 { border-color: #ddd6fe; }
+.border-gray-200 { border-color: #e5e7eb; }

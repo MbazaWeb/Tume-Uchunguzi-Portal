@@ -23,10 +23,10 @@ export default function Dashboard(){
       if(!name){
         const {data:profile} = await supabase
           .from('profiles')
-          .select('display_name,full_name')
+          .select('display_name')
           .eq('id',data.user.id)
           .maybeSingle();
-        name = profile?.display_name || profile?.full_name || '';
+        name = profile?.display_name || '';
       }
 
       // 3) Fallback: sehemu ya mwanzo ya email (kabla ya @)
