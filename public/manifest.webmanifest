@@ -1,0 +1,26 @@
+{
+  "name": "Tume ya Uchunguzi Portal",
+  "short_name": "Tume Uchunguzi",
+  "description": "Portal ya ushiriki na shughuli za Tume ya Uchunguzi kuhusu matukio ya Oktoba 2025 nchini Tanzania.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#087ea4",
+  "lang": "sw",
+  "icons": [
+    {
+      "src": "https://images.seeklogo.com/logo-png/31/1/coat-of-arms-of-tanzania-logo-png_seeklogo-311608.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://images.seeklogo.com/logo-png/31/1/coat-of-arms-of-tanzania-logo-png_seeklogo-311608.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
