@@ -33,7 +33,7 @@ type PersonEntry = { name: string; role: string };
 type AffectedPerson = { name: string; status: 'deceased' | 'missing' };
 
 const initialForm = {
-  submissionType: '', reporterRole: '', incidentDate: '', incidentTime: 'unknown',
+  submissionType: '', reporterRole: '', incidentDate: '', incidentTime: 'unknown', eventTime: '',
   region: '', district: '', ward: '', wardCustom: false, streetVillage: '',
   location: '', violationTypes: [] as string[], violationCounts: {} as Record<string, number>, affectedPeople: [] as AffectedPerson[], shortTitleCategory: '', title: '',
   description: '', peopleInvolved: [] as PersonEntry[], authoritiesPresent: 'unsure',
@@ -116,7 +116,7 @@ export function InquiryWizard() {
       description: form.description.trim(),
       title: form.title.trim() || selectionLabel('shortTitle', form.shortTitleCategory),
       peopleInvolved: peopleJoined,
-      details: { violationCounts: form.violationCounts, affectedPeople: form.affectedPeople },
+      details: { violationCounts: form.violationCounts, affectedPeople: form.affectedPeople, eventTime: form.eventTime },
       ward: form.ward,
       streetVillage: form.streetVillage.trim(),
       anonymous: anonymousMode
@@ -329,6 +329,7 @@ export function InquiryWizard() {
         <div className="wizardTwo">
           <label>{t('Tarehe ya tukio', 'Incident date')}<select required value={form.incidentDate} onChange={e => update('incidentDate', e.target.value)}><option value="">{t('Chagua tarehe', 'Select a date')}</option>{incidentDateOptions.map(date => <option key={date} value={date}>{date.slice(8, 10) + ' Oct 2025'}</option>)}</select></label>
           <label>{t('Muda wa takriban', 'Approximate time')}<select value={form.incidentTime} onChange={e => update('incidentTime', e.target.value)}>{['morning', 'afternoon', 'evening', 'night', 'unknown'].map(value => <option key={value} value={value}>{selectionLabel('time', value)}</option>)}</select></label>
+          <label>{t('Saa halisi ya tukio (hiari)', 'Exact time of incident (optional)')}<input type="time" value={form.eventTime} onChange={e => update('eventTime', e.target.value)} /></label>
         </div>
         <div className="wizardTwo">
           <label>{t('Mkoa', 'Region')}<select value={form.region} onChange={e => { update('region', e.target.value); update('district', ''); update('ward', ''); update('wardCustom', false); }}><option value="">{t('Chagua mkoa', 'Select region')}</option>{TANZANIA_REGION_NAMES.map(region => <option key={region} value={region}>{region}</option>)}</select></label>
@@ -441,7 +442,7 @@ export function InquiryWizard() {
         {(() => {
           const sections: [number, string, any[]][] = [
             [1, t('Aina na nafasi', 'Type and role'), [selectionLabel('submissionType', form.submissionType), selectionLabel('reporterRole', form.reporterRole)]],
-            [2, t('Tukio', 'Incident'), [form.incidentDate, selectionLabel('time', form.incidentTime), [form.region, form.district, form.ward, form.streetVillage, form.location].filter(Boolean).join(', '), form.violationTypes.map(value => { const option = violationOptions.find(item => item[0] === value); return `${t(option?.[1] || value, option?.[2] || value)} (${form.violationCounts[value] ?? 1})`; }).join(', '), ...((form.affectedPeople.length && (form.violationTypes.includes('death') || form.violationTypes.includes('missing_person'))) ? [t('Majina ya waliofariki/waliopotea:', 'Names of deceased/missing people:') + ' ' + form.affectedPeople.map(person => `${person.name.trim() || t('Jina halijulikani', 'Name unknown')} (${person.status === 'deceased' ? t('Amefariki', 'Deceased') : t('Amepotea', 'Missing')})`).join('; ')] : [])]],
+            [2, t('Tukio', 'Incident'), [form.incidentDate, selectionLabel('time', form.incidentTime), ...(form.eventTime ? [t('Saa:', 'Exact time:') + ' ' + form.eventTime] : []), [form.region, form.district, form.ward, form.streetVillage, form.location].filter(Boolean).join(', '), form.violationTypes.map(value => { const option = violationOptions.find(item => item[0] === value); return `${t(option?.[1] || value, option?.[2] || value)} (${form.violationCounts[value] ?? 1})`; }).join(', '), ...((form.affectedPeople.length && (form.violationTypes.includes('death') || form.violationTypes.includes('missing_person'))) ? [t('Majina ya waliofariki/waliopotea:', 'Names of deceased/missing people:') + ' ' + form.affectedPeople.map(person => `${person.name.trim() || t('Jina halijulikani', 'Name unknown')} (${person.status === 'deceased' ? t('Amefariki', 'Deceased') : t('Amepotea', 'Missing')})`).join('; ')] : [])]],
             [3, t('Simulizi', 'Account'), [form.title, form.description, t('Watu waliohusika:', 'People involved:') + ' ' + (form.peopleInvolved.filter(p => p.name.trim()).map(p => `${p.name.trim()} (${selectionLabel('peopleRole', p.role)})`).join('; ') || t('Hakuna', 'None'))]],
             [4, t('Ushahidi', 'Evidence'), [files.length ? files.map(item => item.file.name).join(', ') : t('Hakuna faili lililoongezwa', 'No files attached')]],
             [5, t('Mwasilishaji', 'Your details'), [anonymousMode ? t('Bila kutaja jina (siri kabisa)', 'Anonymous (fully confidential)') : selectionLabel('mode', form.submissionMode), anonymousMode ? t('Hakuna arifa zitakazotumwa', 'No notifications will be sent') : (form.submissionMode === 'anonymous' ? t('Bila kutaja jina', 'Anonymous') : [form.fullName, form.contactConsent ? (form.contactMethod === 'email' ? form.email : form.phone) : ''].filter(Boolean).join(' - '))]]
