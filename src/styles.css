@@ -1618,3 +1618,408 @@ button.lawDashboardCard{transition:transform .16s ease,box-shadow .16s ease}
 .border-blue-200 { border-color: #bfdbfe; }
 .border-purple-200 { border-color: #ddd6fe; }
 .border-gray-200 { border-color: #e5e7eb; }
+
+/* ==========================================================
+   STAFF NAV — links katikati ya header
+   ========================================================== */
+
+/* Header: brand | nav (kati) | navActions (kulia) */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Nav katikati — inachukua space yote iliyobaki */
+.nav > nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Nav links */
+.nav > nav a {
+  font-weight: 600;
+  color: #4d4944;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav > nav a:hover {
+  color: #087ea4;
+}
+
+.nav > nav a.active {
+  color: #087ea4;
+}
+
+/* navActions — kulia pekee */
+.navActions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+  .nav > nav {
+    display: none;
+  }
+  
+  .mobileMenuBtn {
+    display: flex;
+  }
+}
+
+/* ==========================================================
+   STAFF DASHBOARDS — stats, charts, cards
+   ========================================================== */
+
+/* Stat card grid */
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: white;
+  border: 1px solid #e4e1dc;
+  border-left: 4px solid #087ea4;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(25,25,20,0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(25,25,20,0.08);
+}
+
+.statCardIcon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.statCardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.statCardBody strong {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #181715;
+  line-height: 1;
+}
+
+.statCardBody span {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Dashboard subheading */
+.dashboardSubhead {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #181715;
+  margin: 2.5rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dashboardSubhead::before {
+  content: '';
+  width: 4px;
+  height: 1.35rem;
+  background: #087ea4;
+  border-radius: 4px;
+}
+
+/* Chart grid */
+.chartGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chartCard {
+  background: white;
+  border: 1px solid #e4e1dc;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(25,25,20,0.04);
+}
+
+.chartCard h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #181715;
+  margin: 0 0 1.25rem;
+}
+
+.chartCard h3 svg {
+  color: #087ea4;
+}
+
+/* Simple Pie chart */
+.pieWrap {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pie {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pieInner {
+  position: absolute;
+  inset: 22px;
+  background: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.pieInner strong {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #181715;
+  line-height: 1;
+}
+
+.pieInner span {
+  font-size: 0.7rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.15rem;
+}
+
+.pieLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 140px;
+}
+
+.pieLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.pieDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pieLegendItem b {
+  margin-left: auto;
+  color: #181715;
+}
+
+/* Mini bar chart */
+.miniBarChart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.miniBar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.miniBarTrack {
+  height: 8px;
+  background: #f0ede8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.miniBarFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.miniBarLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.miniBarLabel b {
+  color: #181715;
+}
+
+/* Staff card list */
+.staffCardList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.staffCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: white;
+  border: 1px solid #e4e1dc;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.staffCard:hover {
+  border-color: #087ea4;
+  transform: translateX(4px);
+}
+
+.staffCard > div:first-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.staffCard strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #087ea4;
+}
+
+.staffCard span {
+  font-size: 0.9rem;
+  color: #181715;
+}
+
+.staffCard small {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+/* Status badge */
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.statusBadge.submitted { background: #dbeafe; color: #1e40af; }
+.statusBadge.reviewing { background: #fef3c7; color: #92400e; }
+.statusBadge.closed { background: #d1fae5; color: #065f46; }
+.statusBadge.assigned { background: #dbeafe; color: #1e40af; }
+.statusBadge.in_review { background: #fef3c7; color: #92400e; }
+.statusBadge.reviewed { background: #d1fae5; color: #065f46; }
+.statusBadge.returned { background: #fee2e2; color: #991b1b; }
+
+/* Quick links */
+.quickLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.quickLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 1px solid #e4e1dc;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #181715;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.15s ease;
+}
+
+.quickLink:hover {
+  border-color: #087ea4;
+  color: #087ea4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(8,126,164,0.1);
+}
+
+.quickLink svg {
+  color: #087ea4;
+}
+
+/* Muted text */
+.muted {
+  color: #888;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .statGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chartGrid {
+    grid-template-columns: 1fr;
+  }
+  .pieWrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .statCardBody strong {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statGrid {
+    grid-template-columns: 1fr;
+  }
+}

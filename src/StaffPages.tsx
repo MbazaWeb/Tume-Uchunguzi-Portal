@@ -64,7 +64,7 @@ function RoleBadge({role}:{role:string}){
 }
 
 // ==========================================================
-// PAGE 1: AdminUsersPage — manage users and their roles
+// PAGE 1: AdminUsersPage â€” manage users and their roles
 // ==========================================================
 export function AdminUsersPage(){
   const {t}=useLanguage();
@@ -179,7 +179,7 @@ export function AdminUsersPage(){
 }
 
 // ==========================================================
-// PAGE 2: WorkflowPage — reviewer dashboard
+// PAGE 2: WorkflowPage â€” reviewer dashboard
 // ==========================================================
 export function WorkflowPage(){
   const {t}=useLanguage();
@@ -245,9 +245,9 @@ export function WorkflowPage(){
       </header>
       <p>{a.submission.description}</p>
       <small>
-        {a.submission.incident_date} · {a.submission.region}
+        {a.submission.incident_date} Â· {a.submission.region}
         {a.submission.district ? ', ' + a.submission.district : ''}
-        {a.submission.anonymous_flag ? ' · ' + t('Bila jina','Anonymous') : ''}
+        {a.submission.anonymous_flag ? ' Â· ' + t('Bila jina','Anonymous') : ''}
       </small>
       <div style={{display:'flex',gap:'0.5rem',marginTop:'1rem',flexWrap:'wrap'}}>
         <button
@@ -272,7 +272,7 @@ export function WorkflowPage(){
 }
 
 // ==========================================================
-// PAGE 3: CommitteePage — committee members vote
+// PAGE 3: CommitteePage â€” committee members vote
 // ==========================================================
 export function CommitteePage(){
   const {t}=useLanguage();
@@ -374,9 +374,9 @@ export function CommitteePage(){
         </header>
         <p>{s.description}</p>
         <small>
-          {s.incident_date} · {s.region}
+          {s.incident_date} Â· {s.region}
           {s.district ? ', ' + s.district : ''}
-          {s.anonymous_flag ? ' · ' + t('Bila jina','Anonymous') : ''}
+          {s.anonymous_flag ? ' Â· ' + t('Bila jina','Anonymous') : ''}
         </small>
 
         {myDecision ? (
