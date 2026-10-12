@@ -197,7 +197,19 @@ export function InquiryWizard() {
         <label className="wizardAnonLocation">{t('Tarehe ya tukio', 'Incident date')}<select required value={form.incidentDate} onChange={e => setForm(current => ({ ...current, incidentDate: e.target.value }))}><option value="">{t('Chagua tarehe', 'Select a date')}</option>{incidentDateOptions.map(date => <option key={date} value={date}>{date.slice(8, 10) + ' Oct 2025'}</option>)}</select></label>
       </fieldset>
       <fieldset className="wizardAnonymousQ">
-        <legend>{t('3. Tukio lilitokea wapi?', '3. Where did the incident happen?')}</legend>
+        <legend>{t('3. Tukio lilitokea saa ngapi?', '3. What time did the incident happen?')}</legend>
+        <label className="wizardAnonLocation">{t('Muda wa takriban', 'Approximate time')}
+          <select value={form.incidentTime} onChange={e => setForm(current => ({ ...current, incidentTime: e.target.value }))}>
+            {[['morning', 'Asubuhi', 'Morning'], ['afternoon', 'Mchana', 'Afternoon'], ['evening', 'Jioni', 'Evening'], ['night', 'Usiku', 'Night'], ['unknown', 'Sijui / Sikumbuki', 'Unknown / I do not remember']].map(([value, sw, en]) => <option key={value} value={value}>{t(sw, en)}</option>)}
+          </select>
+        </label>
+        <label className="wizardAnonLocation">{t('Saa halisi ya tukio (hiari)', 'Exact time of incident (optional)')}
+          <input type="time" value={form.eventTime} onChange={e => setForm(current => ({ ...current, eventTime: e.target.value }))} />
+        </label>
+        <p>{t('Ikiwa hukumbuki muda, acha chaguo la “Sijui / Sikumbuki”. Saa halisi si lazima.', 'If you do not remember the time, leave “Unknown / I do not remember” selected. Exact time is optional.')}</p>
+      </fieldset>
+      <fieldset className="wizardAnonymousQ">
+        <legend>{t('4. Tukio lilitokea wapi?', '4. Where did the incident happen?')}</legend>
         <label className="wizardAnonLocation">{t('Mkoa', 'Region')}<select value={form.region} onChange={e => setForm(current => ({ ...current, region: e.target.value, district: '', ward: '' }))}><option value="">{t('Chagua mkoa', 'Select region')}</option>{TANZANIA_REGION_NAMES.map(region => <option key={region} value={region}>{region}</option>)}</select></label>
         <label className="wizardAnonLocation">{t('Wilaya', 'District')}<select value={form.district} disabled={!form.region} onChange={e => setForm(current => ({ ...current, district: e.target.value, ward: '' }))}><option value="">{t('Chagua wilaya', 'Select district')}</option>{(TANZANIA_REGIONS[form.region] || []).map(district => <option key={district} value={district}>{district}</option>)}</select></label>
         <label className="wizardAnonLocation">{t('Kata/Mtaa', 'Ward/Street')}<input value={anonAnswers.location || form.ward || form.streetVillage} maxLength={160} onChange={e => { setAnonAnswers(a => ({ ...a, location: e.target.value })); setForm(current => ({ ...current, streetVillage: e.target.value })); }} placeholder={t('Andika jina la kata, mtaa au kitongoji', 'Type the ward, street, or sub-village name')} /></label>
