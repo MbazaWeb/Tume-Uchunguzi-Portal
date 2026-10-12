@@ -1493,7 +1493,7 @@ button.lawDashboardCard{transition:transform .16s ease,box-shadow .16s ease}
 
 
 /* ==========================================================
-   STAFF PAGES — Users, Workflow, Committee
+   STAFF PAGES â€” Users, Workflow, Committee
    ========================================================== */
 
 /* Role badges */
@@ -1620,7 +1620,7 @@ button.lawDashboardCard{transition:transform .16s ease,box-shadow .16s ease}
 .border-gray-200 { border-color: #e5e7eb; }
 
 /* ==========================================================
-   STAFF NAV — links katikati ya header
+   STAFF NAV â€” links katikati ya header
    ========================================================== */
 
 /* Header: brand | nav (kati) | navActions (kulia) */
@@ -1630,7 +1630,7 @@ button.lawDashboardCard{transition:transform .16s ease,box-shadow .16s ease}
   gap: 1rem;
 }
 
-/* Nav katikati — inachukua space yote iliyobaki */
+/* Nav katikati â€” inachukua space yote iliyobaki */
 .nav > nav {
   flex: 1;
   display: flex;
@@ -1655,7 +1655,7 @@ button.lawDashboardCard{transition:transform .16s ease,box-shadow .16s ease}
   color: #087ea4;
 }
 
-/* navActions — kulia pekee */
+/* navActions â€” kulia pekee */
 .navActions {
   flex: 0 0 auto;
   display: flex;
@@ -1675,7 +1675,7 @@ button.lawDashboardCard{transition:transform .16s ease,box-shadow .16s ease}
 }
 
 /* ==========================================================
-   STAFF DASHBOARDS — stats, charts, cards
+   STAFF DASHBOARDS â€” stats, charts, cards
    ========================================================== */
 
 /* Stat card grid */
@@ -1689,28 +1689,28 @@ button.lawDashboardCard{transition:transform .16s ease,box-shadow .16s ease}
 .statCard {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1.25rem;
+  gap: 0.9rem;
+  padding: 1rem 1.15rem;
   background: white;
   border: 1px solid #e4e1dc;
-  border-left: 4px solid #087ea4;
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(25,25,20,0.04);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border-left: 3px solid #087ea4;
+  border-radius: 10px;
+  transition: border-color 0.15s ease;
 }
 
 .statCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(25,25,20,0.08);
+  border-left-color: #065a75;
 }
 
 .statCardIcon {
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   flex-shrink: 0;
+  background: rgba(8,126,164,0.1) !important;
+  color: #087ea4 !important;
 }
 
 .statCardBody {
@@ -1721,8 +1721,8 @@ button.lawDashboardCard{transition:transform .16s ease,box-shadow .16s ease}
 }
 
 .statCardBody strong {
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #181715;
   line-height: 1;
 }

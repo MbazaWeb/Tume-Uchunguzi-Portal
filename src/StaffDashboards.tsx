@@ -169,28 +169,28 @@ export function AdminDashboard(){
     <h2 className="dashboardSubhead">{t('Taarifa','Submissions')}</h2>
     <div className="statGrid">
       <StatCard label={t('Jumla','Total')} value={stats.submissions} icon={FileText} color="#087ea4"/>
-      <StatCard label={t('Zilizopokelewa','Submitted')} value={stats.submitted} icon={Clock} color="#f59e0b"/>
-      <StatCard label={t('Zinakaguliwa','Reviewing')} value={stats.reviewing} icon={UserCheck} color="#8b5cf6"/>
-      <StatCard label={t('Zilizofungwa','Closed')} value={stats.closed} icon={CheckCircle2} color="#10b981"/>
+      <StatCard label={t('Zilizopokelewa','Submitted')} value={stats.submitted} icon={Clock} color="#087ea4"/>
+      <StatCard label={t('Zinakaguliwa','Reviewing')} value={stats.reviewing} icon={UserCheck} color="#087ea4"/>
+      <StatCard label={t('Zilizofungwa','Closed')} value={stats.closed} icon={CheckCircle2} color="#087ea4"/>
     </div>
 
     {/* Users summary */}
     <h2 className="dashboardSubhead">{t('Watumiaji','Users')}</h2>
     <div className="statGrid">
       <StatCard label={t('Jumla','Total')} value={stats.users} icon={Users} color="#087ea4"/>
-      <StatCard label="Admin" value={stats.admins} icon={ShieldCheck} color="#ef4444"/>
-      <StatCard label={t('Wakaguzi','Reviewers')} value={stats.reviewers} icon={UserCheck} color="#3b82f6"/>
-      <StatCard label={t('Kamati','Committee')} value={stats.committees} icon={Users} color="#8b5cf6"/>
-      <StatCard label={t('Wananchi','Citizens')} value={stats.citizens} icon={Users} color="#10b981"/>
+      <StatCard label="Admin" value={stats.admins} icon={ShieldCheck} color="#087ea4"/>
+      <StatCard label={t('Wakaguzi','Reviewers')} value={stats.reviewers} icon={UserCheck} color="#087ea4"/>
+      <StatCard label={t('Kamati','Committee')} value={stats.committees} icon={Users} color="#087ea4"/>
+      <StatCard label={t('Wananchi','Citizens')} value={stats.citizens} icon={Users} color="#087ea4"/>
     </div>
 
     {/* Assignments + Decisions */}
     <h2 className="dashboardSubhead">{t('Kazi & Maamuzi','Work & Decisions')}</h2>
     <div className="statGrid">
-      <StatCard label={t('Zilizopewa','Assigned')} value={stats.assigned} icon={FileText} color="#3b82f6"/>
-      <StatCard label={t('Zinakaguliwa','In Review')} value={stats.in_review} icon={Clock} color="#f59e0b"/>
-      <StatCard label={t('Zilizokaguliwa','Reviewed')} value={stats.reviewed} icon={CheckCircle2} color="#10b981"/>
-      <StatCard label={t('Maamuzi','Decisions')} value={stats.decisions} icon={TrendingUp} color="#8b5cf6"/>
+      <StatCard label={t('Zilizopewa','Assigned')} value={stats.assigned} icon={FileText} color="#087ea4"/>
+      <StatCard label={t('Zinakaguliwa','In Review')} value={stats.in_review} icon={Clock} color="#087ea4"/>
+      <StatCard label={t('Zilizokaguliwa','Reviewed')} value={stats.reviewed} icon={CheckCircle2} color="#087ea4"/>
+      <StatCard label={t('Maamuzi','Decisions')} value={stats.decisions} icon={TrendingUp} color="#087ea4"/>
     </div>
 
     {/* Charts */}
@@ -217,7 +217,7 @@ export function AdminDashboard(){
         <div>
           <strong>{s.reference_code}</strong>
           <span>{s.title || t('Bila kichwa','Untitled')}</span>
-          <small>{s.region} · {new Date(s.created_at).toLocaleDateString()}</small>
+          <small>{s.region} Ã‚Â· {new Date(s.created_at).toLocaleDateString()}</small>
         </div>
         <span className={`statusBadge ${s.status}`}>{s.status}</span>
         <ArrowRight size={16}/>
@@ -289,10 +289,10 @@ export function WorkflowDashboard(){
     <h2 className="dashboardSubhead">{t('Kazi zangu','My work')}</h2>
     <div className="statGrid">
       <StatCard label={t('Jumla','Total')} value={stats.total} icon={FileText} color="#087ea4"/>
-      <StatCard label={t('Zinasubiri','Assigned')} value={stats.assigned} icon={Clock} color="#3b82f6"/>
-      <StatCard label={t('Zinakaguliwa','In Review')} value={stats.in_review} icon={UserCheck} color="#f59e0b"/>
-      <StatCard label={t('Zilizokaguliwa','Reviewed')} value={stats.reviewed} icon={CheckCircle2} color="#10b981"/>
-      <StatCard label={t('Zinahitaji haraka','Urgent')} value={stats.urgent} icon={XCircle} color="#ef4444"/>
+      <StatCard label={t('Zinasubiri','Assigned')} value={stats.assigned} icon={Clock} color="#087ea4"/>
+      <StatCard label={t('Zinakaguliwa','In Review')} value={stats.in_review} icon={UserCheck} color="#087ea4"/>
+      <StatCard label={t('Zilizokaguliwa','Reviewed')} value={stats.reviewed} icon={CheckCircle2} color="#087ea4"/>
+      <StatCard label={t('Zinahitaji haraka','Urgent')} value={stats.urgent} icon={XCircle} color="#087ea4"/>
     </div>
 
     <h2 className="dashboardSubhead">{t('Mchanganuo','Breakdown')}</h2>
@@ -309,7 +309,7 @@ export function WorkflowDashboard(){
         <div>
           <strong>{a.submission?.reference_code}</strong>
           <span>{a.submission?.title || t('Bila kichwa','Untitled')}</span>
-          <small>{a.submission?.region} · {new Date(a.assigned_at).toLocaleDateString()}</small>
+          <small>{a.submission?.region} Ã‚Â· {new Date(a.assigned_at).toLocaleDateString()}</small>
         </div>
         <span className={`statusBadge ${a.status}`}>{a.status}</span>
         <ArrowRight size={16}/>
@@ -392,10 +392,10 @@ export function CommitteeDashboard(){
     <h2 className="dashboardSubhead">{t('Kura zangu','My votes')}</h2>
     <div className="statGrid">
       <StatCard label={t('Taarifa zote','Total submissions')} value={stats.total} icon={FileText} color="#087ea4"/>
-      <StatCard label={t('Zilizopigiwa kura','Voted')} value={stats.voted} icon={CheckCircle2} color="#10b981"/>
-      <StatCard label={t('Zinasubiri kura','Pending')} value={stats.pending} icon={Clock} color="#f59e0b"/>
-      <StatCard label={t('Kubali','Approve')} value={stats.approve} icon={CheckCircle2} color="#10b981"/>
-      <StatCard label={t('Kataa','Reject')} value={stats.reject} icon={XCircle} color="#ef4444"/>
+      <StatCard label={t('Zilizopigiwa kura','Voted')} value={stats.voted} icon={CheckCircle2} color="#087ea4"/>
+      <StatCard label={t('Zinasubiri kura','Pending')} value={stats.pending} icon={Clock} color="#087ea4"/>
+      <StatCard label={t('Kubali','Approve')} value={stats.approve} icon={CheckCircle2} color="#087ea4"/>
+      <StatCard label={t('Kataa','Reject')} value={stats.reject} icon={XCircle} color="#087ea4"/>
     </div>
 
     <h2 className="dashboardSubhead">{t('Mchanganuo','Breakdown')}</h2>
@@ -406,7 +406,7 @@ export function CommitteeDashboard(){
       </article>
       <article className="chartCard">
         <h3><BarChart3 size={18}/> {t('Mikoa 5 yenye taarifa nyingi','Top 5 regions')}</h3>
-        {byRegion.length ? <MiniBarChart data={byRegion} color="#8b5cf6"/> : <p className="muted">{t('Hakuna data.','No data.')}</p>}
+        {byRegion.length ? <MiniBarChart data={byRegion} color="#087ea4"/> : <p className="muted">{t('Hakuna data.','No data.')}</p>}
       </article>
     </div>
 
@@ -416,7 +416,7 @@ export function CommitteeDashboard(){
         <div>
           <strong>{s.reference_code}</strong>
           <span>{s.title || t('Bila kichwa','Untitled')}</span>
-          <small>{s.region} · {new Date(s.created_at).toLocaleDateString()}</small>
+          <small>{s.region} Ã‚Â· {new Date(s.created_at).toLocaleDateString()}</small>
         </div>
         <ArrowRight size={16}/>
       </Link>)}
