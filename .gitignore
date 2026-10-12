@@ -131,3 +131,5 @@ backup-*/
 # Backups
 *.bak-*
 *.bak
+.vercel
+.env*
