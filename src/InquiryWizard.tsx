@@ -39,7 +39,7 @@ const initialForm = {
   description: '', peopleInvolved: [] as PersonEntry[], authoritiesPresent: 'unsure',
   reportedElsewhere: false, reportingPlace: '', evidenceCategory: 'none',
   submissionMode: 'identified', fullName: '', phone: '', email: '',
-  residenceRegion: '', contactMethod: 'none', contactConsent: false, truthDeclared: false
+  residenceRegion: '', contactMethod: 'none', contactConsent: false, truthDeclared: false, website: ''
 };
 type WizardForm = typeof initialForm;
 type EvidenceItem = { file: File; description: string; capturedAt: string; originalUnmodified: boolean; evidenceType: string; previewUrl?: string };
@@ -54,9 +54,7 @@ function evidenceKind(type: string) {
 
 export function InquiryWizard() {
   const { language, t } = useLanguage();
-  const siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY || '';
-  const widgetHost = useRef<HTMLDivElement>(null);
-  const widgetId = useRef('');
+
   const [user, setUser] = useState<any>(undefined);
   const [anonymousMode, setAnonymousMode] = useState<boolean>(false);
   const [preScreen, setPreScreen] = useState<'choose' | 'anonymous_intro' | 'anonymous_questions' | 'wizard'>('choose');
@@ -65,7 +63,6 @@ export function InquiryWizard() {
   const [form, setForm] = useState<WizardForm>(initialForm);
   const [step, setStep] = useState(1);
   const [files, setFiles] = useState<EvidenceItem[]>([]);
-  const [captchaToken, setCaptchaToken] = useState('');
   const [busy, setBusy] = useState(false);
   const [saving, setSaving] = useState(false);
   const [draftLoaded, setDraftLoaded] = useState(false);
@@ -90,14 +87,7 @@ export function InquiryWizard() {
     return () => { live = false; };
   }, [user?.id, anonymousMode]);
 
-  useEffect(() => {
-    if (!siteKey || !widgetHost.current) return;
-    const existing = document.querySelector<HTMLScriptElement>('script[data-inquiry-turnstile]');
-    const script = existing || document.createElement('script');
-    const render = () => { if (!widgetHost.current || !window.turnstile || widgetId.current) return; widgetId.current = window.turnstile.render(widgetHost.current, { sitekey: siteKey, callback: (token: string) => setCaptchaToken(token), 'expired-callback': () => setCaptchaToken(''), 'error-callback': () => setCaptchaToken('') }); };
-    if (!existing) { script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'; script.async = true; script.defer = true; script.dataset.inquiryTurnstile = 'true'; script.addEventListener('load', render); document.head.appendChild(script); } else if (window.turnstile) render(); else script.addEventListener('load', render);
-    return () => { script.removeEventListener('load', render); if (widgetId.current && window.turnstile) { window.turnstile.remove(widgetId.current); widgetId.current = ''; } };
-  }, [siteKey]);
+
 
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -105,7 +95,6 @@ export function InquiryWizard() {
     if (error) { setMessage(error); return; }
     if (!anonymousMode && !user) { setMessage(t('Ingia kwenye akaunti yako ili kuwasilisha taarifa.', 'Sign in to submit this report.')); return; }
     if (!form.truthDeclared) { setMessage(t('Thibitisha tamko kabla ya kutuma.', 'Confirm the declaration before submitting.')); return; }
-    if (files.length && !captchaToken) { setMessage(t('Thibitisha kuwa wewe si roboti kabla ya kupakia ushahidi.', 'Complete the security check before uploading evidence.')); return; }
     setBusy(true); setMessage('');
     const peopleJoined = form.peopleInvolved.filter(p => p.name.trim()).map(p => `${p.name.trim()} (${selectionLabel('peopleRole', p.role)})`).join('; ');
     const report = {
@@ -121,7 +110,7 @@ export function InquiryWizard() {
       streetVillage: form.streetVillage.trim(),
       anonymous: anonymousMode
     };
-    const { data: created, error: createError } = await supabase.functions.invoke('inquiry-intake', { body: { action: 'create', turnstileToken: captchaToken, website: '', report, attachments: files.map(item => ({ name: item.file.name, size: item.file.size, type: item.file.type, description: item.description, capturedAt: item.capturedAt, originalUnmodified: item.originalUnmodified, evidenceType: item.evidenceType })) } });
+    const { data: created, error: createError } = await supabase.functions.invoke('inquiry-intake', { body: { action: 'create', website: form.website || '', report, attachments: files.map(item => ({ name: item.file.name, size: item.file.size, type: item.file.type, description: item.description, capturedAt: item.capturedAt, originalUnmodified: item.originalUnmodified, evidenceType: item.evidenceType })) } });
     if (createError || !created?.id || !Array.isArray(created.uploads)) { setMessage(t('Imeshindikana kuanza uwasilishaji. Jaribu tena.', 'Could not start your submission. Try again.')); setBusy(false); return; }
     const storageBase = new URL(supabaseUrl); storageBase.hostname = storageBase.hostname.replace('.supabase.co', '.storage.supabase.co');
     for (let index = 0; index < files.length; index++) {
@@ -134,7 +123,7 @@ export function InquiryWizard() {
     const { data: finalized, error: finalizeError } = await supabase.functions.invoke('inquiry-intake', { body: { action: 'finalize', id: created.id, anonymous: anonymousMode } });
     if (finalizeError || !finalized?.referenceCode) { setMessage(t('Taarifa hazijathibitishwa. Tumia namba hii kuwasiliana na Tume: ', 'Submission could not be confirmed. Contact the Commission with this reference: ') + created.referenceCode); setBusy(false); return; }
     if (!anonymousMode && user) await supabase.from('inquiry_drafts').delete().eq('user_id', user.id);
-    setReference(finalized.referenceCode); setFiles([]); setCaptchaToken(''); setBusy(false);
+    setReference(finalized.referenceCode); setFiles([]); setBusy(false);
   }
 
   if (!anonymousMode && user === undefined) return <section className="section page inquiryPage"><h1 className="pageTitle">{t('Inathibitisha akaunti...', 'Checking your account...')}</h1></section>;
@@ -206,7 +195,7 @@ export function InquiryWizard() {
         <label className="wizardAnonLocation">{t('Saa halisi ya tukio (hiari)', 'Exact time of incident (optional)')}
           <input type="time" value={form.eventTime} onChange={e => setForm(current => ({ ...current, eventTime: e.target.value }))} />
         </label>
-        <p>{t('Ikiwa hukumbuki muda, acha chaguo la â€œSijui / Sikumbukiâ€. Saa halisi si lazima.', 'If you do not remember the time, leave â€œUnknown / I do not rememberâ€ selected. Exact time is optional.')}</p>
+        <p>{t('Ikiwa hukumbuki muda, acha chaguo la ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œSijui / SikumbukiÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â. Saa halisi si lazima.', 'If you do not remember the time, leave ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œUnknown / I do not rememberÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â selected. Exact time is optional.')}</p>
       </fieldset>
       <fieldset className="wizardAnonymousQ">
         <legend>{t('4. Tukio lilitokea wapi?', '4. Where did the incident happen?')}</legend>
@@ -479,15 +468,27 @@ export function InquiryWizard() {
           </article>);
         })()}
         <label className="wizardDeclaration"><input type="checkbox" checked={form.truthDeclared} onChange={e => update('truthDeclared', e.target.checked)} /><span>{t('Ninathibitisha kuwa taarifa hii ni ya kweli kwa kadiri ya ufahamu wangu.', 'I declare this information is true to the best of my knowledge.')}</span></label>
-        {files.length > 0 && <div className="wizardCaptcha" ref={widgetHost} />}
-        {!siteKey && files.length > 0 && <div className="inquirySetupNotice">{t('Uwasilishaji wa ushahidi utawezeshwa baada ya kusanidi uthibitisho wa usalama.', 'Evidence submission will be enabled after security verification is configured.')}</div>}
+
       </section>}
+
+      {/* Honeypot ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â bots only */}
+      <label className="inquiryHoneypot" aria-hidden="true" style={{position:'absolute',left:'-10000px',width:'1px',height:'1px',overflow:'hidden'}}>
+        Website
+        <input
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          value={form.website || ''}
+          onChange={e => update('website', e.target.value)}
+        />
+      </label>
 
       {uploadProgress && <div className="wizardUploadStatus" role="status">{uploadProgress}</div>}
       <div className="wizardActions">
         {step > 1 && <button type="button" className="secondary" onClick={previousStep}><ArrowLeft size={16} /> {t('Rudi', 'Back')}</button>}
         {!anonymousMode && <button type="button" className="wizardSave" onClick={saveDraft} disabled={saving || busy}><Save size={16} />{saving ? t('Inahifadhi...', 'Saving...') : t('Hifadhi rasimu', 'Save draft')}</button>}
-        {step < 6 ? <button type="button" className="primary" onClick={nextStep}>{t('Endelea', 'Continue')} <ArrowRight size={16} /></button> : <button type="submit" className="primary" disabled={busy || !form.truthDeclared || (files.length > 0 && (!siteKey || !captchaToken))}>{busy ? t('Inawasilisha...', 'Submitting...') : t('Wasilisha kwa Tume', 'Submit to the Commission')} <ArrowRight size={16} /></button>}
+        {step < 6 ? <button type="button" className="primary" onClick={nextStep}>{t('Endelea', 'Continue')} <ArrowRight size={16} /></button> : <button type="submit" className="primary" disabled={busy || !form.truthDeclared}>{busy ? t('Inawasilisha...', 'Submitting...') : t('Wasilisha kwa Tume', 'Submit to the Commission')} <ArrowRight size={16} /></button>}
       </div>
       {draftMessage && <small className="wizardDraftStatus" role="status">{draftMessage}</small>}
     </form>

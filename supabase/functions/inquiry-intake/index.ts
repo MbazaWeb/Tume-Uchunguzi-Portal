@@ -62,19 +62,7 @@ async function getAuthenticatedUser(req: Request) {
   return error ? null : data.user;
 }
 
-async function verifyTurnstile(token: string, ip: string | null) {
-  const secret = Deno.env.get("TURNSTILE_SECRET_KEY");
-  if (!secret) return false;
-  const body = new FormData();
-  body.set("secret", secret);
-  body.set("response", token);
-  if (ip) body.set("remoteip", ip);
-  const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
-    method: "POST", body,
-  });
-  if (!res.ok) return false;
-  return Boolean((await res.json()).success);
-}
+
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
@@ -92,16 +80,15 @@ Deno.serve(async (req) => {
   // ACTION: create
   // ==========================================================
   if (body.action === "create") {
-    if (String(body.website || "").trim()) return json({ error: "Invalid request" }, 400);
 
     const report = body.report || {};
     const attachments = Array.isArray(body.attachments) ? body.attachments : [];
     const anonymousMode = Boolean(report.anonymous);
 
-    // Turnstile required for every submission
-    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || null;
-    if (!(await verifyTurnstile(String(body.turnstileToken || ""), ip))) {
-      return json({ error: "Verification failed" }, 403);
+    // Honeypot check — bots fill this hidden field, humans leave it empty
+    if (String(body.website || "").trim() !== "") {
+      // Silently accept but don't create submission (bot detected)
+      return json({ error: "Invalid request" }, 400);
     }
 
     // Anonymous allowed without login; identified requires login
