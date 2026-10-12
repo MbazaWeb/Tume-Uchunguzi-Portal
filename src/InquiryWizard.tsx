@@ -136,7 +136,7 @@ export function InquiryWizard() {
 
   if (!anonymousMode && user === undefined) return <section className="section page inquiryPage"><h1 className="pageTitle">{t('Inathibitisha akaunti...', 'Checking your account...')}</h1></section>;
 
-  if (preScreen === 'choose' && !reference) {
+  if (preScreen === 'choose' && !reference && !user) {
     return <section className="section page inquiryWizardPage">
       <span className="kicker">{t('USHIRIKI WA WANANCHI', 'CITIZEN SUBMISSION')}</span>
       <h1 className="pageTitle">{t('Wasilisha taarifa kwa Tume', 'Submit information to the Commission')}</h1>
