@@ -41,11 +41,17 @@ export default function App(){
         <div className="navActions">
           <button className="ghost languageSwitch headerLanguage" onClick={()=>setLanguage(language==='sw'?'en':'sw')}><b>{language.toUpperCase()}</b> / {language==='sw'?'EN':'SW'}</button>
           {userRole==='admin'&&<NavLink className="headerAdminLink" to="/admin">{t('Admin','Admin')}</NavLink>}
+          {userRole==='admin'&&<NavLink className="headerAdminLink" to="/admin/users">{t('Watumiaji','Users')}</NavLink>}
+          {(userRole==='admin'||userRole==='reviewer')&&<NavLink className="headerAdminLink" to="/workflow">{t('Kazi','Workflow')}</NavLink>}
+          {(userRole==='admin'||userRole==='committee')&&<NavLink className="headerAdminLink" to="/committee">{t('Kura','Committee')}</NavLink>}
           <NavLink className="headerAccountLink" to="/account">{session?.user?t('Akaunti','Account'):t('Ingia','Sign in')}</NavLink>
           <button className="mobileMenuBtn" onClick={()=>setMobileOpen(v=>!v)} aria-label={t('Fungua menyu','Open menu')}>{mobileOpen?<X size={21}/>:<Menu size={21}/>}</button>
         </div>
       </header>
-      {mobileOpen&&<div className="menuBackdrop" onClick={()=>setMobileOpen(false)}><div className="mobileNav" onClick={e=>e.stopPropagation()}><nav>{nav.map(([to,sw,en])=><NavLink key={to} to={to} end={to==='/'}>{t(sw,en)}</NavLink>)}</nav>{userRole==='admin'&&<NavLink to="/admin">{t('Admin','Admin')}</NavLink>}{session?.user&&<button className="menuLogout" onClick={logout}>{t('Toka','Sign out')}</button>}</div></div>}
+      {mobileOpen&&<div className="menuBackdrop" onClick={()=>setMobileOpen(false)}><div className="mobileNav" onClick={e=>e.stopPropagation()}><nav>{nav.map(([to,sw,en])=><NavLink key={to} to={to} end={to==='/'}>{t(sw,en)}</NavLink>)}</nav>{userRole==='admin'&&<NavLink to="/admin">{t('Admin','Admin')}</NavLink>}
+          {userRole==='admin'&&<NavLink to="/admin/users">{t('Watumiaji','Users')}</NavLink>}
+          {(userRole==='admin'||userRole==='reviewer')&&<NavLink to="/workflow">{t('Kazi','Workflow')}</NavLink>}
+          {(userRole==='admin'||userRole==='committee')&&<NavLink to="/committee">{t('Kura','Committee')}</NavLink>}{session?.user&&<button className="menuLogout" onClick={logout}>{t('Toka','Sign out')}</button>}</div></div>}
       <main><Outlet/></main>
       <footer className="siteFooter"><div className="footerBrand"><strong>TUME YA UCHUNGUZI</strong><p>{t('Portal ya kupokea na kufuatilia taarifa zinazohusiana na uchunguzi wa matukio ya Oktoba 2025.','Portal for receiving and tracking information related to the inquiry into events of October 2025.')}</p><span>Development by <b>PlayGO Tanzania</b></span></div><div className="footerLinks"><b>{t('Viungo Muhimu','Useful Links')}</b><NavLink to="/toa-taarifa">{t('Wasilisha Taarifa','Submit Information')}</NavLink><NavLink to="/taarifa-zangu">{t('Taarifa Zangu','My Submissions')}</NavLink><a href="https://www.tume.uchunguzi.go.tz/" target="_blank" rel="noreferrer">{t('Tovuti rasmi ya Tume','Official Commission website')}</a></div><div className="footerLinks"><b>{t('Akaunti','Account')}</b><NavLink to="/account">{t('Ingia / Akaunti','Sign in / Account')}</NavLink></div><p className="legal">{t('Taarifa zako zinapaswa kushughulikiwa kwa usiri na watumishi walioidhinishwa pekee.','Your reports must be handled confidentially and only by authorized personnel.')}</p></footer>
     </div>
