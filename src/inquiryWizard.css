@@ -142,3 +142,192 @@
   .wizardActions>.wizardSave:only-child{grid-column:1/-1}
   .wizardActions .secondary{justify-content:center}
 }
+
+
+/* Refreshed anonymous submission + screening UI */
+.inquiryWizardPage:has(.wizardAnonymousQ),
+.inquiryWizardPage:has(.wizardPrivacyNotice) {
+  max-width: 860px;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) > .kicker,
+.inquiryWizardPage:has(.wizardPrivacyNotice) > .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border: 1px solid #b9dce9;
+  border-radius: 999px;
+  background: #edf8fc;
+  color: #075985;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .07em;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) > .pageTitle,
+.inquiryWizardPage:has(.wizardPrivacyNotice) > .pageTitle {
+  margin-top: 15px;
+  margin-bottom: 9px;
+  color: #123a52;
+  font-size: clamp(25px, 4vw, 34px);
+  line-height: 1.2;
+  letter-spacing: -.035em;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) > .lead,
+.inquiryWizardPage:has(.wizardPrivacyNotice) > .lead {
+  max-width: 650px;
+  margin: 0 0 22px;
+  color: #5c7180;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardAnonymousQ {
+  position: relative;
+  display: grid;
+  gap: 13px;
+  margin: 0 0 14px;
+  padding: 20px;
+  border: 1px solid #d3e4ec;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #fff 0%, #f8fcfe 100%);
+  box-shadow: 0 7px 22px rgba(8, 72, 105, .055);
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardAnonymousQ legend {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #153d53;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.5;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardAnonymousQ > p {
+  margin: -5px 0 0;
+  color: #687e8a;
+  font-size: 12px;
+  line-height: 1.55;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardChoiceGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardChoice {
+  min-height: 54px;
+  padding: 13px;
+  border-color: #d4e4ec;
+  border-radius: 11px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 650;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardChoice:has(input:checked) {
+  border-color: #087ea4;
+  background: #eaf6fb;
+  box-shadow: inset 0 0 0 1px #087ea4;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardAnonLocation {
+  gap: 8px;
+  color: #24495d;
+  font-size: 12px;
+  font-weight: 800;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardAnonLocation input,
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardAnonLocation select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 45px;
+  padding: 11px 13px;
+  border: 1px solid #bfd4df;
+  border-radius: 10px;
+  background: #fff;
+  color: #183344;
+  font: inherit;
+  font-size: 13px;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardAnonLocation input:focus,
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardAnonLocation select:focus {
+  outline: 3px solid rgba(8, 126, 164, .15);
+  border-color: #087ea4;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardActions {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid #dceaf0;
+}
+.inquiryWizardPage:has(.wizardAnonymousQ) .wizardActions button,
+.inquiryWizardPage:has(.wizardPrivacyNotice) .wizardActions button {
+  min-height: 44px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.inquiryWizardPage:has(.wizardPrivacyNotice) .wizardPrivacyNotice {
+  margin: 20px 0;
+  padding: 18px;
+  border: 1px solid #c5e1ec;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #eff9fd, #f8fcfe);
+  box-shadow: 0 7px 22px rgba(8, 72, 105, .05);
+}
+.inquiryWizardPage:has(.wizardPrivacyNotice) .wizardPrivacyNotice svg {
+  width: 24px;
+  height: 24px;
+  color: #087ea4;
+}
+.inquiryWizardPage:has(.wizardPrivacyNotice) .wizardPrivacyNotice p {
+  color: #24495d;
+  font-size: 13px;
+  line-height: 1.75;
+}
+.inquiryWizardPage:has(.wizardPrivacyNotice) .wizardAnonymousSteps {
+  gap: 12px;
+  margin: 22px 0;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: anonymous-step;
+}
+.inquiryWizardPage:has(.wizardPrivacyNotice) .wizardAnonymousSteps li {
+  position: relative;
+  min-height: 25px;
+  padding: 12px 14px 12px 48px;
+  border: 1px solid #d8e7ee;
+  border-radius: 11px;
+  background: #fff;
+  color: #385568;
+  font-size: 12px;
+  line-height: 1.6;
+  counter-increment: anonymous-step;
+}
+.inquiryWizardPage:has(.wizardPrivacyNotice) .wizardAnonymousSteps li::before {
+  content: counter(anonymous-step);
+  position: absolute;
+  left: 13px;
+  top: 12px;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e4f4fa;
+  color: #075985;
+  font-size: 11px;
+  font-weight: 850;
+}
+@media (max-width: 640px) {
+  .inquiryWizardPage:has(.wizardAnonymousQ) .wizardAnonymousQ {
+    padding: 16px 13px;
+    border-radius: 12px;
+  }
+  .inquiryWizardPage:has(.wizardAnonymousQ) .wizardAnonymousQ legend {
+    font-size: 13px;
+  }
+  .inquiryWizardPage:has(.wizardAnonymousQ) .wizardChoiceGrid {
+    grid-template-columns: 1fr;
+  }
+  .inquiryWizardPage:has(.wizardAnonymousQ) .wizardChoice {
+    min-height: 46px;
+  }
+  .inquiryWizardPage:has(.wizardPrivacyNotice) .wizardPrivacyNotice {
+    padding: 14px;
+  }
+}
