@@ -206,7 +206,7 @@ export function InquiryWizard() {
         <label className="wizardAnonLocation">{t('Saa halisi ya tukio (hiari)', 'Exact time of incident (optional)')}
           <input type="time" value={form.eventTime} onChange={e => setForm(current => ({ ...current, eventTime: e.target.value }))} />
         </label>
-        <p>{t('Ikiwa hukumbuki muda, acha chaguo la “Sijui / Sikumbuki”. Saa halisi si lazima.', 'If you do not remember the time, leave “Unknown / I do not remember” selected. Exact time is optional.')}</p>
+        <p>{t('Ikiwa hukumbuki muda, acha chaguo la â€œSijui / Sikumbukiâ€. Saa halisi si lazima.', 'If you do not remember the time, leave â€œUnknown / I do not rememberâ€ selected. Exact time is optional.')}</p>
       </fieldset>
       <fieldset className="wizardAnonymousQ">
         <legend>{t('4. Tukio lilitokea wapi?', '4. Where did the incident happen?')}</legend>
@@ -296,8 +296,22 @@ export function InquiryWizard() {
     setFiles(current => [...current, ...selected.map(file => ({ file, description: '', capturedAt: '', originalUnmodified: false, evidenceType: evidenceKind(file.type), previewUrl: file.type.startsWith('image/') ? URL.createObjectURL(file) : undefined }))]); setMessage('');
   };
   const removeFile = (index: number) => setFiles(current => { const item = current[index]; if (item?.previewUrl) URL.revokeObjectURL(item.previewUrl); return current.filter((_, itemIndex) => itemIndex !== index); });
-  const nextStep = () => { const error = validateStep(step); if (error) { setMessage(error); return; } setMessage(''); setStep(current => Math.min(6, current + 1)); };
-  const previousStep = () => { setMessage(''); setStep(current => Math.max(1, current - 1)); };
+  // Anonymous users skip step 2 (data collected in screening questions)
+  const isStepSkipped = (targetStep: number) => anonymousMode && targetStep === 2;
+  const nextStep = () => { 
+    const error = validateStep(step); 
+    if (error) { setMessage(error); return; } 
+    setMessage(''); 
+    let next = step + 1;
+    if (isStepSkipped(next)) next += 1;
+    setStep(Math.min(6, next)); 
+  };
+  const previousStep = () => { 
+    setMessage(''); 
+    let prev = step - 1;
+    if (isStepSkipped(prev)) prev -= 1;
+    setStep(Math.max(1, prev)); 
+  };
   const editSection = (targetStep: number) => { setStep(targetStep); setMessage(''); };
 
   // People-involved list helpers (+ icon to add new person, X to remove)
@@ -311,8 +325,8 @@ export function InquiryWizard() {
     <span className="kicker">{t('USHIRIKI WA WANANCHI', 'CITIZEN SUBMISSION')}</span>
     <h1 className="pageTitle">{t('Wasilisha taarifa kwa Tume', 'Submit information to the Commission')}</h1>
     {anonymousMode && <div className="wizardPrivacyNotice"><LockKeyhole size={18} /><p>{t('Uko kwenye hali ya siri kabisa. Hakakaunti, hakuna arifa.', 'You are in fully anonymous mode. No account, no notifications.')}</p></div>}
-    <div className="wizardHeader"><div><strong>{t('Hatua', 'Step')} {step} {t('kati ya', 'of')} 6</strong><span>{t(stepNames[step - 1][0], stepNames[step - 1][1])}</span></div>{!anonymousMode && <button type="button" className="wizardSave" onClick={saveDraft} disabled={saving}><Save size={16} /> {saving ? t('Inahifadhi...', 'Saving...') : t('Hifadhi rasimu', 'Save draft')}</button>}</div>
-    <div className="wizardProgress" role="progressbar" aria-valuemin={1} aria-valuemax={6} aria-valuenow={step}><span style={{ width: (step / 6 * 100) + '%' }} /></div>
+    <div className="wizardHeader"><div><strong>{t('Hatua', 'Step')} {anonymousMode && step > 2 ? step - 1 : step} {t('kati ya', 'of')} {anonymousMode ? 5 : 6}</strong><span>{t(stepNames[step - 1][0], stepNames[step - 1][1])}</span></div>{!anonymousMode && <button type="button" className="wizardSave" onClick={saveDraft} disabled={saving}><Save size={16} /> {saving ? t('Inahifadhi...', 'Saving...') : t('Hifadhi rasimu', 'Save draft')}</button>}</div>
+    <div className="wizardProgress" role="progressbar" aria-valuemin={1} aria-valuemax={6} aria-valuenow={step}><span style={{ width: (((anonymousMode && step > 2 ? step - 1 : step) / (anonymousMode ? 5 : 6)) * 100) + '%' }} /></div>
     <div className="wizardStepTrack">{stepNames.map((name, index) => <button key={name[0]} type="button" className={index + 1 === step ? 'current' : index + 1 < step ? 'complete' : ''} onClick={() => index + 1 < step && editSection(index + 1)} disabled={index + 1 > step}><b>{index + 1 < step ? <Check size={14} /> : index + 1}</b><span>{t(name[0], name[1])}</span></button>)}</div>
     {draftMessage && <div className="wizardDraftMessage" role="status">{draftMessage}</div>}
     {message && <div className="authMessage" role="alert">{message}</div>}
