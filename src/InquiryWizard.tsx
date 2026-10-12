@@ -116,6 +116,7 @@ export function InquiryWizard() {
       description: form.description.trim(),
       title: form.title.trim() || selectionLabel('shortTitle', form.shortTitleCategory),
       peopleInvolved: peopleJoined,
+      details: { violationCounts: form.violationCounts, affectedPeople: form.affectedPeople },
       ward: form.ward,
       streetVillage: form.streetVillage.trim(),
       anonymous: anonymousMode
@@ -440,7 +441,7 @@ export function InquiryWizard() {
         {(() => {
           const sections: [number, string, any[]][] = [
             [1, t('Aina na nafasi', 'Type and role'), [selectionLabel('submissionType', form.submissionType), selectionLabel('reporterRole', form.reporterRole)]],
-            [2, t('Tukio', 'Incident'), [form.incidentDate, selectionLabel('time', form.incidentTime), [form.region, form.district, form.ward, form.streetVillage, form.location].filter(Boolean).join(', '), form.violationTypes.map(value => t(violationOptions.find(option => option[0] === value)?.[1] || value, violationOptions.find(option => option[0] === value)?.[2] || value)).join(', ')]],
+            [2, t('Tukio', 'Incident'), [form.incidentDate, selectionLabel('time', form.incidentTime), [form.region, form.district, form.ward, form.streetVillage, form.location].filter(Boolean).join(', '), form.violationTypes.map(value => { const option = violationOptions.find(item => item[0] === value); return `${t(option?.[1] || value, option?.[2] || value)} (${form.violationCounts[value] ?? 1})`; }).join(', '), ...((form.affectedPeople.length && (form.violationTypes.includes('death') || form.violationTypes.includes('missing_person'))) ? [t('Majina ya waliofariki/waliopotea:', 'Names of deceased/missing people:') + ' ' + form.affectedPeople.map(person => `${person.name.trim() || t('Jina halijulikani', 'Name unknown')} (${person.status === 'deceased' ? t('Amefariki', 'Deceased') : t('Amepotea', 'Missing')})`).join('; ')] : [])]],
             [3, t('Simulizi', 'Account'), [form.title, form.description, t('Watu waliohusika:', 'People involved:') + ' ' + (form.peopleInvolved.filter(p => p.name.trim()).map(p => `${p.name.trim()} (${selectionLabel('peopleRole', p.role)})`).join('; ') || t('Hakuna', 'None'))]],
             [4, t('Ushahidi', 'Evidence'), [files.length ? files.map(item => item.file.name).join(', ') : t('Hakuna faili lililoongezwa', 'No files attached')]],
             [5, t('Mwasilishaji', 'Your details'), [anonymousMode ? t('Bila kutaja jina (siri kabisa)', 'Anonymous (fully confidential)') : selectionLabel('mode', form.submissionMode), anonymousMode ? t('Hakuna arifa zitakazotumwa', 'No notifications will be sent') : (form.submissionMode === 'anonymous' ? t('Bila kutaja jina', 'Anonymous') : [form.fullName, form.contactConsent ? (form.contactMethod === 'email' ? form.email : form.phone) : ''].filter(Boolean).join(' - '))]]
