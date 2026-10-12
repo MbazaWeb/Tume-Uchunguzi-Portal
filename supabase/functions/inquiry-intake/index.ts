@@ -64,6 +64,70 @@ async function getAuthenticatedUser(req: Request) {
 
 
 
+// ==========================================================
+// Rate limiting â€” 5 submissions per IP per hour
+// ==========================================================
+async function checkRateLimit(
+  admin: any,
+  ip: string,
+  action: string,
+  limit: number,
+  windowMinutes: number,
+): Promise<boolean> {
+  try {
+    const now = new Date();
+    const { data, error } = await admin
+      .from("rate_limits")
+      .select("*")
+      .eq("ip", ip)
+      .eq("action", action)
+      .maybeSingle();
+
+    if (error) {
+      console.error("Rate limit check error:", error);
+      // Fail open â€” allow if DB error
+      return true;
+    }
+
+    if (!data) {
+      await admin.from("rate_limits").insert({
+        ip,
+        action,
+        count: 1,
+        window_start: now.toISOString(),
+      });
+      return true;
+    }
+
+    const windowAgeMinutes =
+      (now.getTime() - new Date(data.window_start).getTime()) / 1000 / 60;
+
+    if (windowAgeMinutes > windowMinutes) {
+      await admin
+        .from("rate_limits")
+        .update({ count: 1, window_start: now.toISOString() })
+        .eq("ip", ip)
+        .eq("action", action);
+      return true;
+    }
+
+    if (data.count >= limit) {
+      return false;
+    }
+
+    await admin
+      .from("rate_limits")
+      .update({ count: data.count + 1 })
+      .eq("ip", ip)
+      .eq("action", action);
+
+    return true;
+  } catch (err) {
+    console.error("Rate limit exception:", err);
+    return true;
+  }
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
   if (req.method !== "POST") return json({ error: "Method not allowed" }, 405);
@@ -85,7 +149,17 @@ Deno.serve(async (req) => {
     const attachments = Array.isArray(body.attachments) ? body.attachments : [];
     const anonymousMode = Boolean(report.anonymous);
 
-    // Honeypot check — bots fill this hidden field, humans leave it empty
+    // Rate limit — max 5 submissions per IP per hour
+    const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    const allowed = await checkRateLimit(admin, clientIp, "submit", 5, 60);
+    if (!allowed) {
+      return json(
+        { error: "Too many submissions. Please try again later." },
+        429,
+      );
+    }
+
+    // Honeypot check Ã¢â‚¬â€ bots fill this hidden field, humans leave it empty
     if (String(body.website || "").trim() !== "") {
       // Silently accept but don't create submission (bot detected)
       return json({ error: "Invalid request" }, 400);
