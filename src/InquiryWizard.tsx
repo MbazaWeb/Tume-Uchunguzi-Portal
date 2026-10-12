@@ -9,7 +9,8 @@ import './inquiryWizard.css';
 
 const maxFileBytes = 50 * 1024 * 1024;
 const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg', 'image/png', 'image/webp', 'video/mp4', 'video/webm', 'video/quicktime', 'audio/mpeg', 'audio/wav', 'audio/mp4', 'audio/ogg'];
-const violationOptions = [['physical_violence', 'Vurugu za kimwili', 'Physical violence'], ['arrest', 'Kukamatwa', 'Arrest'], ['intimidation', 'Vitisho au udhalilishaji', 'Intimidation'], ['property_damage', 'Uharibifu wa mali', 'Property damage'], ['death', 'Kifo', 'Death'], ['sexual_violence', 'Vurugu za kingono', 'Sexual violence'], ['other', 'Nyingine', 'Other']];
+const incidentDateOptions = ['2025-10-25', '2025-10-26', '2025-10-27', '2025-10-28', '2025-10-29', '2025-10-30', '2025-10-31'];
+const violationOptions = [['physical_violence', 'Vurugu za kimwili', 'Physical violence'], ['arrest', 'Kukamatwa', 'Arrest'], ['intimidation', 'Vitisho au udhalilishaji', 'Intimidation'], ['property_damage', 'Uharibifu wa mali', 'Property damage'], ['death', 'Kifo', 'Death'], ['missing_person', 'Kupotea kwa mtu', 'Missing person'], ['sexual_violence', 'Vurugu za kingono', 'Sexual violence'], ['other', 'Nyingine', 'Other']];
 const stepNames = [['Aina', 'Type'], ['Tukio', 'Incident'], ['Simulizi', 'Account'], ['Ushahidi', 'Evidence'], ['Mwasilishaji', 'Your details'], ['Kagua', 'Review']];
 
 // Roles a citizen can tag a person with in the "People involved" list.
@@ -29,11 +30,12 @@ const peopleRoles: [string, string, string][] = [
 ];
 
 type PersonEntry = { name: string; role: string };
+type AffectedPerson = { name: string; status: 'deceased' | 'missing' };
 
 const initialForm = {
   submissionType: '', reporterRole: '', incidentDate: '', incidentTime: 'unknown',
   region: '', district: '', ward: '', wardCustom: false, streetVillage: '',
-  location: '', violationTypes: [] as string[], shortTitleCategory: '', title: '',
+  location: '', violationTypes: [] as string[], violationCounts: {} as Record<string, number>, affectedPeople: [] as AffectedPerson[], shortTitleCategory: '', title: '',
   description: '', peopleInvolved: [] as PersonEntry[], authoritiesPresent: 'unsure',
   reportedElsewhere: false, reportingPlace: '', evidenceCategory: 'none',
   submissionMode: 'identified', fullName: '', phone: '', email: '',
@@ -177,7 +179,7 @@ export function InquiryWizard() {
   }
 
   if (preScreen === 'anonymous_questions') {
-    const canProceed = Boolean(anonAnswers.witnessed && form.incidentDate >= '2025-10-25' && form.incidentDate <= '2025-11-01' && (anonAnswers.location || form.region));
+    const canProceed = Boolean(anonAnswers.witnessed && incidentDateOptions.includes(form.incidentDate) && (anonAnswers.location || form.region));
     return <section className="section page inquiryWizardPage">
       <span className="kicker">{t('MASWALI YA UPIMAJI', 'SCREENING QUESTIONS')}</span>
       <h1 className="pageTitle">{t('Jibu maswali mafupi', 'Answer a few short questions')}</h1>
@@ -190,8 +192,8 @@ export function InquiryWizard() {
       </fieldset>
       <fieldset className="wizardAnonymousQ">
         <legend>{t('2. Tukio lilitokea lini?', '2. When did the incident happen?')}</legend>
-        <p>{t('Chagua tarehe kati ya 25 Oktoba na 1 Novemba 2025 pekee.', 'Select a date from 25 October through 1 November 2025 only.')}</p>
-        <label className="wizardAnonLocation">{t('Tarehe ya tukio', 'Incident date')}<input type="date" required min="2025-10-25" max="2025-11-01" value={form.incidentDate} onChange={e => setForm(current => ({ ...current, incidentDate: e.target.value }))} /></label>
+        <p>{t('Chagua tarehe moja kati ya tarehe zilizoorodheshwa.', 'Choose one date from the list.')}</p>
+        <label className="wizardAnonLocation">{t('Tarehe ya tukio', 'Incident date')}<select required value={form.incidentDate} onChange={e => setForm(current => ({ ...current, incidentDate: e.target.value }))}><option value="">{t('Chagua tarehe', 'Select a date')}</option>{incidentDateOptions.map(date => <option key={date} value={date}>{date.slice(8, 10) + ' Oct 2025'}</option>)}</select></label>
       </fieldset>
       <fieldset className="wizardAnonymousQ">
         <legend>{t('3. Tukio lilitokea wapi?', '3. Where did the incident happen?')}</legend>
@@ -242,11 +244,12 @@ export function InquiryWizard() {
   const validateStep = (activeStep: number) => {
     if (activeStep === 1 && (!form.submissionType || !form.reporterRole)) return t('Chagua aina ya taarifa na nafasi yako.', 'Choose a submission type and your role.');
     if (activeStep === 2) {
-      if (!form.incidentDate || form.incidentDate < '2025-10-25' || form.incidentDate > '2025-11-01') return t('Tarehe ya tukio iwe kati ya 25 Oktoba na 1 Novemba 2025.', 'Choose an incident date from 25 October through 1 November 2025.');
+      if (!incidentDateOptions.includes(form.incidentDate)) return t('Chagua tarehe ya tukio kati ya 25 na 31 Oktoba 2025.', 'Choose an incident date from 25 to 31 October 2025.');
       if (!form.region) return t('Chagua mkoa.', 'Choose a region.');
       if (!form.district) return t('Chagua wilaya.', 'Choose a district.');
       if (!form.ward && !form.streetVillage) return t('Chagua kata au andika mtaa/kitongoji.', 'Choose a ward or type a street/village.');
       if (!form.violationTypes.length) return t('Chagua angalau aina moja ya ukiukwaji.', 'Choose at least one violation type.');
+      if (form.violationTypes.some(value => !Number.isInteger(form.violationCounts[value]) || form.violationCounts[value] < 1)) return t('Weka idadi ya angalau 1 kwa kila aina ya ukiukwaji uliyochagua.', 'Enter a count of at least 1 for each selected violation type.');
     }
     if (activeStep === 3) {
       if (!form.shortTitleCategory) return t('Chagua kichwa kifupi.', 'Choose a short title.');
@@ -269,7 +272,11 @@ export function InquiryWizard() {
     return '';
   };
 
-  const toggleViolation = (value: string) => setForm(current => ({ ...current, violationTypes: current.violationTypes.includes(value) ? current.violationTypes.filter(item => item !== value) : [...current.violationTypes, value] }));
+  const toggleViolation = (value: string) => setForm(current => { const selected = current.violationTypes.includes(value); const violationCounts = { ...current.violationCounts }; if (selected) delete violationCounts[value]; else violationCounts[value] = 1; return { ...current, violationTypes: selected ? current.violationTypes.filter(item => item !== value) : [...current.violationTypes, value], violationCounts }; });
+  const updateViolationCount = (value: string, count: number) => setForm(current => ({ ...current, violationCounts: { ...current.violationCounts, [value]: Math.max(1, Math.floor(count) || 1) } }));
+  const addAffectedPerson = () => setForm(current => ({ ...current, affectedPeople: [...current.affectedPeople, { name: '', status: current.violationTypes.includes('death') ? 'deceased' : 'missing' }] }));
+  const updateAffectedPerson = (index: number, key: keyof AffectedPerson, value: string) => setForm(current => ({ ...current, affectedPeople: current.affectedPeople.map((person, i) => i === index ? { ...person, [key]: value } : person) }));
+  const removeAffectedPerson = (index: number) => setForm(current => ({ ...current, affectedPeople: current.affectedPeople.filter((_, i) => i !== index) }));
   const addFiles = (list: FileList | null) => {
     const selected = Array.from(list || []);
     if (files.length + selected.length > 5 || selected.some(file => !allowedTypes.includes(file.type) || file.size < 1 || file.size > maxFileBytes)) { setMessage(t('Chagua hadi faili 5 za aina zinazoruhusiwa, kila moja hadi MB 50.', 'Choose up to 5 allowed files, each up to 50 MB.')); return; }
@@ -319,7 +326,7 @@ export function InquiryWizard() {
       {step === 2 && <section className="wizardStep">
         <h2>{t('Tukio lilitokea lini na wapi?', 'When and where did it happen?')}</h2>
         <div className="wizardTwo">
-          <label>{t('Tarehe ya tukio', 'Incident date')}<input type="date" required min="2025-10-25" max="2025-11-01" value={form.incidentDate} onChange={e => update('incidentDate', e.target.value)} /></label>
+          <label>{t('Tarehe ya tukio', 'Incident date')}<select required value={form.incidentDate} onChange={e => update('incidentDate', e.target.value)}><option value="">{t('Chagua tarehe', 'Select a date')}</option>{incidentDateOptions.map(date => <option key={date} value={date}>{date.slice(8, 10) + ' Oct 2025'}</option>)}</select></label>
           <label>{t('Muda wa takriban', 'Approximate time')}<select value={form.incidentTime} onChange={e => update('incidentTime', e.target.value)}>{['morning', 'afternoon', 'evening', 'night', 'unknown'].map(value => <option key={value} value={value}>{selectionLabel('time', value)}</option>)}</select></label>
         </div>
         <div className="wizardTwo">
@@ -340,7 +347,8 @@ export function InquiryWizard() {
         </div>
         <fieldset>
           <legend>{t('Aina ya ukiukwaji (chagua zote zinazohusika)', 'Type of violation (select all that apply)')}</legend>
-          <div className="wizardCheckGrid">{violationOptions.map(([value, sw, en]) => <label className="wizardChoice" key={value}><input type="checkbox" checked={form.violationTypes.includes(value)} onChange={() => toggleViolation(value)} /><span>{t(sw, en)}</span></label>)}</div>
+          <div className="wizardViolationGrid">{violationOptions.map(([value, sw, en]) => <div className={`wizardViolationItem ${form.violationTypes.includes(value) ? 'selected' : ''}`} key={value}><label className="wizardChoice"><input type="checkbox" checked={form.violationTypes.includes(value)} onChange={() => toggleViolation(value)} /><span>{t(sw, en)}</span></label>{form.violationTypes.includes(value) && <label className="wizardViolationCount">{t('Idadi ya watu/matukio', 'Number of people/incidents')}<input type="number" min="1" step="1" required value={form.violationCounts[value] ?? 1} onChange={e => updateViolationCount(value, Number(e.target.value))} aria-label={t(`Idadi ya ${sw}`, `Count for ${en}`)} /></label>}</div>)}</div>
+          {(form.violationTypes.includes('death') || form.violationTypes.includes('missing_person')) && <div className="wizardAffectedBlock"><div className="wizardPeopleHeader"><strong>{t('Majina ya watu waliofariki au kupotea (kama yanajulikana)', 'Names of deceased or missing people (if known)')}</strong><button type="button" className="wizardAddPersonBtn" onClick={addAffectedPerson}><Plus size={16} /> {t('Ongeza jina', 'Add name')}</button></div><p className="wizardPeopleEmpty">{t('Unaweza kuacha majina wazi ikiwa huyajui. Usibuni taarifa.', 'You may leave names blank if unknown. Do not guess details.')}</p>{form.affectedPeople.map((person, index) => <div className="wizardAffectedRow" key={index}><input value={person.name} maxLength={200} onChange={e => updateAffectedPerson(index, 'name', e.target.value)} placeholder={t('Jina kamili au maelezo ya utambulisho', 'Full name or identifying description')} /><select value={person.status} onChange={e => updateAffectedPerson(index, 'status', e.target.value)}><option value="deceased">{t('Amefariki', 'Deceased')}</option><option value="missing">{t('Amepotea', 'Missing')}</option></select><button type="button" className="wizardRemovePersonBtn" onClick={() => removeAffectedPerson(index)} aria-label={t('Ondoa jina', 'Remove name')}><X size={14} /></button></div>)}</div>}
         </fieldset>
       </section>}
 
